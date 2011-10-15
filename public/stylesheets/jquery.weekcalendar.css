@@ -269,3 +269,26 @@ table.wc-time-slots {
 *:first-child+html .wc-grid-row-oddeven{top:2px;}
 *:first-child+html .wc-grid-row-freebusy{top:1px;}
 *:first-child+html .wc-time-slots .wc-today{/* due to rendering issues, no background */background:none;}
+
+#message{
+    
+    background: none repeat scroll 0 0 #FFFFCC;
+    border: 1px solid #DDDDAA;
+    display: none;
+    font-size: 0.7em;
+    padding: 1em;
+    width: 400px;
+    min-height:30px;
+    position:absolute;
+    top:160px;
+    z-index:1000;
+    left:100%;
+    margin-left:-500px;
+    
+}
+#message .close {float:right;margin-top:-10px;}
+#message h3 {font-size:14px;font-weight:bold;border-top;-5px;}
+.ui-corner-all {
+    border-radius: 4px 4px 4px 4px;
+}
+
