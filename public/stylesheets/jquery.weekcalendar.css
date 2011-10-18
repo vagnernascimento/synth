@@ -223,6 +223,7 @@ table.wc-time-slots {
 	display: none;
 }
 
+.wc-cal-event  input{width:15px;margin:3px;}
 
 .wc-cal-event.ui-resizable-resizing {
 	cursor: s-resize;
@@ -256,7 +257,7 @@ table.wc-time-slots {
 
 
 .wc-container .ui-draggable-dragging {
-   z-index: 1000;
+   /*z-index: 1000;*/
 }
 
 .free-busy-free{}
