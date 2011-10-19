@@ -52,7 +52,7 @@ class SHDM::Context
       expected_parameters = @context.context_parameters.map{|p| p.context_parameter_name.first }
       received_parameters = @parameters_values.keys.map{|p| p.to_s}
       missing_parameters  = expected_parameters - received_parameters      
-      raise MissingContextParameterValue, "Missing parameters: #{missing_parameters.join(', ')}" unless missing_parameters.empty?
+      #raise MissingContextParameterValue, "Missing parameters: #{missing_parameters.join(', ')}" unless missing_parameters.empty?
       
       #TODO: check parameter types      
       #expected_parameters_types = {}; @people_context.context_parameters.each{|p| 

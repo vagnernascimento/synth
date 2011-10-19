@@ -44,6 +44,11 @@ module ActiveRDF
       @query.limit(lim)
       self
     end
+    
+    def offset(i)
+      @query.offset(i)
+      self
+    end
 
     def execute(options = {}, &blk)
       if truefalse(options[:all_types])
