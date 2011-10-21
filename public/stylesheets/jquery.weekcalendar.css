@@ -288,11 +288,7 @@ table.wc-time-slots {
     width: 400px;
     min-height:30px;
     position:absolute;
-    top:160px;
     z-index:1000;
-    left:50%;
-    margin-left:150px;
-    
 }
 #message .close {float:right;margin-top:-10px;}
 #message h3 {font-size:14px;font-weight:bold;border-top;-5px;}
