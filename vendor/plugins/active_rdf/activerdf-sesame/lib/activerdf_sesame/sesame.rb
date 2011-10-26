@@ -233,6 +233,68 @@ module ActiveRDF
       end
     end
 
+	# executes ActiveRDF query on the sesame triple store associated with this adapter
+    def execute_sparql(query)
+
+      # we want to put the results in here
+      results = []
+
+      # translate the query object into a SPARQL query string
+      qs = query
+
+      begin
+        # evaluate the query on the sesame triple store
+        # TODO: if we want to get inferred statements back we have to say so, as third boolean parameter
+        tuplequeryresult = @db.prepareTupleQuery(QueryLanguage::SPARQL, qs).evaluate
+      rescue Exception => e
+        #ActiveRdfLogger.log_error(self) { "Error evaluating query (#{e.message}): #{qs}" }
+        raise
+      end
+
+      # what are the variables of the query ?
+      variables = tuplequeryresult.getBindingNames
+      size_of_variables = variables.size
+
+      # the following is plainly ugly. the reason is that JRuby currently does not support
+      # using iterators in the ruby way: with "each". it is possible to define "each" for java.util.Iterator
+      # using JavaUtilities.extend_proxy but that fails in strange ways. this is ugly but works.
+
+      # TODO: null handling, if a value is null...
+
+      # if there only was one variable, then the results array should look like this:
+      # results = [ [first Value For The Variable], [second Value], ...]
+      if size_of_variables == 1 then
+        # the counter keeps track of the number of values, so we can insert them into the results at the right position
+        counter = 0
+        while tuplequeryresult.hasNext
+          solution = tuplequeryresult.next			
+          temparray = []
+          # get the value associated with a variable in this specific solution          
+          temparray[0] = convertSesame2ActiveRDF(solution.getValue(variables[0]), RDFS::Resource, ActiveRDF::Query.new)
+          results[counter] = temparray
+          counter = counter + 1
+        end
+      else
+        # if there is more then one variable the results array looks like this:
+        # results = [ [Value From First Solution For First Variable, Value From First Solution For Second Variable, ...],
+        #             [Value From Second Solution For First Variable, Value From Second Solution for Second Variable, ...], ...]
+        counter = 0
+        while tuplequeryresult.hasNext
+          solution = tuplequeryresult.next
+          temparray = []
+          for n in 1..size_of_variables
+            value = convertSesame2ActiveRDF(solution.getValue(variables[n-1]), RDFS::Resource, ActiveRDF::Query.new)
+            temparray[n-1] = value
+          end
+          results[counter] = temparray
+          counter = counter + 1
+        end
+      end
+
+      return results
+    end
+
+
     # executes ActiveRDF query on the sesame triple store associated with this adapter
     def execute(query)
 
