@@ -1,0 +1,11 @@
+<%= @resource.direct_properties.to_json %>
+
+<br>
+----
+<% @resource.direct_properties.each do |property| %>
+	<%= property.to_json %>
+	
+<% end %>	
+	
+
+	
