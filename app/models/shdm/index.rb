@@ -1,4 +1,5 @@
 require 'index_entry_decorator'
+require 'rdf_json'
 
 SHDM::Index
 SHDM::ContextIndex
@@ -8,6 +9,7 @@ SHDM::NavigationAttribute
 
 class SHDM::Index
   
+  include RdfJson
   property SHDM::index_name
   property SHDM::index_title, 'rdfs:subPropertyOf' => RDFS::label
   property SHDM::index_attributes, 'rdfs:range' => SHDM::NavigationAttribute #TODO: change the name to navigation_attributes and subproperties
@@ -27,7 +29,7 @@ class SHDM::Index
     end
     url
   end
-    
+ 
   protected
   
   def remove_dependents
@@ -62,6 +64,10 @@ class SHDM::ContextIndex;  sub_class_of(SHDM::Index)
     
     def nodes
       context_instance.resources #getting resources instead of node for performance reasons
+    end
+    
+    def entry(node)
+      IndexEntryDecorator.new(node, self)
     end
     
     def entries

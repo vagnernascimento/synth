@@ -12,7 +12,8 @@ ActionController::Routing::Routes.draw do |map|
                                            :index_navigation_attribute_index_parameters_post_data => :get                                           
                                          }
 
-  map.resources :rest, :requirements => { :id => /.*/ }, :collection => { :show => :get }
+  #map.resources :rest, :requirements => { :id => /.*/ }, :collection => { :show => :get }
+  
   map.resources :landmarks
   map.resources :operation_parameters
   map.resources :abstract_interfaces, :member => { :xslt => :get }, :collection => { :htmlTags => :get, :css => :get, :aixsl => :get }
