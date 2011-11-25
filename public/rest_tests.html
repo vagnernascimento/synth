@@ -13,7 +13,10 @@
 <script src="/javascripts/jquery/jquery-1.4.2.min.js?1321298839" type="text/javascript"></script>
 
 </head>
- 
+ <style>
+    .entry{margin-bottom:8px;}
+    img{color:none;background:none;border:none;}
+ </style>
 <body>
 
 <div id="wrapper">
@@ -75,17 +78,27 @@ $(document).ready(function(){
   function escape_url(url){
     return escape(url).replace(/[/.%]/gi,"__");
   }
-  
+  //**Events
   var index_rest_url = '/rest/index/http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d';
-  //{"http://data.semanticweb.org/conference/www/2011/event/ps-03":{"Label":[{"value":"Posters Display","type":"ContextAnchorNodeAttribute","url":"/execute/context/http%3A%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2Fps-03"}],"When":[{"value":"01/01/2011 03:00 to 11:00&nbsp;&nbsp;&nbsp;","type":"ComputedNodeAttribute","url":null}],"Where":[{"value":"Auditorium","type":"ComputedNodeAttribute","url":null}]}}
+  //**Publications
+  //var index_rest_url = '/rest/index/http%3A%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d';
+  
   function html_formatter(uri, entry){
-	 $('#'+escape_url(uri)).html('');
-	$.each( entry[uri], 
-		function(attr_name, attr){
-      $('#'+escape_url(uri)).append(attr[0].value+'<br>');
-		}
-	);
-	$('#'+escape_url(uri)).append('<hr>');
+    $('#'+escape_url(uri)).html('');
+    var ct = 0;
+    $.each( entry[uri], 
+      function(attr_name, attr){
+        var html;
+        if(attr[0].url){
+          html = (ct == 0 ? '<h2><a href="'+attr[0].url+'">'+attr[0].value+'</a></h2>' : '<b>'+attr_name+'</b>: <a href="'+attr[0].url+'">'+attr[0].value+'</a></br>');
+        }else{
+          html = '<b>'+attr_name+'</b>: '+attr[0].value+'<br>';
+        }
+        ct++;
+        $('#'+escape_url(uri)).append(html);
+      }
+    );
+	//$('#'+escape_url(uri)).append('<br/>');
   }
   
   //Request index nodes of Events Idx
@@ -101,12 +114,14 @@ $(document).ready(function(){
   
   $.getJSON(index_rest_url, 
 	function(data) {
-		idx_entries = data;
-		entries = [];
-		$.each(idx_entries["http://base#84f5cd60-59bc-11e0-b9e1-00264afffe1d"]["SHDM:entries"], function(key, entry) {
-			$('<div class="entry" id="'+escape_url(entry.value)+'">'+entry.value+'<br/> <img src="/images/loading.gif"></div>').appendTo('#contentnorightbar');
-      request_entry(index_rest_url, entry.value);
-		});
+    $.each(data, function(idx, value){
+      var idx_entries = value["shdm:IndexEntries"];
+      
+      $.each(idx_entries, function(key, entry) {
+        $('<div class="entry" id="'+escape_url(entry.value)+'"><img src="/images/ajax-loader.gif" border="0"> '+entry.value+'</div>').appendTo('#contentnorightbar');
+        request_entry(index_rest_url, entry.value);
+      });
+    });
 	});
   
   
