@@ -2,9 +2,10 @@ require 'node_attribute_factory'
 
 #Decorates a resource with IndexEntry behavior
 class IndexEntryDecorator
-
+  include RdfJson
   include ActionView::Helpers
-
+ 
+  
   attr_reader :node, :index, :parameters_values, :attributes_names, :attributes_hash
 
   alias :parameters :parameters_values

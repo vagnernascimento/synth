@@ -14,15 +14,10 @@ class RestController < ApplicationController
   
   #index http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d
   def index
-    
     index = SHDM::Index.find(params[:id])
-    #index = SHDM::Index.find('http://base#cd3b1580-59bc-11e0-b9e1-00264afffe1d')
-   
-    
-    @index = index.new({})
-    
-    #render :text => @index.nodes.first.direct_attributes.inspect
-    render :text => @index.entry(@index.nodes.first).attributes_hash["When"].label
+    @index = index.new
+    entry = @index.entry(@index.nodes.first)
+    render :text => entry.rdf_to_json
   end
   
   def showdd
