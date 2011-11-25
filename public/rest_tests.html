@@ -72,20 +72,20 @@ $(document).ready(function(){
       }     
   });
   
-  
+  function escape_url(url){
+    return escape(url).replace(/[/.%]/gi,"__");
+  }
   
   var index_rest_url = '/rest/index/http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d';
+  //{"http://data.semanticweb.org/conference/www/2011/event/ps-03":{"Label":[{"value":"Posters Display","type":"ContextAnchorNodeAttribute","url":"/execute/context/http%3A%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2Fps-03"}],"When":[{"value":"01/01/2011 03:00 to 11:00&nbsp;&nbsp;&nbsp;","type":"ComputedNodeAttribute","url":null}],"Where":[{"value":"Auditorium","type":"ComputedNodeAttribute","url":null}]}}
   function html_formatter(uri, entry){
-	//{"http://data.semanticweb.org/conference/www/2011/event/ps-03":{"Label":[{"value":"Posters Display","type":"ContextAnchorNodeAttribute","url":"/execute/context/http%3A%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2Fps-03"}],"When":[{"value":"01/01/2011 03:00 to 11:00&nbsp;&nbsp;&nbsp;","type":"ComputedNodeAttribute","url":null}],"Where":[{"value":"Auditorium","type":"ComputedNodeAttribute","url":null}]}}
-	alert(uri);
-	$('#'+uri).html('oi');
+	 $('#'+escape_url(uri)).html('');
 	$.each( entry[uri], 
 		function(attr_name, attr){
-			
-			//$('#'+uri).html('oi');
+      $('#'+escape_url(uri)).append(attr[0].value+'<br>');
 		}
 	);
-	
+	$('#'+escape_url(uri)).append('<hr>');
   }
   
   //Request index nodes of Events Idx
@@ -93,6 +93,7 @@ $(document).ready(function(){
 	$.getJSON(index_url+'?entry='+uri, 
 		function(entry) {
 			html_formatter(uri, entry);
+      
 		}
 	);
 		
@@ -103,8 +104,8 @@ $(document).ready(function(){
 		idx_entries = data;
 		entries = [];
 		$.each(idx_entries["http://base#84f5cd60-59bc-11e0-b9e1-00264afffe1d"]["SHDM:entries"], function(key, entry) {
-			request_entry(index_rest_url, entry.value);
-			$('<div class="entry" id="'+entry.value+'">'+entry.value+'<br/>Loading...</div>').appendTo('#contentnorightbar');
+			$('<div class="entry" id="'+escape_url(entry.value)+'">'+entry.value+'<br/> <img src="/images/loading.gif"></div>').appendTo('#contentnorightbar');
+      request_entry(index_rest_url, entry.value);
 		});
 	});
   
@@ -112,14 +113,11 @@ $(document).ready(function(){
  });
 
 </script>
-			
+	
 	<div id="contentnorightbar">
-
-        
-
      
-        <input checked="checked" id="preference" name="preference" onclick="new Ajax.Request('/execute/add_event', {asynchronous:true, evalScripts:true, parameters:'id='+this.value+'&amp;add='+this.checked + '&amp;authenticity_token=' + encodeURIComponent('MGp1/O1GZ+qSQ42hdbGpYhWjG+dobegSyWVD9p084oI=')})" style="width: 20px; float: left;" type="checkbox" value="http://data.semanticweb.org/conference/www/2011/event/ps-03" />
-        <div class="entry" id="http://data.semanticweb.org/conference/www/2011/event/ps-03">        
+        <!--input checked="checked" id="preference" name="preference" onclick="new Ajax.Request('/execute/add_event', {asynchronous:true, evalScripts:true, parameters:'id='+this.value+'&amp;add='+this.checked + '&amp;authenticity_token=' + encodeURIComponent('MGp1/O1GZ+qSQ42hdbGpYhWjG+dobegSyWVD9p084oI=')})" style="width: 20px; float: left;" type="checkbox" value="http://data.semanticweb.org/conference/www/2011/event/ps-03" />
+        <div class="entry" id="http://data.semanticweb.org/conference/www/2011/event/ps-03dfdfdf">        
         <h2><a href="/execute/context/http%3A%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2Fps-03">Posters Display</a></h2>
         <table>
 
@@ -150,7 +148,7 @@ $(document).ready(function(){
            </tr>
 
 	       </table>
-  	    </div>
+  	    </div-->
   	 
 
   	
