@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Events</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="/execute/css/aqueous" type="text/css" media="screen,projection" />
+<script src="/javascripts/prototype.js?1321298839" type="text/javascript"></script>
+<script src="/javascripts/effects.js?1321298838" type="text/javascript"></script>
+<script src="/javascripts/dragdrop.js?1321298838" type="text/javascript"></script>
+<script src="/javascripts/controls.js?1321298838" type="text/javascript"></script>
+<script src="/javascripts/application.js?1321298838" type="text/javascript"></script>
+
+<script src="/javascripts/jquery/jquery-1.4.2.min.js?1321298839" type="text/javascript"></script>
+
+</head>
+ 
+<body>
+
+<div id="wrapper">
+<div id="innerwrapper">
+
+  <div id="header">		
+     <form action="/execute/index/http%3A%2F%2Fbase%236515ada0-59bf-11e0-b9e1-00264afffe1d" method="post">
+        <input name="authenticity_token" type="hidden" value="MGp1/O1GZ+qSQ42hdbGpYhWjG+dobegSyWVD9p084oI=" /> 
+	<input value="Search" name="label_string"/>
+     </form>
+
+		
+     <h1><a href="/execute/init">Synth</a></h1>				
+     <h2>Semantic Web application development environment</h2>
+		
+   
+<ul id="nav">
+
+    <li><a href="/execute/index/http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d">Events</a></li>
+
+    <li><a href="/execute/index/http%3A%2F%2Fbase%239b6a77f0-59ba-11e0-b9e1-00264afffe1d">Persons</a></li>
+
+    <li><a href="/execute/index/http%3A%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d">Publications</a></li>
+
+    <li><a href="/execute/index/http%3A%2F%2Fbase%23436aab30-59bd-11e0-b9e1-00264afffe1d?user%5Bresource%5D=http%3A%2F%2Fsymph%23user">My Program</a></li>
+
+</ul>										
+</div>
+    
+  <div id="sidebar">
+  
+  <h2>Events</h2>
+  
+  
+
+  <h3 style="margin: 0;">Filter</h3>		
+  <input id="input_filter" name="" type="text" value="filter" />
+
+</div>
+<script>
+var idx_entries = {};
+$(document).ready(function(){
+
+  $('#input_filter').keyup(function() {
+     var value = $(this).val().trim();
+     if(value == ""){
+       $('.entry').show();            
+     }
+     else
+    {
+      var re = new RegExp(value,"i");
+      $('.entry').hide()
+      $('.entry').filter(function() {
+        return re.test($(this).find('h2').text()) 
+      }).show();
+      }     
+  });
+  
+  
+  
+  var index_rest_url = '/rest/index/http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d';
+  function html_formatter(uri, entry){
+	//{"http://data.semanticweb.org/conference/www/2011/event/ps-03":{"Label":[{"value":"Posters Display","type":"ContextAnchorNodeAttribute","url":"/execute/context/http%3A%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2Fps-03"}],"When":[{"value":"01/01/2011 03:00 to 11:00&nbsp;&nbsp;&nbsp;","type":"ComputedNodeAttribute","url":null}],"Where":[{"value":"Auditorium","type":"ComputedNodeAttribute","url":null}]}}
+	alert(uri);
+	$('#'+uri).html('oi');
+	$.each( entry[uri], 
+		function(attr_name, attr){
+			
+			//$('#'+uri).html('oi');
+		}
+	);
+	
+  }
+  
+  //Request index nodes of Events Idx
+  function request_entry(index_url, uri){
+	$.getJSON(index_url+'?entry='+uri, 
+		function(entry) {
+			html_formatter(uri, entry);
+		}
+	);
+		
+  }
+  
+  $.getJSON(index_rest_url, 
+	function(data) {
+		idx_entries = data;
+		entries = [];
+		$.each(idx_entries["http://base#84f5cd60-59bc-11e0-b9e1-00264afffe1d"]["SHDM:entries"], function(key, entry) {
+			request_entry(index_rest_url, entry.value);
+			$('<div class="entry" id="'+entry.value+'">'+entry.value+'<br/>Loading...</div>').appendTo('#contentnorightbar');
+		});
+	});
+  
+  
+ });
+
+</script>
+			
+	<div id="contentnorightbar">
+
+        
+
+     
+        <input checked="checked" id="preference" name="preference" onclick="new Ajax.Request('/execute/add_event', {asynchronous:true, evalScripts:true, parameters:'id='+this.value+'&amp;add='+this.checked + '&amp;authenticity_token=' + encodeURIComponent('MGp1/O1GZ+qSQ42hdbGpYhWjG+dobegSyWVD9p084oI=')})" style="width: 20px; float: left;" type="checkbox" value="http://data.semanticweb.org/conference/www/2011/event/ps-03" />
+        <div class="entry" id="http://data.semanticweb.org/conference/www/2011/event/ps-03">        
+        <h2><a href="/execute/context/http%3A%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2Fps-03">Posters Display</a></h2>
+        <table>
+
+        <tr>
+          
+            <th>When</th>
+          
+            <th>Where</th>
+          
+        </tr>
+        <tr>        
+        
+            <td>
+              <ul>
+                <li>01/01/2011 03:00 to 11:00&nbsp;&nbsp;&nbsp;</li>
+
+              </ul>
+   	        </td>
+           
+        
+            <td>
+              <ul>
+                <li>Auditorium</li>
+              </ul>
+   	        </td>
+           
+        
+           </tr>
+
+	       </table>
+  	    </div>
+  	 
+
+  	
+ </div>
+ <div id="footer">
+   <!-- If you wish to delete this line of code please purchase our commercial license http://www.sixshootermedia.com/shop/commercial-license/ -->
+    <p>Template design by <a href="http://www.sixshootermedia.com">Six Shooter Media</a>.</p>
+</div>
+ </div>
+</div>
+</body>
+</html>
