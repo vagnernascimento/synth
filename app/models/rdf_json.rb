@@ -25,13 +25,14 @@ module RdfJson
       uri = self.uri
       attributes_hash = self.attributes_hash
       hash_result = { uri => {} }
-      self.attributes_names.each {|node| hash_result[uri][node] = [{ :value => attributes_hash[node].label.to_s, :type => attributes_hash[node].class.to_s, :url => attributes_hash[node].respond_to?(:target_url) ? attributes_hash[node].target_url : nil }] }
-      hash_result.to_json
-      #self.attributes_hash['Label'].class.inspect
+      self.attributes_names.each{|node| hash_result[uri][node] = [{ :value => attributes_hash[node].label.to_s, :type => attributes_hash[node].class.to_s, :url => attributes_hash[node].respond_to?(:target_url) ? attributes_hash[node].target_url : nil }] }
+      hash_result
     end
   
     def ContextIndexInstance_to_json
-      self.inspect
+      
+	  hash_result = { self.uri.to_s => {"SHDM:entries" => self.nodes.map{ |node| {:value => node.to_s} }} }
+	 
     end
 
 end

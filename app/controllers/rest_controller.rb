@@ -12,12 +12,14 @@ class RestController < ApplicationController
     render :text => RDFS::Resource.new(params[:id]).direct_properties.to_json
   end
   
-  #index http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d
+  #http://localhost:3000/rest/index/http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d?entry=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent/ps-03
   def index
-    index = SHDM::Index.find(params[:id])
-    @index = index.new
-    entry = @index.entry(@index.nodes.first)
-    render :text => entry.rdf_to_json
+    unless params[:id].nil?
+		index = SHDM::Index.find(params[:id]).new
+		result = params[:entry].nil? ? index : index.entry(RDFS::Resource.new(params[:entry])) 
+		#render :text => index.class.to_s
+		render :text => result.rdf_to_json.to_json
+	end
   end
   
   def showdd
