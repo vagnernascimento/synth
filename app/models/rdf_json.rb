@@ -30,9 +30,7 @@ module RdfJson
     end
   
     def ContextIndexInstance_to_json
-      
-	  hash_result = { self.uri.to_s => {"SHDM:entries" => self.nodes.map{ |node| {:value => node.to_s} }} }
-	 
+	  { self.uri.to_s => {"SHDM:entries" => self.nodes.map{ |node| {:value => node.to_s} }} }
     end
 
 end

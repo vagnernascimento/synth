@@ -17,8 +17,7 @@ class RestController < ApplicationController
     unless params[:id].nil?
 		index = SHDM::Index.find(params[:id]).new
 		result = params[:entry].nil? ? index : index.entry(RDFS::Resource.new(params[:entry])) 
-		#render :text => index.class.to_s
-		render :text => result.rdf_to_json.to_json
+		render :json => result.rdf_to_json
 	end
   end
   
