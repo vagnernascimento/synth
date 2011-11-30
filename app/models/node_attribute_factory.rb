@@ -11,6 +11,10 @@ end
 
 class IndexNodeAttribute < NodeAttribute
   
+  def label
+    "label teste"
+  end
+  
   def value
     index.new(parameters)
   end

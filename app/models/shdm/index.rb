@@ -10,7 +10,7 @@ SHDM::NavigationAttribute
 
 class SHDM::Index
   
-  include RdfJson
+  include RdfSerialization
   
   property SHDM::index_name
   property SHDM::index_title, 'rdfs:subPropertyOf' => RDFS::label
@@ -50,7 +50,7 @@ class SHDM::ContextIndex;  sub_class_of(SHDM::Index)
   
   class ContextIndexInstance
     
-    include RdfJson
+    include RdfSerialization
     
     attr_reader :index, :context_instance, :parameters_values
     

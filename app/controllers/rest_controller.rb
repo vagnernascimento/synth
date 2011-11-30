@@ -15,9 +15,29 @@ class RestController < ApplicationController
   #http://localhost:3000/rest/index/http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d?entry=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent/ps-03
   def index
     unless params[:id].nil?
-		index = SHDM::Index.find(params[:id]).new
-		result = params[:entry].nil? ? index : index.entry(RDFS::Resource.new(params[:entry])) 
-		render :json => result.rdf_to_json
+		
+    
+    params.delete(:controller)
+    params.delete(:action)
+
+    index_id = params.delete(:id)
+    index = SHDM::Index.find(index_id)
+    index = index.nil? ? SHDM::Index.find_all.first : index
+
+    new_params = {}
+    params.each{ |i,v| new_params[i] = v.is_a?(Hash) ? RDFS::Resource.new(v["resource"]) : v }
+    new_params.delete('authenticity_token')
+
+    index = index.new(new_params)
+
+		result = ( params[:entry].nil? ? index : index.entry(RDFS::Resource.new(params[:entry])) ).rdf_to_serialized
+    
+    respond_to do |format|
+      format.text { render :text => result.inspect }
+      format.xml  { render :xml => result }
+      format.json  { render :json => result }
+    end
+    
 	end
   end
   

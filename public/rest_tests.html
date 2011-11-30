@@ -4,11 +4,11 @@
 <title>Events</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" href="/execute/css/aqueous" type="text/css" media="screen,projection" />
-<script src="/javascripts/prototype.js?1321298839" type="text/javascript"></script>
+<!--script src="/javascripts/prototype.js?1321298839" type="text/javascript"></script>
 <script src="/javascripts/effects.js?1321298838" type="text/javascript"></script>
 <script src="/javascripts/dragdrop.js?1321298838" type="text/javascript"></script>
 <script src="/javascripts/controls.js?1321298838" type="text/javascript"></script>
-<script src="/javascripts/application.js?1321298838" type="text/javascript"></script>
+<script src="/javascripts/application.js?1321298838" type="text/javascript"></script-->
 
 <script src="/javascripts/jquery/jquery-1.4.2.min.js?1321298839" type="text/javascript"></script>
 
@@ -79,9 +79,10 @@ $(document).ready(function(){
     return escape(url).replace(/[/.%]/gi,"__");
   }
   //**Events
-  var index_rest_url = '/rest/index/http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d';
+  //var index_rest_url = '/rest/index/http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d';
   //**Publications
-  //var index_rest_url = '/rest/index/http%3A%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d';
+
+  var index_rest_url = '/rest/index/http%3A%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d';
   
   function html_formatter(uri, entry){
     $('#'+escape_url(uri)).html('');
@@ -115,7 +116,7 @@ $(document).ready(function(){
   $.getJSON(index_rest_url, 
 	function(data) {
     $.each(data, function(idx, value){
-      var idx_entries = value["shdm:IndexEntries"];
+      var idx_entries = value["shdm:index_entries"];
       
       $.each(idx_entries, function(key, entry) {
         $('<div class="entry" id="'+escape_url(entry.value)+'"><img src="/images/ajax-loader.gif" border="0"> '+entry.value+'</div>').appendTo('#contentnorightbar');
