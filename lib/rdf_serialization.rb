@@ -12,6 +12,16 @@ module RdfSerialization
       
   end
   
+  def parameters_to_url()
+    if self.respond_to?(:parameters)
+      parameters = self.parameters
+      if parameters.is_a?(Hash) && !parameters.empty?
+        parameters.merge!(parameters){|i,v| v.respond_to?(:uri) ? { "resource" => v.uri } : v }
+        "#{parameters.to_query}" 
+      end
+    end
+  end
+  
   protected
     ##############################
     #### Json format example #####
@@ -23,7 +33,7 @@ module RdfSerialization
     
     def get_hash_node(node)
       if node.is_a?(IndexNodeAttribute)
-       { :value => node.index.to_s, :type => node.class.to_s, :url => node.respond_to?(:target_url) ? node.target_url : nil, :parameters => node.respond_to?(:parameters) ? node.parameters : nil  }
+       { :value => CGI::escape(node.index.to_s), :type => node.class.to_s, :url => node.respond_to?(:target_url) ? node.target_url : nil, :parameters => node.parameters_to_url }
       else
         { :value => node.label.to_s, :type => node.class.to_s, :url => node.respond_to?(:target_url) ? node.target_url : nil }
       end
@@ -38,7 +48,7 @@ module RdfSerialization
     end
   
     def ContextIndexInstance_to_serialized
-	  { self.uri.to_s => {"shdm:index_entries" => self.nodes.map{ |node| {:value => node.to_s} }} }
+	  { self.uri.to_s => {"shdm:index_title" => self.index_title, "shdm:index_nodes" => self.nodes.map{ |node| {:value => node.to_s} }} }
     end
 
 end

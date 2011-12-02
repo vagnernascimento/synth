@@ -4,14 +4,8 @@
 <title>Events</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" href="/execute/css/aqueous" type="text/css" media="screen,projection" />
-<!--script src="/javascripts/prototype.js?1321298839" type="text/javascript"></script>
-<script src="/javascripts/effects.js?1321298838" type="text/javascript"></script>
-<script src="/javascripts/dragdrop.js?1321298838" type="text/javascript"></script>
-<script src="/javascripts/controls.js?1321298838" type="text/javascript"></script>
-<script src="/javascripts/application.js?1321298838" type="text/javascript"></script-->
-
 <script src="/javascripts/jquery/jquery-1.4.2.min.js?1321298839" type="text/javascript"></script>
-
+<script src="javascripts/synth.rest.js" type="text/javascript"></script>
 </head>
  <style>
     .entry{margin-bottom:8px;}
@@ -48,7 +42,7 @@
     
   <div id="sidebar">
   
-  <h2>Events</h2>
+  <h2 id='index_title'></h2>
   
   
 
@@ -57,7 +51,7 @@
 
 </div>
 <script>
-var idx_entries = {};
+
 $(document).ready(function(){
 
   $('#input_filter').keyup(function() {
@@ -78,53 +72,42 @@ $(document).ready(function(){
   function escape_url(url){
     return escape(url).replace(/[/.%]/gi,"__");
   }
-  //**Events
-  //var index_rest_url = '/rest/index/http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d';
-  //**Publications
+  
 
-  var index_rest_url = '/rest/index/http%3A%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d';
   
-  function html_formatter(uri, entry){
-    $('#'+escape_url(uri)).html('');
-    var ct = 0;
-    $.each( entry[uri], 
-      function(attr_name, attr){
-        var html;
-        if(attr[0].url){
-          html = (ct == 0 ? '<h2><a href="'+attr[0].url+'">'+attr[0].value+'</a></h2>' : '<b>'+attr_name+'</b>: <a href="'+attr[0].url+'">'+attr[0].value+'</a></br>');
-        }else{
-          html = '<b>'+attr_name+'</b>: '+attr[0].value+'<br>';
+function node(key, entry){
+  $('<div class="entry" id="'+escape_url(entry.value)+'"><img src="/images/ajax-loader.gif" border="0"> '+entry.value+'</div>').appendTo('#contentnorightbar');
+}
+
+ function entry_formater(entry){
+    $.each(entry, function(uri, value){
+      $('#'+escape_url(uri)).html('');
+      var ct = 0;
+      $.each( value, 
+        function(attr_name, attr){
+          var html;
+          if(attr[0].url){
+            html = (ct == 0 ? '<h2><a href="'+attr[0].url+'">'+attr[0].value+'</a></h2>' : '<b>'+attr_name+'</b>: <a href="'+attr[0].url+'">'+attr[0].value+'</a></br>');
+          }else{
+            html = '<b>'+attr_name+'</b>: '+attr[0].value+'<br>'+attr[0].type;
+          }
+          ct++;
+          $('#'+escape_url(uri)).append(html);
         }
-        ct++;
-        $('#'+escape_url(uri)).append(html);
-      }
-    );
-	//$('#'+escape_url(uri)).append('<br/>');
-  }
-  
-  //Request index nodes of Events Idx
-  function request_entry(index_url, uri){
-	$.getJSON(index_url+'?entry='+uri, 
-		function(entry) {
-			html_formatter(uri, entry);
-      
-		}
-	);
-		
-  }
-  
-  $.getJSON(index_rest_url, 
-	function(data) {
-    $.each(data, function(idx, value){
-      var idx_entries = value["shdm:index_entries"];
-      
-      $.each(idx_entries, function(key, entry) {
-        $('<div class="entry" id="'+escape_url(entry.value)+'"><img src="/images/ajax-loader.gif" border="0"> '+entry.value+'</div>').appendTo('#contentnorightbar');
-        request_entry(index_rest_url, entry.value);
-      });
+      );
     });
-	});
+  }
+
+
+function callback(){
+  $('#index_title').html(this.title[0]);
+  this.foreach_node(node);
+  this.request_entries(entry_formater);
   
+};
+
+//http:%2F%2Fbase%2301741d00-59be-11e0-b9e1-00264afffe1d
+var Index = new Synth.Index('http%3A%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d', callback);
   
  });
 

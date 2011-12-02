@@ -1,3 +1,4 @@
+include RdfSerialization
 class NodeAttribute
 
   attr_accessor :navigation_attribute, :resource
@@ -12,7 +13,7 @@ end
 class IndexNodeAttribute < NodeAttribute
   
   def label
-    "label teste"
+    ""
   end
   
   def value
