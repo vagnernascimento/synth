@@ -13,6 +13,8 @@ end
 SHDM::Context
 SHDM::ContextParameter
 
+include RdfSerialization
+
 class SHDM::Context
   
   property SHDM::context_name, 'rdfs:subPropertyOf' => RDFS::label
@@ -94,7 +96,11 @@ class SHDM::Context
         NodeDecorator.new(resource, self)
       end
     end
-  
+    
+    def node(node)
+      NodeDecorator.new(node, self)
+    end
+    
     def index
 
       label_expression = "

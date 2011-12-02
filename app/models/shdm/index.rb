@@ -6,11 +6,9 @@ SHDM::QueryIndex
 SHDM::IndexParameter
 SHDM::NavigationAttribute
 
-
+include RdfSerialization
 
 class SHDM::Index
-  
-  include RdfSerialization
   
   property SHDM::index_name
   property SHDM::index_title, 'rdfs:subPropertyOf' => RDFS::label

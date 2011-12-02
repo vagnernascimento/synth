@@ -22,8 +22,8 @@ class RestController < ApplicationController
     new_params.delete('authenticity_token')
 
     index = index.new(new_params)
-		result = ( params[:node].nil? ? index : index.entry(RDFS::Resource.new(params[:node])) ).rdf_to_serialized
-    #render :text => result.inspect
+		result = ( params[:node].nil? ? index : index.entry(RDFS::Resource.new(params[:node])) ).serialize
+    
     respond_to do |format|
       format.json  { render :json => result }
       format.text { render :text => result.inspect }
@@ -31,5 +31,29 @@ class RestController < ApplicationController
     end
   end
  
+ 
+  def context
+    params.delete(:controller)
+    params.delete(:action)
+
+    context_id = params.delete(:id)
+    node_id     = params.delete(:node)
+    context      = SHDM::Context.find(context_id)
+
+    new_params = {}
+    params.each{ |i,v| new_params[i] = v.is_a?(Hash) ? RDFS::Resource.new(v["resource"]) : v }
+    new_params.delete('authenticity_token')
+
+    context   = context.new(new_params)
+    result = ( node_id.nil? ? context : context.node(RDFS::Resource.new(node_id)) ).serialize
+    
+    respond_to do |format|
+      format.json  { render :json => result }
+      format.text { render :text => result.inspect }
+      #format.xml  { render :xml => result }
+    end
+    
+    
+  end
   
 end

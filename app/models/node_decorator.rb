@@ -1,8 +1,12 @@
 require 'node_attribute_factory'
 
+
+
 #Decorates a resource with InContextClass behavior
 class NodeDecorator
-
+  
+  include RdfSerialization
+  
   attr_reader :resource, :context, :default_index, :parameters_values, :attributes_names, :attributes_hash
 
   alias :parameters :parameters_values
