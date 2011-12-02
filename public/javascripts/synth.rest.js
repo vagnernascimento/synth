@@ -57,7 +57,7 @@ Synth.Index.prototype.request_entries = function(run_on_the_entry){
   var path = this.path();
   var request_entry = this.request_entry
   this.foreach_node(function(key, node){
-      var entry_url = path + '?node='+node.value;
+      var entry_url = path + ( path.match(/[?]/) ? '&': '?' ) + 'node='+node.value;
       request_entry(entry_url, run_on_the_entry)
     });
 }

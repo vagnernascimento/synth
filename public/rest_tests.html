@@ -10,6 +10,10 @@
  <style>
     .entry{margin-bottom:8px;}
     img{color:none;background:none;border:none;}
+    .IndexNodeAttribute h2 {font-size:12px;color:#444444;border-bottom:none;float:none;display: inline; }
+    .IndexNodeAttribute h2 a{color:#444444; }
+    .IndexNodeAttribute h2 a:hover{text-decoration:underline;}
+    .IndexNodeAttribute span{ border-bottom:none;}
  </style>
 <body>
 
@@ -73,41 +77,59 @@ $(document).ready(function(){
     return escape(url).replace(/[/.%]/gi,"__");
   }
   
-
+function callback_index_node_attr(){ 
+  var uri =this.uri;
+  var total_nodes = this.nodes.length;
+  $('#'+escape_url(uri)).html('');
+  var c = 0;
+  this.foreach_node(function(key,entry){
+                      c++;
+                      $('#'+escape_url(uri)).append( '<span id="'+escape_url(this.value)+'"><img src="/images/ajax-loader.gif" border="0"> '+
+                      this.value+'</span>'+ 
+                      (c == total_nodes ? '' : ', ')
+                      );
+                    });
+  this.request_entries(entry_handler);
+};
   
-function node(key, entry){
-  $('<div class="entry" id="'+escape_url(entry.value)+'"><img src="/images/ajax-loader.gif" border="0"> '+entry.value+'</div>').appendTo('#contentnorightbar');
-}
-
- function entry_formater(entry){
+ function entry_handler(entry){
     $.each(entry, function(uri, value){
       $('#'+escape_url(uri)).html('');
       var ct = 0;
       $.each( value, 
         function(attr_name, attr){
           var html;
-          if(attr[0].url){
+          if(attr[0].url ){
             html = (ct == 0 ? '<h2><a href="'+attr[0].url+'">'+attr[0].value+'</a></h2>' : '<b>'+attr_name+'</b>: <a href="'+attr[0].url+'">'+attr[0].value+'</a></br>');
+          }else if(attr[0].type == 'IndexNodeAttribute'){
+            var entry_url = attr[0].value;
+            html = '<b>'+attr_name+'</b>: <span class="IndexNodeAttribute" id="'+escape_url(entry_url)+'"> <img src="/images/ajax-loader.gif" border="0"> </span><br />';
+            var entry_index = new Synth.Index(entry_url, callback_index_node_attr);
+                             
           }else{
-            html = '<b>'+attr_name+'</b>: '+attr[0].value+'<br>'+attr[0].type;
+            html = '<b>'+attr_name+'</b>: '+attr[0].value+'<br>';
           }
           ct++;
-          $('#'+escape_url(uri)).append(html);
+           $('#'+escape_url(uri)).append(html);
         }
       );
     });
   }
 
+function node(key, entry){
+  $('<div class="entry" id="'+escape_url(entry.value)+'"><img src="/images/ajax-loader.gif" border="0"> '+entry.value+'</div>').appendTo('#contentnorightbar');
+}
 
-function callback(){
-  $('#index_title').html(this.title[0]);
-  this.foreach_node(node);
-  this.request_entries(entry_formater);
-  
-};
+//Organizations - http:%2F%2Fbase%2301741d00-59be-11e0-b9e1-00264afffe1d
+//All Publications - 'http%3A%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d'
+//Events - http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d
 
-//http:%2F%2Fbase%2301741d00-59be-11e0-b9e1-00264afffe1d
-var Index = new Synth.Index('http%3A%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d', callback);
+var Index = new Synth.Index('http%3A%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d', 
+                            function(){
+                              $('#index_title').html(this.title[0]);
+                              this.foreach_node(node);
+                              this.request_entries(entry_handler);
+                            });
   
  });
 
