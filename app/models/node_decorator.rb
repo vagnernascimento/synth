@@ -50,15 +50,15 @@ class NodeDecorator
   end
     
   def node_position
-    @node_position ||= context.nodes.index(self) || 0
+    @node_position ||= context.resources.index(RDFS::Resource.new(self.uri)) || 0
   end
     
   def next_node
-    @next_node ||= node_position == context.nodes.size ? nil : context.nodes[node_position + 1]
+    @next_node ||= node_position == context.resources.size ? nil : context.node(context.resources[node_position + 1])
   end
 
   def next_node_anchor    
-    @next_node_anchor ||= node_position == context.nodes.size ? nil : next_node.anchor
+    @next_node_anchor ||= node_position == context.resources.size ? nil : next_node.anchor
   end
   
   def previous_node_anchor
@@ -66,7 +66,7 @@ class NodeDecorator
   end
     
   def previous_node
-    @previous_node ||= node_position == 0 ? nil : context.nodes[node_position - 1]
+    @previous_node ||= node_position == 0 ? nil : context.node(context.resources[node_position - 1])
   end
   
   def anchor
