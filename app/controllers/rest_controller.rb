@@ -46,7 +46,8 @@ class RestController < ApplicationController
 
     context   = context.new(new_params)
     result = ( node_id.nil? ? context : context.node(RDFS::Resource.new(node_id)) ).serialize
-    
+    #result = ( node_id.nil? ? context : context.node(RDFS::Resource.new(node_id)) )
+    #render :text => result.context.resources.class.inspect
     respond_to do |format|
       format.json  { render :json => result }
       format.text { render :text => result.inspect }

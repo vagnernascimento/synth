@@ -29,8 +29,9 @@ class SHDM::Context
     ContextInstance.new(parameters_values, self)
   end
   
-  def url(parameters={}, node=nil)
-    url = "/execute/context/#{CGI::escape(self.uri)}"
+  def url(parameters={}, node=nil, raw_url = false)
+    app_url = raw_url ? "" : "/execute/context/"
+    url = "#{app_url}#{CGI::escape(self.uri)}"
     url << "?node=#{CGI::escape(node.to_s)}" unless node.nil?
     if parameters.is_a?(Hash) && !parameters.empty?
       parameters.merge!(parameters){|i,v| v.respond_to?(:uri) ? { "resource" => v.uri } : v }

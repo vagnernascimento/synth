@@ -46,8 +46,8 @@ class ContextAnchorNodeAttribute < NodeAttribute
     end
   end
 
-  def target_url
-    target_context.url(target_parameters, target_node)
+  def target_url(raw_url=false)
+    target_context.url(target_parameters, target_node, raw_url)
   end
 
   def target_context

@@ -4,7 +4,11 @@
 <title>Events</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" href="/execute/css/aqueous" type="text/css" media="screen,projection" />
-<script src="/javascripts/jquery/jquery-1.4.2.min.js?1321298839" type="text/javascript"></script>
+<link rel="stylesheet" href="/stylesheets/redmond/jquery-ui-1.8.2.custom.css" type="text/css" media="screen,projection" />
+
+<script src="/javascripts/jquery/jquery-1.4.2.min.js" type="text/javascript"></script>
+<script src="/javascripts/jquery/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+<script src="/javascripts/jquery/jquery.ui.dialog.js" type="text/javascript"></script>
 <script src="javascripts/synth.rest.js" type="text/javascript"></script>
 </head>
  <style>
@@ -56,24 +60,7 @@
 </div>
 <script>
 
-$(document).ready(function(){
-
-  $('#input_filter').keyup(function() {
-     var value = $(this).val().trim();
-     if(value == ""){
-       $('.entry').show();            
-     }
-     else
-    {
-      var re = new RegExp(value,"i");
-      $('.entry').hide()
-      $('.entry').filter(function() {
-        return re.test($(this).find('h2').text()) 
-      }).show();
-      }     
-  });
-  
-  function escape_url(url){
+ function escape_url(url){
     return escape(url).replace(/[/.%]/gi,"__");
   }
   
@@ -90,8 +77,27 @@ function callback_index_node_attr(){
                       );
                     });
   this.request_entries(entry_handler);
-};
-  
+}
+ 
+  function preview_context(url){
+    var ContextInstance = new Synth.ContextInstance(url, 
+                            function(){
+                               
+                               var div_id = escape_url(url)+'_context';
+                               $('#'+div_id).remove();
+                               var div = $('<div id="'+div_id+'" style="font-size:11px;"></div>').appendTo('body');
+                              // $('<b>'+attr_name+'</b>: '+ attr[0].value +'<br />').appendTo('#'+div_id);
+                               $.each( this.resource_properties[0], function(attr_name, attr){
+                                  $('<b>'+attr_name+'</b>: '+ attr[0].value +'<br />').appendTo('#'+div_id);
+                               });
+                               
+                               // Setting a dialog box
+                               $('#'+div_id ).dialog({title: this.label[0], minWidth: 550});
+                               
+                               //alert('Context instance has '+ this.navigational_properties[0]['previous_node'] + ' resources properties.');
+                            });
+  }
+ 
  function entry_handler(entry){
     $.each(entry, function(uri, value){
       $('#'+escape_url(uri)).html('');
@@ -99,8 +105,8 @@ function callback_index_node_attr(){
       $.each( value, 
         function(attr_name, attr){
           var html;
-          if(attr[0].url ){
-            html = (ct == 0 ? '<h2><a href="'+attr[0].url+'">'+attr[0].value+'</a></h2>' : '<b>'+attr_name+'</b>: <a href="'+attr[0].url+'">'+attr[0].value+'</a></br>');
+          if(attr[0].type == 'ContextAnchorNodeAttribute' ){
+            html = (ct == 0 ? '<h2><a onclick="preview_context(\''+this[0].url+'\')" href="javascript:void(0)">'+attr[0].value+'</a></h2>' : '<b>'+attr_name+'</b>: <a onclick="preview_context(\''+this[0].url+'\')" href="javascript:void(0)">'+attr[0].value+'</a></br>');
           }else if(attr[0].type == 'IndexNodeAttribute'){
             var entry_url = attr[0].value;
             html = '<b>'+attr_name+'</b>: <span class="IndexNodeAttribute" id="'+escape_url(entry_url)+'"> <img src="/images/ajax-loader.gif" border="0"> </span><br />';
@@ -120,19 +126,40 @@ function node(key, entry){
   $('<div class="entry" id="'+escape_url(entry.value)+'"><img src="/images/ajax-loader.gif" border="0"> '+entry.value+'</div>').appendTo('#contentnorightbar');
 }
 
-//Organizations - http:%2F%2Fbase%2301741d00-59be-11e0-b9e1-00264afffe1d
-//All Publications - 'http%3A%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d'
-//Events - http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d
 
-var Index = new Synth.Index('http%3A%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d', 
-                            function(){
-                              $('#index_title').html(this.title[0]);
-                              this.foreach_node(node);
-                              this.request_entries(entry_handler);
-                            });
+
+$(document).ready(function(){
+
+  $('#input_filter').keyup(function() {
+     var value = $(this).val().trim();
+     if(value == ""){
+       $('.entry').show();            
+     }
+     else
+    {
+      var re = new RegExp(value,"i");
+      $('.entry').hide()
+      $('.entry').filter(function() {
+        return re.test($(this).find('h2').text()) 
+      }).show();
+      }     
+  });
+  
+  //Organizations - http:%2F%2Fbase%2301741d00-59be-11e0-b9e1-00264afffe1d
+  //All Publications - 'http%3A%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d'
+  //Events - http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d
+
+  var Index = new Synth.Index('http%3A%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d', 
+                              function(){
+                                $('#index_title').html(this.title[0]);
+                                this.foreach_node(node);
+                                this.request_entries(entry_handler);
+                              });
   
  });
 
+ 
+ 
 </script>
 	
 	<div id="contentnorightbar">
