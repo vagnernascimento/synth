@@ -73,7 +73,19 @@ function callback_index_node_attr(){
                     });
   this.request_entries(index_entry_handler);
 }
- 
+  
+  function preview_resource(url){
+    var ContextInstance = new Synth.Resource(url, 
+                            function(){
+                              var value = '';
+                              $.each( this.resource_properties[0], function(attr_name, values){
+                                value += attr_name + ': ' + values[0].value +'\n'
+                              });                              
+                              
+                              alert('RESOURCE PROPERTIES\n--------------------------------------\n'+value);
+                            }); 
+  }
+  
   function preview_context(url){
     $("#loading").show();
     var ContextInstance = new Synth.ContextInstance(url, 
@@ -94,9 +106,15 @@ function callback_index_node_attr(){
                                if(next_node)
                                 $('<a onclick="preview_context(\''+next_node+'\')" href="javascript:void(0)"> Next >></a>').appendTo('#'+div_id);
                                $(' <hr>').appendTo('#'+div_id);
+                               
                                //resource properties
-                               $.each( this.resource_properties[0], function(attr_name, attr){
-                                  $('<b>'+attr_name+'</b>: '+ attr[0].value +'<br />').appendTo('#'+div_id);
+                               $.each( this.resource_properties[0], function(attr_name, values){
+                                  var value = '';
+                                  $.each(values, function(i, v){ 
+                                        value += (i > 0 ? ', ' : '') + v.value +
+                                                 (v.uri ? '<sup><a href="javascript:preview_resource(\''+v.uri+'\')">(R)</a></sup>' : '');
+                                        });
+                                  $('<b>'+attr_name+'</b>: '+ value +'<br />').appendTo('#'+div_id);
                                });
                                
                                // Setting a dialog box

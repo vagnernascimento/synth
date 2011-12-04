@@ -27,16 +27,23 @@ var Synth = {
     this.navigational_properties = [];
     this.request(callback);
   },
+  Resource : function(uri, callback){
+    this.uri = uri;
+    this.rest_path = 'resource';
+    this.label = [];
+    this.resource_properties = [];
+    this.request(callback);
+  },
 };
 //---------------------------------------------------------------------------------
 //--- SYNTH.INDEX METHODS ---
 //---------------------------------------------------------------------------------
 
-//--- REQUIRING A NEW INDEX  --- 
+//--- REQUIRING A NEW INSTANCE OF INDEX  --- 
 //   Using ex: var Index = Synth.Index.new('escaped_uri_of_index',
 //                                          function(){ //callback ; 
 //                                                      alert('Index title is "'+this.title+ '" and it has '+ this.nodes.length + ' nodes.');
-//                                                    };
+//                                                    });
 
 Synth.Index.prototype.path = function(){ 
   var url = Synth.path + this.rest_path + (this.uri ? ('/' + this.uri) : '');
@@ -81,11 +88,11 @@ Synth.Index.prototype.request_entries = function(run_on_the_entry){
 //--- SYNTH.CONTEXT METHODS ---
 //---------------------------------------------------------------------------------
 
-//--- REQUIRING A NEW CONTEXT  --- 
+//--- REQUIRING A NEW INSTANCE OF CONTEXT  --- 
 //   Using ex: var Index = Synth.Context.new('escaped_uri_of_context',
 //                                          function(){ //callback ; 
 //                                                      alert('Context title is "'+this.title+ '" and it has '+ this.resources.length + ' resources.');
-//   
+//                                                    });
 
 Synth.Context.prototype.path = function(){ 
   var url = Synth.path + this.rest_path + (this.uri ? ('/' + this.uri) : '');
@@ -123,11 +130,11 @@ Synth.Context.prototype.request_node = function(node_url, run_on_the_node){
 //--- SYNTH.ContextInstance METHODS ---
 //---------------------------------------------------------------------------------
 
-//--- REQUIRING A NEW CONTEXT INSTANCE  --- 
+//--- REQUIRING A NEW INSTANCE OF CONTEXT   --- 
 //   Using ex: var Index = Synth.Context.new('escaped_uri_of_context_instance',
 //                                          function(){ //callback ; 
 //                                                      alert('Context instance has '+ this.resource_properties.length + ' resources properties.');
-//   
+//                                                    });  
 
 Synth.ContextInstance.prototype.path = function(){ 
   var url = Synth.path + this.rest_path + (this.uri ? ('/' + this.uri) : '');
@@ -147,6 +154,39 @@ Synth.ContextInstance.prototype.request = function(callback){
         self.label = value['label'];
         self.resource_properties = value['resource_properties'];
         self.navigational_properties = value['navigational_properties'];
+      });
+      set_values();
+    if(callback){callback.call(self);}
+  });
+}
+
+
+//---------------------------------------------------------------------------------
+//--- SYNTH.Resource METHODS ---
+//---------------------------------------------------------------------------------
+
+//--- REQUIRING A NEW INSTANCE OF RESOURCE   --- 
+//   Using ex: var Index = Synth.Resource.new('escaped_uri_of_resource',
+//                                          function(){ //callback ; 
+//                                                      alert('Resource label is '+ this.label);
+//                                                    });   
+
+Synth.Resource.prototype.path = function(){ 
+  var url = Synth.path + this.rest_path + (this.uri ? ('/' + this.uri) : '');
+  return url
+};
+
+Synth.Resource.prototype.request = function(callback){
+  var self = this;
+  var set_values = function(){
+    this.label = self.label;
+    this.resource_properties = self.resource_properties;
+  }
+  $.getJSON(this.path(), 
+    function(data) {
+      $.each(data, function(idx, value){
+        self.label = value['label'];
+        self.resource_properties = value['resource_properties'];
       });
       set_values();
     if(callback){callback.call(self);}

@@ -1,5 +1,5 @@
 class RestController < ApplicationController
-
+  
   def classes
     render :text => RDFS::Class.domain_classes.to_json
   end
@@ -46,15 +46,20 @@ class RestController < ApplicationController
 
     context   = context.new(new_params)
     result = ( node_id.nil? ? context : context.node(RDFS::Resource.new(node_id)) ).serialize
-    #result = ( node_id.nil? ? context : context.node(RDFS::Resource.new(node_id)) )
-    #render :text => result.context.resources.class.inspect
     respond_to do |format|
       format.json  { render :json => result }
       format.text { render :text => result.inspect }
       #format.xml  { render :xml => result }
     end
-    
-    
   end
   
+  def resource
+    resource_id = params.delete(:id)
+    resource    = SHDM::Resource.new(resource_id)
+    respond_to do |format|
+      format.json  { render :json => resource.serialize }
+      format.text { render :text => resource.inspect }
+      #format.xml  { render :xml => result }
+    end
+  end
 end

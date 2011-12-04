@@ -10,6 +10,8 @@ module Serializer
         self.ContextInstance_serializer
       when 'NodeDecorator'
         self.NodeDecorator_serializer
+      when 'SHDM::Resource'
+        self.Resource_serializer
       else
         {}
     end
@@ -41,7 +43,11 @@ module Serializer
       elsif  node.is_a?(ContextAnchorNodeAttribute)
         { :value => node.label.to_s, :type => node.class.to_s, :target_url => node.target_url, :url => node.target_url(true) }
       elsif node.is_a?(RDF::Property)
-        node.map{|node| { :value => node.to_s, :type => node.class.to_s } }
+        #node.map{|property| { :value => node.to_s, :type => node.class.to_s } }
+        node.to_a.map{|property| { 
+          :value => property.is_a?(RDFS::Resource) ? (property.rdfs::label.empty? ? property.compact_uri : property.rdfs::label.first) : property.to_s, 
+          :type => property.class.to_s, :uri => property.is_a?(RDFS::Resource) ? property.compact_uri : nil } }
+        
       else
         { :value => node.label.to_s, :type => node.class.to_s, :url => node.respond_to?(:url) ? node.url : nil }
       end
@@ -83,6 +89,19 @@ module Serializer
       attributes_hash = self.attributes_hash
       self.attributes_names.each{|node| hash_result[uri]["navigational_properties"].first[node] = [get_hash_node(attributes_hash[node])] }
       
+      # resource_properties
+      self.direct_properties.each{|property| hash_result[uri]["resource_properties"].first[property.label.to_a.empty? ? property.compact_uri : property.label.first] = get_hash_node(property) }
+      hash_result
+    end
+    
+    
+    def Resource_serializer
+      uri = self.uri.to_s
+      hash_result = { uri => {
+        "label" => self.rdfs::label || [self.compact_uri],
+        "resource_properties" => [{}]
+        }
+      }
       # resource_properties
       self.direct_properties.each{|property| hash_result[uri]["resource_properties"].first[property.label.to_a.empty? ? property.compact_uri : property.label.first] = get_hash_node(property) }
       hash_result
