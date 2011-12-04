@@ -18,6 +18,11 @@
     .IndexNodeAttribute h2 a{color:#444444; }
     .IndexNodeAttribute h2 a:hover{text-decoration:underline;}
     .IndexNodeAttribute span{ border-bottom:none;}
+      input{background: none repeat scroll 0 0 #F6F6F6;
+      border: 1px solid #CCCCCC;
+      color: #777777;
+      font: 90% Verdana;}
+    #loading{ position:relative;float:right;border: 1px solid #CCCCCC; padding:10px;color: #777777; width:150px;height:20px; background-color:#F6F6F6;display:none;}
  </style>
 <body>
 
@@ -27,37 +32,27 @@
   <div id="header">		
      <form action="/execute/index/http%3A%2F%2Fbase%236515ada0-59bf-11e0-b9e1-00264afffe1d" method="post">
         <input name="authenticity_token" type="hidden" value="MGp1/O1GZ+qSQ42hdbGpYhWjG+dobegSyWVD9p084oI=" /> 
-	<input value="Search" name="label_string"/>
+        <input value="Search" name="label_string"/>
      </form>
 
 		
-     <h1><a href="/execute/init">Synth</a></h1>				
+     <h1><a href="/execute/init">Synth - REST API</a></h1>				
      <h2>Semantic Web application development environment</h2>
 		
    
 <ul id="nav">
-
     <li><a href="/execute/index/http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d">Events</a></li>
-
     <li><a href="/execute/index/http%3A%2F%2Fbase%239b6a77f0-59ba-11e0-b9e1-00264afffe1d">Persons</a></li>
-
     <li><a href="/execute/index/http%3A%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d">Publications</a></li>
-
     <li><a href="/execute/index/http%3A%2F%2Fbase%23436aab30-59bd-11e0-b9e1-00264afffe1d?user%5Bresource%5D=http%3A%2F%2Fsymph%23user">My Program</a></li>
-
 </ul>										
 </div>
     
   <div id="sidebar">
-  
-  <h2 id='index_title'></h2>
-  
-  
-
-  <h3 style="margin: 0;">Filter</h3>		
-  <input id="input_filter" name="" type="text" value="filter" />
-
-</div>
+    <h2 id='index_title'></h2>
+    <h3 style="margin: 0;">Filter</h3>		
+    <input id="input_filter" name="" type="text" value="filter" />
+  </div>
 <script>
 
  function escape_url(url){
@@ -76,29 +71,41 @@ function callback_index_node_attr(){
                       (c == total_nodes ? '' : ', ')
                       );
                     });
-  this.request_entries(entry_handler);
+  this.request_entries(index_entry_handler);
 }
  
   function preview_context(url){
+    $("#loading").show();
     var ContextInstance = new Synth.ContextInstance(url, 
                             function(){
-                               
-                               var div_id = escape_url(url)+'_context';
+                               //var div_id = escape_url(url)+'_context';
+                               var div_id = "context";
                                $('#'+div_id).remove();
                                var div = $('<div id="'+div_id+'" style="font-size:11px;"></div>').appendTo('body');
-                              // $('<b>'+attr_name+'</b>: '+ attr[0].value +'<br />').appendTo('#'+div_id);
+                               
+                               //Navigational
+                               var node_position = this.navigational_properties[0].node_position;
+                               var previous_node = this.navigational_properties[0].previous_node;
+                               var next_node = this.navigational_properties[0].next_node;
+                               if(previous_node)
+                                $('<a onclick="preview_context(\''+previous_node+'\')" href="javascript:void(0)"><< Previous</a>').appendTo('#'+div_id);
+                               if(previous_node && next_node)
+                                $('<span> - </span>').appendTo('#'+div_id);
+                               if(next_node)
+                                $('<a onclick="preview_context(\''+next_node+'\')" href="javascript:void(0)"> Next >></a>').appendTo('#'+div_id);
+                               $(' <hr>').appendTo('#'+div_id);
+                               //resource properties
                                $.each( this.resource_properties[0], function(attr_name, attr){
                                   $('<b>'+attr_name+'</b>: '+ attr[0].value +'<br />').appendTo('#'+div_id);
                                });
                                
                                // Setting a dialog box
                                $('#'+div_id ).dialog({title: this.label[0], minWidth: 550});
-                               
-                               //alert('Context instance has '+ this.navigational_properties[0]['previous_node'] + ' resources properties.');
+                               $("#loading").hide();
                             });
   }
  
- function entry_handler(entry){
+ function index_entry_handler(entry){
     $.each(entry, function(uri, value){
       $('#'+escape_url(uri)).html('');
       var ct = 0;
@@ -123,9 +130,26 @@ function callback_index_node_attr(){
   }
 
 function node(key, entry){
-  $('<div class="entry" id="'+escape_url(entry.value)+'"><img src="/images/ajax-loader.gif" border="0"> '+entry.value+'</div>').appendTo('#contentnorightbar');
+  $('<div class="entry" id="'+escape_url(entry.value)+'"><img src="/images/ajax-loader.gif" border="0"> '+entry.value+'</div>').appendTo('#dinamic_content');
 }
 
+//Organizations - http:%2F%2Fbase%2301741d00-59be-11e0-b9e1-00264afffe1d
+//All Publications - 'http%3A%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d'
+//Events - http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d
+
+//'http:%2F%2Fbase%23a39aa7c0-3add-11e0-a7b4-00264afffe1d'
+function require_index(url){
+  if(url){
+  var Index = new Synth.Index(url, 
+                            function(){
+                              $('#dinamic_content').html('');
+                              $('#index_title').html(this.title[0]);
+                              this.foreach_node(node);
+                              this.request_entries(index_entry_handler);
+                            });
+  }
+  
+}
 
 
 $(document).ready(function(){
@@ -145,61 +169,25 @@ $(document).ready(function(){
       }     
   });
   
-  //Organizations - http:%2F%2Fbase%2301741d00-59be-11e0-b9e1-00264afffe1d
-  //All Publications - 'http%3A%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d'
-  //Events - http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d
-
-  var Index = new Synth.Index('http%3A%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d', 
-                              function(){
-                                $('#index_title').html(this.title[0]);
-                                this.foreach_node(node);
-                                this.request_entries(entry_handler);
-                              });
+  $('#request_form').submit(function() {
+    var form = $(this).serializeArray();
+    require_index(form[0].value);
+    return false;
+  });
   
- });
-
- 
+});
  
 </script>
 	
 	<div id="contentnorightbar">
-     
-        <!--input checked="checked" id="preference" name="preference" onclick="new Ajax.Request('/execute/add_event', {asynchronous:true, evalScripts:true, parameters:'id='+this.value+'&amp;add='+this.checked + '&amp;authenticity_token=' + encodeURIComponent('MGp1/O1GZ+qSQ42hdbGpYhWjG+dobegSyWVD9p084oI=')})" style="width: 20px; float: left;" type="checkbox" value="http://data.semanticweb.org/conference/www/2011/event/ps-03" />
-        <div class="entry" id="http://data.semanticweb.org/conference/www/2011/event/ps-03dfdfdf">        
-        <h2><a href="/execute/context/http%3A%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2Fps-03">Posters Display</a></h2>
-        <table>
-
-        <tr>
-          
-            <th>When</th>
-          
-            <th>Where</th>
-          
-        </tr>
-        <tr>        
-        
-            <td>
-              <ul>
-                <li>01/01/2011 03:00 to 11:00&nbsp;&nbsp;&nbsp;</li>
-
-              </ul>
-   	        </td>
-           
-        
-            <td>
-              <ul>
-                <li>Auditorium</li>
-              </ul>
-   	        </td>
-           
-        
-           </tr>
-
-	       </table>
-  	    </div-->
-  	 
-
-  	
+    
+    <form id='request_form'>
+     Index URI: <input id="index_url" name="index_url" type="text" value="http%3A%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d" style="width:440px"/>
+      <input type="submit" value="Load"  style="width:40px"/>
+    </form>
+    <div id='loading'>  <img src="/images/ajax-loader.gif" border="0"> Loading... </div>
+    <div id="dinamic_content"></div>
+    
  </div>
  <div id="footer">
    <!-- If you wish to delete this line of code please purchase our commercial license http://www.sixshootermedia.com/shop/commercial-license/ -->

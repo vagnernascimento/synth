@@ -2,7 +2,7 @@ require 'node_attribute_factory'
 
 #Decorates a resource with IndexEntry behavior
 class IndexEntryDecorator
-  include RdfSerialization
+  include Serializer
   include ActionView::Helpers
  
   

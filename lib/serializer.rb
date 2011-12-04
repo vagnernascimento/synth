@@ -1,4 +1,4 @@
-module RdfSerialization
+module Serializer
   
   def serialize
     case self.class.to_s
@@ -71,6 +71,7 @@ module RdfSerialization
         "label" => self.rdfs::label || [self.compact_uri],
         "resource_properties" => [{}],
         "navigational_properties" => [{
+          "node_position" => self.node_position,
           "next_node" => self.next_node_anchor.respond_to?(:target_url) ? self.next_node_anchor.target_url(true) : nil,
           "previous_node" => self.previous_node_anchor.respond_to?(:target_url) ? self.previous_node_anchor.target_url(true) : nil,
           "next_node_target_url" => self.next_node_anchor.respond_to?(:target_url) ? self.next_node_anchor.target_url : nil,

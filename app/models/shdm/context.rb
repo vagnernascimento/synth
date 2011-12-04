@@ -13,7 +13,7 @@ end
 SHDM::Context
 SHDM::ContextParameter
 
-include RdfSerialization
+include Serializer
 
 class SHDM::Context
   

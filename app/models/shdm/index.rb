@@ -6,7 +6,7 @@ SHDM::QueryIndex
 SHDM::IndexParameter
 SHDM::NavigationAttribute
 
-include RdfSerialization
+include Serializer
 
 class SHDM::Index
   
@@ -48,7 +48,7 @@ class SHDM::ContextIndex;  sub_class_of(SHDM::Index)
   
   class ContextIndexInstance
     
-    include RdfSerialization
+    
     
     attr_reader :index, :context_instance, :parameters_values
     

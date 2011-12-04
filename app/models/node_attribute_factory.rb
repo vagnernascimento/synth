@@ -1,4 +1,4 @@
-include RdfSerialization
+include Serializer
 class NodeAttribute
 
   attr_accessor :navigation_attribute, :resource
