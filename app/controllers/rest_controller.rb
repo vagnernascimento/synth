@@ -1,13 +1,5 @@
 class RestController < ApplicationController
   
-  def classes
-    render :text => RDFS::Class.domain_classes.to_json
-  end
-  
-  def properties
-    render :text => RDF::Property.find_all.to_json
-  end
-  #http://localhost:3000/rest/index/http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d?entry=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent/ps-03
   def index
     #cleaning extra parameters
     params.delete(:controller)
