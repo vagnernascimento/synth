@@ -90,4 +90,15 @@ class RestControllerTest < ActionController::TestCase
     
   end
   
+  test "resuls" do
+    puts "EXECUTED"
+    puts "resource_without_pass_resource_id" 
+    puts "index_without_pass_index_id" 
+    puts "context_without_pass_context_id" 
+    puts "index_passing_only_id" 
+    puts "index_passing_a_node" 
+    puts "node in context" 
+    puts "request_a_shdm_resource" 
+  end
+  
 end
