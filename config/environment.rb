@@ -45,7 +45,7 @@ Rails::Initializer.run do |config|
   # config.i18n.default_locale = :de
 end
 
-$QUERY_DEBUG = true
+$QUERY_DEBUG = false
 
 # Query caching: caches any query on federation manager. 
 # All cache is invalidated on any changes on database.

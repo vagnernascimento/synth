@@ -15,6 +15,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :landmarks
   map.resources :operation_parameters
+	map.resources :interfaces
   map.resources :abstract_interfaces, :member => { :xslt => :get }, :collection => { :htmlTags => :get, :css => :get, :aixsl => :get }
   map.resources :effects
   map.resources :concrete_widgets
@@ -78,7 +79,7 @@ ActionController::Routing::Routes.draw do |map|
   map.connect 'home',       :controller => :applications
   map.connect 'domain',     :controller => :ontologies
   map.connect 'navigation', :controller => :contexts
-  map.connect 'interface',  :controller => :abstract_interfaces
+  map.connect 'interface',  :controller => :interfaces
   map.connect 'behavior',   :controller => :operations
   
 end

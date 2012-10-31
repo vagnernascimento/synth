@@ -1,0 +1,45 @@
+<h1>Add interface</h1>
+
+<% form_for :interface, :url => { :action => "update" } do |f| %>
+  <%= f.error_messages %>
+	<%= hidden_field_tag :id, @interface %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :interface_name %>
+  </p>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :interface_title %>
+  </p>
+	<p>
+    <%= f.label :interface_weight %><br />
+    <%= f.text_field :interface_weight, :size => 2 %>
+  </p>
+	<p>
+    <%= f.label :interface_selection_rule %><br />
+    <%= f.text_area :interface_selection_rule, :rows => 10, :cols => 71 %>
+  </p>
+	<!--
+	<%= f.label :widget_description %>
+	<p>
+		<%= f.radio_button :widget_decription_type, :abstract,  { :checked => true, :onclick => "toggle_widget_description();" } %> Abstract
+		<%= f.radio_button :widget_decription_type, :concrete, { :onclick => "toggle_widget_description();" } %> Concrete
+	</p-->
+  <p>
+    <%= f.label :abstract_scheme %><br />
+    <%= f.text_area :abstract_scheme, :rows => 10, :cols => 71 %>
+  </p>
+	<p>
+    <%= f.label :abstract_rules %><br />
+    <%= f.text_area :abstract_rules, :rows => 10, :cols => 71 %>
+  </p>
+	<p>
+    <%= f.label :concrete_mapping_rules %><br />
+    <%= f.text_area :concrete_mapping_rules, :rows => 10, :cols => 71 %>
+  </p>
+  <p>
+    <%= f.submit 'Save' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', interfaces_path %>

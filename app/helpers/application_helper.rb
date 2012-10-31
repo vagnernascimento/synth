@@ -20,7 +20,8 @@ module ApplicationHelper
     { "home"       => [ "applications" ],
       "domain"     => [ "ontologies", "namespaces", "datasets","resources", "classes", "properties" ],
       "navigation" => [ "contexts", "indexes", "landmarks", "in_context_classes"],
-      "interface"  => [ "abstract_interfaces", "concrete_interfaces", "concrete_widgets", "effects" ],
+      "interface" => 	[ "interfaces" ],
+			#"interface"  => [ "abstract_interfaces", "concrete_interfaces", "concrete_widgets", "effects" ],
       "behavior"   => [ "operations" ]
     }
   end

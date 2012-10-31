@@ -1,0 +1,39 @@
+<h1>Add interface</h1>
+
+<% form_for :interface, :url => { :action => "create" } do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :interface_name %>
+  </p>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :interface_title %>
+  </p>
+	<p>
+    <%= f.label :interface_weight %><br />
+    <%= f.text_field :interface_weight, :size => 2 %>
+  </p>
+	<p>
+    <%= f.label :interface_selection_rule %><br />
+    <%= f.text_area :interface_selection_rule, :rows => 10, :cols => 71 %>
+  </p>
+  <p>
+    <%= f.label :abstract_scheme %><br />
+    <%= f.text_area :abstract_scheme, :rows => 10, :cols => 71 %>
+  </p>
+	<p>
+    <%= f.label :abstract_rules %><br />
+    <%= f.text_area :abstract_rules, :rows => 10, :cols => 71 %>
+  </p>
+	<p>
+    <%= f.label :concrete_mapping_rules %><br />
+    <%= f.text_area :concrete_mapping_rules, :rows => 10, :cols => 71 %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', interfaces_path %>
