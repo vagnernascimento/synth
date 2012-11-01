@@ -10680,3 +10680,3402 @@ Completed in 1017ms (View: 7 | 200 OK [http://localhost/execute/context/http:%2F
 Processing ExecuteController#context (for 127.0.0.1 at 2012-10-31 18:34:06) [GET]
   Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/DT-07", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
 Completed in 802ms (View: 7 | 200 OK [http://localhost/execute/context/http:%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http:%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2FDT-07]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-10-31 18:38:18) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/DT-07", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 1536ms (View: 8 | 200 OK [http://localhost/execute/context/http:%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http:%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2FDT-07]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-10-31 18:38:24) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/DT-07", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 789ms (View: 6 | 200 OK [http://localhost/execute/context/http:%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http:%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2FDT-07]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-10-31 18:38:29) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/DT-07", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 841ms (View: 8 | 200 OK [http://localhost/execute/context/http:%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http:%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2FDT-07]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-10-31 18:38:32) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/DT-07", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 895ms (View: 5 | 200 OK [http://localhost/execute/context/http:%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http:%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2FDT-07]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-10-31 18:39:20) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/DT-07", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 750ms (View: 5 | 200 OK [http://localhost/execute/context/http:%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http:%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2FDT-07]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-10-31 18:39:23) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/DT-07", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 775ms (View: 5 | 200 OK [http://localhost/execute/context/http:%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http:%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2FDT-07]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-10-31 19:12:04) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 770ms (View: 759 | 200 OK [http://localhost/interface]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-10-31 19:12:09) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 196ms (View: 187 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-10-31 19:12:18) [POST]
+  Parameters: {"authenticity_token"=>"LxjoD5a0sYXbTxHlY1e5czvlEVDFnsE/Wg2XytPE+aY=", "id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28", "interface"=>{"interface_name"=>"DefaultContext", "interface_title"=>"Default Context", "interface_weight"=>"3", "interface_selection_rule"=>"set{\r\n has \"current_node\", \"rdf:about\", :URI \r\n has :URI, \"class\", \"SHDM::Context\"\r\n}", "abstract_scheme"=>"aa", "abstract_rules"=>"", "concrete_mapping_rules"=>""}, "commit"=>"Save"}
+Redirected to http://localhost:3000/interfaces
+Completed in 267ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-10-31 19:12:18) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 574ms (View: 567 | 200 OK [http://localhost/interfaces]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-10-31 19:12:23) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/DT-07", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 1239ms (View: 9 | 200 OK [http://localhost/execute/context/http:%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http:%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2FDT-07]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-10-31 19:12:26) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/DT-07", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 811ms (View: 12 | 200 OK [http://localhost/execute/context/http:%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http:%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2FDT-07]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-10-31 19:12:51) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/DT-07", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 845ms (View: 6 | 200 OK [http://localhost/execute/context/http:%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http:%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2FDT-07]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-10-31 19:13:20) [POST]
+  Parameters: {"authenticity_token"=>"LxjoD5a0sYXbTxHlY1e5czvlEVDFnsE/Wg2XytPE+aY=", "id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28", "interface"=>{"interface_name"=>"DefaultContext", "interface_title"=>"Default Context", "interface_weight"=>"3", "interface_selection_rule"=>"set{\r\n has \"current_node\", \"rdf:about\", :URI \r\n has :URI, \"rdf:type\", \"SHDM::Context\"\r\n}", "abstract_scheme"=>"aa", "abstract_rules"=>"", "concrete_mapping_rules"=>""}, "commit"=>"Save"}
+Redirected to http://localhost:3000/interfaces
+Completed in 255ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-10-31 19:13:21) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 450ms (View: 445 | 200 OK [http://localhost/interfaces]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-10-31 19:13:24) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/DT-07", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 959ms (View: 6 | 200 OK [http://localhost/execute/context/http:%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http:%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2FDT-07]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-10-31 19:13:31) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 162ms (View: 157 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-10-31 19:13:39) [POST]
+  Parameters: {"authenticity_token"=>"LxjoD5a0sYXbTxHlY1e5czvlEVDFnsE/Wg2XytPE+aY=", "id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28", "interface"=>{"interface_name"=>"DefaultContext", "interface_title"=>"Default Context", "interface_weight"=>"3", "interface_selection_rule"=>"set{\r\n has \"current_nodde\", \"rdf:about\", :URI \r\n has :URI, \"rdf:type\", \"SHDM::Context\"\r\n}", "abstract_scheme"=>"aa", "abstract_rules"=>"", "concrete_mapping_rules"=>""}, "commit"=>"Save"}
+Redirected to http://localhost:3000/interfaces
+Completed in 205ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-10-31 19:13:39) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 418ms (View: 413 | 200 OK [http://localhost/interfaces]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-10-31 19:13:42) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/DT-07", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 1031ms (View: 7 | 200 OK [http://localhost/execute/context/http:%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http:%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2FDT-07]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-10-31 19:13:50) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 117ms (View: 112 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-10-31 19:13:57) [POST]
+  Parameters: {"authenticity_token"=>"LxjoD5a0sYXbTxHlY1e5czvlEVDFnsE/Wg2XytPE+aY=", "id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28", "interface"=>{"interface_name"=>"DefaultContext", "interface_title"=>"Default Context", "interface_weight"=>"3", "interface_selection_rule"=>"set{\r\n has \"current_node\", \"rdf:about\", :URI \r\n has :URI, \"rdf:type\", \"SHDM::Contextd\"\r\n}", "abstract_scheme"=>"aa", "abstract_rules"=>"", "concrete_mapping_rules"=>""}, "commit"=>"Save"}
+Redirected to http://localhost:3000/interfaces
+Completed in 203ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-10-31 19:13:58) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 409ms (View: 401 | 200 OK [http://localhost/interfaces]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-10-31 19:14:01) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/DT-07", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 985ms (View: 5 | 200 OK [http://localhost/execute/context/http:%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http:%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2FDT-07]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-10-31 19:14:12) [POST]
+  Parameters: {"authenticity_token"=>"LxjoD5a0sYXbTxHlY1e5czvlEVDFnsE/Wg2XytPE+aY=", "id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28", "interface"=>{"interface_name"=>"DefaultContext", "interface_title"=>"Default Context", "interface_weight"=>"3", "interface_selection_rule"=>"set{\r\n has \"current_node\", \"rdf:about\", :URI \r\n has :URI, \"rdf:type\", \"SHDM::Context\"\r\n}", "abstract_scheme"=>"aa", "abstract_rules"=>"", "concrete_mapping_rules"=>""}, "commit"=>"Save"}
+Redirected to http://localhost:3000/interfaces
+Completed in 204ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-10-31 19:14:12) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 400ms (View: 396 | 200 OK [http://localhost/interfaces]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-10-31 19:14:15) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/DT-07", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 993ms (View: 10 | 200 OK [http://localhost/execute/context/http:%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http:%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2FDT-07]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-10-31 19:14:57) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/d-06", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 629ms (View: 5 | 200 OK [http://localhost/execute/context/http%3A%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2Fd-06]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-10-31 19:15:28) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/d-06", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 732ms (View: 5 | 200 OK [http://localhost/execute/context/http%3A%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2Fd-06]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-10-31 19:15:51) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/d-06", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 786ms (View: 7 | 200 OK [http://localhost/execute/context/http%3A%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2Fd-06]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-10-31 19:15:53) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/d-06", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 800ms (View: 6 | 200 OK [http://localhost/execute/context/http%3A%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2Fd-06]
+
+
+Processing OperationsController#index (for 127.0.0.1 at 2012-10-31 19:16:05) [GET]
+Rendering template within layouts/application
+Rendering operations/index
+Completed in 217ms (View: 212 | 200 OK [http://localhost/behavior]
+
+
+Processing OperationsController#edit (for 127.0.0.1 at 2012-10-31 19:16:07) [GET]
+  Parameters: {"id"=>"http://base#5d089320-59c4-11e0-b9e1-00264afffe1d"}
+Rendering template within layouts/application
+Rendering operations/edit
+Completed in 84ms (View: 79 | 200 OK [http://localhost/operations/edit/http:%2F%2Fbase%235d089320-59c4-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-10-31 19:16:32) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/d-06", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 752ms (View: 5 | 200 OK [http://localhost/execute/context/http%3A%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2Fd-06]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-10-31 19:17:54) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/d-06", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 887ms (View: 5 | 200 OK [http://localhost/execute/context/http%3A%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2Fd-06]
+
+
+Processing OperationsController#update (for 127.0.0.1 at 2012-10-31 19:18:26) [POST]
+  Parameters: {"authenticity_token"=>"LxjoD5a0sYXbTxHlY1e5czvlEVDFnsE/Wg2XytPE+aY=", "id"=>"http://base#5d089320-59c4-11e0-b9e1-00264afffe1d", "operation"=>{"operation_name"=>"context", "operation_type"=>"external", "operation_code"=>"$page_cache ||= Hash.new\r\n\r\npage_id = (request.request_uri + params.to_s).hash\r\nunless $page_cache[page_id].nil?\r\n   render :text => $page_cache[page_id]\r\n   return\r\nend\r\n\r\nparams.delete(:controller)\r\nparams.delete(:action)\r\n\r\ncontext_id = params.delete(:id)\r\nnode_id     = params.delete(:node)\r\ncontext      = SHDM::Context.find(context_id)\r\n\r\nnew_params = {}\r\nparams.each{ |i,v| new_params[i] = v.is_a?(Hash) ? RDFS::Resource.new(v[\"resource\"]) : v }\r\nnew_params.delete('authenticity_token')\r\n\r\n@context   = context.new(new_params)\r\n\#@current_node ||= @context.nodes.select{|node| node.uri == node_id}.first\r\n\r\n@current_node ||= NodeDecorator.new(RDFS::Resource.new(node_id), @context)\r\n@current_node ||= @context.nodes.first\r\n\r\n\#$page_cache[page_id] = render_context(@context, @current_node)\r\n#render :text => $page_cache[page_id]\r\n\r\nfacts_from = { :navigational_element => @context, :current_node=> @node, :user_agent => request.env[\"HTTP_USER_AGENT\"], :environment => request.env }\r\n\r\n#render :text => render_interface(@context, @current_node)\r\nrender :text => render_interface(facts_from)\r\n\r\n\r\n"}, "commit"=>"Save"}
+Redirected to http://localhost:3000/operations
+Completed in 233ms | 302 Found [http://localhost/operations/update]
+
+
+Processing OperationsController#index (for 127.0.0.1 at 2012-10-31 19:18:26) [GET]
+Rendering template within layouts/application
+Rendering operations/index
+Completed in 157ms (View: 154 | 200 OK [http://localhost/operations]
+
+
+Processing OperationsController#edit (for 127.0.0.1 at 2012-10-31 19:18:30) [GET]
+  Parameters: {"id"=>"http://base#216f01a0-59c4-11e0-b9e1-00264afffe1d"}
+Rendering template within layouts/application
+Rendering operations/edit
+Completed in 64ms (View: 60 | 200 OK [http://localhost/operations/edit/http:%2F%2Fbase%23216f01a0-59c4-11e0-b9e1-00264afffe1d]
+
+
+Processing OperationsController#update (for 127.0.0.1 at 2012-10-31 19:18:41) [POST]
+  Parameters: {"authenticity_token"=>"LxjoD5a0sYXbTxHlY1e5czvlEVDFnsE/Wg2XytPE+aY=", "id"=>"http://base#216f01a0-59c4-11e0-b9e1-00264afffe1d", "operation"=>{"operation_name"=>"index", "operation_type"=>"external", "operation_code"=>"$page_cache ||= Hash.new\r\nparams_clone = params.clone\r\npage_id = (request.request_uri + params.to_s).hash\r\nunless $page_cache[page_id].nil?\r\n   render :text => $page_cache[page_id]\r\n   return\r\nend\r\n\r\nparams.delete(:controller)\r\nparams.delete(:action)\r\n\r\nindex_id = params.delete(:id)\r\nindex = SHDM::Index.find(index_id)\r\nindex = index.nil? ? SHDM::Index.find_all.first : index\r\n\r\nnew_params = {}\r\nparams.each{ |i,v| new_params[i] = v.is_a?(Hash) ? RDFS::Resource.new(v[\"resource\"]) : v }\r\nnew_params.delete('authenticity_token')\r\n\r\n@index = index.new(new_params)\r\n\r\n@page_title = \"\#{@index.index_title.first}\"\r\n\r\n\#$page_cache[page_id] = render_index(@index)\r\n#render :text => $page_cache[page_id]\r\n\r\nfacts_from = { :navigational_element  => @index, :user_agent => request.env[\"HTTP_USER_AGENT\"], :environment => request.env, :params => params_clone }\r\n\r\n#render :text => render_interface(@context, @current_node)\r\nrender :text => render_interface(facts_from)\r\n"}, "commit"=>"Save"}
+Redirected to http://localhost:3000/operations
+Completed in 193ms | 302 Found [http://localhost/operations/update]
+
+
+Processing OperationsController#index (for 127.0.0.1 at 2012-10-31 19:18:41) [GET]
+Rendering template within layouts/application
+Rendering operations/index
+Completed in 139ms (View: 136 | 200 OK [http://localhost/operations]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-10-31 19:18:44) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 429ms (View: 425 | 200 OK [http://localhost/interface]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-10-31 19:18:48) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 97ms (View: 92 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-10-31 19:19:09) [POST]
+  Parameters: {"authenticity_token"=>"LxjoD5a0sYXbTxHlY1e5czvlEVDFnsE/Wg2XytPE+aY=", "id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28", "interface"=>{"interface_name"=>"DefaultContext", "interface_title"=>"Default Context", "interface_weight"=>"3", "interface_selection_rule"=>"set{\r\n has \"current_node\", \"rdf:about\", :URI \r\n has :URI, \"rdf:type\", \"SHDM::Context\"\r\n}", "abstract_scheme"=>"aa", "abstract_rules"=>"", "concrete_mapping_rules"=>""}, "commit"=>"Save"}
+Redirected to http://localhost:3000/interfaces
+Completed in 60ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-10-31 19:19:09) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 232ms (View: 229 | 200 OK [http://localhost/interfaces]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-10-31 19:19:12) [GET]
+  Parameters: {"id"=>"http://base#9b6a77f0-59ba-11e0-b9e1-00264afffe1d"}
+Completed in 809ms (View: 5 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%239b6a77f0-59ba-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-10-31 19:19:15) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/DT-07", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 972ms (View: 5 | 200 OK [http://localhost/execute/context/http:%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http:%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2FDT-07]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-10-31 19:20:02) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 93ms (View: 88 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-10-31 19:21:00) [POST]
+  Parameters: {"authenticity_token"=>"LxjoD5a0sYXbTxHlY1e5czvlEVDFnsE/Wg2XytPE+aY=", "id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28", "interface"=>{"interface_name"=>"DefaultContext", "interface_title"=>"Default Context", "interface_weight"=>"3", "interface_selection_rule"=>"set{\r\n has \"navigational_element\", \"rdf:about\", :URI \r\n has :URI, \"rdf:type\", \"SHDM::Context\"\r\n}", "abstract_scheme"=>"aa", "abstract_rules"=>"", "concrete_mapping_rules"=>""}, "commit"=>"Save"}
+Redirected to http://localhost:3000/interfaces
+Completed in 235ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-10-31 19:21:00) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 370ms (View: 365 | 200 OK [http://localhost/interfaces]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-10-31 19:21:03) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/DT-07", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 1075ms (View: 6 | 200 OK [http://localhost/execute/context/http:%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http:%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2FDT-07]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-10-31 19:21:15) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/d-06", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 810ms (View: 5 | 200 OK [http://localhost/execute/context/http%3A%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2Fd-06]
+
+
+Processing OperationsController#index (for 127.0.0.1 at 2012-10-31 19:21:23) [GET]
+Rendering template within layouts/application
+Rendering operations/index
+Completed in 146ms (View: 141 | 200 OK [http://localhost/behavior]
+
+
+Processing OperationsController#edit (for 127.0.0.1 at 2012-10-31 19:21:25) [GET]
+  Parameters: {"id"=>"http://base#5d089320-59c4-11e0-b9e1-00264afffe1d"}
+Rendering template within layouts/application
+Rendering operations/edit
+Completed in 62ms (View: 58 | 200 OK [http://localhost/operations/edit/http:%2F%2Fbase%235d089320-59c4-11e0-b9e1-00264afffe1d]
+
+
+Processing OperationsController#update (for 127.0.0.1 at 2012-10-31 19:21:48) [POST]
+  Parameters: {"authenticity_token"=>"LxjoD5a0sYXbTxHlY1e5czvlEVDFnsE/Wg2XytPE+aY=", "id"=>"http://base#5d089320-59c4-11e0-b9e1-00264afffe1d", "operation"=>{"operation_name"=>"context", "operation_type"=>"external", "operation_code"=>"$page_cache ||= Hash.new\r\n\r\npage_id = (request.request_uri + params.to_s).hash\r\nunless $page_cache[page_id].nil?\r\n   render :text => $page_cache[page_id]\r\n   return\r\nend\r\n\r\nparams.delete(:controller)\r\nparams.delete(:action)\r\n\r\ncontext_id = params.delete(:id)\r\nnode_id     = params.delete(:node)\r\ncontext      = SHDM::Context.find(context_id)\r\n\r\nnew_params = {}\r\nparams.each{ |i,v| new_params[i] = v.is_a?(Hash) ? RDFS::Resource.new(v[\"resource\"]) : v }\r\nnew_params.delete('authenticity_token')\r\n\r\n@context   = context.new(new_params)\r\n\#@current_node ||= @context.nodes.select{|node| node.uri == node_id}.first\r\n\r\n@current_node ||= NodeDecorator.new(RDFS::Resource.new(node_id), @context)\r\n@current_node ||= @context.nodes.first\r\n\r\n\#$page_cache[page_id] = render_context(@context, @current_node)\r\n#render :text => $page_cache[page_id]\r\n\r\nfacts_from = { :navigational_element => @context, :current_node=> @current_node, :user_agent => request.env[\"HTTP_USER_AGENT\"], :environment => request.env }\r\n\r\n#render :text => render_interface(@context, @current_node)\r\nrender :text => render_interface(facts_from)\r\n\r\n\r\n"}, "commit"=>"Save"}
+Redirected to http://localhost:3000/operations
+Completed in 189ms | 302 Found [http://localhost/operations/update]
+
+
+Processing OperationsController#index (for 127.0.0.1 at 2012-10-31 19:21:48) [GET]
+Rendering template within layouts/application
+Rendering operations/index
+Completed in 145ms (View: 141 | 200 OK [http://localhost/operations]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-10-31 19:21:57) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/DT-07", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 1274ms (View: 39 | 200 OK [http://localhost/execute/context/http:%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http:%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2FDT-07]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-10-31 19:22:43) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/DT-07", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 682ms (View: 5 | 200 OK [http://localhost/execute/context/http:%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http:%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2FDT-07]
+
+
+Processing OperationsController#edit (for 127.0.0.1 at 2012-10-31 19:23:07) [GET]
+  Parameters: {"id"=>"http://base#5d089320-59c4-11e0-b9e1-00264afffe1d"}
+Rendering template within layouts/application
+Rendering operations/edit
+Completed in 110ms (View: 106 | 200 OK [http://localhost/operations/edit/http:%2F%2Fbase%235d089320-59c4-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-10-31 19:25:56) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/DT-07", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 611ms (View: 6 | 200 OK [http://localhost/execute/context/http:%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http:%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2FDT-07]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-10-31 19:26:11) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/DT-07", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 684ms (View: 5 | 200 OK [http://localhost/execute/context/http:%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http:%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2FDT-07]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-10-31 19:26:52) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/DT-07", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 1280ms (View: 7 | 200 OK [http://localhost/execute/context/http:%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http:%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2FDT-07]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-10-31 19:27:21) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/DT-07", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 723ms (View: 6 | 200 OK [http://localhost/execute/context/http:%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http:%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2FDT-07]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-10-31 19:27:53) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/DT-07", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 1100ms (View: 12 | 200 OK [http://localhost/execute/context/http:%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http:%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2FDT-07]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-10-31 19:28:58) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/DT-07", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 1067ms (View: 6 | 200 OK [http://localhost/execute/context/http:%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http:%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2FDT-07]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-10-31 19:29:08) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 216ms (View: 209 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-10-31 19:29:22) [POST]
+  Parameters: {"authenticity_token"=>"LxjoD5a0sYXbTxHlY1e5czvlEVDFnsE/Wg2XytPE+aY=", "id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28", "interface"=>{"interface_name"=>"DefaultContext", "interface_title"=>"Default Context", "interface_weight"=>"3", "interface_selection_rule"=>"set{\r\n has \"current_node\", \"rdf:about\", :URI \r\n has :URI, \"rdf:type\", \"SHDM::Context\"\r\n}", "abstract_scheme"=>"aa", "abstract_rules"=>"", "concrete_mapping_rules"=>""}, "commit"=>"Save"}
+Redirected to http://localhost:3000/interfaces
+Completed in 209ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-10-31 19:29:23) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 483ms (View: 477 | 200 OK [http://localhost/interfaces]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-10-31 19:29:25) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/DT-07", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 1489ms (View: 5 | 200 OK [http://localhost/execute/context/http:%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http:%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2FDT-07]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-10-31 19:30:21) [POST]
+  Parameters: {"authenticity_token"=>"LxjoD5a0sYXbTxHlY1e5czvlEVDFnsE/Wg2XytPE+aY=", "id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28", "interface"=>{"interface_name"=>"DefaultContext", "interface_title"=>"Default Context", "interface_weight"=>"3", "interface_selection_rule"=>"set{\r\n has \"navigational_element\", \"rdf:about\", :URI \r\n has :URI, \"rdf:type\", \"SHDM::Context\"\r\n}", "abstract_scheme"=>"aa", "abstract_rules"=>"", "concrete_mapping_rules"=>""}, "commit"=>"Save"}
+Redirected to http://localhost:3000/interfaces
+Completed in 209ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-10-31 19:30:21) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 499ms (View: 494 | 200 OK [http://localhost/interfaces]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-10-31 19:30:31) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/DT-07", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 1368ms (View: 12 | 200 OK [http://localhost/execute/context/http:%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http:%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2FDT-07]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-10-31 19:33:14) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 142ms (View: 136 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing OperationsController#edit (for 127.0.0.1 at 2012-10-31 19:50:02) [GET]
+  Parameters: {"id"=>"http://base#5d089320-59c4-11e0-b9e1-00264afffe1d"}
+Rendering template within layouts/application
+Rendering operations/edit
+Completed in 131ms (View: 126 | 200 OK [http://localhost/operations/edit/http:%2F%2Fbase%235d089320-59c4-11e0-b9e1-00264afffe1d]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-10-31 19:50:02) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/codemirror/mode/ruby.js" with {:method=>:get}):
+  org/jruby/RubyProc.java:258:in `call'
+  org/jruby/RubyArray.java:1620:in `each'
+  c:/jruby-1.6.8/lib/ruby/1.9/webrick/httpserver.rb:111:in `service'
+  c:/jruby-1.6.8/lib/ruby/1.9/webrick/httpserver.rb:70:in `run'
+  c:/jruby-1.6.8/lib/ruby/1.9/webrick/server.rb:183:in `start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-10-31 19:50:03) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/codemirror/mode/ruby.js" with {:method=>:get}):
+  org/jruby/RubyProc.java:258:in `call'
+  org/jruby/RubyArray.java:1620:in `each'
+  c:/jruby-1.6.8/lib/ruby/1.9/webrick/httpserver.rb:111:in `service'
+  c:/jruby-1.6.8/lib/ruby/1.9/webrick/httpserver.rb:70:in `run'
+  c:/jruby-1.6.8/lib/ruby/1.9/webrick/server.rb:183:in `start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing OperationsController#edit (for 127.0.0.1 at 2012-10-31 19:51:14) [GET]
+  Parameters: {"id"=>"http://base#5d089320-59c4-11e0-b9e1-00264afffe1d"}
+Rendering template within layouts/application
+Rendering operations/edit
+Completed in 82ms (View: 73 | 200 OK [http://localhost/operations/edit/http:%2F%2Fbase%235d089320-59c4-11e0-b9e1-00264afffe1d]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-10-31 19:53:56) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 139ms (View: 135 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-10-31 19:55:19) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 141ms (View: 135 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-10-31 19:55:49) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 116ms (View: 108 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-10-31 19:55:57) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 160ms (View: 156 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-10-31 19:58:08) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 125ms (View: 120 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-10-31 19:58:08) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/codemirror/lib/util/searchcursor.js" with {:method=>:get}):
+  org/jruby/RubyProc.java:258:in `call'
+  org/jruby/RubyArray.java:1620:in `each'
+  c:/jruby-1.6.8/lib/ruby/1.9/webrick/httpserver.rb:111:in `service'
+  c:/jruby-1.6.8/lib/ruby/1.9/webrick/httpserver.rb:70:in `run'
+  c:/jruby-1.6.8/lib/ruby/1.9/webrick/server.rb:183:in `start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-10-31 19:58:08) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/codemirror/lib/util/match-highlighter.js" with {:method=>:get}):
+  org/jruby/RubyProc.java:258:in `call'
+  org/jruby/RubyArray.java:1620:in `each'
+  c:/jruby-1.6.8/lib/ruby/1.9/webrick/httpserver.rb:111:in `service'
+  c:/jruby-1.6.8/lib/ruby/1.9/webrick/httpserver.rb:70:in `run'
+  c:/jruby-1.6.8/lib/ruby/1.9/webrick/server.rb:183:in `start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-10-31 19:58:09) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/codemirror/lib/util/searchcursor.js" with {:method=>:get}):
+  org/jruby/RubyProc.java:258:in `call'
+  org/jruby/RubyArray.java:1620:in `each'
+  c:/jruby-1.6.8/lib/ruby/1.9/webrick/httpserver.rb:111:in `service'
+  c:/jruby-1.6.8/lib/ruby/1.9/webrick/httpserver.rb:70:in `run'
+  c:/jruby-1.6.8/lib/ruby/1.9/webrick/server.rb:183:in `start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-10-31 19:58:09) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/codemirror/lib/util/match-highlighter.js" with {:method=>:get}):
+  org/jruby/RubyProc.java:258:in `call'
+  org/jruby/RubyArray.java:1620:in `each'
+  c:/jruby-1.6.8/lib/ruby/1.9/webrick/httpserver.rb:111:in `service'
+  c:/jruby-1.6.8/lib/ruby/1.9/webrick/httpserver.rb:70:in `run'
+  c:/jruby-1.6.8/lib/ruby/1.9/webrick/server.rb:183:in `start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-10-31 19:58:48) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 114ms (View: 107 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-10-31 19:58:48) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/codemirror/lib/util/searchcursor.js" with {:method=>:get}):
+  org/jruby/RubyProc.java:258:in `call'
+  org/jruby/RubyArray.java:1620:in `each'
+  c:/jruby-1.6.8/lib/ruby/1.9/webrick/httpserver.rb:111:in `service'
+  c:/jruby-1.6.8/lib/ruby/1.9/webrick/httpserver.rb:70:in `run'
+  c:/jruby-1.6.8/lib/ruby/1.9/webrick/httpserver.rb:48:in `run'
+  c:/jruby-1.6.8/lib/ruby/1.9/webrick/server.rb:183:in `start_thread'
+  c:/jruby-1.6.8/lib/ruby/1.9/webrick/server.rb:173:in `start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-10-31 19:58:48) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/codemirror/lib/util/match-highlighter.js" with {:method=>:get}):
+  org/jruby/RubyProc.java:258:in `call'
+  org/jruby/RubyArray.java:1620:in `each'
+  c:/jruby-1.6.8/lib/ruby/1.9/webrick/httpserver.rb:111:in `service'
+  c:/jruby-1.6.8/lib/ruby/1.9/webrick/httpserver.rb:70:in `run'
+  c:/jruby-1.6.8/lib/ruby/1.9/webrick/httpserver.rb:48:in `run'
+  c:/jruby-1.6.8/lib/ruby/1.9/webrick/server.rb:183:in `start_thread'
+  c:/jruby-1.6.8/lib/ruby/1.9/webrick/server.rb:173:in `start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-10-31 19:58:48) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/codemirror/lib/util/searchcursor.js" with {:method=>:get}):
+  org/jruby/RubyProc.java:258:in `call'
+  org/jruby/RubyArray.java:1620:in `each'
+  c:/jruby-1.6.8/lib/ruby/1.9/webrick/httpserver.rb:111:in `service'
+  c:/jruby-1.6.8/lib/ruby/1.9/webrick/httpserver.rb:70:in `run'
+  c:/jruby-1.6.8/lib/ruby/1.9/webrick/httpserver.rb:48:in `run'
+  c:/jruby-1.6.8/lib/ruby/1.9/webrick/server.rb:183:in `start_thread'
+  c:/jruby-1.6.8/lib/ruby/1.9/webrick/server.rb:173:in `start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-10-31 19:58:48) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/codemirror/lib/util/match-highlighter.js" with {:method=>:get}):
+  org/jruby/RubyProc.java:258:in `call'
+  org/jruby/RubyArray.java:1620:in `each'
+  c:/jruby-1.6.8/lib/ruby/1.9/webrick/httpserver.rb:111:in `service'
+  c:/jruby-1.6.8/lib/ruby/1.9/webrick/httpserver.rb:70:in `run'
+  c:/jruby-1.6.8/lib/ruby/1.9/webrick/httpserver.rb:48:in `run'
+  c:/jruby-1.6.8/lib/ruby/1.9/webrick/server.rb:183:in `start_thread'
+  c:/jruby-1.6.8/lib/ruby/1.9/webrick/server.rb:173:in `start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-10-31 19:59:26) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 93ms (View: 89 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-10-31 20:00:29) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 94ms (View: 89 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-10-31 20:00:44) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 109ms (View: 104 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-10-31 20:01:35) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 98ms (View: 94 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-10-31 20:01:50) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 114ms (View: 95 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-10-31 20:02:48) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 92ms (View: 83 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-10-31 20:03:34) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 134ms (View: 129 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-10-31 20:04:46) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 131ms (View: 126 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-10-31 20:04:48) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 90ms (View: 85 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-10-31 20:04:58) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 98ms (View: 93 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing ApplicationsController#index (for 127.0.0.1 at 2012-10-31 21:19:43) [GET]
+Rendering template within layouts/application
+Rendering applications/index
+Completed in 593ms (View: 577 | 200 OK [http://localhost/]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-10-31 21:19:48) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 1888ms (View: 1857 | 200 OK [http://localhost/interface]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-10-31 21:19:54) [GET]
+  Parameters: {"id"=>"http://base#96a9ecb0-2384-11e2-9220-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 577ms (View: 562 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%2396a9ecb0-2384-11e2-9220-00044b181e28]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-10-31 21:20:37) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/ps-03", "id"=>"http://base#84f5cd60-59bc-11e0-b9e1-00264afffe1d"}
+Completed in 390ms (View: 15 | 200 OK [http://localhost/execute/context/http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d?node=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent/ps-03]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-10-31 21:20:44) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/ps-03", "id"=>"http://base#84f5cd60-59bc-11e0-b9e1-00264afffe1d"}
+Completed in 3963ms (View: 0 | 200 OK [http://localhost/execute/index/http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d?node=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent/ps-03]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-10-31 21:22:03) [GET]
+  Parameters: {"entry"=>"http://data.semanticweb.org/conference/www/2011/event/d-14"}
+
+ActionController::RoutingError (No route matches "/rest/index/http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d" with {:method=>:get}):
+  org/jruby/RubyProc.java:262:in `call'
+  org/jruby/RubyArray.java:1603:in `each'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:111:in `service'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:70:in `run'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:183:in `start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-10-31 21:22:08) [GET]
+  Parameters: {"entry"=>"http://data.semanticweb.org/conference/www/2011/event/d-14", "id"=>"http://base#84f5cd60-59bc-11e0-b9e1-00264afffe1d"}
+Completed in 1451ms (View: 16 | 200 OK [http://localhost/execute/index/http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d?entry=http://data.semanticweb.org/conference/www/2011/event/d-14]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-10-31 21:22:21) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 593ms (View: 593 | 200 OK [http://localhost/interfaces]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-10-31 21:22:29) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 344ms (View: 312 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-10-31 21:22:35) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 499ms (View: 484 | 200 OK [http://localhost/interfaces]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-10-31 21:22:42) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 390ms (View: 296 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-10-31 21:22:59) [POST]
+  Parameters: {"authenticity_token"=>"/hts3ecfLAspwA3UBh2gxTwznRGzOhtTEFUUWnYL+ng=", "id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28", "interface"=>{"interface_name"=>"AllPersons", "interface_title"=>"All Persons", "interface_weight"=>"1", "interface_selection_rule"=>"set{\r\n  #has :URI, \"index_title\", \"All Persons\"\r\n  has :URI, \"class\", \"SHDM::Index\"\r\n  has \"user_agent\", \"mobile\", false\r\n}", "abstract_scheme"=>"", "abstract_rules"=>"", "concrete_mapping_rules"=>""}, "commit"=>"Save"}
+Redirected to http://localhost:3000/interfaces
+Completed in 427ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-10-31 21:23:00) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 1213ms (View: 1182 | 200 OK [http://localhost/interfaces]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-10-31 21:23:04) [GET]
+  Parameters: {"entry"=>"http://data.semanticweb.org/conference/www/2011/event/d-14", "id"=>"http://base#84f5cd60-59bc-11e0-b9e1-00264afffe1d"}
+Completed in 1608ms (View: 9 | 200 OK [http://localhost/execute/index/http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d?entry=http://data.semanticweb.org/conference/www/2011/event/d-14]
+
+
+Processing ApplicationsController#index (for 127.0.0.1 at 2012-11-01 10:30:12) [GET]
+Rendering template within layouts/application
+Rendering applications/index
+Completed in 697ms (View: 675 | 200 OK [http://localhost/]
+
+
+Processing ContextsController#index (for 127.0.0.1 at 2012-11-01 10:30:18) [GET]
+Rendering template within layouts/application
+Rendering contexts/index
+Completed in 1574ms (View: 1321 | 200 OK [http://localhost/navigation]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-01 10:30:21) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 1848ms (View: 1801 | 200 OK [http://localhost/interface]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 10:30:28) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 517ms (View: 487 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 10:34:45) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 435ms (View: 366 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 10:35:22) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 685ms (View: 664 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 10:37:52) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 385ms (View: 320 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 11:10:51) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 385ms (View: 361 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 11:11:53) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 349ms (View: 334 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing ContextsController#index (for 127.0.0.1 at 2012-11-01 11:17:38) [GET]
+Rendering template within layouts/application
+Rendering contexts/index
+Completed in 429ms (View: 410 | 200 OK [http://localhost/navigation]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-01 11:17:40) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 584ms (View: 574 | 200 OK [http://localhost/interface]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 11:17:44) [GET]
+  Parameters: {"id"=>"http://base#8946e970-2383-11e2-9220-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 350ms (View: 334 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%238946e970-2383-11e2-9220-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 11:18:16) [GET]
+  Parameters: {"id"=>"http://base#8946e970-2383-11e2-9220-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 285ms (View: 272 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%238946e970-2383-11e2-9220-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 11:18:48) [GET]
+  Parameters: {"id"=>"http://base#8946e970-2383-11e2-9220-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 285ms (View: 272 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%238946e970-2383-11e2-9220-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 11:19:12) [GET]
+  Parameters: {"id"=>"http://base#8946e970-2383-11e2-9220-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 212ms (View: 197 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%238946e970-2383-11e2-9220-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 11:19:27) [GET]
+  Parameters: {"id"=>"http://base#8946e970-2383-11e2-9220-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 236ms (View: 223 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%238946e970-2383-11e2-9220-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 11:19:47) [GET]
+  Parameters: {"id"=>"http://base#8946e970-2383-11e2-9220-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 226ms (View: 203 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%238946e970-2383-11e2-9220-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 11:20:12) [GET]
+  Parameters: {"id"=>"http://base#8946e970-2383-11e2-9220-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 419ms (View: 407 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%238946e970-2383-11e2-9220-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 11:21:08) [GET]
+  Parameters: {"id"=>"http://base#8946e970-2383-11e2-9220-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 325ms (View: 313 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%238946e970-2383-11e2-9220-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 11:22:26) [GET]
+  Parameters: {"id"=>"http://base#8946e970-2383-11e2-9220-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 217ms (View: 204 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%238946e970-2383-11e2-9220-00044b181e28]
+
+
+Processing OperationsController#index (for 127.0.0.1 at 2012-11-01 11:35:43) [GET]
+Rendering template within layouts/application
+Rendering operations/index
+Completed in 271ms (View: 257 | 200 OK [http://localhost/behavior]
+
+
+Processing OperationsController#edit (for 127.0.0.1 at 2012-11-01 11:35:48) [GET]
+  Parameters: {"id"=>"http://base#5d089320-59c4-11e0-b9e1-00264afffe1d"}
+Rendering template within layouts/application
+Rendering operations/edit
+Completed in 218ms (View: 204 | 200 OK [http://localhost/operations/edit/http:%2F%2Fbase%235d089320-59c4-11e0-b9e1-00264afffe1d]
+
+
+Processing OperationsController#edit (for 127.0.0.1 at 2012-11-01 11:37:21) [GET]
+  Parameters: {"id"=>"http://base#5d089320-59c4-11e0-b9e1-00264afffe1d"}
+Rendering template within layouts/application
+Rendering operations/edit
+Completed in 161ms (View: 149 | 200 OK [http://localhost/operations/edit/http:%2F%2Fbase%235d089320-59c4-11e0-b9e1-00264afffe1d]
+
+
+Processing OperationsController#edit (for 127.0.0.1 at 2012-11-01 11:37:29) [GET]
+  Parameters: {"id"=>"http://base#5d089320-59c4-11e0-b9e1-00264afffe1d"}
+Rendering template within layouts/application
+Rendering operations/edit
+Completed in 130ms (View: 119 | 200 OK [http://localhost/operations/edit/http:%2F%2Fbase%235d089320-59c4-11e0-b9e1-00264afffe1d]
+
+
+Processing OperationsController#edit (for 127.0.0.1 at 2012-11-01 11:37:53) [GET]
+  Parameters: {"id"=>"http://base#5d089320-59c4-11e0-b9e1-00264afffe1d"}
+Rendering template within layouts/application
+Rendering operations/edit
+Completed in 217ms (View: 181 | 200 OK [http://localhost/operations/edit/http:%2F%2Fbase%235d089320-59c4-11e0-b9e1-00264afffe1d]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-01 11:38:49) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 498ms (View: 490 | 200 OK [http://localhost/interface]
+
+
+Processing OperationsController#index (for 127.0.0.1 at 2012-11-01 11:38:56) [GET]
+Rendering template within layouts/application
+Rendering operations/index
+Completed in 214ms (View: 206 | 200 OK [http://localhost/behavior]
+
+
+Processing OperationsController#new (for 127.0.0.1 at 2012-11-01 11:38:59) [GET]
+Rendering template within layouts/application
+Rendering operations/new
+Completed in 136ms (View: 126 | 200 OK [http://localhost/operations/new]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-01 11:39:10) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 457ms (View: 450 | 200 OK [http://localhost/interface]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 11:39:13) [GET]
+  Parameters: {"id"=>"http://base#69537700-59c2-11e0-b9e1-00264afffe1d"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 244ms (View: 233 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%2369537700-59c2-11e0-b9e1-00264afffe1d]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 11:39:36) [GET]
+  Parameters: {"id"=>"http://base#69537700-59c2-11e0-b9e1-00264afffe1d"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 298ms (View: 285 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%2369537700-59c2-11e0-b9e1-00264afffe1d]
+
+
+Processing OperationsController#index (for 127.0.0.1 at 2012-11-01 11:40:48) [GET]
+Rendering template within layouts/application
+Rendering operations/index
+Completed in 194ms (View: 187 | 200 OK [http://localhost/behavior]
+
+
+Processing OperationsController#new (for 127.0.0.1 at 2012-11-01 11:40:51) [GET]
+Rendering template within layouts/application
+Rendering operations/new
+Completed in 156ms (View: 117 | 200 OK [http://localhost/operations/new]
+
+
+Processing OperationsController#edit (for 127.0.0.1 at 2012-11-01 11:40:58) [GET]
+  Parameters: {"id"=>"http://base#5d089320-59c4-11e0-b9e1-00264afffe1d"}
+Rendering template within layouts/application
+Rendering operations/edit
+Completed in 160ms (View: 147 | 200 OK [http://localhost/operations/edit/http:%2F%2Fbase%235d089320-59c4-11e0-b9e1-00264afffe1d]
+
+
+Processing OperationsController#index (for 127.0.0.1 at 2012-11-01 11:44:40) [GET]
+Rendering template within layouts/application
+Rendering operations/index
+Completed in 179ms (View: 174 | 200 OK [http://localhost/behavior]
+
+
+Processing OperationsController#edit (for 127.0.0.1 at 2012-11-01 11:44:45) [GET]
+  Parameters: {"id"=>"http://base#5d089320-59c4-11e0-b9e1-00264afffe1d"}
+Rendering template within layouts/application
+Rendering operations/edit
+Completed in 134ms (View: 124 | 200 OK [http://localhost/operations/edit/http:%2F%2Fbase%235d089320-59c4-11e0-b9e1-00264afffe1d]
+
+
+Processing OperationsController#index (for 127.0.0.1 at 2012-11-01 11:45:03) [GET]
+Rendering template within layouts/application
+Rendering operations/index
+Completed in 268ms (View: 261 | 200 OK [http://localhost/operations]
+
+
+Processing OperationsController#edit (for 127.0.0.1 at 2012-11-01 11:45:14) [GET]
+  Parameters: {"id"=>"http://base#216f01a0-59c4-11e0-b9e1-00264afffe1d"}
+Rendering template within layouts/application
+Rendering operations/edit
+Completed in 140ms (View: 131 | 200 OK [http://localhost/operations/edit/http:%2F%2Fbase%23216f01a0-59c4-11e0-b9e1-00264afffe1d]
+
+
+Processing OperationsController#edit (for 127.0.0.1 at 2012-11-01 11:51:50) [GET]
+  Parameters: {"id"=>"http://base#216f01a0-59c4-11e0-b9e1-00264afffe1d"}
+Rendering template within layouts/application
+Rendering operations/edit
+Completed in 153ms (View: 144 | 200 OK [http://localhost/operations/edit/http:%2F%2Fbase%23216f01a0-59c4-11e0-b9e1-00264afffe1d]
+
+
+Processing OperationsController#index (for 127.0.0.1 at 2012-11-01 11:52:05) [GET]
+Rendering template within layouts/application
+Rendering operations/index
+Completed in 161ms (View: 157 | 200 OK [http://localhost/operations]
+
+
+Processing OperationsController#new (for 127.0.0.1 at 2012-11-01 11:52:08) [GET]
+Rendering template within layouts/application
+Rendering operations/new
+Completed in 145ms (View: 137 | 200 OK [http://localhost/operations/new]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-01 11:55:03) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 508ms (View: 502 | 200 OK [http://localhost/interface]
+
+
+Processing InterfacesController#new (for 127.0.0.1 at 2012-11-01 11:55:07) [GET]
+Rendering template within layouts/application
+Rendering interfaces/new
+
+ActionView::TemplateError (Missing template interfaces/_form_fields.erb in view path C:/Users/Vagner/Documents/My Dropbox/MESTRADO/dissertacao/DEV/synth/app/views) on line #35 of app/views/interfaces/new.html.erb:
+32:     <%= f.text_area :concrete_mapping_rules, :rows => 10, :cols => 71 %>
+33:   </p>
+34:   
+35:   <% render "form_fields" %>
+36:   <p>
+37:     <%= f.submit 'Create' %>
+38:   </p>
+
+    app/views/interfaces/new.html.erb:35
+    app/views/interfaces/new.html.erb:3
+    org/jruby/RubyBasicObject.java:1691:in `__send__'
+    org/jruby/RubyKernel.java:2117:in `send'
+    org/jruby/RubyBasicObject.java:1691:in `__send__'
+    org/jruby/RubyKernel.java:2117:in `send'
+    org/jruby/RubyProc.java:262:in `call'
+    org/jruby/RubyArray.java:1603:in `each'
+    app/controllers/interfaces_controller.rb:12:in `new'
+    org/jruby/RubyBasicObject.java:1685:in `__send__'
+    org/jruby/RubyKernel.java:2113:in `send'
+    org/jruby/RubyBasicObject.java:1685:in `__send__'
+    org/jruby/RubyKernel.java:2113:in `send'
+    org/jruby/RubyProc.java:262:in `call'
+    org/jruby/RubyArray.java:1603:in `each'
+    c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:111:in `service'
+    c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:70:in `run'
+    c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:48:in `run'
+    c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:183:in `start_thread'
+    c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:173:in `start_thread'
+
+Rendered rescues/_trace (236.0ms)
+Rendered rescues/_request_and_response (76.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InterfacesController#new (for 127.0.0.1 at 2012-11-01 11:55:40) [GET]
+Rendering template within layouts/application
+Rendering interfaces/new
+
+ActionView::TemplateError (undefined local variable or method `f' for #<ActionView::Base:0x7ecc938c>) on line #2 of app/views/interfaces/_form_fields.erb:
+1: <p>
+2:     <%= f.label :name %><br />
+3:     <%= f.text_field :interface_name %>
+4:   </p>
+5:   <p>
+
+    app/views/interfaces/_form_fields.erb:2
+    org/jruby/RubyBasicObject.java:1691:in `__send__'
+    org/jruby/RubyKernel.java:2117:in `send'
+    app/views/interfaces/new.html.erb:35
+    app/views/interfaces/new.html.erb:3
+    org/jruby/RubyBasicObject.java:1691:in `__send__'
+    org/jruby/RubyKernel.java:2117:in `send'
+    org/jruby/RubyBasicObject.java:1691:in `__send__'
+    org/jruby/RubyKernel.java:2117:in `send'
+    org/jruby/RubyProc.java:262:in `call'
+    org/jruby/RubyArray.java:1603:in `each'
+    app/controllers/interfaces_controller.rb:12:in `new'
+    org/jruby/RubyBasicObject.java:1685:in `__send__'
+    org/jruby/RubyKernel.java:2113:in `send'
+    org/jruby/RubyBasicObject.java:1685:in `__send__'
+    org/jruby/RubyKernel.java:2113:in `send'
+    org/jruby/RubyProc.java:262:in `call'
+    org/jruby/RubyArray.java:1603:in `each'
+    c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:111:in `service'
+    c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:70:in `run'
+    c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:48:in `run'
+    c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:183:in `start_thread'
+    c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:173:in `start_thread'
+
+Rendered rescues/_trace (204.0ms)
+Rendered rescues/_request_and_response (3.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InterfacesController#new (for 127.0.0.1 at 2012-11-01 11:58:04) [GET]
+Rendering template within layouts/application
+Rendering interfaces/new
+
+ActionView::TemplateError (undefined local variable or method `f' for #<ActionView::Base:0x2c3a2b23>) on line #2 of app/views/interfaces/_form_fields.erb:
+1: <p>
+2:     <%= f.label :name %><br />
+3:     <%= f.text_field :interface_name %>
+4:   </p>
+5:   <p>
+
+    app/views/interfaces/_form_fields.erb:2
+    org/jruby/RubyBasicObject.java:1691:in `__send__'
+    org/jruby/RubyKernel.java:2117:in `send'
+    app/views/interfaces/new.html.erb:35
+    app/views/interfaces/new.html.erb:3
+    org/jruby/RubyBasicObject.java:1691:in `__send__'
+    org/jruby/RubyKernel.java:2117:in `send'
+    org/jruby/RubyBasicObject.java:1691:in `__send__'
+    org/jruby/RubyKernel.java:2117:in `send'
+    org/jruby/RubyProc.java:262:in `call'
+    org/jruby/RubyArray.java:1603:in `each'
+    app/controllers/interfaces_controller.rb:12:in `new'
+    org/jruby/RubyBasicObject.java:1685:in `__send__'
+    org/jruby/RubyKernel.java:2113:in `send'
+    org/jruby/RubyBasicObject.java:1685:in `__send__'
+    org/jruby/RubyKernel.java:2113:in `send'
+    org/jruby/RubyProc.java:262:in `call'
+    org/jruby/RubyArray.java:1603:in `each'
+    c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:111:in `service'
+    c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:70:in `run'
+    c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:48:in `run'
+    c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:183:in `start_thread'
+    c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:173:in `start_thread'
+
+Rendered rescues/_trace (155.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InterfacesController#new (for 127.0.0.1 at 2012-11-01 11:59:23) [GET]
+Rendering template within layouts/application
+Rendering interfaces/new
+Completed in 88ms (View: 83 | 200 OK [http://localhost/interfaces/new]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-01 12:02:19) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 456ms (View: 451 | 200 OK [http://localhost/interface]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 12:02:21) [GET]
+  Parameters: {"id"=>"http://base#dc27c930-59c1-11e0-b9e1-00264afffe1d"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 296ms (View: 285 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23dc27c930-59c1-11e0-b9e1-00264afffe1d]
+
+
+Processing OperationsController#index (for 127.0.0.1 at 2012-11-01 12:02:25) [GET]
+Rendering template within layouts/application
+Rendering operations/index
+Completed in 189ms (View: 184 | 200 OK [http://localhost/behavior]
+
+
+Processing OperationsController#new (for 127.0.0.1 at 2012-11-01 12:02:26) [GET]
+Rendering template within layouts/application
+Rendering operations/new
+Completed in 288ms (View: 230 | 200 OK [http://localhost/operations/new]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-01 12:02:30) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 563ms (View: 558 | 200 OK [http://localhost/interface]
+
+
+Processing ContextsController#index (for 127.0.0.1 at 2012-11-01 12:05:26) [GET]
+Rendering template within layouts/application
+Rendering contexts/index
+Completed in 509ms (View: 493 | 200 OK [http://localhost/navigation]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-01 12:05:27) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 486ms (View: 470 | 200 OK [http://localhost/interface]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 12:07:09) [GET]
+  Parameters: {"id"=>"http://base#8946e970-2383-11e2-9220-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 350ms (View: 337 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%238946e970-2383-11e2-9220-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 12:07:17) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 325ms (View: 313 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 12:07:21) [GET]
+  Parameters: {"id"=>"http://base#8946e970-2383-11e2-9220-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 277ms (View: 237 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%238946e970-2383-11e2-9220-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 12:07:28) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 262ms (View: 252 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 12:08:23) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 295ms (View: 281 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 12:08:27) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 244ms (View: 210 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 12:09:17) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 224ms (View: 212 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 12:09:46) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 272ms (View: 262 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 12:10:05) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 206ms (View: 196 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 12:10:08) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 223ms (View: 216 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 12:10:19) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 211ms (View: 202 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 12:10:24) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 265ms (View: 254 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 12:10:46) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 197ms (View: 187 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 12:11:12) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 215ms (View: 206 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 12:11:56) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 217ms (View: 208 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 12:12:23) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 303ms (View: 285 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 12:12:31) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 204ms (View: 194 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 12:13:39) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 216ms (View: 202 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 12:13:58) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 257ms (View: 242 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 12:37:38) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 296ms (View: 286 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-11-01 12:37:39) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery/ui/minified/jquery.ui.core" with {:method=>:get}):
+  org/jruby/RubyProc.java:262:in `call'
+  org/jruby/RubyArray.java:1603:in `each'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:111:in `service'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:70:in `run'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:48:in `run'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:183:in `start_thread'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:173:in `start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-11-01 12:37:39) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery/ui/minified/jquery.ui.tabs" with {:method=>:get}):
+  org/jruby/RubyProc.java:262:in `call'
+  org/jruby/RubyArray.java:1603:in `each'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:111:in `service'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:70:in `run'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:48:in `run'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:183:in `start_thread'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:173:in `start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-11-01 12:37:40) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery/ui/minified/jquery.ui.widget" with {:method=>:get}):
+  org/jruby/RubyProc.java:262:in `call'
+  org/jruby/RubyArray.java:1603:in `each'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:111:in `service'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:70:in `run'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:48:in `run'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:183:in `start_thread'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:173:in `start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ContextsController#index (for 127.0.0.1 at 2012-11-01 12:37:42) [GET]
+Rendering template within layouts/application
+Rendering contexts/index
+Completed in 302ms (View: 289 | 200 OK [http://localhost/navigation]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-11-01 12:37:43) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery/ui/minified/jquery.ui.tabs" with {:method=>:get}):
+  org/jruby/RubyProc.java:262:in `call'
+  org/jruby/RubyArray.java:1603:in `each'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:111:in `service'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:70:in `run'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:48:in `run'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:183:in `start_thread'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:173:in `start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-11-01 12:37:43) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery/ui/minified/jquery.ui.core" with {:method=>:get}):
+  org/jruby/RubyProc.java:262:in `call'
+  org/jruby/RubyArray.java:1603:in `each'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:111:in `service'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:70:in `run'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:48:in `run'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:183:in `start_thread'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:173:in `start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-11-01 12:37:43) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery/ui/minified/jquery.ui.widget" with {:method=>:get}):
+  org/jruby/RubyProc.java:262:in `call'
+  org/jruby/RubyArray.java:1603:in `each'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:111:in `service'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:70:in `run'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:48:in `run'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:183:in `start_thread'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:173:in `start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-01 12:37:44) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 434ms (View: 428 | 200 OK [http://localhost/interface]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-11-01 12:37:45) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery/ui/minified/jquery.ui.widget" with {:method=>:get}):
+  org/jruby/RubyProc.java:262:in `call'
+  org/jruby/RubyArray.java:1603:in `each'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:111:in `service'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:70:in `run'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:48:in `run'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:183:in `start_thread'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:173:in `start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-11-01 12:37:45) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery/ui/minified/jquery.ui.core" with {:method=>:get}):
+  org/jruby/RubyProc.java:262:in `call'
+  org/jruby/RubyArray.java:1603:in `each'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:111:in `service'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:70:in `run'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:48:in `run'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:183:in `start_thread'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:173:in `start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-11-01 12:37:45) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery/ui/minified/jquery.ui.tabs" with {:method=>:get}):
+  org/jruby/RubyProc.java:262:in `call'
+  org/jruby/RubyArray.java:1603:in `each'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:111:in `service'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:70:in `run'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:48:in `run'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:183:in `start_thread'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:173:in `start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 12:37:48) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 196ms (View: 187 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-11-01 12:37:48) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery/ui/minified/jquery.ui.core" with {:method=>:get}):
+  org/jruby/RubyProc.java:262:in `call'
+  org/jruby/RubyArray.java:1603:in `each'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:111:in `service'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:70:in `run'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:48:in `run'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:183:in `start_thread'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:173:in `start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-11-01 12:37:48) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery/ui/minified/jquery.ui.widget" with {:method=>:get}):
+  org/jruby/RubyProc.java:262:in `call'
+  org/jruby/RubyArray.java:1603:in `each'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:111:in `service'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:70:in `run'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:48:in `run'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:183:in `start_thread'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:173:in `start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-11-01 12:37:49) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery/ui/minified/jquery.ui.tabs" with {:method=>:get}):
+  org/jruby/RubyProc.java:262:in `call'
+  org/jruby/RubyArray.java:1603:in `each'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:111:in `service'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:70:in `run'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:48:in `run'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:183:in `start_thread'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:173:in `start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 12:39:26) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 257ms (View: 243 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-11-01 12:39:27) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery/ui/minified/jquery.ui.core" with {:method=>:get}):
+  org/jruby/RubyProc.java:262:in `call'
+  org/jruby/RubyArray.java:1603:in `each'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:111:in `service'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:70:in `run'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:48:in `run'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:183:in `start_thread'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:173:in `start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-11-01 12:39:27) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery/ui/minified/jquery.ui.widget" with {:method=>:get}):
+  org/jruby/RubyProc.java:262:in `call'
+  org/jruby/RubyArray.java:1603:in `each'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:111:in `service'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:70:in `run'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:48:in `run'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:183:in `start_thread'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:173:in `start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-11-01 12:39:27) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery/ui/minified/jquery.ui.tabs" with {:method=>:get}):
+  org/jruby/RubyProc.java:262:in `call'
+  org/jruby/RubyArray.java:1603:in `each'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:111:in `service'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:70:in `run'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:48:in `run'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:183:in `start_thread'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:173:in `start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-11-01 12:39:27) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery/ui/minified/jquery.ui.core" with {:method=>:get}):
+  org/jruby/RubyProc.java:262:in `call'
+  org/jruby/RubyArray.java:1603:in `each'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:111:in `service'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:70:in `run'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:48:in `run'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:183:in `start_thread'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:173:in `start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-11-01 12:39:27) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery/ui/minified/jquery.ui.widget" with {:method=>:get}):
+  org/jruby/RubyProc.java:262:in `call'
+  org/jruby/RubyArray.java:1603:in `each'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:111:in `service'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:70:in `run'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:48:in `run'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:183:in `start_thread'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:173:in `start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-11-01 12:39:27) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery/ui/minified/jquery.ui.tabs" with {:method=>:get}):
+  org/jruby/RubyProc.java:262:in `call'
+  org/jruby/RubyArray.java:1603:in `each'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:111:in `service'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:70:in `run'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:48:in `run'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:183:in `start_thread'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:173:in `start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 12:40:44) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 171ms (View: 152 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-11-01 12:40:52) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery/ui/minified/jquery.ui.core" with {:method=>:get}):
+  org/jruby/RubyProc.java:262:in `call'
+  org/jruby/RubyArray.java:1603:in `each'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:111:in `service'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:70:in `run'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:48:in `run'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:183:in `start_thread'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:173:in `start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 12:40:54) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 186ms (View: 164 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 12:46:27) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 170ms (View: 160 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing ContextsController#index (for 127.0.0.1 at 2012-11-01 12:46:35) [GET]
+Rendering template within layouts/application
+Rendering contexts/index
+Completed in 329ms (View: 318 | 200 OK [http://localhost/navigation]
+
+
+Processing ContextsController#index (for 127.0.0.1 at 2012-11-01 12:46:52) [GET]
+Rendering template within layouts/application
+Rendering contexts/index
+Completed in 310ms (View: 290 | 200 OK [http://localhost/navigation]
+
+
+Processing ContextsController#index (for 127.0.0.1 at 2012-11-01 12:47:08) [GET]
+Rendering template within layouts/application
+Rendering contexts/index
+Completed in 377ms (View: 364 | 200 OK [http://localhost/navigation]
+
+
+Processing ContextsController#index (for 127.0.0.1 at 2012-11-01 12:47:30) [GET]
+Rendering template within layouts/application
+Rendering contexts/index
+Completed in 305ms (View: 287 | 200 OK [http://localhost/navigation]
+
+
+Processing ContextsController#index (for 127.0.0.1 at 2012-11-01 12:48:40) [GET]
+Rendering template within layouts/application
+Rendering contexts/index
+Completed in 333ms (View: 321 | 200 OK [http://localhost/navigation]
+
+
+Processing ContextsController#index (for 127.0.0.1 at 2012-11-01 12:48:45) [GET]
+Rendering template within layouts/application
+Rendering contexts/index
+Completed in 326ms (View: 310 | 200 OK [http://localhost/navigation]
+
+
+Processing ContextsController#index (for 127.0.0.1 at 2012-11-01 12:49:00) [GET]
+Rendering template within layouts/application
+Rendering contexts/index
+Completed in 331ms (View: 317 | 200 OK [http://localhost/navigation]
+
+
+Processing ContextsController#index (for 127.0.0.1 at 2012-11-01 12:52:56) [GET]
+Rendering template within layouts/application
+Rendering contexts/index
+Completed in 305ms (View: 293 | 200 OK [http://localhost/navigation]
+
+
+Processing ContextsController#index (for 127.0.0.1 at 2012-11-01 12:54:24) [GET]
+Rendering template within layouts/application
+Rendering contexts/index
+Completed in 301ms (View: 287 | 200 OK [http://localhost/navigation]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-01 12:54:26) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 433ms (View: 429 | 200 OK [http://localhost/interface]
+
+
+Processing OntologiesController#index (for 127.0.0.1 at 2012-11-01 12:54:29) [GET]
+Rendering template within layouts/application
+Rendering ontologies/index
+Completed in 95ms (View: 87 | 200 OK [http://localhost/domain]
+
+
+Processing ContextsController#index (for 127.0.0.1 at 2012-11-01 12:54:31) [GET]
+Rendering template within layouts/application
+Rendering contexts/index
+Completed in 302ms (View: 290 | 200 OK [http://localhost/navigation]
+
+
+Processing ContextsController#edit (for 127.0.0.1 at 2012-11-01 12:54:34) [GET]
+  Parameters: {"id"=>"http://base#e5ea2710-59b7-11e0-b9e1-00264afffe1d"}
+Rendering template within layouts/application
+Rendering contexts/edit
+Completed in 205ms (View: 193 | 200 OK [http://localhost/contexts/edit/http:%2F%2Fbase%23e5ea2710-59b7-11e0-b9e1-00264afffe1d]
+
+
+Processing ContextsController#context_parameters (for 127.0.0.1 at 2012-11-01 12:54:35) [GET]
+  Parameters: {"q"=>"1", "_search"=>"false", "nd"=>"1351781675026", "rows"=>"10", "page"=>"1", "sidx"=>"", "sord"=>"", "id"=>"http://base#e5ea2710-59b7-11e0-b9e1-00264afffe1d"}
+Completed in 42ms (View: 11 | 200 OK [http://localhost/contexts/context_parameters/http%3A%2F%2Fbase%23e5ea2710-59b7-11e0-b9e1-00264afffe1d?q=1&_search=false&nd=1351781675026&rows=10&page=1&sidx=&sord=]
+
+
+Processing ContextsController#pre_conditions (for 127.0.0.1 at 2012-11-01 12:54:35) [GET]
+  Parameters: {"q"=>"1", "_search"=>"false", "nd"=>"1351781675114", "rows"=>"10", "page"=>"1", "sidx"=>"", "sord"=>"", "id"=>"http://base#e5ea2710-59b7-11e0-b9e1-00264afffe1d"}
+Completed in 30ms (View: 9 | 200 OK [http://localhost/contexts/pre_conditions/http%3A%2F%2Fbase%23e5ea2710-59b7-11e0-b9e1-00264afffe1d?q=1&_search=false&nd=1351781675114&rows=10&page=1&sidx=&sord=]
+
+
+Processing IndexesController#index (for 127.0.0.1 at 2012-11-01 12:54:39) [GET]
+Rendering template within layouts/application
+Rendering indexes/index
+Completed in 837ms (View: 784 | 200 OK [http://localhost/indexes]
+
+
+Processing IndexesController#edit (for 127.0.0.1 at 2012-11-01 12:54:45) [GET]
+  Parameters: {"id"=>"http://base#b233dff0-59bd-11e0-b9e1-00264afffe1d"}
+Rendering template within layouts/application
+Rendering indexes/edit
+Completed in 1136ms (View: 925 | 200 OK [http://localhost/indexes/edit/http:%2F%2Fbase%23b233dff0-59bd-11e0-b9e1-00264afffe1d]
+
+
+Processing IndexesController#index_attributes (for 127.0.0.1 at 2012-11-01 12:54:47) [GET]
+  Parameters: {"q"=>"1", "_search"=>"false", "nd"=>"1351781687010", "rows"=>"10", "page"=>"1", "sidx"=>"", "sord"=>"", "id"=>"http://base#b233dff0-59bd-11e0-b9e1-00264afffe1d"}
+Completed in 33ms (View: 7 | 200 OK [http://localhost/indexes/index_attributes/http%3A%2F%2Fbase%23b233dff0-59bd-11e0-b9e1-00264afffe1d?q=1&_search=false&nd=1351781687010&rows=10&page=1&sidx=&sord=]
+
+
+Processing IndexesController#context_anchor_attributes (for 127.0.0.1 at 2012-11-01 12:54:47) [GET]
+  Parameters: {"q"=>"1", "_search"=>"false", "nd"=>"1351781687085", "rows"=>"10", "page"=>"1", "sidx"=>"", "sord"=>"", "id"=>"http://base#b233dff0-59bd-11e0-b9e1-00264afffe1d"}
+Completed in 522ms (View: 5 | 200 OK [http://localhost/indexes/context_anchor_attributes/http%3A%2F%2Fbase%23b233dff0-59bd-11e0-b9e1-00264afffe1d?q=1&_search=false&nd=1351781687085&rows=10&page=1&sidx=&sord=]
+
+
+Processing IndexesController#index_anchor_attributes (for 127.0.0.1 at 2012-11-01 12:54:48) [GET]
+  Parameters: {"q"=>"1", "_search"=>"false", "nd"=>"1351781687128", "rows"=>"10", "page"=>"1", "sidx"=>"", "sord"=>"", "id"=>"http://base#b233dff0-59bd-11e0-b9e1-00264afffe1d"}
+Completed in 24ms (View: 7 | 200 OK [http://localhost/indexes/index_anchor_attributes/http%3A%2F%2Fbase%23b233dff0-59bd-11e0-b9e1-00264afffe1d?q=1&_search=false&nd=1351781687128&rows=10&page=1&sidx=&sord=]
+
+
+Processing IndexesController#computed_attributes (for 127.0.0.1 at 2012-11-01 12:54:48) [GET]
+  Parameters: {"q"=>"1", "_search"=>"false", "nd"=>"1351781687181", "rows"=>"10", "page"=>"1", "sidx"=>"", "sord"=>"", "id"=>"http://base#b233dff0-59bd-11e0-b9e1-00264afffe1d"}
+Completed in 24ms (View: 5 | 200 OK [http://localhost/indexes/computed_attributes/http%3A%2F%2Fbase%23b233dff0-59bd-11e0-b9e1-00264afffe1d?q=1&_search=false&nd=1351781687181&rows=10&page=1&sidx=&sord=]
+
+
+Processing IndexesController#pre_conditions (for 127.0.0.1 at 2012-11-01 12:54:48) [GET]
+  Parameters: {"q"=>"1", "_search"=>"false", "nd"=>"1351781687224", "rows"=>"10", "page"=>"1", "sidx"=>"", "sord"=>"", "id"=>"http://base#b233dff0-59bd-11e0-b9e1-00264afffe1d"}
+Completed in 24ms (View: 5 | 200 OK [http://localhost/indexes/pre_conditions/http%3A%2F%2Fbase%23b233dff0-59bd-11e0-b9e1-00264afffe1d?q=1&_search=false&nd=1351781687224&rows=10&page=1&sidx=&sord=]
+
+
+Processing IndexesController#edit (for 127.0.0.1 at 2012-11-01 12:54:58) [GET]
+  Parameters: {"id"=>"http://base#b233dff0-59bd-11e0-b9e1-00264afffe1d"}
+Rendering template within layouts/application
+Rendering indexes/edit
+Completed in 913ms (View: 750 | 200 OK [http://localhost/indexes/edit/http:%2F%2Fbase%23b233dff0-59bd-11e0-b9e1-00264afffe1d]
+
+
+Processing IndexesController#edit (for 127.0.0.1 at 2012-11-01 13:31:03) [GET]
+  Parameters: {"id"=>"http://base#b233dff0-59bd-11e0-b9e1-00264afffe1d"}
+Rendering template within layouts/application
+Rendering indexes/edit
+Completed in 913ms (View: 759 | 200 OK [http://localhost/indexes/edit/http:%2F%2Fbase%23b233dff0-59bd-11e0-b9e1-00264afffe1d]
+
+
+Processing IndexesController#context_anchor_attributes (for 127.0.0.1 at 2012-11-01 13:31:05) [GET]
+  Parameters: {"q"=>"1", "_search"=>"false", "nd"=>"1351783865615", "rows"=>"10", "page"=>"1", "sidx"=>"", "sord"=>"", "id"=>"http://base#b233dff0-59bd-11e0-b9e1-00264afffe1d"}
+Completed in 183ms (View: 7 | 200 OK [http://localhost/indexes/context_anchor_attributes/http%3A%2F%2Fbase%23b233dff0-59bd-11e0-b9e1-00264afffe1d?q=1&_search=false&nd=1351783865615&rows=10&page=1&sidx=&sord=]
+
+
+Processing IndexesController#computed_attributes (for 127.0.0.1 at 2012-11-01 13:31:06) [GET]
+  Parameters: {"q"=>"1", "_search"=>"false", "nd"=>"1351783865711", "rows"=>"10", "page"=>"1", "sidx"=>"", "sord"=>"", "id"=>"http://base#b233dff0-59bd-11e0-b9e1-00264afffe1d"}
+Completed in 21ms (View: 6 | 200 OK [http://localhost/indexes/computed_attributes/http%3A%2F%2Fbase%23b233dff0-59bd-11e0-b9e1-00264afffe1d?q=1&_search=false&nd=1351783865711&rows=10&page=1&sidx=&sord=]
+
+
+Processing IndexesController#pre_conditions (for 127.0.0.1 at 2012-11-01 13:31:06) [GET]
+  Parameters: {"q"=>"1", "_search"=>"false", "nd"=>"1351783865752", "rows"=>"10", "page"=>"1", "sidx"=>"", "sord"=>"", "id"=>"http://base#b233dff0-59bd-11e0-b9e1-00264afffe1d"}
+Completed in 21ms (View: 6 | 200 OK [http://localhost/indexes/pre_conditions/http%3A%2F%2Fbase%23b233dff0-59bd-11e0-b9e1-00264afffe1d?q=1&_search=false&nd=1351783865752&rows=10&page=1&sidx=&sord=]
+
+
+Processing IndexesController#index_anchor_attributes (for 127.0.0.1 at 2012-11-01 13:31:06) [GET]
+  Parameters: {"q"=>"1", "_search"=>"false", "nd"=>"1351783865661", "rows"=>"10", "page"=>"1", "sidx"=>"", "sord"=>"", "id"=>"http://base#b233dff0-59bd-11e0-b9e1-00264afffe1d"}
+Completed in 24ms (View: 8 | 200 OK [http://localhost/indexes/index_anchor_attributes/http%3A%2F%2Fbase%23b233dff0-59bd-11e0-b9e1-00264afffe1d?q=1&_search=false&nd=1351783865661&rows=10&page=1&sidx=&sord=]
+
+
+Processing IndexesController#index_attributes (for 127.0.0.1 at 2012-11-01 13:31:06) [GET]
+  Parameters: {"q"=>"1", "_search"=>"false", "nd"=>"1351783865547", "rows"=>"10", "page"=>"1", "sidx"=>"", "sord"=>"", "id"=>"http://base#b233dff0-59bd-11e0-b9e1-00264afffe1d"}
+Completed in 20ms (View: 6 | 200 OK [http://localhost/indexes/index_attributes/http%3A%2F%2Fbase%23b233dff0-59bd-11e0-b9e1-00264afffe1d?q=1&_search=false&nd=1351783865547&rows=10&page=1&sidx=&sord=]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-01 13:31:09) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 406ms (View: 401 | 200 OK [http://localhost/interface]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 13:31:14) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 164ms (View: 133 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 13:32:15) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 217ms (View: 208 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 13:33:55) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 210ms (View: 201 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 13:34:52) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 176ms (View: 167 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing ContextsController#index (for 127.0.0.1 at 2012-11-01 13:34:57) [GET]
+Rendering template within layouts/application
+Rendering contexts/index
+Completed in 250ms (View: 239 | 200 OK [http://localhost/navigation]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-01 13:34:59) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 370ms (View: 365 | 200 OK [http://localhost/interface]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 13:35:04) [GET]
+  Parameters: {"id"=>"http://base#e4658c70-59c3-11e0-b9e1-00264afffe1d"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 205ms (View: 197 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23e4658c70-59c3-11e0-b9e1-00264afffe1d]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-01 13:35:08) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 376ms (View: 372 | 200 OK [http://localhost/interface]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 13:35:12) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 159ms (View: 150 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 13:44:58) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 210ms (View: 201 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 13:50:17) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 174ms (View: 164 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 13:51:23) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 197ms (View: 187 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 13:51:42) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 271ms (View: 260 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 13:52:21) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 182ms (View: 173 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 13:53:17) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 192ms (View: 182 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 14:01:15) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 199ms (View: 189 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 14:01:21) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 159ms (View: 150 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 14:01:40) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 162ms (View: 153 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 14:03:24) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 179ms (View: 170 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 14:04:11) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 157ms (View: 147 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 14:04:46) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 164ms (View: 155 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 14:05:48) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 173ms (View: 165 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 14:06:19) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 158ms (View: 149 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 14:08:07) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 189ms (View: 179 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 14:09:37) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 190ms (View: 181 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 14:10:36) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 186ms (View: 176 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 14:19:07) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 194ms (View: 185 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing ContextsController#index (for 127.0.0.1 at 2012-11-01 14:19:14) [GET]
+Rendering template within layouts/application
+Rendering contexts/index
+Completed in 242ms (View: 231 | 200 OK [http://localhost/navigation]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-01 14:19:22) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 348ms (View: 344 | 200 OK [http://localhost/interface]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 14:19:26) [GET]
+  Parameters: {"id"=>"http://base#dc27c930-59c1-11e0-b9e1-00264afffe1d"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 189ms (View: 181 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23dc27c930-59c1-11e0-b9e1-00264afffe1d]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 14:20:05) [GET]
+  Parameters: {"id"=>"http://base#dc27c930-59c1-11e0-b9e1-00264afffe1d"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 205ms (View: 197 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23dc27c930-59c1-11e0-b9e1-00264afffe1d]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 14:20:33) [GET]
+  Parameters: {"id"=>"http://base#dc27c930-59c1-11e0-b9e1-00264afffe1d"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 222ms (View: 214 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23dc27c930-59c1-11e0-b9e1-00264afffe1d]
+
+
+Processing ContextsController#index (for 127.0.0.1 at 2012-11-01 14:20:38) [GET]
+Rendering template within layouts/application
+Rendering contexts/index
+Completed in 288ms (View: 278 | 200 OK [http://localhost/navigation]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-01 14:20:41) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 418ms (View: 414 | 200 OK [http://localhost/interface]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-01 14:21:19) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 413ms (View: 408 | 200 OK [http://localhost/interface]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-01 14:21:35) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 453ms (View: 428 | 200 OK [http://localhost/interface]
+
+
+Processing ContextsController#index (for 127.0.0.1 at 2012-11-01 14:21:41) [GET]
+Rendering template within layouts/application
+Rendering contexts/index
+Completed in 299ms (View: 287 | 200 OK [http://localhost/navigation]
+
+
+Processing LandmarksController#index (for 127.0.0.1 at 2012-11-01 14:21:44) [GET]
+Rendering template within layouts/application
+Rendering landmarks/index
+Completed in 417ms (View: 375 | 200 OK [http://localhost/landmarks]
+
+
+Processing IndexesController#index (for 127.0.0.1 at 2012-11-01 14:21:48) [GET]
+Rendering template within layouts/application
+Rendering indexes/index
+Completed in 320ms (View: 309 | 200 OK [http://localhost/indexes]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-01 14:24:45) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 382ms (View: 377 | 200 OK [http://localhost/interface]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 14:24:50) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 151ms (View: 143 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 14:25:34) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 210ms (View: 201 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 14:26:18) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 245ms (View: 236 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 14:26:22) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 199ms (View: 191 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 14:28:39) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 173ms (View: 164 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 14:29:06) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 202ms (View: 193 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 14:31:15) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 166ms (View: 156 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 14:31:20) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 172ms (View: 163 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 14:31:45) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 204ms (View: 196 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 14:32:19) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 175ms (View: 167 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 14:33:23) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 205ms (View: 196 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing ContextsController#index (for 127.0.0.1 at 2012-11-01 14:33:30) [GET]
+Rendering template within layouts/application
+Rendering contexts/index
+Completed in 227ms (View: 219 | 200 OK [http://localhost/navigation]
+
+
+Processing ContextsController#index (for 127.0.0.1 at 2012-11-01 14:33:44) [GET]
+Rendering template within layouts/application
+Rendering contexts/index
+Completed in 308ms (View: 297 | 200 OK [http://localhost/navigation]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-01 14:34:47) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 492ms (View: 488 | 200 OK [http://localhost/interface]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 14:34:52) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 180ms (View: 171 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 14:35:09) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 236ms (View: 228 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 14:35:54) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 155ms (View: 146 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 14:36:55) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 168ms (View: 158 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 14:48:18) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 174ms (View: 164 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing ContextsController#index (for 127.0.0.1 at 2012-11-01 14:48:24) [GET]
+Rendering template within layouts/application
+Rendering contexts/index
+Completed in 247ms (View: 227 | 200 OK [http://localhost/navigation]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-01 14:48:27) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 412ms (View: 398 | 200 OK [http://localhost/interface]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 14:48:33) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 228ms (View: 219 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 14:48:51) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 168ms (View: 159 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 14:48:59) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 152ms (View: 143 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 14:51:32) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 177ms (View: 166 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 14:54:34) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 163ms (View: 152 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 14:55:33) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 186ms (View: 177 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 14:55:58) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 163ms (View: 155 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 14:56:59) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 196ms (View: 188 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 14:57:30) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 156ms (View: 148 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 14:59:03) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 167ms (View: 158 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:00:04) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 216ms (View: 201 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:00:43) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 143ms (View: 134 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:01:28) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 177ms (View: 168 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:02:52) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 252ms (View: 223 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:03:28) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 228ms (View: 218 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:03:53) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 190ms (View: 181 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:04:05) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 145ms (View: 137 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:04:22) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 164ms (View: 156 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:04:37) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 177ms (View: 168 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:07:02) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 171ms (View: 163 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:07:55) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 149ms (View: 142 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:08:10) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 133ms (View: 125 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:08:57) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 180ms (View: 171 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:09:51) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 174ms (View: 166 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:10:17) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 159ms (View: 151 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:10:44) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 162ms (View: 154 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:11:20) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 174ms (View: 166 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:11:43) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 184ms (View: 176 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:12:08) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 191ms (View: 182 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:12:44) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 166ms (View: 157 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:13:30) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 207ms (View: 199 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:13:42) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 166ms (View: 159 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:14:09) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 161ms (View: 153 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:14:39) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 210ms (View: 203 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:15:45) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 180ms (View: 171 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:16:43) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 153ms (View: 145 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:18:59) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 160ms (View: 150 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:20:21) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 235ms (View: 225 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:20:31) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 264ms (View: 255 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:20:52) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 172ms (View: 161 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:21:14) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 167ms (View: 158 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:21:57) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 156ms (View: 147 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:22:09) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 147ms (View: 138 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:22:26) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 153ms (View: 145 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:23:38) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 162ms (View: 153 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:24:10) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 159ms (View: 151 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:25:49) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 181ms (View: 171 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:26:23) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 157ms (View: 146 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:27:36) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 158ms (View: 149 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:28:22) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 156ms (View: 147 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:29:09) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 169ms (View: 161 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:29:48) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 158ms (View: 149 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:30:11) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 194ms (View: 180 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:37:35) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 167ms (View: 158 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:38:51) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 180ms (View: 147 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:39:49) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 168ms (View: 159 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:41:40) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 166ms (View: 156 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:41:57) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 183ms (View: 175 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:42:53) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 205ms (View: 196 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:44:57) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 178ms (View: 166 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:45:16) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 141ms (View: 133 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:45:39) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 159ms (View: 150 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:50:34) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 153ms (View: 144 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:53:20) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 162ms (View: 151 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:56:18) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 187ms (View: 178 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 15:58:58) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 175ms (View: 167 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:00:40) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 173ms (View: 159 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:01:23) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 165ms (View: 157 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:03:42) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 196ms (View: 187 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:04:44) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 158ms (View: 148 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:05:52) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 142ms (View: 134 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:06:01) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 189ms (View: 181 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:06:17) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 221ms (View: 203 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:06:37) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 192ms (View: 184 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:07:00) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 176ms (View: 168 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:08:28) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 160ms (View: 151 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:09:04) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 165ms (View: 156 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:09:19) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 171ms (View: 159 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:10:41) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 178ms (View: 168 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:11:47) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 184ms (View: 176 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:12:18) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 200ms (View: 190 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:12:52) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 165ms (View: 156 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:13:34) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 157ms (View: 149 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:13:47) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 169ms (View: 160 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:13:57) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 126ms (View: 119 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:14:06) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 161ms (View: 148 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:14:10) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 149ms (View: 128 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:14:22) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 287ms (View: 278 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:15:23) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 177ms (View: 169 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:17:12) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 159ms (View: 150 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:17:30) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 213ms (View: 203 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-01 16:18:40) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 409ms (View: 397 | 200 OK [http://localhost/interfaces]
+
+
+Processing InterfacesController#new (for 127.0.0.1 at 2012-11-01 16:18:44) [GET]
+Rendering template within layouts/application
+Rendering interfaces/new
+Completed in 78ms (View: 73 | 200 OK [http://localhost/interfaces/new]
+
+
+Processing InterfacesController#create (for 127.0.0.1 at 2012-11-01 16:18:54) [POST]
+  Parameters: {"authenticity_token"=>"BUnVjdMUJD9gMhc3uDOgZo4yBvlCwEzevtF6BxAEfYo=", "interface"=>{"interface_name"=>"nova Interface", "interface_title"=>"Nova Interface"}, "commit"=>"Create"}
+Redirected to http://localhost:3000/interfaces/edit/http:%2F%2Fbase%2398784a60-2450-11e2-aed3-00268277eccd
+Completed in 20713ms | 302 Found [http://localhost/interfaces]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:19:15) [GET]
+  Parameters: {"id"=>"http://base#98784a60-2450-11e2-aed3-00268277eccd"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 183ms (View: 177 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%2398784a60-2450-11e2-aed3-00268277eccd]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:28:15) [GET]
+  Parameters: {"id"=>"http://base#98784a60-2450-11e2-aed3-00268277eccd"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 222ms (View: 214 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%2398784a60-2450-11e2-aed3-00268277eccd]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:29:03) [GET]
+  Parameters: {"id"=>"http://base#98784a60-2450-11e2-aed3-00268277eccd"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 230ms (View: 221 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%2398784a60-2450-11e2-aed3-00268277eccd]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:30:01) [GET]
+  Parameters: {"id"=>"http://base#98784a60-2450-11e2-aed3-00268277eccd"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 262ms (View: 252 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%2398784a60-2450-11e2-aed3-00268277eccd]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:30:56) [GET]
+  Parameters: {"id"=>"http://base#98784a60-2450-11e2-aed3-00268277eccd"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 197ms (View: 190 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%2398784a60-2450-11e2-aed3-00268277eccd]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:36:25) [GET]
+  Parameters: {"id"=>"http://base#98784a60-2450-11e2-aed3-00268277eccd"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 209ms (View: 201 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%2398784a60-2450-11e2-aed3-00268277eccd]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:37:06) [GET]
+  Parameters: {"id"=>"http://base#98784a60-2450-11e2-aed3-00268277eccd"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 185ms (View: 161 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%2398784a60-2450-11e2-aed3-00268277eccd]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:37:36) [GET]
+  Parameters: {"id"=>"http://base#98784a60-2450-11e2-aed3-00268277eccd"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 198ms (View: 190 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%2398784a60-2450-11e2-aed3-00268277eccd]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-01 16:39:12) [POST]
+  Parameters: {"authenticity_token"=>"BUnVjdMUJD9gMhc3uDOgZo4yBvlCwEzevtF6BxAEfYo=", "id"=>"http://base#98784a60-2450-11e2-aed3-00268277eccd", "interface"=>{"interface_name"=>"nova Interface", "interface_title"=>"Nova Interface", "interface_weight"=>"1", "interface_selection_rule"=>"set{\r\n  has \"navigational_element\", \"uri\", :URI\r\n  has :URI, \"class\", \"SHDM:Index\"\r\n  }", "abstract_scheme"=>"asdfasdf", "abstract_rules"=>"", "concrete_mapping_rules"=>""}, "commit"=>"Save"}
+Redirected to http://localhost:3000/interfaces
+Completed in 1715ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-01 16:39:14) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 839ms (View: 831 | 200 OK [http://localhost/interfaces]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:39:20) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 198ms (View: 189 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-01 16:39:30) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 353ms (View: 347 | 200 OK [http://localhost/interfaces]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:39:34) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 193ms (View: 179 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-01 16:40:16) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 402ms (View: 397 | 200 OK [http://localhost/interfaces]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:40:25) [GET]
+  Parameters: {"id"=>"http://base#96a9ecb0-2384-11e2-9220-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 245ms (View: 236 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%2396a9ecb0-2384-11e2-9220-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:41:03) [GET]
+  Parameters: {"id"=>"http://base#96a9ecb0-2384-11e2-9220-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+ERROR: compiling _run_erb_app47views47interfaces47edit46html46erb RAISED C:/Users/Vagner/Documents/My Dropbox/MESTRADO/dissertacao/DEV/synth/app/views/interfaces/edit.html.erb:45: syntax error, unexpected tSYMBEG
+
+; @output_buffer.concat(( @interface.:interface_selection_rule ).to_s); @output_buffer.concat "\n <div id=\"steps_container\">\n \n  <ul id=\"interface_steps\" >\n    <li class=\"active\"><a href=\"#general\">General data</a></li>\n    <li class=\"\"><a href=\"#tab_selection_rule\">Interface Selection Rules</a></li>\n    <li class=\"\"><a href=\"#tab_abstract_scheme\"> Abstract Scheme and Rules</a></li>\n    <li class=\"\"><a href=\"#tab_concrete_mapping_rules\">Concrete Mapping</a></li>\n    \n  </ul>\n \n  <div id=\"general\" class=\"ui-tabs-panel\">\n    <p>\n      "
+                                     ^
+Function body: #coding:ASCII-8BIT
+          def _run_erb_app47views47interfaces47edit46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<style>\n\n#steps_container ul li { \n  display: inline; \n  margin:0px 0px 0px 0px;\n  padding: 5px 10px 5px 10px;\n}\n#interface_steps {\n  \n  list-style: none;\n\tmargin-left: 0;\n\tpadding-left: 1em;\n\ttext-indent: -1em;\n}\n#interface_steps .active {color: red}\n#steps_container ul li \n{\nbackground: url(\"/images/jqgrid/ui-bg_glass_85_dfeffc_1x400.png\") repeat-x scroll 50% 50% #DFEFFC;\n    border: 1px solid #C5DBEC;\n    color: #2E6E9E;\n    font-weight: bold;\n    outline: medium none;\n    \n}\n#steps_container ul li a{\n  text-decoration:none;\n}\n#steps_container ul li a:hover\n{\ncolor: #fff;\n\n}\n\n#steps_container .tab{\n  border:1px solid #c0c0c0;\n}\n.ui-tabs-panel{margin-bottom:10px;min-width:669px;}\n.default-container {color:#fff;}\n</style>\n<h1>Edit interface: "
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+; @output_buffer.concat(( @interface.interface_title ).to_s); @output_buffer.concat "</h1>\n\n"
+
+;  form_for :interface, :url => { :action => "update" } do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\t"
+; @output_buffer.concat(( hidden_field_tag :id, @interface ).to_s); @output_buffer.concat "\n "
+; @output_buffer.concat(( @interface.:interface_selection_rule ).to_s); @output_buffer.concat "\n <div id=\"steps_container\">\n \n  <ul id=\"interface_steps\" >\n    <li class=\"active\"><a href=\"#general\">General data</a></li>\n    <li class=\"\"><a href=\"#tab_selection_rule\">Interface Selection Rules</a></li>\n    <li class=\"\"><a href=\"#tab_abstract_scheme\"> Abstract Scheme and Rules</a></li>\n    <li class=\"\"><a href=\"#tab_concrete_mapping_rules\">Concrete Mapping</a></li>\n    \n  </ul>\n \n  <div id=\"general\" class=\"ui-tabs-panel\">\n    <p>\n      "
+
+
+
+
+
+
+
+
+
+
+
+
+; @output_buffer.concat(( f.label :name ).to_s); @output_buffer.concat "<br />\n      "
+; @output_buffer.concat(( f.text_field :interface_name ).to_s); @output_buffer.concat "\n    </p>\n    <p>\n      "
+
+
+; @output_buffer.concat(( f.label :title ).to_s); @output_buffer.concat "<br />\n      "
+; @output_buffer.concat(( f.text_field :interface_title ).to_s); @output_buffer.concat "\n    </p>\n  </div>\n  \n  <div id=\"tab_selection_rule\" class=\"ui-tabs-panel\">\n     <p>\n      "
+
+
+
+
+
+; @output_buffer.concat(( f.label :interface_weight ).to_s); @output_buffer.concat "<br /> \n      "
+; @output_buffer.concat(( f.select :interface_weight, (1..20), :selected => @interface.interface_weight.to_s.to_i ).to_s); @output_buffer.concat "\n     \n    </p>\n    <p>\n      "
+
+
+
+; @output_buffer.concat(( f.label :interface_selection_rule ).to_s); @output_buffer.concat "<br />\n      "
+; @output_buffer.concat(( f.text_area :interface_selection_rule, :rows => 5, :cols => 71 ).to_s); @output_buffer.concat "\n    </p>\n  </div>\n  <div id=\"tab_abstract_scheme\" class=\"ui-tabs-panel\">\n    <p>\n      "
+
+
+
+
+; @output_buffer.concat(( f.label :abstract_scheme ).to_s); @output_buffer.concat "<br />\n      "
+; @output_buffer.concat(( f.text_area :abstract_scheme, :rows => 10, :cols => 71 ).to_s); @output_buffer.concat "\n    </p>\n    <p>\n      "
+
+
+; @output_buffer.concat(( f.label :abstract__composition_rules ).to_s); @output_buffer.concat "<br />\n      "
+; @output_buffer.concat(( f.text_area :abstract_rules, :rows => 10, :cols => 71 ).to_s); @output_buffer.concat "\n    </p>\n  </div>\n  <div id=\"tab_concrete_mapping_rules\" class=\"ui-tabs-panel\">\n\n    "
+
+
+
+
+; @output_buffer.concat(( f.label :concrete_mapping_rules ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :concrete_mapping_rules, :rows => 10, :cols => 71 ).to_s); @output_buffer.concat "\n  </div>\n </div> \n  <p style=\"clear:both;\">\n    "
+
+
+
+; @output_buffer.concat(( f.submit 'Save' ).to_s); @output_buffer.concat "\n  </p>\n"
+
+;  end ; @output_buffer.concat "\n\n<script>\n    $(\"#interface_steps\").tabify().removeClass(\"ui-tabs-vertical ui-tabs-panel\");\n    codemirror_instance(\"interface_interface_selection_rule\");\n    codemirror_instance(\"interface_abstract_scheme\");\n    codemirror_instance(\"interface_abstract_rules\");\n    codemirror_instance(\"interface_concrete_mapping_rules\");\n  </script>\n\n\n\n"
+
+
+
+
+
+
+
+
+
+
+
+; @output_buffer.concat(( link_to 'Back', interfaces_path ).to_s); @output_buffer.force_encoding(__ENCODING__)
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: org/jruby/RubyModule.java:2233:in `module_eval'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/actionpack-2.3.14/lib/action_view/renderable.rb:91:in `compile!'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/actionpack-2.3.14/lib/action_view/renderable.rb:61:in `compile'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/actionpack-2.3.14/lib/action_view/renderable.rb:28:in `render'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/actionpack-2.3.14/lib/action_view/template.rb:205:in `render_template'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/actionpack-2.3.14/lib/action_view/base.rb:265:in `render'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/actionpack-2.3.14/lib/action_view/base.rb:348:in `_render_with_layout'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/actionpack-2.3.14/lib/action_view/base.rb:346:in `_render_with_layout'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/actionpack-2.3.14/lib/action_view/base.rb:262:in `render'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/actionpack-2.3.14/lib/action_controller/base.rb:1252:in `render_for_file'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/actionpack-2.3.14/lib/action_controller/base.rb:936:in `render'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/actionpack-2.3.14/lib/action_controller/benchmarking.rb:51:in `render_with_benchmark'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/activesupport-2.3.14/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/jruby-1.6.4/lib/ruby/1.9/benchmark.rb:309:in `realtime'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/activesupport-2.3.14/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/actionpack-2.3.14/lib/action_controller/benchmarking.rb:51:in `render_with_benchmark'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/actionpack-2.3.14/lib/action_controller/base.rb:1328:in `default_render'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/actionpack-2.3.14/lib/action_controller/base.rb:1334:in `perform_action'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/actionpack-2.3.14/lib/action_controller/filters.rb:617:in `call_filters'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/actionpack-2.3.14/lib/action_controller/filters.rb:610:in `perform_action_with_filters'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/actionpack-2.3.14/lib/action_controller/benchmarking.rb:68:in `perform_action_with_benchmark'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/activesupport-2.3.14/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/jruby-1.6.4/lib/ruby/1.9/benchmark.rb:309:in `realtime'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/activesupport-2.3.14/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/actionpack-2.3.14/lib/action_controller/benchmarking.rb:68:in `perform_action_with_benchmark'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/actionpack-2.3.14/lib/action_controller/rescue.rb:160:in `perform_action_with_rescue'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/actionpack-2.3.14/lib/action_controller/flash.rb:151:in `perform_action_with_flash'
+org/jruby/RubyBasicObject.java:1685:in `__send__'
+org/jruby/RubyKernel.java:2113:in `send'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/actionpack-2.3.14/lib/action_controller/base.rb:532:in `process'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/actionpack-2.3.14/lib/action_controller/filters.rb:606:in `process_with_filters'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/actionpack-2.3.14/lib/action_controller/base.rb:391:in `process'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/actionpack-2.3.14/lib/action_controller/base.rb:386:in `call'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/actionpack-2.3.14/lib/action_controller/routing/route_set.rb:438:in `call'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/actionpack-2.3.14/lib/action_controller/dispatcher.rb:87:in `dispatch'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/actionpack-2.3.14/lib/action_controller/dispatcher.rb:85:in `dispatch'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/actionpack-2.3.14/lib/action_controller/dispatcher.rb:121:in `_call'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/actionpack-2.3.14/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+org/jruby/RubyProc.java:262:in `call'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/actionpack-2.3.14/lib/action_controller/string_coercion.rb:25:in `call'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/rack-1.1.2/lib/rack/head.rb:9:in `call'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/rack-1.1.2/lib/rack/methodoverride.rb:24:in `call'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/actionpack-2.3.14/lib/action_controller/params_parser.rb:15:in `call'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/actionpack-2.3.14/lib/action_controller/session/cookie_store.rb:99:in `call'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/actionpack-2.3.14/lib/action_controller/failsafe.rb:26:in `call'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/rack-1.1.2/lib/rack/lock.rb:11:in `call'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/rack-1.1.2/lib/rack/lock.rb:11:in `call'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/actionpack-2.3.14/lib/action_controller/dispatcher.rb:114:in `call'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/actionpack-2.3.14/lib/action_controller/reloader.rb:34:in `run'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/actionpack-2.3.14/lib/action_controller/dispatcher.rb:108:in `call'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/rails-2.3.14/lib/rails/rack/static.rb:31:in `call'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/rack-1.1.2/lib/rack/urlmap.rb:49:in `call'
+org/jruby/RubyArray.java:1603:in `each'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/rack-1.1.2/lib/rack/urlmap.rb:41:in `call'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/rails-2.3.14/lib/rails/rack/log_tailer.rb:17:in `call'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/rack-1.1.2/lib/rack/content_length.rb:13:in `call'
+c:/jruby-1.6.4/lib/ruby/gems/1.8/gems/rack-1.1.2/lib/rack/handler/webrick.rb:48:in `service'
+c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:111:in `service'
+c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:70:in `run'
+c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:48:in `run'
+c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:183:in `start_thread'
+c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:173:in `start_thread'
+
+ActionView::TemplateError (C:/Users/Vagner/Documents/My Dropbox/MESTRADO/dissertacao/DEV/synth/app/views/interfaces/edit.html.erb:45: syntax error, unexpected tSYMBEG
+
+; @output_buffer.concat(( @interface.:interface_selection_rule ).to_s); @output_buffer.concat "\n <div id=\"steps_container\">\n \n  <ul id=\"interface_steps\" >\n    <li class=\"active\"><a href=\"#general\">General data</a></li>\n    <li class=\"\"><a href=\"#tab_selection_rule\">Interface Selection Rules</a></li>\n    <li class=\"\"><a href=\"#tab_abstract_scheme\"> Abstract Scheme and Rules</a></li>\n    <li class=\"\"><a href=\"#tab_concrete_mapping_rules\">Concrete Mapping</a></li>\n    \n  </ul>\n \n  <div id=\"general\" class=\"ui-tabs-panel\">\n    <p>\n      "
+                                     ^) on line #45 of app/views/interfaces/edit.html.erb:
+42: <% form_for :interface, :url => { :action => "update" } do |f| %>
+43:   <%= f.error_messages %>
+44: 	<%= hidden_field_tag :id, @interface %>
+45:  <%= @interface.:interface_selection_rule %>
+46:  <div id="steps_container">
+47:  
+48:   <ul id="interface_steps" >
+
+    org/jruby/RubyModule.java:2233:in `module_eval'
+    org/jruby/RubyBasicObject.java:1685:in `__send__'
+    org/jruby/RubyKernel.java:2113:in `send'
+    org/jruby/RubyProc.java:262:in `call'
+    org/jruby/RubyArray.java:1603:in `each'
+    c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:111:in `service'
+    c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:70:in `run'
+    c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:48:in `run'
+    c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:183:in `start_thread'
+    c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:173:in `start_thread'
+
+Rendered rescues/_trace (79.0ms)
+Rendered rescues/_request_and_response (5.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:41:14) [GET]
+  Parameters: {"id"=>"http://base#96a9ecb0-2384-11e2-9220-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 173ms (View: 163 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%2396a9ecb0-2384-11e2-9220-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:41:53) [GET]
+  Parameters: {"id"=>"http://base#96a9ecb0-2384-11e2-9220-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 174ms (View: 163 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%2396a9ecb0-2384-11e2-9220-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:41:58) [GET]
+  Parameters: {"id"=>"http://base#96a9ecb0-2384-11e2-9220-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 180ms (View: 167 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%2396a9ecb0-2384-11e2-9220-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:42:10) [GET]
+  Parameters: {"id"=>"http://base#96a9ecb0-2384-11e2-9220-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 225ms (View: 183 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%2396a9ecb0-2384-11e2-9220-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:42:39) [GET]
+  Parameters: {"id"=>"http://base#96a9ecb0-2384-11e2-9220-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 190ms (View: 181 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%2396a9ecb0-2384-11e2-9220-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:43:09) [GET]
+  Parameters: {"id"=>"http://base#96a9ecb0-2384-11e2-9220-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 184ms (View: 175 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%2396a9ecb0-2384-11e2-9220-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:43:15) [GET]
+  Parameters: {"id"=>"http://base#96a9ecb0-2384-11e2-9220-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 214ms (View: 207 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%2396a9ecb0-2384-11e2-9220-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:43:32) [GET]
+  Parameters: {"id"=>"http://base#96a9ecb0-2384-11e2-9220-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 203ms (View: 194 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%2396a9ecb0-2384-11e2-9220-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:43:45) [GET]
+  Parameters: {"id"=>"http://base#96a9ecb0-2384-11e2-9220-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 184ms (View: 175 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%2396a9ecb0-2384-11e2-9220-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:43:52) [GET]
+  Parameters: {"id"=>"http://base#96a9ecb0-2384-11e2-9220-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 180ms (View: 172 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%2396a9ecb0-2384-11e2-9220-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:44:17) [GET]
+  Parameters: {"id"=>"http://base#96a9ecb0-2384-11e2-9220-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 193ms (View: 184 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%2396a9ecb0-2384-11e2-9220-00044b181e28]
+
+
+Processing ContextsController#index (for 127.0.0.1 at 2012-11-01 16:44:28) [GET]
+Rendering template within layouts/application
+Rendering contexts/index
+Completed in 784ms (View: 762 | 200 OK [http://localhost/navigation]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-01 16:44:36) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 457ms (View: 453 | 200 OK [http://localhost/interface]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:44:42) [GET]
+  Parameters: {"id"=>"http://base#96a9ecb0-2384-11e2-9220-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 162ms (View: 153 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%2396a9ecb0-2384-11e2-9220-00044b181e28]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-01 16:45:01) [POST]
+  Parameters: {"authenticity_token"=>"BUnVjdMUJD9gMhc3uDOgZo4yBvlCwEzevtF6BxAEfYo=", "id"=>"http://base#96a9ecb0-2384-11e2-9220-00044b181e28", "interface"=>{"interface_name"=>"PageforChorme", "interface_title"=>"Page for Chorme", "interface_weight"=>"1", "interface_selection_rule"=>"set {\r\n has :_, \"class\", \"SHDM::Context\"\r\n has \"user_agent\", \"browser\", :BrowserName\r\n like \"chrome\", :BrowserName\r\n}", "abstract_scheme"=>"puts \"algo\"", "abstract_rules"=>"", "concrete_mapping_rules"=>"puts \"mapping\""}, "commit"=>"Save"}
+Redirected to http://localhost:3000/interfaces
+Completed in 803ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-01 16:45:02) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 845ms (View: 839 | 200 OK [http://localhost/interfaces]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:45:07) [GET]
+  Parameters: {"id"=>"http://base#96a9ecb0-2384-11e2-9220-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 275ms (View: 267 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%2396a9ecb0-2384-11e2-9220-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:45:29) [GET]
+  Parameters: {"id"=>"http://base#96a9ecb0-2384-11e2-9220-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 205ms (View: 195 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%2396a9ecb0-2384-11e2-9220-00044b181e28]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-01 16:45:40) [POST]
+  Parameters: {"authenticity_token"=>"BUnVjdMUJD9gMhc3uDOgZo4yBvlCwEzevtF6BxAEfYo=", "id"=>"http://base#96a9ecb0-2384-11e2-9220-00044b181e28", "interface"=>{"interface_name"=>"PageforChorme", "interface_title"=>"Page for Chorme", "interface_weight"=>"2", "interface_selection_rule"=>"set {\r\n has :_, \"class\", \"SHDM::Context\"\r\n has \"user_agent\", \"browser\", :BrowserName\r\n like \"chrome\", :BrowserName\r\n}", "abstract_scheme"=>"puts \"algo\"", "abstract_rules"=>"", "concrete_mapping_rules"=>"puts \"mapping\""}, "commit"=>"Save"}
+Redirected to http://localhost:3000/interfaces
+Completed in 337ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-01 16:45:41) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 764ms (View: 758 | 200 OK [http://localhost/interfaces]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:45:45) [GET]
+  Parameters: {"id"=>"http://base#96a9ecb0-2384-11e2-9220-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 182ms (View: 174 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%2396a9ecb0-2384-11e2-9220-00044b181e28]
+
+
+Processing OperationsController#index (for 127.0.0.1 at 2012-11-01 16:46:23) [GET]
+Rendering template within layouts/application
+Rendering operations/index
+Completed in 263ms (View: 255 | 200 OK [http://localhost/behavior]
+
+
+Processing OperationsController#edit (for 127.0.0.1 at 2012-11-01 16:46:25) [GET]
+  Parameters: {"id"=>"http://base#5d089320-59c4-11e0-b9e1-00264afffe1d"}
+Rendering template within layouts/application
+Rendering operations/edit
+Completed in 116ms (View: 109 | 200 OK [http://localhost/operations/edit/http:%2F%2Fbase%235d089320-59c4-11e0-b9e1-00264afffe1d]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-01 16:46:36) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 389ms (View: 385 | 200 OK [http://localhost/interface]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:46:52) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 210ms (View: 203 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-01 16:47:01) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 401ms (View: 396 | 200 OK [http://localhost/interfaces]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 16:47:04) [GET]
+  Parameters: {"id"=>"http://base#98784a60-2450-11e2-aed3-00268277eccd"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 286ms (View: 279 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%2398784a60-2450-11e2-aed3-00268277eccd]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-01 16:47:29) [POST]
+  Parameters: {"authenticity_token"=>"BUnVjdMUJD9gMhc3uDOgZo4yBvlCwEzevtF6BxAEfYo=", "id"=>"http://base#98784a60-2450-11e2-aed3-00268277eccd", "interface"=>{"interface_name"=>"nova Interface", "interface_title"=>"Nova Interface", "interface_weight"=>"1", "interface_selection_rule"=>"set{\r\n  has \"navigational_element\", \"rdf:about\", :URI\r\n  has :URI, \"rdf:type\", \"SHDM::Index\"\r\n  }", "abstract_scheme"=>"asdfasdf", "abstract_rules"=>"", "concrete_mapping_rules"=>""}, "commit"=>"Save"}
+Redirected to http://localhost:3000/interfaces
+Completed in 341ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-01 16:47:30) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 924ms (View: 916 | 200 OK [http://localhost/interfaces]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-01 16:47:52) [GET]
+  Parameters: {"entry"=>"http://data.semanticweb.org/conference/www/2011/event/d-14", "id"=>"http://base#84f5cd60-59bc-11e0-b9e1-00264afffe1d"}
+Completed in 1588ms (View: 11 | 200 OK [http://localhost/execute/index/http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d?entry=http://data.semanticweb.org/conference/www/2011/event/d-14]

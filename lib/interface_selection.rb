@@ -1,5 +1,4 @@
 require "useragent"
-require "pp"
 
 module InterfaceSelection
 
@@ -26,6 +25,7 @@ module InterfaceSelection
 end
 
 module Rules
+	#== Extract facts from { :navigational_element => @context, :current_node=> @node, :user_agent => request.user_agent["HTTP_USER_AGENT"], :environment => request.env, :params => params }
 	class Facts
 		
 		def initialize(facts=[])
@@ -46,14 +46,16 @@ module Rules
 					case value
 						when Hash
 							facts_from_hash(key.to_s, value)
-						when RDFS::Resource, SHDM::Context::ContextInstance, SHDM::ContextIndex::ContextIndexInstance
-							facts_from_properties(value)
+						when RDFS::Resource, SHDM::Context::ContextInstance, SHDM::ContextIndex::ContextIndexInstance, NodeDecorator
+							facts_from_properties(key.to_s, value)
 						when String
 							if key == :user_agent
 								facts_from_user_agent(key.to_s, value)
 							else
 								self << [key.to_s, "literal", value]
 							end
+						else
+						 #puts value.class
 					end
 				}
 			end
@@ -75,9 +77,11 @@ module Rules
 			hash.each {|key, value| self << [ subject, key, value ] } 
 		end
 		
-		def facts_from_properties(node)
+		def facts_from_properties(subject, node)
 			unless node.nil?
 				node.classes.each { | prop | 
+					self << [ subject, "rdf:about", node.uri.to_s ] 
+					self << [ subject, "uri", node.uri.to_s ] 
 					self << [ node.uri.to_s, "class", prop.to_s ] 
 					self << [ node.uri.to_s, "rdf:type", prop.to_s ] 
 				}

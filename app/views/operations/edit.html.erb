@@ -20,6 +20,11 @@
   </p>
 <% end %>
 
+
+<script>
+  codemirror_instance("operation_operation_code");
+</script>
+
 <%=jqgrid("Parameters", "operation_parameters", "/operations/operation_parameters/#{CGI::escape(@operation.uri)}",
 	[
 		{ :field => "id", :label => "ID", :width => 1, :resizable => false },

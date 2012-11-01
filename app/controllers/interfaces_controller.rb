@@ -23,7 +23,7 @@ class InterfacesController < ApplicationController
     respond_to do |format|
       if @interface.save
         flash[:notice] = 'Interface was successfully created.'
-        format.html { redirect_to :action => 'index', :id => @interface }
+        format.html { redirect_to :action => 'edit', :id => @interface }
         format.xml  { render :xml => @interface, :status => :created, :location => @interface }
       else
         format.html { render :action => "new" }

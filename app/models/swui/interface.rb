@@ -20,8 +20,7 @@ module SWUI
 			interfaces.sort!{ | x, y | (x.interface_weight.to_s.to_i || 0) <=> (y.interface_weight.to_s.to_i || 0) }
 		end
 		
-		# Extract facts from { :nav_element => @context, :current_node=> @node, :user_agent => request.user_agent["HTTP_USER_AGENT"], :environment => request.env }
-		# To do ===> Add params!
+		
 		def evaluate_selection_rule(facts_triples = [])
 			
 			unless self.interface_selection_rule.empty?

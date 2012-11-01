@@ -15,11 +15,19 @@
   <%= stylesheet_link_tag 'table-style' %>
   <%= stylesheet_link_tag 'uidform' %>
   <%= stylesheet_link_tag 'formalize' %>
-  <%= javascript_include_tag 'jquery/jquery-ui-1.7.3.custom.min' %>
+  <%= javascript_include_tag 'jquery/jquery-ui-1.8.2.custom.min' %>
   <%= javascript_include_tag 'jquery/jquery.form' %>
   <%= javascript_include_tag 'jquery/jquery.dform-0.1.3.min' %>
   <%= javascript_include_tag 'jquery/jquery.formalize.min' %>
   
+  <%= javascript_include_tag 'jquery.tabify' %>
+  
+	<%= stylesheet_link_tag 'codemirror/codemirror' %>
+  <%= stylesheet_link_tag 'codemirror/theme/blackboard' %>
+	<%= javascript_include_tag 'codemirror/codemirror' %>
+	<%= javascript_include_tag 'codemirror/mode/ruby/ruby' %>
+	<%= javascript_include_tag 'codemirror/util/searchcursor' %>	
+	<%= javascript_include_tag 'codemirror/util/match-highlighter' %>
 	
   <script type="text/javascript">
 	
@@ -37,7 +45,24 @@
 			});		
 			
 		});
-		
+
+    function codemirror_instance(id){
+      var editor = CodeMirror.fromTextArea(document.getElementById(id), {
+      mode: "ruby",
+      lineNumbers: true,
+      lineWrapping: true,
+      tabSize: 2,
+      theme: "default",
+      onCursorActivity: function() {
+        editor.matchHighlight("CodeMirror-matchhighlight");
+       // editor.setLineClass(hlLine, null, null);
+       // hlLine = editor.setLineClass(editor.getCursor().line, null, "activeline");
+        
+      }
+      });
+     // var hlLine = editor.setLineClass(0, "activeline");
+    }
+    
 		$(document).ready(function(){
 		   	$("#vertical_tabs").tabs({
 			    select: function(event, ui) {
@@ -62,7 +87,8 @@
 	.ui-tabs-vertical .ui-tabs-nav li a { display:block; }
 	.ui-tabs-vertical .ui-tabs-nav li.ui-tabs-selected { padding-bottom: 0; padding-right: .1em; border-right-width: 1px; border-right-width: 1px; }
 	.ui-tabs-vertical .ui-tabs-panel { float: left; border: 1px solid #a6c9e2; background-color: #fff; font-size: .9em; }
-	#loading { display: none; }
+	
+  #loading { display: none; }
 	#loading .opaque {
 		position:fixed;
     top:0;
@@ -79,6 +105,11 @@
 		margin-left: 50%;
 		z-index: 49;
 	}
+	.CodeMirror {border: 1px solid #c0c0c0;min-width:650px;font-size:14px;}
+	.activeline {background: #e8f2ff !important;}
+	span.CodeMirror-matchhighlight { background: #e9e9e9 }
+  .CodeMirror-focused span.CodeMirror-matchhighlight { background: #e7e4ff; !important }
+  
 	</style>
 
 </head>

@@ -1,45 +1,110 @@
-<h1>Add interface</h1>
+<style>
+
+#steps_container ul li { 
+  display: inline; 
+  margin:0px 0px 0px 0px;
+  padding: 5px 10px 5px 10px;
+}
+#interface_steps {
+  
+  list-style: none;
+	margin-left: 0;
+	padding-left: 1em;
+	text-indent: -1em;
+}
+#interface_steps .active {color: red}
+#steps_container ul li 
+{
+background: url("/images/jqgrid/ui-bg_glass_85_dfeffc_1x400.png") repeat-x scroll 50% 50% #DFEFFC;
+    border: 1px solid #C5DBEC;
+    color: #2E6E9E;
+    font-weight: bold;
+    outline: medium none;
+    
+}
+#steps_container ul li a{
+  text-decoration:none;
+}
+#steps_container ul li a:hover
+{
+color: #fff;
+
+}
+
+#steps_container .tab{
+  border:1px solid #c0c0c0;
+}
+.ui-tabs-panel{margin-bottom:10px;min-width:669px;}
+.default-container {color:#fff;}
+</style>
+<h1>Edit interface: <%= @interface.interface_title %></h1>
 
 <% form_for :interface, :url => { :action => "update" } do |f| %>
   <%= f.error_messages %>
 	<%= hidden_field_tag :id, @interface %>
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :interface_name %>
-  </p>
-  <p>
-    <%= f.label :title %><br />
-    <%= f.text_field :interface_title %>
-  </p>
-	<p>
-    <%= f.label :interface_weight %><br />
-    <%= f.text_field :interface_weight, :size => 2 %>
-  </p>
-	<p>
-    <%= f.label :interface_selection_rule %><br />
-    <%= f.text_area :interface_selection_rule, :rows => 10, :cols => 71 %>
-  </p>
-	<!--
-	<%= f.label :widget_description %>
-	<p>
-		<%= f.radio_button :widget_decription_type, :abstract,  { :checked => true, :onclick => "toggle_widget_description();" } %> Abstract
-		<%= f.radio_button :widget_decription_type, :concrete, { :onclick => "toggle_widget_description();" } %> Concrete
-	</p-->
-  <p>
-    <%= f.label :abstract_scheme %><br />
-    <%= f.text_area :abstract_scheme, :rows => 10, :cols => 71 %>
-  </p>
-	<p>
-    <%= f.label :abstract_rules %><br />
-    <%= f.text_area :abstract_rules, :rows => 10, :cols => 71 %>
-  </p>
-	<p>
+ 
+ <div id="steps_container">
+ 
+  <ul id="interface_steps" >
+    <li class="active"><a href="#general">General data</a></li>
+    <li class=""><a href="#tab_selection_rule">Interface Selection Rules</a></li>
+    <li class=""><a href="#tab_abstract_scheme"> Abstract Scheme and Rules</a></li>
+    <li class=""><a href="#tab_concrete_mapping_rules">Concrete Mapping</a></li>
+    
+  </ul>
+ 
+  <div id="general" class="ui-tabs-panel">
+    <p>
+      <%= f.label :name %><br />
+      <%= f.text_field :interface_name %>
+    </p>
+    <p>
+      <%= f.label :title %><br />
+      <%= f.text_field :interface_title %>
+    </p>
+  </div>
+  
+  <div id="tab_selection_rule" class="ui-tabs-panel">
+     <p>
+      <%= f.label :interface_weight %><br /> 
+      <%= f.select :interface_weight, (1..20), :selected => @interface.interface_weight.to_s.to_i %>
+     
+    </p>
+    <p>
+      <%= f.label :interface_selection_rule %><br />
+      <%= f.text_area :interface_selection_rule, :rows => 5, :cols => 71 %>
+    </p>
+  </div>
+  <div id="tab_abstract_scheme" class="ui-tabs-panel">
+    <p>
+      <%= f.label :abstract_scheme %><br />
+      <%= f.text_area :abstract_scheme, :rows => 10, :cols => 71 %>
+    </p>
+    <p>
+      <%= f.label :abstract__composition_rules %><br />
+      <%= f.text_area :abstract_rules, :rows => 10, :cols => 71 %>
+    </p>
+  </div>
+  <div id="tab_concrete_mapping_rules" class="ui-tabs-panel">
+
     <%= f.label :concrete_mapping_rules %><br />
     <%= f.text_area :concrete_mapping_rules, :rows => 10, :cols => 71 %>
-  </p>
-  <p>
+  </div>
+ </div> 
+  <p style="clear:both;">
     <%= f.submit 'Save' %>
   </p>
 <% end %>
+
+<script>
+    
+    codemirror_instance("interface_interface_selection_rule");
+    codemirror_instance("interface_abstract_scheme");
+    codemirror_instance("interface_abstract_rules");
+    codemirror_instance("interface_concrete_mapping_rules");
+    $("#interface_steps").tabify();
+  </script>
+
+
 
 <%= link_to 'Back', interfaces_path %>
