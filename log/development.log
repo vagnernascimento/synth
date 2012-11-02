@@ -14079,3 +14079,577 @@ Completed in 924ms (View: 916 | 200 OK [http://localhost/interfaces]
 Processing ExecuteController#index (for 127.0.0.1 at 2012-11-01 16:47:52) [GET]
   Parameters: {"entry"=>"http://data.semanticweb.org/conference/www/2011/event/d-14", "id"=>"http://base#84f5cd60-59bc-11e0-b9e1-00264afffe1d"}
 Completed in 1588ms (View: 11 | 200 OK [http://localhost/execute/index/http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d?entry=http://data.semanticweb.org/conference/www/2011/event/d-14]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 21:06:19) [GET]
+  Parameters: {"id"=>"http://base#8946e970-2383-11e2-9220-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 1381ms (View: 1349 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%238946e970-2383-11e2-9220-00044b181e28]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-01 21:06:30) [POST]
+  Parameters: {"authenticity_token"=>"BUnVjdMUJD9gMhc3uDOgZo4yBvlCwEzevtF6BxAEfYo=", "id"=>"http://base#8946e970-2383-11e2-9220-00044b181e28", "interface"=>{"interface_name"=>"PageForMobile", "interface_title"=>"Page for Mobile", "interface_weight"=>"2", "interface_selection_rule"=>"set{\r\n  has :URI, \"index_title\", \"All Persons\"\r\n  has :URI, \"class\", \"SHDM::Index\"\r\n  has \"user_agent\", \"mobile\", true\r\n}", "abstract_scheme"=>"", "abstract_rules"=>"", "concrete_mapping_rules"=>""}, "commit"=>"Save"}
+Redirected to http://localhost:3000/interfaces
+Completed in 888ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-01 21:06:31) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 1774ms (View: 1749 | 200 OK [http://localhost/interfaces]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 21:06:37) [GET]
+  Parameters: {"id"=>"http://base#8946e970-2383-11e2-9220-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 552ms (View: 509 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%238946e970-2383-11e2-9220-00044b181e28]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-01 21:07:01) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 745ms (View: 733 | 200 OK [http://localhost/interfaces]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 21:07:07) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 314ms (View: 298 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 21:30:16) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 314ms (View: 291 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-11-01 22:04:33) [GET]
+  Parameters: {"entry"=>"http://data.semanticweb.org/conference/www/2011/event/d-14", "id"=>"http://base#84f5cd60-59bc-11e0-b9e1-00264afffe1d"}
+
+MissingSourceFile (no such file to load -- rules_facts):
+  org/jruby/RubyKernel.java:1047:in `require'
+  lib/interface_selection.rb:2:in `(root)'
+  org/jruby/RubyKernel.java:1073:in `load'
+  lib/interface_selection.rb:406:in `load_file'
+  app/controllers/execute_controller.rb:5:in `ExecuteController'
+  app/controllers/execute_controller.rb:3:in `(root)'
+  org/jruby/RubyKernel.java:1073:in `load'
+  app/controllers/execute_controller.rb:406:in `load_file'
+  org/jruby/RubyModule.java:2505:in `const_get'
+  org/jruby/RubyArray.java:1603:in `each'
+  org/jruby/RubyProc.java:262:in `call'
+  org/jruby/RubyArray.java:1603:in `each'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:111:in `service'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:70:in `run'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:183:in `start_thread'
+
+Rendered rescues/_trace (265.0ms)
+Rendered rescues/_request_and_response (71.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-01 22:05:14) [GET]
+  Parameters: {"entry"=>"http://data.semanticweb.org/conference/www/2011/event/d-14", "id"=>"http://base#84f5cd60-59bc-11e0-b9e1-00264afffe1d"}
+Completed in 3785ms (View: 10 | 200 OK [http://localhost/execute/index/http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d?entry=http://data.semanticweb.org/conference/www/2011/event/d-14]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-01 22:06:46) [GET]
+  Parameters: {"entry"=>"http://data.semanticweb.org/conference/www/2011/event/d-14", "id"=>"http://base#84f5cd60-59bc-11e0-b9e1-00264afffe1d"}
+Completed in 164ms (View: 9 | 200 OK [http://localhost/execute/index/http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d?entry=http://data.semanticweb.org/conference/www/2011/event/d-14]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-11-01 22:28:55) [GET]
+  Parameters: {"entry"=>"http://data.semanticweb.org/conference/www/2011/event/d-14", "id"=>"http://base#84f5cd60-59bc-11e0-b9e1-00264afffe1d"}
+
+NameError (uninitialized constant ExecuteController::InterfaceSelection):
+  app/controllers/execute_controller.rb:5:in `ExecuteController'
+  app/controllers/execute_controller.rb:3:in `(root)'
+  org/jruby/RubyKernel.java:1073:in `load'
+  app/controllers/execute_controller.rb:406:in `load_file'
+  org/jruby/RubyModule.java:2505:in `const_get'
+  org/jruby/RubyArray.java:1603:in `each'
+  org/jruby/RubyProc.java:262:in `call'
+  org/jruby/RubyArray.java:1603:in `each'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:111:in `service'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:70:in `run'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:183:in `start_thread'
+
+Rendered rescues/_trace (178.0ms)
+Rendered rescues/_request_and_response (23.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-11-01 22:33:05) [GET]
+  Parameters: {"entry"=>"http://data.semanticweb.org/conference/www/2011/event/d-14", "id"=>"http://base#84f5cd60-59bc-11e0-b9e1-00264afffe1d"}
+
+NameError (uninitialized constant ExecuteController::InterfaceSelection):
+  app/controllers/execute_controller.rb:5:in `ExecuteController'
+  app/controllers/execute_controller.rb:3:in `(root)'
+  org/jruby/RubyKernel.java:1073:in `load'
+  app/controllers/execute_controller.rb:406:in `load_file'
+  org/jruby/RubyModule.java:2505:in `const_get'
+  org/jruby/RubyArray.java:1603:in `each'
+  org/jruby/RubyProc.java:262:in `call'
+  org/jruby/RubyArray.java:1603:in `each'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:111:in `service'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:70:in `run'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:183:in `start_thread'
+
+Rendered rescues/_trace (180.0ms)
+Rendered rescues/_request_and_response (5.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-11-01 22:33:56) [GET]
+  Parameters: {"entry"=>"http://data.semanticweb.org/conference/www/2011/event/d-14", "id"=>"http://base#84f5cd60-59bc-11e0-b9e1-00264afffe1d"}
+
+NameError (uninitialized constant ExecuteController::InterfaceSelection):
+  app/controllers/execute_controller.rb:5:in `ExecuteController'
+  app/controllers/execute_controller.rb:3:in `(root)'
+  org/jruby/RubyKernel.java:1073:in `load'
+  app/controllers/execute_controller.rb:406:in `load_file'
+  org/jruby/RubyModule.java:2505:in `const_get'
+  org/jruby/RubyArray.java:1603:in `each'
+  org/jruby/RubyProc.java:262:in `call'
+  org/jruby/RubyArray.java:1603:in `each'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:111:in `service'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:70:in `run'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:183:in `start_thread'
+
+Rendered rescues/_trace (188.0ms)
+Rendered rescues/_request_and_response (22.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-01 22:34:33) [GET]
+  Parameters: {"entry"=>"http://data.semanticweb.org/conference/www/2011/event/d-14", "id"=>"http://base#84f5cd60-59bc-11e0-b9e1-00264afffe1d"}
+Completed in 1689ms (View: 15 | 200 OK [http://localhost/execute/index/http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d?entry=http://data.semanticweb.org/conference/www/2011/event/d-14]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-01 22:35:56) [GET]
+  Parameters: {"entry"=>"http://data.semanticweb.org/conference/www/2011/event/d-14", "id"=>"http://base#84f5cd60-59bc-11e0-b9e1-00264afffe1d"}
+Completed in 1586ms (View: 12 | 200 OK [http://localhost/execute/index/http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d?entry=http://data.semanticweb.org/conference/www/2011/event/d-14]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-01 22:36:51) [GET]
+  Parameters: {"entry"=>"http://data.semanticweb.org/conference/www/2011/event/d-14", "id"=>"http://base#84f5cd60-59bc-11e0-b9e1-00264afffe1d"}
+Completed in 746ms (View: 13 | 200 OK [http://localhost/execute/index/http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d?entry=http://data.semanticweb.org/conference/www/2011/event/d-14]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-01 22:37:28) [GET]
+  Parameters: {"entry"=>"http://data.semanticweb.org/conference/www/2011/event/d-14", "id"=>"http://base#84f5cd60-59bc-11e0-b9e1-00264afffe1d"}
+Completed in 1931ms (View: 19 | 200 OK [http://localhost/execute/index/http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d?entry=http://data.semanticweb.org/conference/www/2011/event/d-14]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-01 22:38:21) [GET]
+  Parameters: {"entry"=>"http://data.semanticweb.org/conference/www/2011/event/d-14", "id"=>"http://base#84f5cd60-59bc-11e0-b9e1-00264afffe1d"}
+Completed in 652ms (View: 12 | 200 OK [http://localhost/execute/index/http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d?entry=http://data.semanticweb.org/conference/www/2011/event/d-14]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-01 22:38:50) [GET]
+  Parameters: {"entry"=>"http://data.semanticweb.org/conference/www/2011/event/d-14", "id"=>"http://base#84f5cd60-59bc-11e0-b9e1-00264afffe1d"}
+Completed in 488ms (View: 15 | 200 OK [http://localhost/execute/index/http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d?entry=http://data.semanticweb.org/conference/www/2011/event/d-14]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-01 22:39:52) [GET]
+  Parameters: {"entry"=>"http://data.semanticweb.org/conference/www/2011/event/d-14", "id"=>"http://base#84f5cd60-59bc-11e0-b9e1-00264afffe1d"}
+Completed in 1836ms (View: 9 | 200 OK [http://localhost/execute/index/http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d?entry=http://data.semanticweb.org/conference/www/2011/event/d-14]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-01 22:39:58) [GET]
+  Parameters: {"entry"=>"http://data.semanticweb.org/conference/www/2011/event/d-14", "id"=>"http://base#84f5cd60-59bc-11e0-b9e1-00264afffe1d"}
+Completed in 948ms (View: 11 | 200 OK [http://localhost/execute/index/http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d?entry=http://data.semanticweb.org/conference/www/2011/event/d-14]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-01 22:40:35) [GET]
+  Parameters: {"entry"=>"http://data.semanticweb.org/conference/www/2011/event/d-14", "id"=>"http://base#84f5cd60-59bc-11e0-b9e1-00264afffe1d"}
+Completed in 562ms (View: 16 | 200 OK [http://localhost/execute/index/http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d?entry=http://data.semanticweb.org/conference/www/2011/event/d-14]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-01 22:41:22) [GET]
+  Parameters: {"entry"=>"http://data.semanticweb.org/conference/www/2011/event/d-14", "id"=>"http://base#84f5cd60-59bc-11e0-b9e1-00264afffe1d"}
+Completed in 512ms (View: 8 | 200 OK [http://localhost/execute/index/http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d?entry=http://data.semanticweb.org/conference/www/2011/event/d-14]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-01 22:41:54) [GET]
+  Parameters: {"entry"=>"http://data.semanticweb.org/conference/www/2011/event/d-14", "id"=>"http://base#84f5cd60-59bc-11e0-b9e1-00264afffe1d"}
+Completed in 1486ms (View: 10 | 200 OK [http://localhost/execute/index/http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d?entry=http://data.semanticweb.org/conference/www/2011/event/d-14]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-01 22:42:10) [GET]
+  Parameters: {"entry"=>"http://data.semanticweb.org/conference/www/2011/event/d-14", "id"=>"http://base#84f5cd60-59bc-11e0-b9e1-00264afffe1d"}
+Completed in 691ms (View: 12 | 200 OK [http://localhost/execute/index/http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d?entry=http://data.semanticweb.org/conference/www/2011/event/d-14]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-01 22:42:59) [GET]
+  Parameters: {"entry"=>"http://data.semanticweb.org/conference/www/2011/event/d-14", "id"=>"http://base#84f5cd60-59bc-11e0-b9e1-00264afffe1d"}
+Completed in 2433ms (View: 13 | 200 OK [http://localhost/execute/index/http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d?entry=http://data.semanticweb.org/conference/www/2011/event/d-14]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-01 22:43:23) [GET]
+  Parameters: {"entry"=>"http://data.semanticweb.org/conference/www/2011/event/d-14", "id"=>"http://base#84f5cd60-59bc-11e0-b9e1-00264afffe1d"}
+Completed in 1150ms (View: 7 | 200 OK [http://localhost/execute/index/http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d?entry=http://data.semanticweb.org/conference/www/2011/event/d-14]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-01 22:47:25) [GET]
+  Parameters: {"entry"=>"http://data.semanticweb.org/conference/www/2011/event/d-14", "id"=>"http://base#84f5cd60-59bc-11e0-b9e1-00264afffe1d"}
+Completed in 318ms (View: 7 | 200 OK [http://localhost/execute/index/http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d?entry=http://data.semanticweb.org/conference/www/2011/event/d-14]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-01 22:48:31) [GET]
+  Parameters: {"entry"=>"http://data.semanticweb.org/conference/www/2011/event/d-14", "id"=>"http://base#84f5cd60-59bc-11e0-b9e1-00264afffe1d"}
+Completed in 1160ms (View: 7 | 200 OK [http://localhost/execute/index/http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d?entry=http://data.semanticweb.org/conference/www/2011/event/d-14]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-01 22:49:18) [GET]
+  Parameters: {"entry"=>"http://data.semanticweb.org/conference/www/2011/event/d-14", "id"=>"http://base#84f5cd60-59bc-11e0-b9e1-00264afffe1d"}
+Completed in 2843ms (View: 7 | 200 OK [http://localhost/execute/index/http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d?entry=http://data.semanticweb.org/conference/www/2011/event/d-14]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-01 22:53:21) [POST]
+  Parameters: {"authenticity_token"=>"BUnVjdMUJD9gMhc3uDOgZo4yBvlCwEzevtF6BxAEfYo=", "id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28", "interface"=>{"interface_name"=>"DefaultContext", "interface_title"=>"Default Context", "interface_weight"=>"1", "interface_selection_rule"=>"set{\r\n has \"navigational_element\", \"rdf:about\", :URI \r\n has :URI, \"rdf:type\", \"SHDM::Context\"\r\n}", "abstract_scheme"=>"aa", "abstract_rules"=>"", "concrete_mapping_rules"=>""}, "commit"=>"Save"}
+Redirected to http://localhost:3000/interfaces
+Completed in 1107ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-01 22:53:23) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 1892ms (View: 1876 | 200 OK [http://localhost/interfaces]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 22:53:30) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 577ms (View: 521 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-01 22:53:42) [POST]
+  Parameters: {"authenticity_token"=>"BUnVjdMUJD9gMhc3uDOgZo4yBvlCwEzevtF6BxAEfYo=", "id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28", "interface"=>{"interface_name"=>"AllPersons", "interface_title"=>"All Persons", "interface_weight"=>"1", "interface_selection_rule"=>"set{\r\n  #has :URI, \"index_title\", \"All Persons\"\r\n  has :URI, \"class\", \"SHDM::Index\"\r\n  has \"user_agent\", \"mobile\", false\r\n}", "abstract_scheme"=>"", "abstract_rules"=>"", "concrete_mapping_rules"=>""}, "commit"=>"Save"}
+Redirected to http://localhost:3000/interfaces
+Completed in 428ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-01 22:53:43) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 876ms (View: 862 | 200 OK [http://localhost/interfaces]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-01 22:53:45) [GET]
+  Parameters: {"entry"=>"http://data.semanticweb.org/conference/www/2011/event/d-14", "id"=>"http://base#84f5cd60-59bc-11e0-b9e1-00264afffe1d"}
+Completed in 2248ms (View: 6 | 200 OK [http://localhost/execute/index/http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d?entry=http://data.semanticweb.org/conference/www/2011/event/d-14]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-01 22:55:48) [GET]
+  Parameters: {"entry"=>"http://data.semanticweb.org/conference/www/2011/event/d-14", "id"=>"http://base#84f5cd60-59bc-11e0-b9e1-00264afffe1d"}
+Completed in 1270ms (View: 13 | 200 OK [http://localhost/execute/index/http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d?entry=http://data.semanticweb.org/conference/www/2011/event/d-14]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-01 22:56:21) [GET]
+  Parameters: {"entry"=>"http://data.semanticweb.org/conference/www/2011/event/d-14", "id"=>"http://base#84f5cd60-59bc-11e0-b9e1-00264afffe1d"}
+Completed in 3360ms (View: 7 | 200 OK [http://localhost/execute/index/http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d?entry=http://data.semanticweb.org/conference/www/2011/event/d-14]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-01 22:58:18) [GET]
+  Parameters: {"entry"=>"http://data.semanticweb.org/conference/www/2011/event/d-14", "id"=>"http://base#84f5cd60-59bc-11e0-b9e1-00264afffe1d"}
+Completed in 3914ms (View: 9 | 200 OK [http://localhost/execute/index/http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d?entry=http://data.semanticweb.org/conference/www/2011/event/d-14]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-01 22:58:27) [GET]
+  Parameters: {"entry"=>"http://data.semanticweb.org/conference/www/2011/event/d-14", "id"=>"http://base#84f5cd60-59bc-11e0-b9e1-00264afffe1d"}
+Completed in 1388ms (View: 7 | 200 OK [http://localhost/execute/index/http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d?entry=http://data.semanticweb.org/conference/www/2011/event/d-14]
+
+
+Processing ContextsController#index (for 127.0.0.1 at 2012-11-01 22:58:35) [GET]
+Rendering template within layouts/application
+Rendering contexts/index
+Completed in 1438ms (View: 1217 | 200 OK [http://localhost/navigation]
+
+
+Processing ContextsController#edit (for 127.0.0.1 at 2012-11-01 22:58:45) [GET]
+  Parameters: {"id"=>"http://base#d7c230b0-59b7-11e0-b9e1-00264afffe1d"}
+Rendering template within layouts/application
+Rendering contexts/edit
+Completed in 425ms (View: 406 | 200 OK [http://localhost/contexts/edit/http:%2F%2Fbase%23d7c230b0-59b7-11e0-b9e1-00264afffe1d]
+
+
+Processing ContextsController#pre_conditions (for 127.0.0.1 at 2012-11-01 22:58:47) [GET]
+  Parameters: {"q"=>"1", "_search"=>"false", "nd"=>"1351817927744", "rows"=>"10", "page"=>"1", "sidx"=>"", "sord"=>"", "id"=>"http://base#d7c230b0-59b7-11e0-b9e1-00264afffe1d"}
+Completed in 36ms (View: 13 | 200 OK [http://localhost/contexts/pre_conditions/http%3A%2F%2Fbase%23d7c230b0-59b7-11e0-b9e1-00264afffe1d?q=1&_search=false&nd=1351817927744&rows=10&page=1&sidx=&sord=]
+
+
+Processing ContextsController#context_parameters (for 127.0.0.1 at 2012-11-01 22:58:48) [GET]
+  Parameters: {"q"=>"1", "_search"=>"false", "nd"=>"1351817927677", "rows"=>"10", "page"=>"1", "sidx"=>"", "sord"=>"", "id"=>"http://base#d7c230b0-59b7-11e0-b9e1-00264afffe1d"}
+Completed in 42ms (View: 14 | 200 OK [http://localhost/contexts/context_parameters/http%3A%2F%2Fbase%23d7c230b0-59b7-11e0-b9e1-00264afffe1d?q=1&_search=false&nd=1351817927677&rows=10&page=1&sidx=&sord=]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-01 22:58:52) [GET]
+  Parameters: {"id"=>"http://base#d7c230b0-59b7-11e0-b9e1-00264afffe1d"}
+Completed in 1013ms (View: 13 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23d7c230b0-59b7-11e0-b9e1-00264afffe1d]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-01 22:59:02) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 756ms (View: 748 | 200 OK [http://localhost/interface]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-01 22:59:10) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 392ms (View: 380 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-01 22:59:41) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 427ms (View: 419 | 200 OK [http://localhost/interface]
+
+
+Processing ContextsController#edit (for 127.0.0.1 at 2012-11-01 22:59:43) [GET]
+  Parameters: {"id"=>"http://base#d7c230b0-59b7-11e0-b9e1-00264afffe1d"}
+Rendering template within layouts/application
+Rendering contexts/edit
+Completed in 182ms (View: 166 | 200 OK [http://localhost/contexts/edit/http:%2F%2Fbase%23d7c230b0-59b7-11e0-b9e1-00264afffe1d]
+
+
+Processing ContextsController#context_parameters (for 127.0.0.1 at 2012-11-01 22:59:44) [GET]
+  Parameters: {"q"=>"1", "_search"=>"false", "nd"=>"1351817984705", "rows"=>"10", "page"=>"1", "sidx"=>"", "sord"=>"", "id"=>"http://base#d7c230b0-59b7-11e0-b9e1-00264afffe1d"}
+Completed in 40ms (View: 11 | 200 OK [http://localhost/contexts/context_parameters/http%3A%2F%2Fbase%23d7c230b0-59b7-11e0-b9e1-00264afffe1d?q=1&_search=false&nd=1351817984705&rows=10&page=1&sidx=&sord=]
+
+
+Processing ContextsController#pre_conditions (for 127.0.0.1 at 2012-11-01 22:59:45) [GET]
+  Parameters: {"q"=>"1", "_search"=>"false", "nd"=>"1351817984774", "rows"=>"10", "page"=>"1", "sidx"=>"", "sord"=>"", "id"=>"http://base#d7c230b0-59b7-11e0-b9e1-00264afffe1d"}
+Completed in 33ms (View: 9 | 200 OK [http://localhost/contexts/pre_conditions/http%3A%2F%2Fbase%23d7c230b0-59b7-11e0-b9e1-00264afffe1d?q=1&_search=false&nd=1351817984774&rows=10&page=1&sidx=&sord=]
+
+
+Processing IndexesController#index (for 127.0.0.1 at 2012-11-01 22:59:47) [GET]
+Rendering template within layouts/application
+Rendering indexes/index
+Completed in 740ms (View: 714 | 200 OK [http://localhost/indexes]
+
+
+Processing IndexesController#edit (for 127.0.0.1 at 2012-11-01 22:59:53) [GET]
+  Parameters: {"id"=>"http://base#9b6a77f0-59ba-11e0-b9e1-00264afffe1d"}
+Rendering template within layouts/application
+Rendering indexes/edit
+Completed in 1127ms (View: 1001 | 200 OK [http://localhost/indexes/edit/http:%2F%2Fbase%239b6a77f0-59ba-11e0-b9e1-00264afffe1d]
+
+
+Processing IndexesController#index_attributes (for 127.0.0.1 at 2012-11-01 22:59:56) [GET]
+  Parameters: {"q"=>"1", "_search"=>"false", "nd"=>"1351817995745", "rows"=>"10", "page"=>"1", "sidx"=>"", "sord"=>"", "id"=>"http://base#9b6a77f0-59ba-11e0-b9e1-00264afffe1d"}
+Completed in 33ms (View: 12 | 200 OK [http://localhost/indexes/index_attributes/http%3A%2F%2Fbase%239b6a77f0-59ba-11e0-b9e1-00264afffe1d?q=1&_search=false&nd=1351817995745&rows=10&page=1&sidx=&sord=]
+
+
+Processing IndexesController#context_anchor_attributes (for 127.0.0.1 at 2012-11-01 22:59:56) [GET]
+  Parameters: {"q"=>"1", "_search"=>"false", "nd"=>"1351817995818", "rows"=>"10", "page"=>"1", "sidx"=>"", "sord"=>"", "id"=>"http://base#9b6a77f0-59ba-11e0-b9e1-00264afffe1d"}
+Completed in 346ms (View: 6 | 200 OK [http://localhost/indexes/context_anchor_attributes/http%3A%2F%2Fbase%239b6a77f0-59ba-11e0-b9e1-00264afffe1d?q=1&_search=false&nd=1351817995818&rows=10&page=1&sidx=&sord=]
+
+
+Processing IndexesController#pre_conditions (for 127.0.0.1 at 2012-11-01 22:59:56) [GET]
+  Parameters: {"q"=>"1", "_search"=>"false", "nd"=>"1351817995952", "rows"=>"10", "page"=>"1", "sidx"=>"", "sord"=>"", "id"=>"http://base#9b6a77f0-59ba-11e0-b9e1-00264afffe1d"}
+Completed in 36ms (View: 19 | 200 OK [http://localhost/indexes/pre_conditions/http%3A%2F%2Fbase%239b6a77f0-59ba-11e0-b9e1-00264afffe1d?q=1&_search=false&nd=1351817995952&rows=10&page=1&sidx=&sord=]
+
+
+Processing IndexesController#index_anchor_attributes (for 127.0.0.1 at 2012-11-01 22:59:56) [GET]
+  Parameters: {"q"=>"1", "_search"=>"false", "nd"=>"1351817995872", "rows"=>"10", "page"=>"1", "sidx"=>"", "sord"=>"", "id"=>"http://base#9b6a77f0-59ba-11e0-b9e1-00264afffe1d"}
+Completed in 245ms (View: 6 | 200 OK [http://localhost/indexes/index_anchor_attributes/http%3A%2F%2Fbase%239b6a77f0-59ba-11e0-b9e1-00264afffe1d?q=1&_search=false&nd=1351817995872&rows=10&page=1&sidx=&sord=]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-01 23:00:03) [GET]
+  Parameters: {"id"=>"http://base#9b6a77f0-59ba-11e0-b9e1-00264afffe1d"}
+Completed in 951ms (View: 7 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%239b6a77f0-59ba-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-01 23:02:30) [GET]
+  Parameters: {"id"=>"http://base#9b6a77f0-59ba-11e0-b9e1-00264afffe1d"}
+Completed in 962ms (View: 10 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%239b6a77f0-59ba-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-01 23:02:36) [GET]
+  Parameters: {"id"=>"http://base#9b6a77f0-59ba-11e0-b9e1-00264afffe1d"}
+Completed in 849ms (View: 8 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%239b6a77f0-59ba-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-01 23:03:55) [GET]
+  Parameters: {"id"=>"http://base#9b6a77f0-59ba-11e0-b9e1-00264afffe1d"}
+Completed in 855ms (View: 6 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%239b6a77f0-59ba-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-01 23:06:56) [GET]
+  Parameters: {"id"=>"http://base#9b6a77f0-59ba-11e0-b9e1-00264afffe1d"}
+Completed in 3065ms (View: 7 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%239b6a77f0-59ba-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-01 23:08:31) [GET]
+  Parameters: {"id"=>"http://base#9b6a77f0-59ba-11e0-b9e1-00264afffe1d"}
+Completed in 2742ms (View: 9 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%239b6a77f0-59ba-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-01 23:09:31) [GET]
+  Parameters: {"id"=>"http://base#9b6a77f0-59ba-11e0-b9e1-00264afffe1d"}
+Completed in 1365ms (View: 8 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%239b6a77f0-59ba-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-02 00:04:23) [GET]
+  Parameters: {"id"=>"http://base#9b6a77f0-59ba-11e0-b9e1-00264afffe1d"}
+Completed in 4682ms (View: 520 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%239b6a77f0-59ba-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-02 00:05:10) [GET]
+  Parameters: {"id"=>"http://base#9b6a77f0-59ba-11e0-b9e1-00264afffe1d"}
+Completed in 1867ms (View: 14 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%239b6a77f0-59ba-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-02 00:05:56) [GET]
+  Parameters: {"id"=>"http://base#9b6a77f0-59ba-11e0-b9e1-00264afffe1d"}
+Completed in 2858ms (View: 13 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%239b6a77f0-59ba-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-02 00:07:12) [GET]
+  Parameters: {"id"=>"http://base#9b6a77f0-59ba-11e0-b9e1-00264afffe1d"}
+Completed in 1528ms (View: 9 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%239b6a77f0-59ba-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-02 00:09:19) [GET]
+  Parameters: {"id"=>"http://base#9b6a77f0-59ba-11e0-b9e1-00264afffe1d"}
+Completed in 3050ms (View: 12 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%239b6a77f0-59ba-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-02 00:12:25) [GET]
+  Parameters: {"id"=>"http://base#9b6a77f0-59ba-11e0-b9e1-00264afffe1d"}
+Completed in 2983ms (View: 7 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%239b6a77f0-59ba-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-02 00:14:52) [GET]
+  Parameters: {"id"=>"http://base#9b6a77f0-59ba-11e0-b9e1-00264afffe1d"}
+Completed in 4022ms (View: 23 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%239b6a77f0-59ba-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-02 00:16:28) [GET]
+  Parameters: {"id"=>"http://base#9b6a77f0-59ba-11e0-b9e1-00264afffe1d"}
+Completed in 4438ms (View: 9 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%239b6a77f0-59ba-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-02 00:17:48) [GET]
+  Parameters: {"id"=>"http://base#9b6a77f0-59ba-11e0-b9e1-00264afffe1d"}
+Completed in 4754ms (View: 21 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%239b6a77f0-59ba-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-02 00:19:01) [GET]
+  Parameters: {"id"=>"http://base#9b6a77f0-59ba-11e0-b9e1-00264afffe1d"}
+Completed in 2867ms (View: 7 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%239b6a77f0-59ba-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-02 00:25:33) [GET]
+  Parameters: {"id"=>"http://base#9b6a77f0-59ba-11e0-b9e1-00264afffe1d"}
+Completed in 565ms (View: 15 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%239b6a77f0-59ba-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-02 00:27:03) [GET]
+  Parameters: {"id"=>"http://base#9b6a77f0-59ba-11e0-b9e1-00264afffe1d"}
+Completed in 243ms (View: 8 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%239b6a77f0-59ba-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-02 00:28:28) [GET]
+  Parameters: {"id"=>"http://base#9b6a77f0-59ba-11e0-b9e1-00264afffe1d"}
+Completed in 657ms (View: 19 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%239b6a77f0-59ba-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-02 00:30:48) [GET]
+  Parameters: {"id"=>"http://base#9b6a77f0-59ba-11e0-b9e1-00264afffe1d"}
+Completed in 571ms (View: 8 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%239b6a77f0-59ba-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-02 00:31:27) [GET]
+  Parameters: {"id"=>"http://base#9b6a77f0-59ba-11e0-b9e1-00264afffe1d"}
+Completed in 290ms (View: 12 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%239b6a77f0-59ba-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-02 00:32:01) [GET]
+  Parameters: {"id"=>"http://base#9b6a77f0-59ba-11e0-b9e1-00264afffe1d"}
+Completed in 248ms (View: 21 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%239b6a77f0-59ba-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-02 00:32:38) [GET]
+  Parameters: {"id"=>"http://base#9b6a77f0-59ba-11e0-b9e1-00264afffe1d"}
+Completed in 523ms (View: 8 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%239b6a77f0-59ba-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-02 00:35:16) [GET]
+  Parameters: {"id"=>"http://base#9b6a77f0-59ba-11e0-b9e1-00264afffe1d"}
+Completed in 510ms (View: 8 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%239b6a77f0-59ba-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-02 00:36:00) [GET]
+  Parameters: {"id"=>"http://base#9b6a77f0-59ba-11e0-b9e1-00264afffe1d"}
+Completed in 278ms (View: 7 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%239b6a77f0-59ba-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-02 00:36:29) [GET]
+  Parameters: {"id"=>"http://base#9b6a77f0-59ba-11e0-b9e1-00264afffe1d"}
+Completed in 3298ms (View: 9 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%239b6a77f0-59ba-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-02 00:37:26) [GET]
+  Parameters: {"id"=>"http://base#9b6a77f0-59ba-11e0-b9e1-00264afffe1d"}
+Completed in 1521ms (View: 13 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%239b6a77f0-59ba-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-02 00:38:03) [GET]
+  Parameters: {"id"=>"http://base#9b6a77f0-59ba-11e0-b9e1-00264afffe1d"}
+Completed in 3546ms (View: 14 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%239b6a77f0-59ba-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-02 00:39:01) [GET]
+  Parameters: {"id"=>"http://base#9b6a77f0-59ba-11e0-b9e1-00264afffe1d"}
+Completed in 3913ms (View: 14 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%239b6a77f0-59ba-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-02 00:39:46) [GET]
+  Parameters: {"id"=>"http://base#9b6a77f0-59ba-11e0-b9e1-00264afffe1d"}
+Completed in 4040ms (View: 19 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%239b6a77f0-59ba-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-02 00:41:20) [GET]
+  Parameters: {"id"=>"http://base#9b6a77f0-59ba-11e0-b9e1-00264afffe1d"}
+Completed in 3524ms (View: 11 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%239b6a77f0-59ba-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-02 00:44:53) [GET]
+  Parameters: {"id"=>"http://base#9b6a77f0-59ba-11e0-b9e1-00264afffe1d"}
+Completed in 3883ms (View: 13 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%239b6a77f0-59ba-11e0-b9e1-00264afffe1d]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-02 00:45:09) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 1229ms (View: 1212 | 200 OK [http://localhost/interface]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-02 00:48:18) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 1963ms (View: 1935 | 200 OK [http://localhost/interface]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-02 00:48:23) [GET]
+  Parameters: {"id"=>"http://base#9b6a77f0-59ba-11e0-b9e1-00264afffe1d"}
+Completed in 3252ms (View: 10 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%239b6a77f0-59ba-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-11-02 00:48:35) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/ps-03", "id"=>"http://base#84f5cd60-59bc-11e0-b9e1-00264afffe1d"}
+Completed in 264ms (View: 13 | 200 OK [http://localhost/execute/context/http%3A%2F%2Fbase%2384f5cd60-59bc-11e0-b9e1-00264afffe1d?node=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent/ps-03]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-11-02 00:48:55) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/ps-03", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 4399ms (View: 11 | 200 OK [http://localhost/execute/context/http%3A%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2Fps-03]

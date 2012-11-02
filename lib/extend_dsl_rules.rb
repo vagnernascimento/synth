@@ -1,7 +1,6 @@
 require "wongi-engine"
 module ExtendDSLRules
-	include Wongi::Engine
-	
+  include Wongi::Engine
 	
 	#=== Defining new Wong methods
 	module Wongi::Engine
