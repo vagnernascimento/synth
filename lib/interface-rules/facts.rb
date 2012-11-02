@@ -2,7 +2,7 @@
 require "useragent"
 module InterfaceRules
 
-	class Facts
+	class InterfaceRules::Facts
 		
 		def initialize(facts=[])
 			@facts = facts 

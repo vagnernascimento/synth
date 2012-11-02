@@ -14653,3 +14653,484 @@ Completed in 264ms (View: 13 | 200 OK [http://localhost/execute/context/http%3A%
 Processing ExecuteController#context (for 127.0.0.1 at 2012-11-02 00:48:55) [GET]
   Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/ps-03", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
 Completed in 4399ms (View: 11 | 200 OK [http://localhost/execute/context/http%3A%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2Fps-03]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-11-02 16:47:45) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/ps-03", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 5079ms (View: 12 | 200 OK [http://localhost/execute/context/http%3A%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2Fps-03]
+
+
+Processing OperationsController#index (for 127.0.0.1 at 2012-11-02 16:48:16) [GET]
+Rendering template within layouts/application
+Rendering operations/index
+Completed in 302ms (View: 294 | 200 OK [http://localhost/behavior]
+
+
+Processing OperationsController#edit (for 127.0.0.1 at 2012-11-02 16:48:19) [GET]
+  Parameters: {"id"=>"http://base#5d089320-59c4-11e0-b9e1-00264afffe1d"}
+Rendering template within layouts/application
+Rendering operations/edit
+Completed in 587ms (View: 575 | 200 OK [http://localhost/operations/edit/http:%2F%2Fbase%235d089320-59c4-11e0-b9e1-00264afffe1d]
+
+
+Processing OperationsController#edit (for 127.0.0.1 at 2012-11-02 16:56:34) [GET]
+  Parameters: {"id"=>"http://base#5d089320-59c4-11e0-b9e1-00264afffe1d"}
+Rendering template within layouts/application
+Rendering operations/edit
+Completed in 433ms (View: 400 | 200 OK [http://localhost/operations/edit/http:%2F%2Fbase%235d089320-59c4-11e0-b9e1-00264afffe1d]
+
+
+Processing OperationsController#edit (for 127.0.0.1 at 2012-11-02 16:56:44) [GET]
+  Parameters: {"id"=>"http://base#5d089320-59c4-11e0-b9e1-00264afffe1d"}
+Rendering template within layouts/application
+Rendering operations/edit
+Completed in 187ms (View: 171 | 200 OK [http://localhost/operations/edit/http:%2F%2Fbase%235d089320-59c4-11e0-b9e1-00264afffe1d]
+
+
+Processing OperationsController#edit (for 127.0.0.1 at 2012-11-02 16:57:09) [GET]
+  Parameters: {"id"=>"http://base#5d089320-59c4-11e0-b9e1-00264afffe1d"}
+Rendering template within layouts/application
+Rendering operations/edit
+Completed in 245ms (View: 224 | 200 OK [http://localhost/operations/edit/http:%2F%2Fbase%235d089320-59c4-11e0-b9e1-00264afffe1d]
+
+
+Processing ContextsController#index (for 127.0.0.1 at 2012-11-02 18:10:23) [GET]
+Rendering template within layouts/application
+Rendering contexts/index
+Completed in 719ms (View: 597 | 200 OK [http://localhost/navigation]
+
+
+Processing OperationsController#index (for 127.0.0.1 at 2012-11-02 18:10:28) [GET]
+Rendering template within layouts/application
+Rendering operations/index
+Completed in 344ms (View: 336 | 200 OK [http://localhost/behavior]
+
+
+Processing OperationsController#edit (for 127.0.0.1 at 2012-11-02 18:10:32) [GET]
+  Parameters: {"id"=>"http://base#5d089320-59c4-11e0-b9e1-00264afffe1d"}
+Rendering template within layouts/application
+Rendering operations/edit
+Completed in 212ms (View: 202 | 200 OK [http://localhost/operations/edit/http:%2F%2Fbase%235d089320-59c4-11e0-b9e1-00264afffe1d]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-02 18:12:14) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 609ms (View: 599 | 200 OK [http://localhost/interface]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-02 18:12:20) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 284ms (View: 274 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-02 18:13:07) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 500ms (View: 492 | 200 OK [http://localhost/interfaces]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-02 18:13:13) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 305ms (View: 291 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-02 18:14:17) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 394ms (View: 387 | 200 OK [http://localhost/interfaces]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-02 18:14:23) [GET]
+  Parameters: {"id"=>"http://base#96a9ecb0-2384-11e2-9220-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 245ms (View: 233 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%2396a9ecb0-2384-11e2-9220-00044b181e28]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-11-02 18:14:41) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/ps-03", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 2302ms (View: 12 | 200 OK [http://localhost/execute/context/http%3A%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2Fps-03]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-11-02 18:15:03) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/ps-03", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 2463ms (View: 10 | 200 OK [http://localhost/execute/context/http%3A%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2Fps-03]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-02 18:15:17) [POST]
+  Parameters: {"authenticity_token"=>"BUnVjdMUJD9gMhc3uDOgZo4yBvlCwEzevtF6BxAEfYo=", "id"=>"http://base#96a9ecb0-2384-11e2-9220-00044b181e28", "interface"=>{"interface_name"=>"PageforChorme", "interface_title"=>"Page for Chorme", "interface_weight"=>"1", "interface_selection_rule"=>"set {\r\n has :_, \"class\", \"SHDM::Context\"\r\n has \"user_agent\", \"browser\", :BrowserName\r\n like \"chrome\", :BrowserName\r\n}", "abstract_scheme"=>"puts \"algo\"", "abstract_rules"=>"", "concrete_mapping_rules"=>"puts \"mapping\""}, "commit"=>"Save"}
+Redirected to http://localhost:3000/interfaces
+Completed in 319ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-02 18:15:17) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 739ms (View: 730 | 200 OK [http://localhost/interfaces]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-02 18:15:21) [GET]
+  Parameters: {"id"=>"http://base#96a9ecb0-2384-11e2-9220-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 283ms (View: 274 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%2396a9ecb0-2384-11e2-9220-00044b181e28]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-02 18:15:43) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 478ms (View: 472 | 200 OK [http://localhost/interfaces]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-02 18:15:48) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 330ms (View: 320 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-02 18:15:55) [POST]
+  Parameters: {"authenticity_token"=>"BUnVjdMUJD9gMhc3uDOgZo4yBvlCwEzevtF6BxAEfYo=", "id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28", "interface"=>{"interface_name"=>"DefaultContext", "interface_title"=>"Default Context", "interface_weight"=>"3", "interface_selection_rule"=>"set{\r\n has \"navigational_element\", \"rdf:about\", :URI \r\n has :URI, \"rdf:type\", \"SHDM::Context\"\r\n}", "abstract_scheme"=>"aa", "abstract_rules"=>"", "concrete_mapping_rules"=>""}, "commit"=>"Save"}
+Redirected to http://localhost:3000/interfaces
+Completed in 458ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-02 18:15:55) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 822ms (View: 814 | 200 OK [http://localhost/interfaces]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-11-02 18:15:59) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/ps-03", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 4218ms (View: 11 | 200 OK [http://localhost/execute/context/http%3A%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2Fps-03]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-11-02 18:16:12) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/ps-03", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 2060ms (View: 9 | 200 OK [http://localhost/execute/context/http%3A%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2Fps-03]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-02 18:42:39) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 187ms (View: 178 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-02 18:44:10) [POST]
+  Parameters: {"authenticity_token"=>"BUnVjdMUJD9gMhc3uDOgZo4yBvlCwEzevtF6BxAEfYo=", "id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28", "interface"=>{"interface_name"=>"DefaultContext", "interface_title"=>"Default Context", "interface_weight"=>"3", "interface_selection_rule"=>"set{\r\n has \"navigational_element\", \"rdf:about\", :URI \r\n has :URI, \"rdf:type\", \"SHDM::Context\"\r\n}", "abstract_scheme"=>"{\r\n  name: \"main_page\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n    { name: \"header\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      { name: \"login\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n        {name: \"user\", abstract_element: \"IndefiniteVariable\"},\r\n        {name: \"password\", abstract_element: \"IndefiniteVariable\"},\r\n        {name: \"send\", abstract_element: \"SimpleActivator\"},\r\n        ]\r\n        },\r\n      { name: \"user_welcome\", abstract_element: \"ElementExhibitor\"}\r\n      ]},\r\n    { name: \"content\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      { name: \"title\", abstract_element: \"ElementExhibitor\"},\r\n      { name: \"text1\", abstract_element: \"ElementExhibitor\"},\r\n      { name: \"text2\", abstract_element: \"ElementExhibitor\"},\r\n      { name: \"next_button\", abstract_element: \"SimpleActivator\"}\r\n      ]}\r\n    ]\r\n}", "abstract_rules"=>"set \"login\" do\r\n  has :_, \"User:authenticated\", true\r\nend\r\n\r\nset \"user_welcome\" do\r\n  has \"Environment\", \"date_time_now\", :Time_now\r\n  gt :Time_now, Time.new(2013,10,01)\r\nend\r\n\r\nset \"text1\" do\r\n  has :_, \"User:age\", :Age\r\n  gte :Age, 18\r\nend\r\n\r\nset \"text2\" do\r\n  has :_, \"User:age\", :Age\r\n  lt :Age, 18\r\nend", "concrete_mapping_rules"=>""}, "commit"=>"Save"}
+
+ActiveRDF::ActiveRdfError (Sesame delete triple failed: java.lang.RuntimeException: handled: Throwable):
+  vendor/plugins/active_rdf/activerdf-sesame/lib/activerdf_sesame/sesame.rb:158:in `delete'
+  app/models/rdfs/resource.rb:144:in `update_attributes'
+  org/jruby/RubyHash.java:1200:in `each_pair'
+  app/models/rdfs/resource.rb:132:in `update_attributes'
+  app/controllers/interfaces_controller.rb:46:in `update'
+  org/jruby/RubyProc.java:262:in `call'
+  app/controllers/interfaces_controller.rb:45:in `update'
+  org/jruby/RubyBasicObject.java:1685:in `__send__'
+  org/jruby/RubyKernel.java:2113:in `send'
+  org/jruby/RubyBasicObject.java:1685:in `__send__'
+  org/jruby/RubyKernel.java:2113:in `send'
+  org/jruby/RubyProc.java:262:in `call'
+  org/jruby/RubyArray.java:1603:in `each'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:111:in `service'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:70:in `run'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/httpserver.rb:48:in `run'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:183:in `start_thread'
+  c:/jruby-1.6.4/lib/ruby/1.9/webrick/server.rb:173:in `start_thread'
+
+Rendered rescues/_trace (155.0ms)
+Rendered rescues/_request_and_response (50.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-02 18:44:49) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 245ms (View: 237 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-02 18:45:02) [POST]
+  Parameters: {"authenticity_token"=>"BUnVjdMUJD9gMhc3uDOgZo4yBvlCwEzevtF6BxAEfYo=", "id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28", "interface"=>{"interface_name"=>"DefaultContext", "interface_title"=>"Default Context", "interface_weight"=>"3", "interface_selection_rule"=>"set{\r\n has \"navigational_element\", \"rdf:about\", :URI \r\n has :URI, \"rdf:type\", \"SHDM::Context\"\r\n}", "abstract_scheme"=>"aa", "abstract_rules"=>"set \"login\" do\r\n  has :_, \"User:authenticated\", true\r\nend\r\nset \"user_welcome\" do\r\n  has \"Environment\", \"date_time_now\", :Time_now\r\n  gt :Time_now, Time.new(2013,10,01)\r\nend\r\nset \"text1\" do\r\n  has :_, \"User:age\", :Age\r\n  gte :Age, 18\r\nend\r\nset \"text2\" do\r\n  has :_, \"User:age\", :Age\r\n  lt :Age, 18\r\nend", "concrete_mapping_rules"=>""}, "commit"=>"Save"}
+Redirected to http://localhost:3000/interfaces
+Completed in 228ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-02 18:45:02) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 689ms (View: 680 | 200 OK [http://localhost/interfaces]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-02 18:45:16) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 217ms (View: 209 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-02 18:45:28) [POST]
+  Parameters: {"authenticity_token"=>"BUnVjdMUJD9gMhc3uDOgZo4yBvlCwEzevtF6BxAEfYo=", "id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28", "interface"=>{"interface_name"=>"DefaultContext", "interface_title"=>"Default Context", "interface_weight"=>"3", "interface_selection_rule"=>"set{\r\n has \"navigational_element\", \"rdf:about\", :URI \r\n has :URI, \"rdf:type\", \"SHDM::Context\"\r\n}", "abstract_scheme"=>"{\r\n  name: \"main_page\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n    { name: \"header\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      { name: \"login\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n        {name: \"user\", abstract_element: \"IndefiniteVariable\"},\r\n        {name: \"password\", abstract_element: \"IndefiniteVariable\"},\r\n        {name: \"send\", abstract_element: \"SimpleActivator\"},\r\n        ]\r\n        },\r\n      { name: \"user_welcome\", abstract_element: \"ElementExhibitor\"}\r\n      ]},\r\n    { name: \"content\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      { name: \"title\", abstract_element: \"ElementExhibitor\"},\r\n      { name: \"text1\", abstract_element: \"ElementExhibitor\"},\r\n      { name: \"text2\", abstract_element: \"ElementExhibitor\"},\r\n      { name: \"next_button\", abstract_element: \"SimpleActivator\"}\r\n      ]}\r\n    ]\r\n\r\n}", "abstract_rules"=>"set \"login\" do\r\n  has :_, \"User:authenticated\", true\r\nend\r\nset \"user_welcome\" do\r\n  has \"Environment\", \"date_time_now\", :Time_now\r\n  gt :Time_now, Time.new(2013,10,01)\r\nend\r\nset \"text1\" do\r\n  has :_, \"User:age\", :Age\r\n  gte :Age, 18\r\nend\r\nset \"text2\" do\r\n  has :_, \"User:age\", :Age\r\n  lt :Age, 18\r\nend", "concrete_mapping_rules"=>""}, "commit"=>"Save"}
+Redirected to http://localhost:3000/interfaces
+Completed in 306ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-02 18:45:28) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 672ms (View: 665 | 200 OK [http://localhost/interfaces]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-02 18:45:35) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 202ms (View: 194 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-02 18:45:41) [POST]
+  Parameters: {"authenticity_token"=>"BUnVjdMUJD9gMhc3uDOgZo4yBvlCwEzevtF6BxAEfYo=", "id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28", "interface"=>{"interface_name"=>"AllPersons", "interface_title"=>"All Persons", "interface_weight"=>"1", "interface_selection_rule"=>"set{\r\n  #has :URI, \"index_title\", \"All Persons\"\r\n  has :URI, \"class\", \"SHDM::Index\"\r\n  has \"user_agent\", \"mobile\", false\r\n}", "abstract_scheme"=>"a", "abstract_rules"=>"b", "concrete_mapping_rules"=>""}, "commit"=>"Save"}
+Redirected to http://localhost:3000/interfaces
+Completed in 504ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-02 18:45:41) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 682ms (View: 674 | 200 OK [http://localhost/interfaces]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-11-02 18:45:46) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/ps-03", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 4779ms (View: 15 | 200 OK [http://localhost/execute/context/http%3A%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2Fps-03]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-11-02 19:08:39) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/ps-03", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 9653ms (View: 10 | 200 OK [http://localhost/execute/context/http%3A%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2Fps-03]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-11-02 19:09:44) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/ps-03", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 3295ms (View: 8 | 200 OK [http://localhost/execute/context/http%3A%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2Fps-03]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-11-02 19:10:27) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/ps-03", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 6374ms (View: 11 | 200 OK [http://localhost/execute/context/http%3A%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2Fps-03]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-11-02 19:12:43) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/ps-03", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 7083ms (View: 8 | 200 OK [http://localhost/execute/context/http%3A%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2Fps-03]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-11-02 19:15:03) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/ps-03", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 11955ms (View: 12 | 200 OK [http://localhost/execute/context/http%3A%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2Fps-03]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-11-02 19:16:26) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/ps-03", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 6740ms (View: 5 | 200 OK [http://localhost/execute/context/http%3A%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2Fps-03]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-11-02 19:16:42) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/ps-03", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 2251ms (View: 7 | 200 OK [http://localhost/execute/context/http%3A%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2Fps-03]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-11-02 19:17:01) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/ps-03", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 2013ms (View: 14 | 200 OK [http://localhost/execute/context/http%3A%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2Fps-03]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-11-02 19:18:11) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/ps-03", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 6057ms (View: 14 | 200 OK [http://localhost/execute/context/http%3A%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2Fps-03]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-02 19:18:32) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 505ms (View: 492 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-11-02 19:19:29) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/ps-03", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 3074ms (View: 14 | 200 OK [http://localhost/execute/context/http%3A%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2Fps-03]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-11-02 19:20:18) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/ps-03", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 6491ms (View: 6 | 200 OK [http://localhost/execute/context/http%3A%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2Fps-03]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-11-02 19:21:45) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/ps-03", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 3719ms (View: 12 | 200 OK [http://localhost/execute/context/http%3A%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2Fps-03]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-11-02 19:22:19) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/ps-03", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 8115ms (View: 7 | 200 OK [http://localhost/execute/context/http%3A%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2Fps-03]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-11-02 19:26:29) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/ps-03", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 7238ms (View: 6 | 200 OK [http://localhost/execute/context/http%3A%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2Fps-03]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-11-02 19:26:42) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/ps-03", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 2883ms (View: 7 | 200 OK [http://localhost/execute/context/http%3A%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2Fps-03]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-11-02 19:27:28) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/ps-03", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 6853ms (View: 6 | 200 OK [http://localhost/execute/context/http%3A%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2Fps-03]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-11-02 19:27:48) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/ps-03", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 3369ms (View: 8 | 200 OK [http://localhost/execute/context/http%3A%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2Fps-03]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-02 19:29:31) [POST]
+  Parameters: {"authenticity_token"=>"BUnVjdMUJD9gMhc3uDOgZo4yBvlCwEzevtF6BxAEfYo=", "id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28", "interface"=>{"interface_name"=>"DefaultContext", "interface_title"=>"Default Context", "interface_weight"=>"3", "interface_selection_rule"=>"set{\r\n has \"navigational_element\", \"rdf:about\", :URI \r\n has :URI, \"rdf:type\", \"SHDM::Context\"\r\n}", "abstract_scheme"=>"{\r\n  name: \"main_page\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n    { name: \"header\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      { name: \"login\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n        {name: \"user\", abstract_element: \"IndefiniteVariable\"},\r\n        {name: \"password\", abstract_element: \"IndefiniteVariable\"},\r\n        {name: \"send\", abstract_element: \"SimpleActivator\"},\r\n        ]\r\n        },\r\n      { name: \"user_welcome\", abstract_element: \"ElementExhibitor\"}\r\n      ]},\r\n    { name: \"content\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      { name: \"title\", abstract_element: \"ElementExhibitor\"},\r\n      { name: \"text1\", abstract_element: \"ElementExhibitor\"},\r\n      { name: \"text2\", abstract_element: \"ElementExhibitor\"},\r\n      { name: \"next_button\", abstract_element: \"SimpleActivator\"}\r\n      ]}\r\n    ]\r\n\r\n}", "abstract_rules"=>"set \"login\" do\r\n  has :_, \"User:authenticated\", true\r\nend\r\nset \"user_welcome\" do\r\n  has \"user_agent\", \"browser\", :Browser\r\n  like \"mozilla\", :Browser\r\nend\r\nset \"text1\" do\r\n  has :_, \"User:age\", :Age\r\n  gte :Age, 18\r\nend\r\nset \"text2\" do\r\n  has :_, \"User:age\", :Age\r\n  lt :Age, 18\r\nend", "concrete_mapping_rules"=>""}, "commit"=>"Save"}
+Redirected to http://localhost:3000/interfaces
+Completed in 259ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-02 19:29:31) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 1287ms (View: 1265 | 200 OK [http://localhost/interfaces]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-11-02 19:29:37) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/ps-03", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 4622ms (View: 11 | 200 OK [http://localhost/execute/context/http%3A%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2Fps-03]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-02 19:30:04) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 395ms (View: 376 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-02 19:30:44) [POST]
+  Parameters: {"authenticity_token"=>"BUnVjdMUJD9gMhc3uDOgZo4yBvlCwEzevtF6BxAEfYo=", "id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28", "interface"=>{"interface_name"=>"DefaultContext", "interface_title"=>"Default Context", "interface_weight"=>"3", "interface_selection_rule"=>"set{\r\n has \"navigational_element\", \"rdf:about\", :URI \r\n has :URI, \"rdf:type\", \"SHDM::Context\"\r\n}", "abstract_scheme"=>"{\r\n  name: \"main_page\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n    { name: \"header\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      { name: \"login\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n        {name: \"user\", abstract_element: \"IndefiniteVariable\"},\r\n        {name: \"password\", abstract_element: \"IndefiniteVariable\"},\r\n        {name: \"send\", abstract_element: \"SimpleActivator\"},\r\n        ]\r\n        },\r\n      { name: \"user_welcome\", abstract_element: \"ElementExhibitor\"}\r\n      ]},\r\n    { name: \"content\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      { name: \"title\", abstract_element: \"ElementExhibitor\"},\r\n      { name: \"text1\", abstract_element: \"ElementExhibitor\"},\r\n      { name: \"text2\", abstract_element: \"ElementExhibitor\"},\r\n      { name: \"next_button\", abstract_element: \"SimpleActivator\"}\r\n      ]}\r\n    ]\r\n\r\n}", "abstract_rules"=>"set \"login\" do\r\n  has :_, \"User:authenticated\", true\r\nend\r\nset \"user_welcome\" do\r\n  has \"user_agent\", \"browser\", :Browser\r\n  like :Browser, \"mozilla\"\r\nend\r\nset \"text1\" do\r\n  has :_, \"User:age\", :Age\r\n  gte :Age, 18\r\nend\r\nset \"text2\" do\r\n  has :_, \"User:age\", :Age\r\n  lt :Age, 18\r\nend", "concrete_mapping_rules"=>""}, "commit"=>"Save"}
+Redirected to http://localhost:3000/interfaces
+Completed in 332ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-02 19:30:45) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 853ms (View: 843 | 200 OK [http://localhost/interfaces]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-11-02 19:30:49) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/ps-03", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 5299ms (View: 12 | 200 OK [http://localhost/execute/context/http%3A%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2Fps-03]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-02 19:31:05) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 257ms (View: 246 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-02 19:31:23) [POST]
+  Parameters: {"authenticity_token"=>"BUnVjdMUJD9gMhc3uDOgZo4yBvlCwEzevtF6BxAEfYo=", "id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28", "interface"=>{"interface_name"=>"DefaultContext", "interface_title"=>"Default Context", "interface_weight"=>"3", "interface_selection_rule"=>"set{\r\n has \"navigational_element\", \"rdf:about\", :URI \r\n has :URI, \"rdf:type\", \"SHDM::Context\"\r\n}", "abstract_scheme"=>"{\r\n  name: \"main_page\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n    { name: \"header\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      { name: \"login\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n        {name: \"user\", abstract_element: \"IndefiniteVariable\"},\r\n        {name: \"password\", abstract_element: \"IndefiniteVariable\"},\r\n        {name: \"send\", abstract_element: \"SimpleActivator\"},\r\n        ]\r\n        },\r\n      { name: \"user_welcome\", abstract_element: \"ElementExhibitor\"}\r\n      ]},\r\n    { name: \"content\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      { name: \"title\", abstract_element: \"ElementExhibitor\"},\r\n      { name: \"text1\", abstract_element: \"ElementExhibitor\"},\r\n      { name: \"text2\", abstract_element: \"ElementExhibitor\"},\r\n      { name: \"next_button\", abstract_element: \"SimpleActivator\"}\r\n      ]}\r\n    ]\r\n\r\n}", "abstract_rules"=>"set \"login\" do\r\n  has :_, \"User:authenticated\", true\r\nend\r\nset \"user_welcome\" do\r\n  #has \"user_agent\", \"browser\", :Browser\r\n  #like :Browser, \"mozilla\"\r\n  eq 1, 1\r\nend\r\nset \"text1\" do\r\n  has :_, \"User:age\", :Age\r\n  gte :Age, 18\r\nend\r\nset \"text2\" do\r\n  has :_, \"User:age\", :Age\r\n  lt :Age, 18\r\nend", "concrete_mapping_rules"=>""}, "commit"=>"Save"}
+Redirected to http://localhost:3000/interfaces
+Completed in 263ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-02 19:31:24) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 611ms (View: 602 | 200 OK [http://localhost/interfaces]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-11-02 19:31:28) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/ps-03", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 4193ms (View: 7 | 200 OK [http://localhost/execute/context/http%3A%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2Fps-03]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-02 19:31:45) [GET]
+  Parameters: {"id"=>"http://base#96a9ecb0-2384-11e2-9220-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 214ms (View: 204 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%2396a9ecb0-2384-11e2-9220-00044b181e28]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-02 19:32:23) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 356ms (View: 350 | 200 OK [http://localhost/interfaces]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-02 19:32:31) [GET]
+  Parameters: {"id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 290ms (View: 279 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23684ac580-228d-11e2-aab8-00044b181e28]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-02 19:33:00) [POST]
+  Parameters: {"authenticity_token"=>"BUnVjdMUJD9gMhc3uDOgZo4yBvlCwEzevtF6BxAEfYo=", "id"=>"http://base#684ac580-228d-11e2-aab8-00044b181e28", "interface"=>{"interface_name"=>"DefaultContext", "interface_title"=>"Default Context", "interface_weight"=>"3", "interface_selection_rule"=>"set{\r\n has \"navigational_element\", \"rdf:about\", :URI \r\n has :URI, \"rdf:type\", \"SHDM::Context\"\r\n}", "abstract_scheme"=>"{\r\n  name: \"main_page\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n    { name: \"header\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      { name: \"login\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n        {name: \"user\", abstract_element: \"IndefiniteVariable\"},\r\n        {name: \"password\", abstract_element: \"IndefiniteVariable\"},\r\n        {name: \"send\", abstract_element: \"SimpleActivator\"},\r\n        ]\r\n        },\r\n      { name: \"user_welcome\", abstract_element: \"ElementExhibitor\"}\r\n      ]},\r\n    { name: \"content\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      { name: \"title\", abstract_element: \"ElementExhibitor\"},\r\n      { name: \"text1\", abstract_element: \"ElementExhibitor\"},\r\n      { name: \"text2\", abstract_element: \"ElementExhibitor\"},\r\n      { name: \"next_button\", abstract_element: \"SimpleActivator\"}\r\n      ]}\r\n    ]\r\n\r\n}", "abstract_rules"=>"set \"login\" do\r\n  has :_, \"User:authenticated\", true\r\nend\r\nset \"user_welcome\" do\r\n  has \"user_agent\", \"browser\", :Browser\r\n  like \"firefox\", :Browser\r\n  eq 1, 1\r\nend\r\nset \"text1\" do\r\n  has :_, \"User:age\", :Age\r\n  gte :Age, 18\r\nend\r\nset \"text2\" do\r\n  has :_, \"User:age\", :Age\r\n  lt :Age, 18\r\nend", "concrete_mapping_rules"=>""}, "commit"=>"Save"}
+Redirected to http://localhost:3000/interfaces
+Completed in 205ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-02 19:33:00) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 546ms (View: 538 | 200 OK [http://localhost/interfaces]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-11-02 19:33:04) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/ps-03", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 3734ms (View: 9 | 200 OK [http://localhost/execute/context/http%3A%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2Fps-03]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-02 19:33:31) [GET]
+  Parameters: {"id"=>"http://base#96a9ecb0-2384-11e2-9220-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 186ms (View: 177 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%2396a9ecb0-2384-11e2-9220-00044b181e28]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-02 19:33:40) [POST]
+  Parameters: {"authenticity_token"=>"BUnVjdMUJD9gMhc3uDOgZo4yBvlCwEzevtF6BxAEfYo=", "id"=>"http://base#96a9ecb0-2384-11e2-9220-00044b181e28", "interface"=>{"interface_name"=>"PageforChorme", "interface_title"=>"Page for Chorme", "interface_weight"=>"6", "interface_selection_rule"=>"set {\r\n has :_, \"class\", \"SHDM::Context\"\r\n has \"user_agent\", \"browser\", :BrowserName\r\n like \"chrome\", :BrowserName\r\n}", "abstract_scheme"=>"puts \"algo\"", "abstract_rules"=>"", "concrete_mapping_rules"=>"puts \"mapping\""}, "commit"=>"Save"}
+Redirected to http://localhost:3000/interfaces
+Completed in 269ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-02 19:33:40) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 598ms (View: 590 | 200 OK [http://localhost/interfaces]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-11-02 19:33:45) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/ps-03", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 3279ms (View: 6 | 200 OK [http://localhost/execute/context/http%3A%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2Fps-03]
+
+
+Processing ExecuteController#context (for 127.0.0.1 at 2012-11-02 19:33:59) [GET]
+  Parameters: {"node"=>"http://data.semanticweb.org/conference/www/2011/event/ps-03", "id"=>"http://base#42ef7a00-59b8-11e0-b9e1-00264afffe1d"}
+Completed in 2096ms (View: 10 | 200 OK [http://localhost/execute/context/http%3A%2F%2Fbase%2342ef7a00-59b8-11e0-b9e1-00264afffe1d?node=http%3A%2F%2Fdata.semanticweb.org%2Fconference%2Fwww%2F2011%2Fevent%2Fps-03]

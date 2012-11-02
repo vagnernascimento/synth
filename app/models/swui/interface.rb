@@ -28,11 +28,27 @@ module SWUI
       end
     end
 		
+    def self.render(facts_triples = [])
+      selected_interface = self.select_interface(facts_triples)
+      unless selected_interface.nil?
+        abstract_scheme = eval(selected_interface.abstract_scheme.to_s)
+        if abstract_scheme.is_a?(Hash)
+          abstract_rules = selected_interface.abstract_rules.to_s
+          
+          #== Instances and evaluates the selected abstract interface
+          abstract_interface_instance =  InterfaceRules::AbstractInterface.new( abstract_scheme )
+          hash_composed = abstract_interface_instance.evaluate( facts_triples, abstract_rules )
+          
+          return hash_composed.to_s
+        end
+      end
+    end
+    
     #== Instance methods
 		def evaluate_selection_rule(facts_triples = [])
 			
 			unless self.interface_selection_rule.empty?
-				instance_rule = InterfacerRules::SelectionRule.new( self.interface_selection_rule.to_s )
+				instance_rule = InterfaceRules::SelectionRule.new( self.interface_selection_rule.to_s )
         #== Adding facts
 				instance_rule.add_facts(facts_triples)
 				return instance_rule.is_true?
