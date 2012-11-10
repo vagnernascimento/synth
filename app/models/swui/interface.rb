@@ -1,4 +1,5 @@
 require "interface-rules"
+require "pp"
 
 SWUI::Interface
 
@@ -28,11 +29,46 @@ module SWUI
       end
     end
 		
+    def self.render(facts_triples = [], interface_data = {})
+      selected_interface = self.select_interface(facts_triples)
+      unless selected_interface.nil?
+        abstract_scheme = eval(selected_interface.abstract_scheme.to_s)
+        if abstract_scheme.is_a?(Hash)
+          abstract_rules_str = selected_interface.abstract_rules.to_s
+          
+          #== Instances and evaluates the selected abstract interface
+          abstract_interface_rules =  InterfaceRules::AbstractInterface.new( abstract_scheme )
+          abstract_composed_hash = abstract_interface_rules.evaluate( facts_triples, abstract_rules_str )
+         
+					#== Concrete mapping
+					concrete_mapping_rules_str = selected_interface.concrete_mapping_rules.to_s
+					 
+					unless concrete_mapping_rules_str.empty?
+						
+						concrete_interface_rules =  InterfaceRules::ConcreteInterface.new( abstract_composed_hash )
+						concrete_composed_hash = concrete_interface_rules.evaluate( facts_triples, concrete_mapping_rules_str, interface_data )
+						
+            #return concrete_composed_hash
+            #== Concrete rendering
+						if  concrete_composed_hash.is_a?(Hash)
+							#return concrete_composed_hash.to_s
+							concrete_interface = ConcreteWidget::Interface.new(concrete_composed_hash)
+							
+							return concrete_interface.render
+						else
+							return "No interface could be composed"
+						end
+					end
+          
+        end
+      end
+    end
+    
     #== Instance methods
 		def evaluate_selection_rule(facts_triples = [])
 			
 			unless self.interface_selection_rule.empty?
-				instance_rule = InterfacerRules::SelectionRule.new( self.interface_selection_rule.to_s )
+				instance_rule = InterfaceRules::SelectionRule.new( self.interface_selection_rule.to_s )
         #== Adding facts
 				instance_rule.add_facts(facts_triples)
 				return instance_rule.is_true?

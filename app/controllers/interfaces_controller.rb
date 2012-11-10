@@ -45,8 +45,8 @@ class InterfacesController < ApplicationController
     respond_to do |format|
       if @interface.update_attributes(params[:interface])
         flash[:notice] = 'Interface was successfully updated.'
-        format.html { redirect_to(interfaces_url) }
-        format.xml  { head :ok }
+				format.html { redirect_to( params[:commit] == 'Save' ? interfaces_url : {:action => 'edit', :id => @interface}) }
+				format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
         format.xml  { render :xml => @interface.errors, :status => :unprocessable_entity }

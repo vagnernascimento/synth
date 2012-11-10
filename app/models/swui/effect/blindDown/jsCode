@@ -1,4 +1,0 @@
-// A wrapper for the Scriptaculous BlindDown effect
-
-widg = document.getElementById(widgetA);
-if (widg != null) { eval (\"new Effect.BlindDown(widgetA, { \" + parameters + \" });\") }

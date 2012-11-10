@@ -1,8 +1,8 @@
 require "wongi-engine"
 
-module InterfacerRules
+module InterfaceRules
 
-	class InterfacerRules::SelectionRule
+	class InterfaceRules::SelectionRule
 		include ExtendDSLRules
 
 		def initialize(str_rule)

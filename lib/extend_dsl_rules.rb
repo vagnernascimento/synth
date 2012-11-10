@@ -11,6 +11,7 @@ module ExtendDSLRules
 		end
 		
 		class Ruleset
+			#== New rules methods
 			def set(rule_name = "rule", &block)
 				rule rule_name do
 					forall &block
@@ -19,6 +20,24 @@ module ExtendDSLRules
 					}
 				end
 			end
+			
+			def maps_to(hash, &block)
+				
+				#id = rand(36**30).to_s(36)
+        rule "#{hash[:abstract]}" do
+				#rule "#{hash[:abstract]}_maps_to_#{hash[:concrete_widget]}" do
+					begin
+						forall &block
+					rescue
+					 forall do end
+					end
+					make{
+						gen hash[:abstract], "maps_to", { concrete_widget: hash[:concrete_widget], params: hash[:params] }
+					}
+				end
+			end
+			
+			
 		end
 	end
 	
