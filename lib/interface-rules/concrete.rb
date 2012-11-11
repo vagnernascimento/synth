@@ -1,16 +1,22 @@
+require "rubygems"
 module InterfaceRules
  
-  #VERSION '0.1.1'
-  require "rubygems"
-	class Dummy  
+	class Dummy  #== Only for simulation of fake objects
 		def method_missing(m, *args, &block)  
-			
 		end  
 	end
+
   class InterfaceRules::ConcreteInterface
 		 include ExtendDSLRules
     def initialize(hash)
 			@hash = hash
+			@cloned_nodes_by_source = Hash.new
+			@extention_list = Array.new
+			@direct_node_ref = Hash.new
+		end
+		
+		def cloned
+			@cloned_nodes_by_source
 		end
 		
 		def hash
@@ -24,10 +30,13 @@ module InterfaceRules
 				interface_data.each{ | k, v | 
 					instance_variable_set( eval(":@#{k}"), v )
 				}
-				#begin
-				eval(str_rules) 
-				#rescue
-				#end
+				begin
+					eval(str_rules) 
+				rescue Exception => e  
+					puts "Evaluation of Interface rules failed (repeatable node)"
+					puts e.message  
+					#puts e.backtrace.inspect 
+				end
 			}
       return selected_elements(engine)
     end
@@ -41,13 +50,30 @@ module InterfaceRules
 				interface_data.each{ | k, v | 
 					instance_variable_set( eval(":@#{k}"), v )
 				}
-				eval(str_rules) 
+				begin
+					eval(str_rules) 
+				rescue Exception => e 
+					puts "Evaluation of Interface rules failed"
+					puts e.message  
+				end
 			}
       @selected = selected_elements(@engine)
       
       return compose(@hash, facts, str_rules, interface_data) 
 		end	
 
+		
+		def evaluate_extensions(extension_str)
+			if extension_str.is_a?(String)
+				eval(extension_str)
+				@extention_list
+			end
+		end
+		
+		def extensions_hash
+			@extention_list
+		end
+		
 		private
 
 		def selected_elements(engine)
@@ -64,12 +90,13 @@ module InterfaceRules
 			
 			if @selected[element_name].is_a?(Hash) #== Checks if node was previously selected by the first evaluation
 				hash_tree[:node_content] = @selected[element_name]
-				
+				@direct_node_ref[element_name] = true
 				if hash_tree[:children].is_a?(Array)
 					#== Generates reapeatable nodes
           new_children = repeatable_children_nodes(hash_tree[:children], hash_tree, facts, str_rules, interface_data)
 					unless new_children.nil? 
             hash_tree[:children] = new_children
+						
 					else
             hash_tree[:children].each_index do |index|
               selected = compose(hash_tree[:children][index], facts, str_rules, interface_data)
@@ -88,11 +115,14 @@ module InterfaceRules
       children.each_index do |index|
         #-- Populates with values of selected node
         if selected_nodes[children[index][:name]].is_a?(Hash)
+					source_node_name = children[index][:name]
 					children[index][:node_content] = selected_nodes[children[index][:name]]
 
 					#-- rename the new node
 					children[index][:name] ||= rand(36**8).to_s(36)
 					children[index][:name] = children[index][:name] + '_'+ counter_parent.to_s + '_' + counter.to_s
+					@cloned_nodes_by_source[ source_node_name ] ||= Array.new
+					@cloned_nodes_by_source[ source_node_name ] << children[index][:name]
 					populate_cloned_children(children[index][:children], selected_nodes, counter_parent, counter + 1) unless children[index][:children].nil?
 				else
 					children[index] = nil
@@ -123,6 +153,25 @@ module InterfaceRules
       end
       
     end
+		
+		#== Extension method
+		#== extend nodes: ['name_field', 'age_field', 'age_field' ], :extension => 'HTMLLineBreak'
+		#== {:name => 'ext2', :extension => 'HTMLLineBreak', :nodes => ['name_field', 'age_field', 'age_field' ]},
+		def extend(hash)
+			if hash.is_a?(Hash)
+				hash[:name] = "#{hash[:extension]}_#{rand(36**8).to_s(36)}"
+				new_nodes = Array.new
+				hash[:nodes].each{ | node |
+					if @direct_node_ref[ node ] == true
+						new_nodes << node
+					else
+						new_nodes = new_nodes + @cloned_nodes_by_source[ node ] if @cloned_nodes_by_source[ node ].is_a?(Array)
+					end
+				}
+				hash[:nodes] = new_nodes
+				@extention_list << hash
+			end
+		end
 		
   end
 	

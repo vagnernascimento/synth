@@ -89,7 +89,7 @@ module ConcreteWidget
     def extension_instance(name, params)
       begin
         #load "extensions/#{name}/#{name}.rb"
-        require "extensions/#{name}/#{name}"
+        require "interface-rules/extensions/#{name}/#{name}"
         klass = eval(name)
         klass.new(params) unless klass.nil?
       rescue LoadError => e

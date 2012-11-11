@@ -41,11 +41,11 @@ class InterfacesController < ApplicationController
   # PUT /interfaces/1.xml
   def update
     @interface = SWUI::Interface.find(params[:id])
-
+		current_panel = params.delete(:current_panel)
     respond_to do |format|
       if @interface.update_attributes(params[:interface])
         flash[:notice] = 'Interface was successfully updated.'
-				format.html { redirect_to( params[:commit] == 'Save' ? interfaces_url : {:action => 'edit', :id => @interface}) }
+				format.html { redirect_to( params[:commit] == 'Save' ? interfaces_url : current_panel ) }
 				format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

@@ -42,14 +42,14 @@ color: #fff;
 <% form_for :interface, :url => { :action => "update" } do |f| %>
   <%= f.error_messages %>
 	<%= hidden_field_tag :id, @interface %>
- 
+	<%= hidden_field_tag :current_panel %>
  <div id="steps_container">
  
   <ul id="interface_steps" >
-    <li class="active"><a href="#general">General data &raquo;</a></li>
-    <li class=""><a href="#tab_selection_rule">Interface Selection Rules &raquo;</a></li>
-    <li class=""><a href="#tab_abstract_scheme"> Abstract Scheme and Rules &raquo;</a></li>
-    <li class=""><a href="#tab_concrete_mapping_rules">Concrete Mapping</a></li>
+    <li class="active"><a onclick="copy_current_panel(this)" href="#general">General data &raquo;</a></li>
+    <li class=""><a onclick="copy_current_panel(this)" href="#tab_selection_rule">Interface Selection Rules &raquo;</a></li>
+    <li class=""><a onclick="copy_current_panel(this)" href="#tab_abstract_scheme"> Abstract Scheme and Rules &raquo;</a></li>
+    <li class=""><a onclick="copy_current_panel(this)" href="#tab_concrete_mapping_rules">Concrete Mapping</a></li>
     
   </ul>
  
@@ -86,9 +86,14 @@ color: #fff;
     </p>
   </div>
   <div id="tab_concrete_mapping_rules" class="ui-tabs-panel">
-
-    <%= f.label :concrete_mapping_rules %><br />
-    <%= f.text_area :concrete_mapping_rules, :rows => 10, :cols => 71 %>
+		<p>
+			<%= f.label :concrete_mapping_rules %><br />
+			<%= f.text_area :concrete_mapping_rules, :rows => 13, :cols => 71 %>
+		</p>
+		<p>	
+			<%= f.label :concrete_extensions %><br />
+			<%= f.text_area :concrete_extensions, :rows => 3, :cols => 71 %>
+		</p>
   </div>
  </div> 
   <p style="clear:both;">
@@ -97,12 +102,20 @@ color: #fff;
 <% end %>
 
 <script>
+    function copy_current_panel(obj){
+			$('#current_panel').attr('value', obj.href);
+		}
+		$(document).ready(function() {
+			$('#current_panel').attr('value', window.location.href);
+			codemirror_instance("interface_interface_selection_rule");
+			codemirror_instance("interface_abstract_scheme");
+			codemirror_instance("interface_abstract_rules");
+			codemirror_instance("interface_concrete_mapping_rules");
+			codemirror_instance("interface_concrete_extensions");
+			$("#interface_steps").tabify();
+		});
+		
     
-    codemirror_instance("interface_interface_selection_rule");
-    codemirror_instance("interface_abstract_scheme");
-    codemirror_instance("interface_abstract_rules");
-    codemirror_instance("interface_concrete_mapping_rules");
-    $("#interface_steps").tabify();
   </script>
 
 

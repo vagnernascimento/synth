@@ -20877,3 +20877,734 @@ Completed in 356ms (View: 350 | 200 OK [http://localhost/interfaces/edit/http:%2
 Processing ExecuteController#index (for 127.0.0.1 at 2012-11-10 15:54:51) [GET]
   Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
 Completed in 31260ms (View: 7 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-10 16:01:22) [GET]
+  Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
+Completed in 32381ms (View: 6 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 16:12:08) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 432ms (View: 418 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-10 16:12:24) [POST]
+  Parameters: {"authenticity_token"=>"a3uBCtckLd2gU1r4RvMjgr9erf2rHUqL9Mv62t2bdFU=", "id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28", "interface"=>{"interface_name"=>"DefaultIdx", "interface_title"=>"Default Index ", "interface_weight"=>"1", "interface_selection_rule"=>"set{\r\n  #has :URI, \"index_title\", \"All Persons\"\r\n  has :URI, \"class\", \"SHDM::Index\"\r\n  has \"user_agent\", \"mobile\", false\r\n}", "abstract_scheme"=>"{name: \"main_page\", abstract_element: \"CompositeInterfaceElement\", children:[\r\n  {name: \"main_header\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n    {name: \"page_title\", abstract_element: \"ElementExhibitor\"}\r\n  ]},\r\n  {name: \"content\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      \r\n    {name: \"persons\", abstract_element: \"CompositeInterfaceElement\", repeatable: true, children:[\r\n        {name: \"target_url\", abstract_element: \"SimpleActivator\"},\r\n        {name: \"Publication\", abstract_element: \"ElementExhibitor\"},\r\n        {name: \"line_break\", abstract_element: \"ElementExhibitor\"}\r\n        \r\n        \r\n       ]}\r\n     ]}\r\n  \r\n  \r\n]}", "abstract_rules"=>"", "concrete_mapping_rules"=>"maps_to abstract: \"main_page\", concrete_widget: \"HTMLPage\" do\r\n  \r\nend\r\n\r\n\r\nmaps_to\tabstract: \"main_header\", concrete_widget: \"HTMLComposition\",\r\nparams: { content: \"My main title\" } do\r\n  eq 1, 1\r\nend\r\n\r\nmaps_to abstract: \"page_title\", concrete_widget: \"HTMLHeading\",\r\nparams: { size: 2, content: @index.index_title.to_s }do\r\n  \r\nend\r\n\r\nmaps_to abstract: \"content\", concrete_widget: \"HTMLComposition\",\r\nparams: {css_class: \"login\", content: \"Here will be something\"} do\r\n  #has :_, \"browser\", \"Firefox\"\r\nend\r\n\r\nmaps_to abstract: \"persons\", concrete_widget: \"HTMLComposition\",\r\nparams: {values: @index.entries }\r\n\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLAnchor\",\r\nparams: { content: value.x} do\r\n  gt value.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: \"No URL\"} do\r\n  lt value.uri.size, 90\r\nend\r\n\r\n\r\nmaps_to abstract: \"Publication\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: value.title } do\r\n  has :_, \"browser\", \"Firefox\"\r\n  eq value.uri.to_s.class, String\r\nend\r\n\r\nmaps_to abstract: \"line_break\", concrete_widget: \"HTMLLineBreak\"\r\n"}, "commit"=>"Save and Continue"}
+Redirected to http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28
+Completed in 320ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 16:12:24) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 219ms (View: 213 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-10 16:12:31) [GET]
+  Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
+Completed in 34931ms (View: 6 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-10 16:13:27) [POST]
+  Parameters: {"authenticity_token"=>"a3uBCtckLd2gU1r4RvMjgr9erf2rHUqL9Mv62t2bdFU=", "id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28", "interface"=>{"interface_name"=>"DefaultIdx", "interface_title"=>"Default Index ", "interface_weight"=>"1", "interface_selection_rule"=>"set{\r\n  #has :URI, \"index_title\", \"All Persons\"\r\n  has :URI, \"class\", \"SHDM::Index\"\r\n  has \"user_agent\", \"mobile\", false\r\n}", "abstract_scheme"=>"{name: \"main_page\", abstract_element: \"CompositeInterfaceElement\", children:[\r\n  {name: \"main_header\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n    {name: \"page_title\", abstract_element: \"ElementExhibitor\"}\r\n  ]},\r\n  {name: \"content\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      \r\n    {name: \"persons\", abstract_element: \"CompositeInterfaceElement\", repeatable: true, children:[\r\n        {name: \"target_url\", abstract_element: \"SimpleActivator\"},\r\n        {name: \"Publication\", abstract_element: \"ElementExhibitor\"},\r\n        {name: \"line_break\", abstract_element: \"ElementExhibitor\"}\r\n        \r\n        \r\n       ]}\r\n     ]}\r\n  \r\n  \r\n]}", "abstract_rules"=>"", "concrete_mapping_rules"=>"maps_to abstract: \"main_page\", concrete_widget: \"HTMLPage\" do\r\n  \r\nend\r\n\r\n\r\nmaps_to\tabstract: \"main_header\", concrete_widget: \"HTMLComposition\",\r\nparams: { content: \"My main title\" } do\r\n  eq 1, 1\r\nend\r\n\r\nmaps_to abstract: \"page_title\", concrete_widget: \"HTMLHeading\",\r\nparams: { size: 2, content: @index.index_title.to_s }do\r\n  \r\nend\r\n\r\nmaps_to abstract: \"content\", concrete_widget: \"HTMLComposition\",\r\nparams: {css_class: \"login\", content: \"Here will be something\"} do\r\n  #has :_, \"browser\", \"Firefox\"\r\nend\r\n\r\nmaps_to abstract: \"persons\", concrete_widget: \"HTMLComposition\",\r\nparams: {values: @index.entries }\r\n\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLAnchor\",\r\nparams: { content: valude.x} do\r\n  gt value.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: \"No URL\"} do\r\n  lt value.uri.size, 90\r\nend\r\n\r\n\r\nmaps_to abstract: \"Publication\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: value.title } do\r\n  has :_, \"browser\", \"Firefox\"\r\n  eq value.uri.to_s.class, String\r\nend\r\n\r\nmaps_to abstract: \"line_break\", concrete_widget: \"HTMLLineBreak\"\r\n"}, "commit"=>"Save and Continue"}
+Redirected to http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28
+Completed in 191ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 16:13:27) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 149ms (View: 143 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-10 16:13:30) [GET]
+  Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
+Completed in 12044ms (View: 8 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-10 16:15:25) [GET]
+  Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
+Completed in 12728ms (View: 5 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-10 16:16:08) [GET]
+  Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
+Completed in 15459ms (View: 5 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-10 16:20:47) [GET]
+  Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
+Completed in 15747ms (View: 5 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-10 16:24:59) [GET]
+  Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
+Completed in 15942ms (View: 5 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 16:26:58) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 376ms (View: 369 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-10 16:27:18) [POST]
+  Parameters: {"authenticity_token"=>"a3uBCtckLd2gU1r4RvMjgr9erf2rHUqL9Mv62t2bdFU=", "id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28", "interface"=>{"interface_name"=>"DefaultIdx", "interface_title"=>"Default Index ", "interface_weight"=>"1", "interface_selection_rule"=>"set{\r\n  #has :URI, \"index_title\", \"All Persons\"\r\n  has :URI, \"class\", \"SHDM::Index\"\r\n  has \"user_agent\", \"mobile\", false\r\n}", "abstract_scheme"=>"{name: \"main_page\", abstract_element: \"CompositeInterfaceElement\", children:[\r\n  {name: \"main_header\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n    {name: \"page_title\", abstract_element: \"ElementExhibitor\"}\r\n  ]},\r\n  {name: \"content\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      \r\n    {name: \"persons\", abstract_element: \"CompositeInterfaceElement\", repeatable: false, children:[\r\n        {name: \"target_url\", abstract_element: \"SimpleActivator\"},\r\n        {name: \"Publication\", abstract_element: \"ElementExhibitor\"},\r\n        {name: \"line_break\", abstract_element: \"ElementExhibitor\"}\r\n        \r\n        \r\n       ]}\r\n     ]}\r\n  \r\n  \r\n]}", "abstract_rules"=>"", "concrete_mapping_rules"=>"maps_to abstract: \"main_page\", concrete_widget: \"HTMLPage\" do\r\n  \r\nend\r\n\r\n\r\nmaps_to\tabstract: \"main_header\", concrete_widget: \"HTMLComposition\",\r\nparams: { content: \"My main title\" } do\r\n  eq 1, 1\r\nend\r\n\r\nmaps_to abstract: \"page_title\", concrete_widget: \"HTMLHeading\",\r\nparams: { size: 2, content: @index.index_title.to_s }do\r\n  \r\nend\r\n\r\nmaps_to abstract: \"content\", concrete_widget: \"HTMLComposition\",\r\nparams: {css_class: \"login\", content: \"Here will be something\"} do\r\n  #has :_, \"browser\", \"Firefox\"\r\nend\r\n\r\nmaps_to abstract: \"persons\", concrete_widget: \"HTMLComposition\",\r\nparams: {values: @index.entries }\r\n\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLAnchor\",\r\nparams: { content: valude.x} do\r\n  gt value.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: \"No URL\"} do\r\n  lt value.uri.size, 90\r\nend\r\n\r\n\r\nmaps_to abstract: \"Publication\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: value.title } do\r\n  has :_, \"browser\", \"Firefox\"\r\n  eq value.uri.to_s.class, String\r\nend\r\n\r\nmaps_to abstract: \"line_break\", concrete_widget: \"HTMLLineBreak\"\r\n"}, "commit"=>"Save and Continue"}
+Redirected to http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28
+Completed in 185ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 16:27:18) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 219ms (View: 214 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-10 16:27:22) [GET]
+  Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
+Completed in 11902ms (View: 6 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-10 16:28:06) [POST]
+  Parameters: {"authenticity_token"=>"a3uBCtckLd2gU1r4RvMjgr9erf2rHUqL9Mv62t2bdFU=", "id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28", "interface"=>{"interface_name"=>"DefaultIdx", "interface_title"=>"Default Index ", "interface_weight"=>"1", "interface_selection_rule"=>"set{\r\n  #has :URI, \"index_title\", \"All Persons\"\r\n  has :URI, \"class\", \"SHDM::Index\"\r\n  has \"user_agent\", \"mobile\", false\r\n}", "abstract_scheme"=>"{name: \"main_page\", abstract_element: \"CompositeInterfaceElement\", children:[\r\n  {name: \"main_header\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n    {name: \"page_title\", abstract_element: \"ElementExhibitor\"}\r\n  ]},\r\n  {name: \"content\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      \r\n    {name: \"persons\", abstract_element: \"CompositeInterfaceElement\", repeatable: true, children:[\r\n        {name: \"target_url\", abstract_element: \"SimpleActivator\"},\r\n        {name: \"Publication\", abstract_element: \"ElementExhibitor\"},\r\n        {name: \"line_break\", abstract_element: \"ElementExhibitor\"}\r\n        \r\n        \r\n       ]}\r\n     ]}\r\n  \r\n  \r\n]}", "abstract_rules"=>"", "concrete_mapping_rules"=>"maps_to abstract: \"main_page\", concrete_widget: \"HTMLPage\" do\r\n  \r\nend\r\n\r\n\r\nmaps_to\tabstract: \"main_header\", concrete_widget: \"HTMLComposition\",\r\nparams: { content: \"My main title\" } do\r\n  eq 1, 1\r\nend\r\n\r\nmaps_to abstract: \"page_title\", concrete_widget: \"HTMLHeading\",\r\nparams: { size: 2, content: @index.index_title.to_s }do\r\n  \r\nend\r\n\r\nmaps_to abstract: \"content\", concrete_widget: \"HTMLComposition\",\r\nparams: {css_class: \"login\", content: \"Here will be something\"} do\r\n  #has :_, \"browser\", \"Firefox\"\r\nend\r\n\r\nmaps_to abstract: \"persons\", concrete_widget: \"HTMLComposition\",\r\nparams: {values: @index.entries }\r\n\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLAnchor\",\r\nparams: { content: value.uri} do\r\n  gt value.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: \"No URL\"} do\r\n  lt value.uri.size, 90\r\nend\r\n\r\n\r\nmaps_to abstract: \"Publication\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: value.title } do\r\n  has :_, \"browser\", \"Firefox\"\r\n  eq value.uri.to_s.class, String\r\nend\r\n\r\nmaps_to abstract: \"line_break\", concrete_widget: \"HTMLLineBreak\"\r\n"}, "commit"=>"Save and Continue"}
+Redirected to http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28
+Completed in 327ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 16:28:06) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 131ms (View: 125 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-10 16:28:12) [GET]
+  Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
+Completed in 31562ms (View: 4 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-10 16:29:20) [POST]
+  Parameters: {"authenticity_token"=>"a3uBCtckLd2gU1r4RvMjgr9erf2rHUqL9Mv62t2bdFU=", "id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28", "interface"=>{"interface_name"=>"DefaultIdx", "interface_title"=>"Default Index ", "interface_weight"=>"1", "interface_selection_rule"=>"set{\r\n  #has :URI, \"index_title\", \"All Persons\"\r\n  has :URI, \"class\", \"SHDM::Index\"\r\n  has \"user_agent\", \"mobile\", false\r\n}", "abstract_scheme"=>"{name: \"main_page\", abstract_element: \"CompositeInterfaceElement\", children:[\r\n  {name: \"main_header\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n    {name: \"page_title\", abstract_element: \"ElementExhibitor\"}\r\n  ]},\r\n  {name: \"content\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      \r\n    {name: \"persons\", abstract_element: \"CompositeInterfaceElement\", repeatable: true, children:[\r\n        {name: \"target_url\", abstract_element: \"SimpleActivator\"},\r\n        {name: \"Publication\", abstract_element: \"ElementExhibitor\"},\r\n        {name: \"line_break\", abstract_element: \"ElementExhibitor\"}\r\n        \r\n        \r\n       ]}\r\n     ]}\r\n  \r\n  \r\n]}", "abstract_rules"=>"", "concrete_mapping_rules"=>"maps_to abstract: \"main_page\", concrete_widget: \"HTMLPage\" do\r\n  \r\nend\r\n\r\n\r\nmaps_to\tabstract: \"main_header\", concrete_widget: \"HTMLComposition\",\r\nparams: { content: \"My main title\" } do\r\n  eq 1, 1\r\nend\r\n\r\nmaps_to abstract: \"page_title\", concrete_widget: \"HTMLHeading\",\r\nparams: { size: 2, content: @index.index_title.to_s }do\r\n  \r\nend\r\n\r\nmaps_to abstract: \"content\", concrete_widget: \"HTMLComposition\",\r\nparams: {css_class: \"login\", content: \"Here will be something\"} do\r\n  #has :_, \"browser\", \"Firefox\"\r\nend\r\n\r\nmaps_to abstract: \"persons\", concrete_widget: \"HTMLComposition\",\r\nparams: {values: @index.entries }\r\n\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLAnchor\",\r\nparams: { content: value.target_url} do\r\n  gt value.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: \"No URL\"} do\r\n  lt value.uri.size, 90\r\nend\r\n\r\n\r\nmaps_to abstract: \"Publication\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: value.title } do\r\n  has :_, \"browser\", \"Firefox\"\r\n  eq value.uri.to_s.class, String\r\nend\r\n\r\nmaps_to abstract: \"line_break\", concrete_widget: \"HTMLLineBreak\"\r\n"}, "commit"=>"Save and Continue"}
+Redirected to http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28
+Completed in 187ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 16:29:20) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 137ms (View: 132 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-10 16:29:27) [GET]
+  Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
+Completed in 31664ms (View: 5 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 16:44:44) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 426ms (View: 413 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 16:45:33) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 220ms (View: 212 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 16:46:21) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 186ms (View: 180 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 16:47:04) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 186ms (View: 181 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 16:48:18) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 137ms (View: 128 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 16:49:16) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 148ms (View: 143 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 16:49:54) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 173ms (View: 168 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 16:51:00) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 145ms (View: 140 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 16:51:15) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 132ms (View: 127 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 16:51:44) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 138ms (View: 133 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 16:51:58) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 136ms (View: 130 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 16:53:22) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 115ms (View: 109 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 16:53:46) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 127ms (View: 122 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 16:56:20) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 123ms (View: 118 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-10 16:56:25) [POST]
+  Parameters: {"authenticity_token"=>"a3uBCtckLd2gU1r4RvMjgr9erf2rHUqL9Mv62t2bdFU=", "id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28", "current_panel"=>"http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_abstract_scheme-tab", "interface"=>{"interface_name"=>"DefaultIdx", "interface_title"=>"Default Index ", "interface_weight"=>"1", "interface_selection_rule"=>"set{\r\n  #has :URI, \"index_title\", \"All Persons\"\r\n  has :URI, \"class\", \"SHDM::Index\"\r\n  has \"user_agent\", \"mobile\", false\r\n}", "abstract_scheme"=>"{name: \"main_page\", abstract_element: \"CompositeInterfaceElement\", children:[\r\n  {name: \"main_header\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n    {name: \"page_title\", abstract_element: \"ElementExhibitor\"}\r\n  ]},\r\n  {name: \"content\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      \r\n    {name: \"persons\", abstract_element: \"CompositeInterfaceElement\", repeatable: true, children:[\r\n        {name: \"target_url\", abstract_element: \"SimpleActivator\"},\r\n        {name: \"Publication\", abstract_element: \"ElementExhibitor\"},\r\n        {name: \"line_break\", abstract_element: \"ElementExhibitor\"}\r\n        \r\n        \r\n       ]}\r\n     ]}\r\n  \r\n  \r\n]}", "abstract_rules"=>"", "concrete_mapping_rules"=>"maps_to abstract: \"main_page\", concrete_widget: \"HTMLPage\" do\r\n  \r\nend\r\n\r\n\r\nmaps_to\tabstract: \"main_header\", concrete_widget: \"HTMLComposition\",\r\nparams: { content: \"My main title\" } do\r\n  eq 1, 1\r\nend\r\n\r\nmaps_to abstract: \"page_title\", concrete_widget: \"HTMLHeading\",\r\nparams: { size: 2, content: @index.index_title.to_s }do\r\n  \r\nend\r\n\r\nmaps_to abstract: \"content\", concrete_widget: \"HTMLComposition\",\r\nparams: {css_class: \"login\", content: \"Here will be something\"} do\r\n  #has :_, \"browser\", \"Firefox\"\r\nend\r\n\r\nmaps_to abstract: \"persons\", concrete_widget: \"HTMLComposition\",\r\nparams: {values: @index.entries }\r\n\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLAnchor\",\r\nparams: { content: value.target_url} do\r\n  gt value.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: \"No URL\"} do\r\n  lt value.uri.size, 90\r\nend\r\n\r\n\r\nmaps_to abstract: \"Publication\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: value.title } do\r\n  has :_, \"browser\", \"Firefox\"\r\n  eq value.uri.to_s.class, String\r\nend\r\n\r\nmaps_to abstract: \"line_break\", concrete_widget: \"HTMLLineBreak\"\r\n", "concrete_extensions"=>""}, "commit"=>"Save and Continue"}
+Redirected to http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_abstract_scheme-tab
+Completed in 327ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 16:56:26) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 106ms (View: 101 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-10 16:56:34) [POST]
+  Parameters: {"authenticity_token"=>"a3uBCtckLd2gU1r4RvMjgr9erf2rHUqL9Mv62t2bdFU=", "id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28", "current_panel"=>"http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_concrete_mapping_rules-tab", "interface"=>{"interface_name"=>"DefaultIdx", "interface_title"=>"Default Index ", "interface_weight"=>"1", "interface_selection_rule"=>"set{\r\n  #has :URI, \"index_title\", \"All Persons\"\r\n  has :URI, \"class\", \"SHDM::Index\"\r\n  has \"user_agent\", \"mobile\", false\r\n}", "abstract_scheme"=>"{name: \"main_page\", abstract_element: \"CompositeInterfaceElement\", children:[\r\n  {name: \"main_header\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n    {name: \"page_title\", abstract_element: \"ElementExhibitor\"}\r\n  ]},\r\n  {name: \"content\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      \r\n    {name: \"persons\", abstract_element: \"CompositeInterfaceElement\", repeatable: true, children:[\r\n        {name: \"target_url\", abstract_element: \"SimpleActivator\"},\r\n        {name: \"Publication\", abstract_element: \"ElementExhibitor\"},\r\n        {name: \"line_break\", abstract_element: \"ElementExhibitor\"}\r\n        \r\n        \r\n       ]}\r\n     ]}\r\n  \r\n  \r\n]}", "abstract_rules"=>"", "concrete_mapping_rules"=>"maps_to abstract: \"main_page\", concrete_widget: \"HTMLPage\" do\r\n  \r\nend\r\n\r\n\r\nmaps_to\tabstract: \"main_header\", concrete_widget: \"HTMLComposition\",\r\nparams: { content: \"My main title\" } do\r\n  eq 1, 1\r\nend\r\n\r\nmaps_to abstract: \"page_title\", concrete_widget: \"HTMLHeading\",\r\nparams: { size: 2, content: @index.index_title.to_s }do\r\n  \r\nend\r\n\r\nmaps_to abstract: \"content\", concrete_widget: \"HTMLComposition\",\r\nparams: {css_class: \"login\", content: \"Here will be something\"} do\r\n  #has :_, \"browser\", \"Firefox\"\r\nend\r\n\r\nmaps_to abstract: \"persons\", concrete_widget: \"HTMLComposition\",\r\nparams: {values: @index.entries }\r\n\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLAnchor\",\r\nparams: { content: value.target_url} do\r\n  gt value.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: \"No URL\"} do\r\n  lt value.uri.size, 90\r\nend\r\n\r\n\r\nmaps_to abstract: \"Publication\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: value.title } do\r\n  has :_, \"browser\", \"Firefox\"\r\n  eq value.uri.to_s.class, String\r\nend\r\n\r\nmaps_to abstract: \"line_break\", concrete_widget: \"HTMLLineBreak\"\r\n", "concrete_extensions"=>"abc"}, "commit"=>"Save and Continue"}
+Redirected to http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_concrete_mapping_rules-tab
+Completed in 250ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 16:56:34) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 112ms (View: 107 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-10 16:56:44) [POST]
+  Parameters: {"authenticity_token"=>"a3uBCtckLd2gU1r4RvMjgr9erf2rHUqL9Mv62t2bdFU=", "id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28", "current_panel"=>"", "interface"=>{"interface_name"=>"DefaultIdx", "interface_title"=>"Default Index ", "interface_weight"=>"1", "interface_selection_rule"=>"set{\r\n  #has :URI, \"index_title\", \"All Persons\"\r\n  has :URI, \"class\", \"SHDM::Index\"\r\n  has \"user_agent\", \"mobile\", false\r\n}", "abstract_scheme"=>"{name: \"main_page\", abstract_element: \"CompositeInterfaceElement\", children:[\r\n  {name: \"main_header\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n    {name: \"page_title\", abstract_element: \"ElementExhibitor\"}\r\n  ]},\r\n  {name: \"content\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      \r\n    {name: \"persons\", abstract_element: \"CompositeInterfaceElement\", repeatable: true, children:[\r\n        {name: \"target_url\", abstract_element: \"SimpleActivator\"},\r\n        {name: \"Publication\", abstract_element: \"ElementExhibitor\"},\r\n        {name: \"line_break\", abstract_element: \"ElementExhibitor\"}\r\n        \r\n        \r\n       ]}\r\n     ]}\r\n  \r\n  \r\n]}", "abstract_rules"=>"", "concrete_mapping_rules"=>"maps_to abstract: \"main_page\", concrete_widget: \"HTMLPage\" do\r\n  \r\nend\r\n\r\n\r\nmaps_to\tabstract: \"main_header\", concrete_widget: \"HTMLComposition\",\r\nparams: { content: \"My main title\" } do\r\n  eq 1, 1\r\nend\r\n\r\nmaps_to abstract: \"page_title\", concrete_widget: \"HTMLHeading\",\r\nparams: { size: 2, content: @index.index_title.to_s }do\r\n  \r\nend\r\n\r\nmaps_to abstract: \"content\", concrete_widget: \"HTMLComposition\",\r\nparams: {css_class: \"login\", content: \"Here will be something\"} do\r\n  #has :_, \"browser\", \"Firefox\"\r\nend\r\n\r\nmaps_to abstract: \"persons\", concrete_widget: \"HTMLComposition\",\r\nparams: {values: @index.entries }\r\n\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLAnchor\",\r\nparams: { content: value.target_url} do\r\n  gt value.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: \"No URL\"} do\r\n  lt value.uri.size, 90\r\nend\r\n\r\n\r\nmaps_to abstract: \"Publication\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: value.title } do\r\n  has :_, \"browser\", \"Firefox\"\r\n  eq value.uri.to_s.class, String\r\nend\r\n\r\nmaps_to abstract: \"line_break\", concrete_widget: \"HTMLLineBreak\"\r\n", "concrete_extensions"=>"abc"}, "commit"=>"Save and Continue"}
+Redirected to http://localhost:3000
+Completed in 99ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing ApplicationsController#index (for 127.0.0.1 at 2012-11-10 16:56:44) [GET]
+Rendering template within layouts/application
+Rendering applications/index
+Completed in 67ms (View: 63 | 200 OK [http://localhost/]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-10 16:56:55) [POST]
+  Parameters: {"authenticity_token"=>"a3uBCtckLd2gU1r4RvMjgr9erf2rHUqL9Mv62t2bdFU=", "id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28", "current_panel"=>"http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_concrete_mapping_rules-tab", "interface"=>{"interface_name"=>"DefaultIdx", "interface_title"=>"Default Index ", "interface_weight"=>"1", "interface_selection_rule"=>"set{\r\n  #has :URI, \"index_title\", \"All Persons\"\r\n  has :URI, \"class\", \"SHDM::Index\"\r\n  has \"user_agent\", \"mobile\", false\r\n}", "abstract_scheme"=>"{name: \"main_page\", abstract_element: \"CompositeInterfaceElement\", children:[\r\n  {name: \"main_header\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n    {name: \"page_title\", abstract_element: \"ElementExhibitor\"}\r\n  ]},\r\n  {name: \"content\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      \r\n    {name: \"persons\", abstract_element: \"CompositeInterfaceElement\", repeatable: true, children:[\r\n        {name: \"target_url\", abstract_element: \"SimpleActivator\"},\r\n        {name: \"Publication\", abstract_element: \"ElementExhibitor\"},\r\n        {name: \"line_break\", abstract_element: \"ElementExhibitor\"}\r\n        \r\n        \r\n       ]}\r\n     ]}\r\n  \r\n  \r\n]}", "abstract_rules"=>"", "concrete_mapping_rules"=>"maps_to abstract: \"main_page\", concrete_widget: \"HTMLPage\" do\r\n  \r\nend\r\n\r\n\r\nmaps_to\tabstract: \"main_header\", concrete_widget: \"HTMLComposition\",\r\nparams: { content: \"My main title\" } do\r\n  eq 1, 1\r\nend\r\n\r\nmaps_to abstract: \"page_title\", concrete_widget: \"HTMLHeading\",\r\nparams: { size: 2, content: @index.index_title.to_s }do\r\n  \r\nend\r\n\r\nmaps_to abstract: \"content\", concrete_widget: \"HTMLComposition\",\r\nparams: {css_class: \"login\", content: \"Here will be something\"} do\r\n  #has :_, \"browser\", \"Firefox\"\r\nend\r\n\r\nmaps_to abstract: \"persons\", concrete_widget: \"HTMLComposition\",\r\nparams: {values: @index.entries }\r\n\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLAnchor\",\r\nparams: { content: value.target_url} do\r\n  gt value.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: \"No URL\"} do\r\n  lt value.uri.size, 90\r\nend\r\n\r\n\r\nmaps_to abstract: \"Publication\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: value.title } do\r\n  has :_, \"browser\", \"Firefox\"\r\n  eq value.uri.to_s.class, String\r\nend\r\n\r\nmaps_to abstract: \"line_break\", concrete_widget: \"HTMLLineBreak\"\r\n", "concrete_extensions"=>"abc"}, "commit"=>"Save and Continue"}
+Redirected to http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_concrete_mapping_rules-tab
+Completed in 69ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 16:56:55) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 161ms (View: 157 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-10 16:57:00) [POST]
+  Parameters: {"authenticity_token"=>"a3uBCtckLd2gU1r4RvMjgr9erf2rHUqL9Mv62t2bdFU=", "id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28", "current_panel"=>"", "interface"=>{"interface_name"=>"DefaultIdx", "interface_title"=>"Default Index ", "interface_weight"=>"1", "interface_selection_rule"=>"set{\r\n  #has :URI, \"index_title\", \"All Persons\"\r\n  has :URI, \"class\", \"SHDM::Index\"\r\n  has \"user_agent\", \"mobile\", false\r\n}", "abstract_scheme"=>"{name: \"main_page\", abstract_element: \"CompositeInterfaceElement\", children:[\r\n  {name: \"main_header\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n    {name: \"page_title\", abstract_element: \"ElementExhibitor\"}\r\n  ]},\r\n  {name: \"content\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      \r\n    {name: \"persons\", abstract_element: \"CompositeInterfaceElement\", repeatable: true, children:[\r\n        {name: \"target_url\", abstract_element: \"SimpleActivator\"},\r\n        {name: \"Publication\", abstract_element: \"ElementExhibitor\"},\r\n        {name: \"line_break\", abstract_element: \"ElementExhibitor\"}\r\n        \r\n        \r\n       ]}\r\n     ]}\r\n  \r\n  \r\n]}", "abstract_rules"=>"", "concrete_mapping_rules"=>"maps_to abstract: \"main_page\", concrete_widget: \"HTMLPage\" do\r\n  \r\nend\r\n\r\n\r\nmaps_to\tabstract: \"main_header\", concrete_widget: \"HTMLComposition\",\r\nparams: { content: \"My main title\" } do\r\n  eq 1, 1\r\nend\r\n\r\nmaps_to abstract: \"page_title\", concrete_widget: \"HTMLHeading\",\r\nparams: { size: 2, content: @index.index_title.to_s }do\r\n  \r\nend\r\n\r\nmaps_to abstract: \"content\", concrete_widget: \"HTMLComposition\",\r\nparams: {css_class: \"login\", content: \"Here will be something\"} do\r\n  #has :_, \"browser\", \"Firefox\"\r\nend\r\n\r\nmaps_to abstract: \"persons\", concrete_widget: \"HTMLComposition\",\r\nparams: {values: @index.entries }\r\n\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLAnchor\",\r\nparams: { content: value.target_url} do\r\n  gt value.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: \"No URL\"} do\r\n  lt value.uri.size, 90\r\nend\r\n\r\n\r\nmaps_to abstract: \"Publication\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: value.title } do\r\n  has :_, \"browser\", \"Firefox\"\r\n  eq value.uri.to_s.class, String\r\nend\r\n\r\nmaps_to abstract: \"line_break\", concrete_widget: \"HTMLLineBreak\"\r\n", "concrete_extensions"=>"abc"}, "commit"=>"Save and Continue"}
+Redirected to http://localhost:3000
+Completed in 69ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing ApplicationsController#index (for 127.0.0.1 at 2012-11-10 16:57:00) [GET]
+Rendering template within layouts/application
+Rendering applications/index
+Completed in 89ms (View: 85 | 200 OK [http://localhost/]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-10 16:57:06) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 494ms (View: 475 | 200 OK [http://localhost/interface]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 16:57:09) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 380ms (View: 374 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-10 16:57:39) [POST]
+  Parameters: {"authenticity_token"=>"a3uBCtckLd2gU1r4RvMjgr9erf2rHUqL9Mv62t2bdFU=", "id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28", "current_panel"=>"http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_abstract_scheme-tab", "interface"=>{"interface_name"=>"DefaultIdx", "interface_title"=>"Default Index ", "interface_weight"=>"1", "interface_selection_rule"=>"set{\r\n  #has :URI, \"index_title\", \"All Persons\"\r\n  has :URI, \"class\", \"SHDM::Index\"\r\n  has \"user_agent\", \"mobile\", false\r\n}", "abstract_scheme"=>"{name: \"main_page\", abstract_element: \"CompositeInterfaceElement\", children:[\r\n  {name: \"main_header\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n    {name: \"page_title\", abstract_element: \"ElementExhibitor\"}\r\n  ]},\r\n  {name: \"content\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      \r\n    {name: \"persons\", abstract_element: \"CompositeInterfaceElement\", repeatable: true, children:[\r\n        {name: \"target_url\", abstract_element: \"SimpleActivator\"},\r\n        {name: \"Publication\", abstract_element: \"ElementExhibitor\"},\r\n        {name: \"line_break\", abstract_element: \"ElementExhibitor\"}\r\n        \r\n        \r\n       ]}\r\n     ]}\r\n  \r\n  \r\n]}", "abstract_rules"=>"", "concrete_mapping_rules"=>"maps_to abstract: \"main_page\", concrete_widget: \"HTMLPage\" do\r\n  \r\nend\r\n\r\n\r\nmaps_to\tabstract: \"main_header\", concrete_widget: \"HTMLComposition\",\r\nparams: { content: \"My main title\" } do\r\n  eq 1, 1\r\nend\r\n\r\nmaps_to abstract: \"page_title\", concrete_widget: \"HTMLHeading\",\r\nparams: { size: 2, content: @index.index_title.to_s }do\r\n  \r\nend\r\n\r\nmaps_to abstract: \"content\", concrete_widget: \"HTMLComposition\",\r\nparams: {css_class: \"login\", content: \"Here will be something\"} do\r\n  #has :_, \"browser\", \"Firefox\"\r\nend\r\n\r\nmaps_to abstract: \"persons\", concrete_widget: \"HTMLComposition\",\r\nparams: {values: @index.entries }\r\n\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLAnchor\",\r\nparams: { content: value.target_url} do\r\n  gt value.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: \"No URL\"} do\r\n  lt value.uri.size, 90\r\nend\r\n\r\n\r\nmaps_to abstract: \"Publication\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: value.title } do\r\n  has :_, \"browser\", \"Firefox\"\r\n  eq value.uri.to_s.class, String\r\nend\r\n\r\nmaps_to abstract: \"line_break\", concrete_widget: \"HTMLLineBreak\"\r\n", "concrete_extensions"=>"abc"}, "commit"=>"Save and Continue"}
+Redirected to http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_abstract_scheme-tab
+Completed in 69ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 16:57:40) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 110ms (View: 99 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 17:01:12) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 115ms (View: 109 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 17:01:41) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 101ms (View: 96 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 17:01:56) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 147ms (View: 143 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-10 17:02:15) [POST]
+  Parameters: {"authenticity_token"=>"a3uBCtckLd2gU1r4RvMjgr9erf2rHUqL9Mv62t2bdFU=", "id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28", "current_panel"=>"http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_concrete_mapping_rules-tab", "interface"=>{"interface_name"=>"DefaultIdx", "interface_title"=>"Default Index ", "interface_weight"=>"1", "interface_selection_rule"=>"set{\r\n  #has :URI, \"index_title\", \"All Persons\"\r\n  has :URI, \"class\", \"SHDM::Index\"\r\n  has \"user_agent\", \"mobile\", false\r\n}", "abstract_scheme"=>"{name: \"main_page\", abstract_element: \"CompositeInterfaceElement\", children:[\r\n  {name: \"main_header\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n    {name: \"page_title\", abstract_element: \"ElementExhibitor\"}\r\n  ]},\r\n  {name: \"content\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      \r\n    {name: \"persons\", abstract_element: \"CompositeInterfaceElement\", repeatable: true, children:[\r\n        {name: \"target_url\", abstract_element: \"SimpleActivator\"},\r\n        {name: \"Publication\", abstract_element: \"ElementExhibitor\"},\r\n        {name: \"line_break\", abstract_element: \"ElementExhibitor\"}\r\n        \r\n        \r\n       ]}\r\n     ]}\r\n  \r\n  \r\n]}", "abstract_rules"=>"", "concrete_mapping_rules"=>"maps_to abstract: \"main_page\", concrete_widget: \"HTMLPage\" do\r\n  \r\nend\r\n\r\n\r\nmaps_to\tabstract: \"main_header\", concrete_widget: \"HTMLComposition\",\r\nparams: { content: \"My main title\" } do\r\n  eq 1, 1\r\nend\r\n\r\nmaps_to abstract: \"page_title\", concrete_widget: \"HTMLHeading\",\r\nparams: { size: 2, content: @index.index_title.to_s }do\r\n  \r\nend\r\n\r\nmaps_to abstract: \"content\", concrete_widget: \"HTMLComposition\",\r\nparams: {css_class: \"login\", content: \"Here will be something\"} do\r\n  #has :_, \"browser\", \"Firefox\"\r\nend\r\n\r\nmaps_to abstract: \"persons\", concrete_widget: \"HTMLComposition\",\r\nparams: {values: @index.entries }\r\n\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLAnchor\",\r\nparams: { content: value.target_url} do\r\n  gt value.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: \"No URL\"} do\r\n  lt value.uri.size, 90\r\nend\r\n\r\n\r\nmaps_to abstract: \"Publication\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: value.title } do\r\n  has :_, \"browser\", \"Firefox\"\r\n  eq value.uri.to_s.class, String\r\nend\r\n\r\nmaps_to abstract: \"line_break\", concrete_widget: \"HTMLLineBreak\"\r\n", "concrete_extensions"=>"abc"}, "commit"=>"Save and Continue"}
+Redirected to http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_concrete_mapping_rules-tab
+Completed in 69ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 17:02:15) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 110ms (View: 104 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-10 17:02:19) [POST]
+  Parameters: {"authenticity_token"=>"a3uBCtckLd2gU1r4RvMjgr9erf2rHUqL9Mv62t2bdFU=", "id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28", "current_panel"=>"http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28", "interface"=>{"interface_name"=>"DefaultIdx", "interface_title"=>"Default Index ", "interface_weight"=>"1", "interface_selection_rule"=>"set{\r\n  #has :URI, \"index_title\", \"All Persons\"\r\n  has :URI, \"class\", \"SHDM::Index\"\r\n  has \"user_agent\", \"mobile\", false\r\n}", "abstract_scheme"=>"{name: \"main_page\", abstract_element: \"CompositeInterfaceElement\", children:[\r\n  {name: \"main_header\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n    {name: \"page_title\", abstract_element: \"ElementExhibitor\"}\r\n  ]},\r\n  {name: \"content\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      \r\n    {name: \"persons\", abstract_element: \"CompositeInterfaceElement\", repeatable: true, children:[\r\n        {name: \"target_url\", abstract_element: \"SimpleActivator\"},\r\n        {name: \"Publication\", abstract_element: \"ElementExhibitor\"},\r\n        {name: \"line_break\", abstract_element: \"ElementExhibitor\"}\r\n        \r\n        \r\n       ]}\r\n     ]}\r\n  \r\n  \r\n]}", "abstract_rules"=>"", "concrete_mapping_rules"=>"maps_to abstract: \"main_page\", concrete_widget: \"HTMLPage\" do\r\n  \r\nend\r\n\r\n\r\nmaps_to\tabstract: \"main_header\", concrete_widget: \"HTMLComposition\",\r\nparams: { content: \"My main title\" } do\r\n  eq 1, 1\r\nend\r\n\r\nmaps_to abstract: \"page_title\", concrete_widget: \"HTMLHeading\",\r\nparams: { size: 2, content: @index.index_title.to_s }do\r\n  \r\nend\r\n\r\nmaps_to abstract: \"content\", concrete_widget: \"HTMLComposition\",\r\nparams: {css_class: \"login\", content: \"Here will be something\"} do\r\n  #has :_, \"browser\", \"Firefox\"\r\nend\r\n\r\nmaps_to abstract: \"persons\", concrete_widget: \"HTMLComposition\",\r\nparams: {values: @index.entries }\r\n\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLAnchor\",\r\nparams: { content: value.target_url} do\r\n  gt value.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: \"No URL\"} do\r\n  lt value.uri.size, 90\r\nend\r\n\r\n\r\nmaps_to abstract: \"Publication\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: value.title } do\r\n  has :_, \"browser\", \"Firefox\"\r\n  eq value.uri.to_s.class, String\r\nend\r\n\r\nmaps_to abstract: \"line_break\", concrete_widget: \"HTMLLineBreak\"\r\n", "concrete_extensions"=>"abc"}, "commit"=>"Save and Continue"}
+Redirected to http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28
+Completed in 60ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 17:02:19) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 96ms (View: 91 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-10 17:02:39) [POST]
+  Parameters: {"authenticity_token"=>"a3uBCtckLd2gU1r4RvMjgr9erf2rHUqL9Mv62t2bdFU=", "id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28", "current_panel"=>"http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_concrete_mapping_rules-tab", "interface"=>{"interface_name"=>"DefaultIdx", "interface_title"=>"Default Index ", "interface_weight"=>"1", "interface_selection_rule"=>"set{\r\n  #has :URI, \"index_title\", \"All Persons\"\r\n  has :URI, \"class\", \"SHDM::Index\"\r\n  has \"user_agent\", \"mobile\", false\r\n}", "abstract_scheme"=>"{name: \"main_page\", abstract_element: \"CompositeInterfaceElement\", children:[\r\n  {name: \"main_header\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n    {name: \"page_title\", abstract_element: \"ElementExhibitor\"}\r\n  ]},\r\n  {name: \"content\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      \r\n    {name: \"persons\", abstract_element: \"CompositeInterfaceElement\", repeatable: true, children:[\r\n        {name: \"target_url\", abstract_element: \"SimpleActivator\"},\r\n        {name: \"Publication\", abstract_element: \"ElementExhibitor\"},\r\n        {name: \"line_break\", abstract_element: \"ElementExhibitor\"}\r\n        \r\n        \r\n       ]}\r\n     ]}\r\n  \r\n  \r\n]}", "abstract_rules"=>"", "concrete_mapping_rules"=>"maps_to abstract: \"main_page\", concrete_widget: \"HTMLPage\" do\r\n  \r\nend\r\n\r\n\r\nmaps_to\tabstract: \"main_header\", concrete_widget: \"HTMLComposition\",\r\nparams: { content: \"My main title\" } do\r\n  eq 1, 1\r\nend\r\n\r\nmaps_to abstract: \"page_title\", concrete_widget: \"HTMLHeading\",\r\nparams: { size: 2, content: @index.index_title.to_s }do\r\n  \r\nend\r\n\r\nmaps_to abstract: \"content\", concrete_widget: \"HTMLComposition\",\r\nparams: {css_class: \"login\", content: \"Here will be something\"} do\r\n  #has :_, \"browser\", \"Firefox\"\r\nend\r\n\r\nmaps_to abstract: \"persons\", concrete_widget: \"HTMLComposition\",\r\nparams: {values: @index.entries }\r\n\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLAnchor\",\r\nparams: { content: value.target_url} do\r\n  gt value.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: \"No URL\"} do\r\n  lt value.uri.size, 90\r\nend\r\n\r\n\r\nmaps_to abstract: \"Publication\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: value.title } do\r\n  has :_, \"browser\", \"Firefox\"\r\n  eq value.uri.to_s.class, String\r\nend\r\n\r\nmaps_to abstract: \"line_break\", concrete_widget: \"HTMLLineBreak\"\r\n", "concrete_extensions"=>"abc"}, "commit"=>"Save and Continue"}
+Redirected to http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_concrete_mapping_rules-tab
+Completed in 58ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 17:02:39) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 132ms (View: 128 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 17:06:45) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 96ms (View: 91 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-10 17:06:56) [POST]
+  Parameters: {"authenticity_token"=>"a3uBCtckLd2gU1r4RvMjgr9erf2rHUqL9Mv62t2bdFU=", "id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28", "current_panel"=>"http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_abstract_scheme-tab", "interface"=>{"interface_name"=>"DefaultIdx", "interface_title"=>"Default Index ", "interface_weight"=>"1", "interface_selection_rule"=>"set{\r\n  #has :URI, \"index_title\", \"All Persons\"\r\n  has :URI, \"class\", \"SHDM::Index\"\r\n  has \"user_agent\", \"mobile\", false\r\n}", "abstract_scheme"=>"{name: \"main_page\", abstract_element: \"CompositeInterfaceElement\", children:[\r\n  {name: \"main_header\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n    {name: \"page_title\", abstract_element: \"ElementExhibitor\"}\r\n  ]},\r\n  {name: \"content\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      \r\n    {name: \"persons\", abstract_element: \"CompositeInterfaceElement\", repeatable: true, children:[\r\n        {name: \"target_url\", abstract_element: \"SimpleActivator\"},\r\n        {name: \"Publication\", abstract_element: \"ElementExhibitor\"},\r\n        {name: \"line_break\", abstract_element: \"ElementExhibitor\"}\r\n        \r\n        \r\n       ]}\r\n     ]}\r\n  \r\n  \r\n]}", "abstract_rules"=>"", "concrete_mapping_rules"=>"maps_to abstract: \"main_page\", concrete_widget: \"HTMLPage\" do\r\n  \r\nend\r\n\r\n\r\nmaps_to\tabstract: \"main_header\", concrete_widget: \"HTMLComposition\",\r\nparams: { content: \"My main title\" } do\r\n  eq 1, 1\r\nend\r\n\r\nmaps_to abstract: \"page_title\", concrete_widget: \"HTMLHeading\",\r\nparams: { size: 2, content: @index.index_title.to_s }do\r\n  \r\nend\r\n\r\nmaps_to abstract: \"content\", concrete_widget: \"HTMLComposition\",\r\nparams: {css_class: \"login\", content: \"Here will be something\"} do\r\n  #has :_, \"browser\", \"Firefox\"\r\nend\r\n\r\nmaps_to abstract: \"persons\", concrete_widget: \"HTMLComposition\",\r\nparams: {values: @index.entries }\r\n\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLAnchor\",\r\nparams: { content: value.target_url} do\r\n  gt value.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: \"No URL\"} do\r\n  lt value.uri.size, 90\r\nend\r\n\r\n\r\nmaps_to abstract: \"Publication\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: value.title } do\r\n  has :_, \"browser\", \"Firefox\"\r\n  eq value.uri.to_s.class, String\r\nend\r\n\r\nmaps_to abstract: \"line_break\", concrete_widget: \"HTMLLineBreak\"\r\n", "concrete_extensions"=>"abc"}, "commit"=>"Save and Continue"}
+Redirected to http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_abstract_scheme-tab
+Completed in 73ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 17:06:56) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 91ms (View: 87 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-10 17:07:01) [POST]
+  Parameters: {"authenticity_token"=>"a3uBCtckLd2gU1r4RvMjgr9erf2rHUqL9Mv62t2bdFU=", "id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28", "current_panel"=>"http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_abstract_scheme-tab", "interface"=>{"interface_name"=>"DefaultIdx", "interface_title"=>"Default Index ", "interface_weight"=>"1", "interface_selection_rule"=>"set{\r\n  #has :URI, \"index_title\", \"All Persons\"\r\n  has :URI, \"class\", \"SHDM::Index\"\r\n  has \"user_agent\", \"mobile\", false\r\n}", "abstract_scheme"=>"{name: \"main_page\", abstract_element: \"CompositeInterfaceElement\", children:[\r\n  {name: \"main_header\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n    {name: \"page_title\", abstract_element: \"ElementExhibitor\"}\r\n  ]},\r\n  {name: \"content\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      \r\n    {name: \"persons\", abstract_element: \"CompositeInterfaceElement\", repeatable: true, children:[\r\n        {name: \"target_url\", abstract_element: \"SimpleActivator\"},\r\n        {name: \"Publication\", abstract_element: \"ElementExhibitor\"},\r\n        {name: \"line_break\", abstract_element: \"ElementExhibitor\"}\r\n        \r\n        \r\n       ]}\r\n     ]}\r\n  \r\n  \r\n]}", "abstract_rules"=>"", "concrete_mapping_rules"=>"maps_to abstract: \"main_page\", concrete_widget: \"HTMLPage\" do\r\n  \r\nend\r\n\r\n\r\nmaps_to\tabstract: \"main_header\", concrete_widget: \"HTMLComposition\",\r\nparams: { content: \"My main title\" } do\r\n  eq 1, 1\r\nend\r\n\r\nmaps_to abstract: \"page_title\", concrete_widget: \"HTMLHeading\",\r\nparams: { size: 2, content: @index.index_title.to_s }do\r\n  \r\nend\r\n\r\nmaps_to abstract: \"content\", concrete_widget: \"HTMLComposition\",\r\nparams: {css_class: \"login\", content: \"Here will be something\"} do\r\n  #has :_, \"browser\", \"Firefox\"\r\nend\r\n\r\nmaps_to abstract: \"persons\", concrete_widget: \"HTMLComposition\",\r\nparams: {values: @index.entries }\r\n\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLAnchor\",\r\nparams: { content: value.target_url} do\r\n  gt value.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: \"No URL\"} do\r\n  lt value.uri.size, 90\r\nend\r\n\r\n\r\nmaps_to abstract: \"Publication\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: value.title } do\r\n  has :_, \"browser\", \"Firefox\"\r\n  eq value.uri.to_s.class, String\r\nend\r\n\r\nmaps_to abstract: \"line_break\", concrete_widget: \"HTMLLineBreak\"\r\n", "concrete_extensions"=>"abc"}, "commit"=>"Save and Continue"}
+Redirected to http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_abstract_scheme-tab
+Completed in 68ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 17:07:01) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 94ms (View: 89 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing ContextsController#index (for 127.0.0.1 at 2012-11-10 17:07:08) [GET]
+Rendering template within layouts/application
+Rendering contexts/index
+Completed in 376ms (View: 275 | 200 OK [http://localhost/navigation]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-10 17:07:10) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 243ms (View: 240 | 200 OK [http://localhost/interface]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 17:07:14) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 91ms (View: 86 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-10 17:07:22) [POST]
+  Parameters: {"authenticity_token"=>"a3uBCtckLd2gU1r4RvMjgr9erf2rHUqL9Mv62t2bdFU=", "id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28", "current_panel"=>"http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_abstract_scheme-tab", "interface"=>{"interface_name"=>"DefaultIdx", "interface_title"=>"Default Index ", "interface_weight"=>"1", "interface_selection_rule"=>"set{\r\n  #has :URI, \"index_title\", \"All Persons\"\r\n  has :URI, \"class\", \"SHDM::Index\"\r\n  has \"user_agent\", \"mobile\", false\r\n}", "abstract_scheme"=>"{name: \"main_page\", abstract_element: \"CompositeInterfaceElement\", children:[\r\n  {name: \"main_header\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n    {name: \"page_title\", abstract_element: \"ElementExhibitor\"}\r\n  ]},\r\n  {name: \"content\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      \r\n    {name: \"persons\", abstract_element: \"CompositeInterfaceElement\", repeatable: true, children:[\r\n        {name: \"target_url\", abstract_element: \"SimpleActivator\"},\r\n        {name: \"Publication\", abstract_element: \"ElementExhibitor\"},\r\n        {name: \"line_break\", abstract_element: \"ElementExhibitor\"}\r\n        \r\n        \r\n       ]}\r\n     ]}\r\n  \r\n  \r\n]}", "abstract_rules"=>"", "concrete_mapping_rules"=>"maps_to abstract: \"main_page\", concrete_widget: \"HTMLPage\" do\r\n  \r\nend\r\n\r\n\r\nmaps_to\tabstract: \"main_header\", concrete_widget: \"HTMLComposition\",\r\nparams: { content: \"My main title\" } do\r\n  eq 1, 1\r\nend\r\n\r\nmaps_to abstract: \"page_title\", concrete_widget: \"HTMLHeading\",\r\nparams: { size: 2, content: @index.index_title.to_s }do\r\n  \r\nend\r\n\r\nmaps_to abstract: \"content\", concrete_widget: \"HTMLComposition\",\r\nparams: {css_class: \"login\", content: \"Here will be something\"} do\r\n  #has :_, \"browser\", \"Firefox\"\r\nend\r\n\r\nmaps_to abstract: \"persons\", concrete_widget: \"HTMLComposition\",\r\nparams: {values: @index.entries }\r\n\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLAnchor\",\r\nparams: { content: value.target_url} do\r\n  gt value.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: \"No URL\"} do\r\n  lt value.uri.size, 90\r\nend\r\n\r\n\r\nmaps_to abstract: \"Publication\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: value.title } do\r\n  has :_, \"browser\", \"Firefox\"\r\n  eq value.uri.to_s.class, String\r\nend\r\n\r\nmaps_to abstract: \"line_break\", concrete_widget: \"HTMLLineBreak\"\r\n", "concrete_extensions"=>"abc"}, "commit"=>"Save and Continue"}
+Redirected to http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_abstract_scheme-tab
+Completed in 59ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 17:07:22) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 93ms (View: 88 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-10 17:09:51) [POST]
+  Parameters: {"authenticity_token"=>"a3uBCtckLd2gU1r4RvMjgr9erf2rHUqL9Mv62t2bdFU=", "id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28", "current_panel"=>"http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_concrete_mapping_rules-tab", "interface"=>{"interface_name"=>"DefaultIdx", "interface_title"=>"Default Index ", "interface_weight"=>"1", "interface_selection_rule"=>"set{\r\n  #has :URI, \"index_title\", \"All Persons\"\r\n  has :URI, \"class\", \"SHDM::Index\"\r\n  has \"user_agent\", \"mobile\", false\r\n}", "abstract_scheme"=>"{name: \"main_page\", abstract_element: \"CompositeInterfaceElement\", children:[\r\n  {name: \"main_header\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n    {name: \"page_title\", abstract_element: \"ElementExhibitor\"}\r\n  ]},\r\n  {name: \"content\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      \r\n    {name: \"persons\", abstract_element: \"CompositeInterfaceElement\", repeatable: true, children:[\r\n        {name: \"target_url\", abstract_element: \"SimpleActivator\"},\r\n        {name: \"Publication\", abstract_element: \"ElementExhibitor\"},\r\n        {name: \"line_break\", abstract_element: \"ElementExhibitor\"}\r\n        \r\n        \r\n       ]}\r\n     ]}\r\n  \r\n  \r\n]}", "abstract_rules"=>"", "concrete_mapping_rules"=>"maps_to abstract: \"main_page\", concrete_widget: \"HTMLPage\" do\r\n  \r\nend\r\n\r\n\r\nmaps_to\tabstract: \"main_header\", concrete_widget: \"HTMLComposition\",\r\nparams: { content: \"My main title\" } do\r\n  eq 1, 1\r\nend\r\n\r\nmaps_to abstract: \"page_title\", concrete_widget: \"HTMLHeading\",\r\nparams: { size: 2, content: @index.index_title.to_s }do\r\n  \r\nend\r\n\r\nmaps_to abstract: \"content\", concrete_widget: \"HTMLComposition\",\r\nparams: {css_class: \"login\", content: \"Here will be something\"} do\r\n  #has :_, \"browser\", \"Firefox\"\r\nend\r\n\r\nmaps_to abstract: \"persons\", concrete_widget: \"HTMLComposition\",\r\nparams: {values: @index.entries }\r\n\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLAnchor\",\r\nparams: { content: value.target_url} do\r\n  gt value.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: \"No URL\"} do\r\n  lt value.uri.size, 90\r\nend\r\n\r\n\r\nmaps_to abstract: \"Publication\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: value.title } do\r\n  has :_, \"browser\", \"Firefox\"\r\n  eq value.uri.to_s.class, String\r\nend\r\n\r\nmaps_to abstract: \"line_break\", concrete_widget: \"HTMLLineBreak\"\r\n", "concrete_extensions"=>"{:name => 'ext2', :extension => 'HTMLLineBreak', :nodes => ['name_field', 'age_field', 'age_field' ]},\r\n      {:name => 'ext1', :extension => 'JQueryCopyTo', :nodes => ['age_field'], :params => {:target => 'long_text'}},"}, "commit"=>"Save and Continue"}
+Redirected to http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_concrete_mapping_rules-tab
+Completed in 224ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 17:09:51) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 102ms (View: 98 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-10 17:11:31) [POST]
+  Parameters: {"authenticity_token"=>"a3uBCtckLd2gU1r4RvMjgr9erf2rHUqL9Mv62t2bdFU=", "id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28", "current_panel"=>"http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_concrete_mapping_rules-tab", "interface"=>{"interface_name"=>"DefaultIdx", "interface_title"=>"Default Index ", "interface_weight"=>"1", "interface_selection_rule"=>"set{\r\n  #has :URI, \"index_title\", \"All Persons\"\r\n  has :URI, \"class\", \"SHDM::Index\"\r\n  has \"user_agent\", \"mobile\", false\r\n}", "abstract_scheme"=>"{name: \"main_page\", abstract_element: \"CompositeInterfaceElement\", children:[\r\n  {name: \"main_header\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n    {name: \"page_title\", abstract_element: \"ElementExhibitor\"}\r\n  ]},\r\n  {name: \"content\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      \r\n    {name: \"persons\", abstract_element: \"CompositeInterfaceElement\", repeatable: true, children:[\r\n        {name: \"target_url\", abstract_element: \"SimpleActivator\"},\r\n        {name: \"Publication\", abstract_element: \"ElementExhibitor\"},\r\n        {name: \"line_break\", abstract_element: \"ElementExhibitor\"}\r\n        \r\n        \r\n       ]}\r\n     ]}\r\n  \r\n  \r\n]}", "abstract_rules"=>"", "concrete_mapping_rules"=>"maps_to abstract: \"main_page\", concrete_widget: \"HTMLPage\" do\r\n  \r\nend\r\n\r\n\r\nmaps_to\tabstract: \"main_header\", concrete_widget: \"HTMLComposition\",\r\nparams: { content: \"My main title\" } do\r\n  eq 1, 1\r\nend\r\n\r\nmaps_to abstract: \"page_title\", concrete_widget: \"HTMLHeading\",\r\nparams: { size: 2, content: @index.index_title.to_s }do\r\n  \r\nend\r\n\r\nmaps_to abstract: \"content\", concrete_widget: \"HTMLComposition\",\r\nparams: {css_class: \"login\", content: \"Here will be something\"} do\r\n  #has :_, \"browser\", \"Firefox\"\r\nend\r\n\r\nmaps_to abstract: \"persons\", concrete_widget: \"HTMLComposition\",\r\nparams: {values: @index.entries }\r\n\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLAnchor\",\r\nparams: { content: value.target_url} do\r\n  gt value.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: \"No URL\"} do\r\n  lt value.uri.size, 90\r\nend\r\n\r\n\r\nmaps_to abstract: \"Publication\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: value.title } do\r\n  has :_, \"browser\", \"Firefox\"\r\n  eq value.uri.to_s.class, String\r\nend\r\n\r\nmaps_to abstract: \"line_break\", concrete_widget: \"HTMLLineBreak\"\r\n", "concrete_extensions"=>"{:name => 'ext2', :extension => 'HTMLLineBreak', :nodes => ['name_field', 'age_field', 'age_field' ]},\r\n      {:name => 'ext1', :extension => 'JQueryCopyTo', :nodes => ['age_field'], :params => {:target => 'long_text'}},"}, "commit"=>"Save and Continue"}
+Redirected to http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_concrete_mapping_rules-tab
+Completed in 134ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 17:11:31) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 96ms (View: 91 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-10 17:12:12) [POST]
+  Parameters: {"authenticity_token"=>"a3uBCtckLd2gU1r4RvMjgr9erf2rHUqL9Mv62t2bdFU=", "id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28", "current_panel"=>"http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_concrete_mapping_rules-tab", "interface"=>{"interface_name"=>"DefaultIdx", "interface_title"=>"Default Index ", "interface_weight"=>"1", "interface_selection_rule"=>"set{\r\n  #has :URI, \"index_title\", \"All Persons\"\r\n  has :URI, \"class\", \"SHDM::Index\"\r\n  has \"user_agent\", \"mobile\", false\r\n}", "abstract_scheme"=>"{name: \"main_page\", abstract_element: \"CompositeInterfaceElement\", children:[\r\n  {name: \"main_header\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n    {name: \"page_title\", abstract_element: \"ElementExhibitor\"}\r\n  ]},\r\n  {name: \"content\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      \r\n    {name: \"persons\", abstract_element: \"CompositeInterfaceElement\", repeatable: true, children:[\r\n        {name: \"target_url\", abstract_element: \"SimpleActivator\"},\r\n        {name: \"Publication\", abstract_element: \"ElementExhibitor\"},\r\n        {name: \"line_break\", abstract_element: \"ElementExhibitor\"}\r\n        \r\n        \r\n       ]}\r\n     ]}\r\n  \r\n  \r\n]}", "abstract_rules"=>"", "concrete_mapping_rules"=>"maps_to abstract: \"main_page\", concrete_widget: \"HTMLPage\" do\r\n  \r\nend\r\n\r\n\r\nmaps_to\tabstract: \"main_header\", concrete_widget: \"HTMLComposition\",\r\nparams: { content: \"My main title\" } do\r\n  eq 1, 1\r\nend\r\n\r\nmaps_to abstract: \"page_title\", concrete_widget: \"HTMLHeading\",\r\nparams: { size: 2, content: @index.index_title.to_s }do\r\n  \r\nend\r\n\r\nmaps_to abstract: \"content\", concrete_widget: \"HTMLComposition\",\r\nparams: {css_class: \"login\", content: \"Here will be something\"} do\r\n  #has :_, \"browser\", \"Firefox\"\r\nend\r\n\r\nmaps_to abstract: \"persons\", concrete_widget: \"HTMLComposition\",\r\nparams: {values: @index.entries }\r\n\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLAnchor\",\r\nparams: { content: value.target_url} do\r\n  gt value.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: \"No URL\"} do\r\n  lt value.uri.size, 90\r\nend\r\n\r\n\r\nmaps_to abstract: \"Publication\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: value.title } do\r\n  has :_, \"browser\", \"Firefox\"\r\n  eq value.uri.to_s.class, String\r\nend\r\n\r\nmaps_to abstract: \"line_break\", concrete_widget: \"HTMLLineBreak\"\r\n", "concrete_extensions"=>"{:name => 'ext2', :extension => 'HTMLLineBreak', :nodes => ['name_field', 'age_field', 'age_field' ]},\r\n      {:name => 'ext1', :extension => 'JQueryCopyTo', :nodes => ['age_field'], :params => {:target => 'long_text'}},"}, "commit"=>"Save and Continue"}
+Redirected to http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_concrete_mapping_rules-tab
+Completed in 65ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 17:12:12) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 100ms (View: 94 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-10 17:12:46) [POST]
+  Parameters: {"authenticity_token"=>"a3uBCtckLd2gU1r4RvMjgr9erf2rHUqL9Mv62t2bdFU=", "id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28", "current_panel"=>"http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_abstract_scheme-tab", "interface"=>{"interface_name"=>"DefaultIdx", "interface_title"=>"Default Index ", "interface_weight"=>"1", "interface_selection_rule"=>"set{\r\n  #has :URI, \"index_title\", \"All Persons\"\r\n  has :URI, \"class\", \"SHDM::Index\"\r\n  has \"user_agent\", \"mobile\", false\r\n}", "abstract_scheme"=>"{name: \"main_page\", abstract_element: \"CompositeInterfaceElement\", children:[\r\n  {name: \"main_header\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n    {name: \"page_title\", abstract_element: \"ElementExhibitor\"}\r\n  ]},\r\n  {name: \"content\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      \r\n    {name: \"persons\", abstract_element: \"CompositeInterfaceElement\", repeatable: true, children:[\r\n        {name: \"target_url\", abstract_element: \"SimpleActivator\"},\r\n        {name: \"Publication\", abstract_element: \"ElementExhibitor\"},\r\n        {name: \"line_break\", abstract_element: \"ElementExhibitor\"}\r\n        \r\n        \r\n       ]}\r\n     ]}\r\n  \r\n  \r\n]}", "abstract_rules"=>"", "concrete_mapping_rules"=>"maps_to abstract: \"main_page\", concrete_widget: \"HTMLPage\" do\r\n  \r\nend\r\n\r\n\r\nmaps_to\tabstract: \"main_header\", concrete_widget: \"HTMLComposition\",\r\nparams: { content: \"My main title\" } do\r\n  eq 1, 1\r\nend\r\n\r\nmaps_to abstract: \"page_title\", concrete_widget: \"HTMLHeading\",\r\nparams: { size: 2, content: @index.index_title.to_s }do\r\n  \r\nend\r\n\r\nmaps_to abstract: \"content\", concrete_widget: \"HTMLComposition\",\r\nparams: {css_class: \"login\", content: \"Here will be something\"} do\r\n  #has :_, \"browser\", \"Firefox\"\r\nend\r\n\r\nmaps_to abstract: \"persons\", concrete_widget: \"HTMLComposition\",\r\nparams: {values: @index.entries }\r\n\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLAnchor\",\r\nparams: { content: value.target_url} do\r\n  gt value.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: \"No URL\"} do\r\n  lt value.uri.size, 90\r\nend\r\n\r\n\r\nmaps_to abstract: \"Publication\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: value.title } do\r\n  has :_, \"browser\", \"Firefox\"\r\n  eq value.uri.to_s.class, String\r\nend\r\n\r\nmaps_to abstract: \"line_break\", concrete_widget: \"HTMLLineBreak\"\r\n", "concrete_extensions"=>"{:name => 'ext2', :extension => 'HTMLLineBreak', :nodes => ['name_field', 'age_field', 'age_field' ]},\r\n      {:name => 'ext1', :extension => 'JQueryCopyTo', :nodes => ['age_field'], :params => {:target => 'long_text'}},"}, "commit"=>"Save and Continue"}
+Redirected to http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_abstract_scheme-tab
+Completed in 68ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 17:12:46) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 103ms (View: 90 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 17:17:04) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 103ms (View: 98 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 17:17:32) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 110ms (View: 105 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-10 17:21:00) [POST]
+  Parameters: {"authenticity_token"=>"a3uBCtckLd2gU1r4RvMjgr9erf2rHUqL9Mv62t2bdFU=", "id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28", "current_panel"=>"http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_concrete_mapping_rules-tab", "interface"=>{"interface_name"=>"DefaultIdx", "interface_title"=>"Default Index ", "interface_weight"=>"1", "interface_selection_rule"=>"set{\r\n  #has :URI, \"index_title\", \"All Persons\"\r\n  has :URI, \"class\", \"SHDM::Index\"\r\n  has \"user_agent\", \"mobile\", false\r\n}", "abstract_scheme"=>"{name: \"main_page\", abstract_element: \"CompositeInterfaceElement\", children:[\r\n  {name: \"main_header\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n    {name: \"page_title\", abstract_element: \"ElementExhibitor\"}\r\n  ]},\r\n  {name: \"content\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      \r\n    {name: \"persons\", abstract_element: \"CompositeInterfaceElement\", repeatable: true, children:[\r\n        {name: \"target_url\", abstract_element: \"SimpleActivator\"},\r\n        {name: \"Publication\", abstract_element: \"ElementExhibitor\"},\r\n        {name: \"line_break\", abstract_element: \"ElementExhibitor\"}\r\n        \r\n        \r\n       ]}\r\n     ]}\r\n  \r\n  \r\n]}", "abstract_rules"=>"", "concrete_mapping_rules"=>"maps_to abstract: \"main_page\", concrete_widget: \"HTMLPage\" do\r\n  \r\nend\r\n\r\n\r\nmaps_to\tabstract: \"main_header\", concrete_widget: \"HTMLComposition\",\r\nparams: { content: \"My main title\" } do\r\n  eq 1, 1\r\nend\r\n\r\nmaps_to abstract: \"page_title\", concrete_widget: \"HTMLHeading\",\r\nparams: { size: 2, content: @index.index_title.to_s }do\r\n  \r\nend\r\n\r\nmaps_to abstract: \"content\", concrete_widget: \"HTMLComposition\",\r\nparams: {css_class: \"login\", content: \"Here will be something\"} do\r\n  #has :_, \"browser\", \"Firefox\"\r\nend\r\n\r\nmaps_to abstract: \"persons\", concrete_widget: \"HTMLComposition\",\r\nparams: {values: @index.entries }\r\n\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLAnchor\",\r\nparams: { content: value.target_url} do\r\n  gt value.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: \"No URL\"} do\r\n  lt value.uri.size, 90\r\nend\r\n\r\n\r\nmaps_to abstract: \"Publication\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: value.title } do\r\n  has :_, \"browser\", \"Firefox\"\r\n  eq value.uri.to_s.class, String\r\nend\r\n\r\nmaps_to abstract: \"line_break\", concrete_widget: \"HTMLLineBreak\"\r\n", "concrete_extensions"=>"extend nodes: ['name_field', 'age_field', 'age_field' ], :extension => 'HTMLLineBreak'\r\nextend nodes: ['age_field'], extension: 'JQueryCopyTo', params: {:target => 'long_text'}"}, "commit"=>"Save and Continue"}
+Redirected to http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_concrete_mapping_rules-tab
+Completed in 195ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 17:21:01) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 120ms (View: 116 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-10 17:26:45) [GET]
+  Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
+Completed in 23577ms (View: 6 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-10 17:27:53) [GET]
+  Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
+Completed in 40433ms (View: 6 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-10 18:27:35) [POST]
+  Parameters: {"authenticity_token"=>"a3uBCtckLd2gU1r4RvMjgr9erf2rHUqL9Mv62t2bdFU=", "id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28", "current_panel"=>"http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_concrete_mapping_rules-tab", "interface"=>{"interface_name"=>"DefaultIdx", "interface_title"=>"Default Index ", "interface_weight"=>"1", "interface_selection_rule"=>"set{\r\n  #has :URI, \"index_title\", \"All Persons\"\r\n  has :URI, \"class\", \"SHDM::Index\"\r\n  has \"user_agent\", \"mobile\", false\r\n}", "abstract_scheme"=>"{name: \"main_page\", abstract_element: \"CompositeInterfaceElement\", children:[\r\n  {name: \"main_header\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n    {name: \"page_title\", abstract_element: \"ElementExhibitor\"}\r\n  ]},\r\n  {name: \"content\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      \r\n    {name: \"persons\", abstract_element: \"CompositeInterfaceElement\", repeatable: true, children:[\r\n        {name: \"target_url\", abstract_element: \"SimpleActivator\"},\r\n        {name: \"Publication\", abstract_element: \"ElementExhibitor\"},\r\n        {name: \"line_break\", abstract_element: \"ElementExhibitor\"}\r\n        \r\n        \r\n       ]}\r\n     ]}\r\n  \r\n  \r\n]}", "abstract_rules"=>"", "concrete_mapping_rules"=>"maps_to abstract: \"main_page\", concrete_widget: \"HTMLPage\" do\r\n  \r\nend\r\n\r\n\r\nmaps_to\tabstract: \"main_header\", concrete_widget: \"HTMLComposition\",\r\nparams: { content: \"My main title\" } do\r\n  eq 1, 1\r\nend\r\n\r\nmaps_to abstract: \"page_title\", concrete_widget: \"HTMLHeading\",\r\nparams: { size: 2, content: @index.index_title.to_s }do\r\n  \r\nend\r\n\r\nmaps_to abstract: \"content\", concrete_widget: \"HTMLComposition\",\r\nparams: {css_class: \"login\", content: \"Here will be something\"} do\r\n  #has :_, \"browser\", \"Firefox\"\r\nend\r\n\r\nmaps_to abstract: \"persons\", concrete_widget: \"HTMLComposition\",\r\nparams: {values: @index.entries }\r\n\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLAnchor\",\r\nparams: { content: value.uri} do\r\n  gt value.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: \"No URL\"} do\r\n  lt value.uri.size, 90\r\nend\r\n\r\n\r\nmaps_to abstract: \"Publication\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: value.title } do\r\n  has :_, \"browser\", \"Firefox\"\r\n  eq value.uri.to_s.class, String\r\nend\r\n\r\nmaps_to abstract: \"line_break\", concrete_widget: \"HTMLLineBreak\"\r\n", "concrete_extensions"=>"extend nodes: ['name_field', 'age_field', 'age_field' ], :extension => 'HTMLLineBreak'\r\nextend nodes: ['age_field'], extension: 'JQueryCopyTo', params: {:target => 'long_text'}"}, "commit"=>"Save and Continue"}
+Redirected to http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_concrete_mapping_rules-tab
+Completed in 436ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 18:27:35) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 229ms (View: 224 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-10 18:27:39) [GET]
+  Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
+Completed in 34395ms (View: 9 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-10 18:36:20) [POST]
+  Parameters: {"authenticity_token"=>"a3uBCtckLd2gU1r4RvMjgr9erf2rHUqL9Mv62t2bdFU=", "id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28", "current_panel"=>"http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_concrete_mapping_rules-tab", "interface"=>{"interface_name"=>"DefaultIdx", "interface_title"=>"Default Index ", "interface_weight"=>"1", "interface_selection_rule"=>"set{\r\n  #has :URI, \"index_title\", \"All Persons\"\r\n  has :URI, \"class\", \"SHDM::Index\"\r\n  has \"user_agent\", \"mobile\", false\r\n}", "abstract_scheme"=>"{name: \"main_page\", abstract_element: \"CompositeInterfaceElement\", children:[\r\n  {name: \"main_header\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n    {name: \"page_title\", abstract_element: \"ElementExhibitor\"}\r\n  ]},\r\n  {name: \"content\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      \r\n    {name: \"persons\", abstract_element: \"CompositeInterfaceElement\", repeatable: true, children:[\r\n        {name: \"target_url\", abstract_element: \"SimpleActivator\"},\r\n        {name: \"Publication\", abstract_element: \"ElementExhibitor\"},\r\n        {name: \"line_break\", abstract_element: \"ElementExhibitor\"}\r\n        \r\n        \r\n       ]}\r\n     ]}\r\n  \r\n  \r\n]}", "abstract_rules"=>"", "concrete_mapping_rules"=>"maps_to abstract: \"main_page\", concrete_widget: \"HTMLPage\" do\r\n  \r\nend\r\n\r\n\r\nmaps_to\tabstract: \"main_header\", concrete_widget: \"HTMLComposition\",\r\nparams: { content: \"My main title\" } do\r\n  eq 1, 1\r\nend\r\n\r\nmaps_to abstract: \"page_title\", concrete_widget: \"HTMLHeading\",\r\nparams: { size: 2, content: @index.index_title.to_s }do\r\n  \r\nend\r\n\r\nmaps_to abstract: \"content\", concrete_widget: \"HTMLComposition\",\r\nparams: {css_class: \"login\", content: \"Here will be something\"} do\r\n  #has :_, \"browser\", \"Firefox\"\r\nend\r\n\r\nmaps_to abstract: \"persons\", concrete_widget: \"HTMLComposition\",\r\nparams: {values: @index.entries }\r\n\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLAnchor\",\r\nparams: { url: value.uri, content: value.title } do\r\n  gt value.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: \"No URL\"} do\r\n  lt value.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"publication\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: value.title } do\r\n  has :_, \"browser\", \"Firefox\"\r\n  eq value.uri.to_s.class, String\r\nend\r\n\r\nmaps_to abstract: \"line_break\", concrete_widget: \"HTMLLineBreak\"\r\n", "concrete_extensions"=>"extend nodes: ['name_field', 'age_field', 'age_field' ], :extension => 'HTMLLineBreak'\r\nextend nodes: ['age_field'], extension: 'JQueryCopyTo', params: {:target => 'long_text'}"}, "commit"=>"Save and Continue"}
+Redirected to http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_concrete_mapping_rules-tab
+Completed in 334ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 18:36:21) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 205ms (View: 200 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-10 18:36:24) [GET]
+  Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
+Completed in 31193ms (View: 7 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-10 18:37:49) [POST]
+  Parameters: {"authenticity_token"=>"a3uBCtckLd2gU1r4RvMjgr9erf2rHUqL9Mv62t2bdFU=", "id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28", "current_panel"=>"http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_abstract_scheme-tab", "interface"=>{"interface_name"=>"DefaultIdx", "interface_title"=>"Default Index ", "interface_weight"=>"1", "interface_selection_rule"=>"set{\r\n  #has :URI, \"index_title\", \"All Persons\"\r\n  has :URI, \"class\", \"SHDM::Index\"\r\n  has \"user_agent\", \"mobile\", false\r\n}", "abstract_scheme"=>"{name: \"main_page\", abstract_element: \"CompositeInterfaceElement\", children:[\r\n  {name: \"main_header\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n    {name: \"page_title\", abstract_element: \"ElementExhibitor\"}\r\n  ]},\r\n  {name: \"content\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      \r\n    {name: \"persons\", abstract_element: \"CompositeInterfaceElement\", repeatable: true, children:[\r\n        {name: \"target_url\", abstract_element: \"SimpleActivator\"},\r\n        {name: \"publication\", abstract_element: \"ElementExhibitor\"},\r\n        {name: \"line_break\", abstract_element: \"ElementExhibitor\"}\r\n        \r\n        \r\n       ]}\r\n     ]}\r\n  \r\n  \r\n]}", "abstract_rules"=>"", "concrete_mapping_rules"=>"maps_to abstract: \"main_page\", concrete_widget: \"HTMLPage\" do\r\n  \r\nend\r\n\r\n\r\nmaps_to\tabstract: \"main_header\", concrete_widget: \"HTMLComposition\",\r\nparams: { content: \"My main title\" } do\r\n  eq 1, 1\r\nend\r\n\r\nmaps_to abstract: \"page_title\", concrete_widget: \"HTMLHeading\",\r\nparams: { size: 2, content: @index.index_title.to_s }do\r\n  \r\nend\r\n\r\nmaps_to abstract: \"content\", concrete_widget: \"HTMLComposition\",\r\nparams: {css_class: \"login\", content: \"Here will be something\"} do\r\n  #has :_, \"browser\", \"Firefox\"\r\nend\r\n\r\nmaps_to abstract: \"persons\", concrete_widget: \"HTMLComposition\",\r\nparams: {values: @index.entries }\r\n\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLAnchor\",\r\nparams: { url: value.uri, content: value.title } do\r\n  gt value.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: \"No URL\"} do\r\n  lt value.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"publication\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: value.title } do\r\n  has :_, \"browser\", \"Firefox\"\r\n  eq value.uri.to_s.class, String\r\nend\r\n\r\nmaps_to abstract: \"line_break\", concrete_widget: \"HTMLLineBreak\"\r\n", "concrete_extensions"=>"extend nodes: ['name_field', 'age_field', 'age_field' ], :extension => 'HTMLLineBreak'\r\nextend nodes: ['age_field'], extension: 'JQueryCopyTo', params: {:target => 'long_text'}"}, "commit"=>"Save and Continue"}
+Redirected to http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_abstract_scheme-tab
+Completed in 200ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 18:37:49) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 134ms (View: 129 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-10 18:37:52) [GET]
+  Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
+Completed in 36482ms (View: 6 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-10 18:40:44) [GET]
+  Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
+Completed in 27789ms (View: 5 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-10 20:09:53) [GET]
+  Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
+Completed in 41637ms (View: 6 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-10 20:12:24) [GET]
+  Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
+Completed in 33391ms (View: 5 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-10 20:15:13) [GET]
+  Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
+Completed in 33968ms (View: 5 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-10 23:42:59) [GET]
+  Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
+Completed in 23597ms (View: 6 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-10 23:44:19) [GET]
+  Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
+Completed in 33712ms (View: 6 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-10 23:49:58) [GET]
+  Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
+Completed in 33434ms (View: 6 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 23:50:55) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 326ms (View: 321 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-10 23:51:55) [POST]
+  Parameters: {"authenticity_token"=>"a3uBCtckLd2gU1r4RvMjgr9erf2rHUqL9Mv62t2bdFU=", "id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28", "current_panel"=>"http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_concrete_mapping_rules-tab", "interface"=>{"interface_name"=>"DefaultIdx", "interface_title"=>"Default Index ", "interface_weight"=>"1", "interface_selection_rule"=>"set{\r\n  #has :URI, \"index_title\", \"All Persons\"\r\n  has :URI, \"class\", \"SHDM::Index\"\r\n  has \"user_agent\", \"mobile\", false\r\n}", "abstract_scheme"=>"{name: \"main_page\", abstract_element: \"CompositeInterfaceElement\", children:[\r\n  {name: \"main_header\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n    {name: \"page_title\", abstract_element: \"ElementExhibitor\"}\r\n  ]},\r\n  {name: \"content\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      \r\n    {name: \"persons\", abstract_element: \"CompositeInterfaceElement\", repeatable: true, children:[\r\n        {name: \"target_url\", abstract_element: \"SimpleActivator\"},\r\n        {name: \"publication\", abstract_element: \"ElementExhibitor\"},\r\n       ]}\r\n     ]}\r\n  \r\n  \r\n]}", "abstract_rules"=>"", "concrete_mapping_rules"=>"maps_to abstract: \"main_page\", concrete_widget: \"HTMLPage\" do\r\n  \r\nend\r\n\r\n\r\nmaps_to\tabstract: \"main_header\", concrete_widget: \"HTMLComposition\",\r\nparams: { content: \"My main title\" } do\r\n  eq 1, 1\r\nend\r\n\r\nmaps_to abstract: \"page_title\", concrete_widget: \"HTMLHeading\",\r\nparams: { size: 2, content: @index.index_title.to_s }do\r\n  \r\nend\r\n\r\nmaps_to abstract: \"content\", concrete_widget: \"HTMLComposition\",\r\nparams: {css_class: \"login\", content: \"Here will be something\"} do\r\n  #has :_, \"browser\", \"Firefox\"\r\nend\r\n\r\nmaps_to abstract: \"persons\", concrete_widget: \"HTMLComposition\",\r\nparams: {values: @index.entries }\r\n\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLAnchor\",\r\nparams: { url: value.uri, content: value.title } do\r\n  gt value.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: \"No URL\"} do\r\n  lt value.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"publication\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: value.title } do\r\n  has :_, \"browser\", \"Firefox\"\r\n  eq value.uri.to_s.class, String\r\nend\r\n\r\n", "concrete_extensions"=>"extend nodes: ['publication', 'page_title' ], :extension => 'HTMLLineBreak'\r\nextend nodes: ['age_field'], extension: 'JQueryCopyTo', params: {:target => 'long_text'}"}, "commit"=>"Save and Continue"}
+Redirected to http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_concrete_mapping_rules-tab
+Completed in 561ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-10 23:51:55) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 200ms (View: 194 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-10 23:52:00) [GET]
+  Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
+Completed in 27905ms (View: 6 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-10 23:53:59) [GET]
+  Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
+Completed in 28657ms (View: 6 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-10 23:55:49) [GET]
+  Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
+
+MissingSourceFile (no such file to load -- interface-rules/concrete-widget/JQueryCopyTo/JQueryCopyTo):
+  org/jruby/RubyKernel.java:1071:in `require'
+  lib/interface-rules/concrete-widget/interpreter.rb:84:in `widget_instance'
+  lib/interface-rules/concrete-widget/interpreter.rb:56:in `add_extensions'
+  org/jruby/RubyArray.java:1620:in `each'
+  lib/interface-rules/concrete-widget/interpreter.rb:50:in `add_extensions'
+  org/jruby/RubyArray.java:1620:in `each'
+  lib/interface-rules/concrete-widget/interpreter.rb:48:in `add_extensions'
+  app/models/swui/interface.rb:58:in `render'
+  lib/interface_selection.rb:11:in `render_interface'
+  (eval):33:in `index'
+  org/jruby/RubyKernel.java:1117:in `eval'
+  app/models/shdm/operation.rb:203:in `index'
+  org/jruby/RubyBasicObject.java:1698:in `__send__'
+  org/jruby/RubyKernel.java:2126:in `send'
+  org/jruby/RubyBasicObject.java:1698:in `__send__'
+  org/jruby/RubyKernel.java:2126:in `send'
+  org/jruby/RubyProc.java:258:in `call'
+  org/jruby/RubyArray.java:1620:in `each'
+  c:/jruby-1.6.8/lib/ruby/1.9/webrick/httpserver.rb:111:in `service'
+  c:/jruby-1.6.8/lib/ruby/1.9/webrick/httpserver.rb:70:in `run'
+  c:/jruby-1.6.8/lib/ruby/1.9/webrick/server.rb:183:in `start_thread'
+
+Rendered rescues/_trace (74.0ms)
+Rendered rescues/_request_and_response (21.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-10 23:59:29) [GET]
+  Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
+Completed in 31319ms (View: 4 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-11 00:00:35) [POST]
+  Parameters: {"authenticity_token"=>"a3uBCtckLd2gU1r4RvMjgr9erf2rHUqL9Mv62t2bdFU=", "id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28", "current_panel"=>"http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_concrete_mapping_rules-tab", "interface"=>{"interface_name"=>"DefaultIdx", "interface_title"=>"Default Index ", "interface_weight"=>"1", "interface_selection_rule"=>"set{\r\n  #has :URI, \"index_title\", \"All Persons\"\r\n  has :URI, \"class\", \"SHDM::Index\"\r\n  has \"user_agent\", \"mobile\", false\r\n}", "abstract_scheme"=>"{name: \"main_page\", abstract_element: \"CompositeInterfaceElement\", children:[\r\n  {name: \"main_header\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n    {name: \"page_title\", abstract_element: \"ElementExhibitor\"}\r\n  ]},\r\n  {name: \"content\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      \r\n    {name: \"persons\", abstract_element: \"CompositeInterfaceElement\", repeatable: true, children:[\r\n        {name: \"target_url\", abstract_element: \"SimpleActivator\"},\r\n        {name: \"publication\", abstract_element: \"ElementExhibitor\"},\r\n       ]}\r\n     ]}\r\n  \r\n  \r\n]}", "abstract_rules"=>"", "concrete_mapping_rules"=>"maps_to abstract: \"main_page\", concrete_widget: \"HTMLPage\" do\r\n  \r\nend\r\n\r\n\r\nmaps_to\tabstract: \"main_header\", concrete_widget: \"HTMLComposition\",\r\nparams: { content: \"My main title\" } do\r\n  eq 1, 1\r\nend\r\n\r\nmaps_to abstract: \"page_title\", concrete_widget: \"HTMLHeading\",\r\nparams: { size: 2, content: @index.index_title.to_s }do\r\n  \r\nend\r\n\r\nmaps_to abstract: \"content\", concrete_widget: \"HTMLComposition\",\r\nparams: {css_class: \"login\", content: \"Here will be something\"} do\r\n  #has :_, \"browser\", \"Firefox\"\r\nend\r\n\r\nmaps_to abstract: \"persons\", concrete_widget: \"HTMLComposition\",\r\nparams: {values: @index.entries }\r\n\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLAnchor\",\r\nparams: { url: value.uri, content: value.title } do\r\n  gt value.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: \"No URL\"} do\r\n  lt value.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"publication\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: value.title } do\r\n  has :_, \"browser\", \"Firefox\"\r\n  eq value.uri.to_s.class, String\r\nend\r\n\r\n", "concrete_extensions"=>"extend nodes: ['publication', 'page_title' ], :extension => 'HTMLLineBreak'\r\n#extend nodes: ['age_field'], extension: 'JQueryCopyTo', params: {:target => 'long_text'}"}, "commit"=>"Save and Continue"}
+Redirected to http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_concrete_mapping_rules-tab
+Completed in 461ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-11 00:00:35) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 270ms (View: 265 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-11 00:00:39) [GET]
+  Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
+Completed in 38214ms (View: 8 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-11 00:08:20) [GET]
+  Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
+Completed in 29015ms (View: 5 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-11 00:09:08) [POST]
+  Parameters: {"authenticity_token"=>"a3uBCtckLd2gU1r4RvMjgr9erf2rHUqL9Mv62t2bdFU=", "id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28", "current_panel"=>"http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_concrete_mapping_rules-tab", "interface"=>{"interface_name"=>"DefaultIdx", "interface_title"=>"Default Index ", "interface_weight"=>"1", "interface_selection_rule"=>"set{\r\n  #has :URI, \"index_title\", \"All Persons\"\r\n  has :URI, \"class\", \"SHDM::Index\"\r\n  has \"user_agent\", \"mobile\", false\r\n}", "abstract_scheme"=>"{name: \"main_page\", abstract_element: \"CompositeInterfaceElement\", children:[\r\n  {name: \"main_header\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n    {name: \"page_title\", abstract_element: \"ElementExhibitor\"}\r\n  ]},\r\n  {name: \"content\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      \r\n    {name: \"persons\", abstract_element: \"CompositeInterfaceElement\", repeatable: true, children:[\r\n        {name: \"target_url\", abstract_element: \"SimpleActivator\"},\r\n        {name: \"publication\", abstract_element: \"ElementExhibitor\"},\r\n       ]}\r\n     ]}\r\n  \r\n  \r\n]}", "abstract_rules"=>"", "concrete_mapping_rules"=>"maps_to abstract: \"main_page\", concrete_widget: \"HTMLPage\" do\r\n  \r\nend\r\n\r\n\r\nmaps_to\tabstract: \"main_header\", concrete_widget: \"HTMLComposition\",\r\nparams: { content: \"My main title\" } do\r\n  eq 1, 1\r\nend\r\n\r\nmaps_to abstract: \"page_title\", concrete_widget: \"HTMLHeading\",\r\nparams: { size: 2, content: @index.index_title.to_s }do\r\n  \r\nend\r\n\r\nmaps_to abstract: \"content\", concrete_widget: \"HTMLComposition\",\r\nparams: {css_class: \"login\", content: \"Here will be something\"} do\r\n  #has :_, \"browser\", \"Firefox\"\r\nend\r\n\r\nmaps_to abstract: \"persons\", concrete_widget: \"HTMLComposition\",\r\nparams: {values: @index.entries }\r\n\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLAnchor\",\r\nparams: { url: value.uri, content: value.title } do\r\n  gt value.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: \"No URL\"} do\r\n  lt value.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"publication\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: value.title } do\r\n  has :_, \"browser\", \"Firefox\"\r\n  eq value.uri.to_s.class, String\r\nend\r\n\r\n", "concrete_extensions"=>"extend nodes: ['publication', 'page_title' ], :extension => 'HTMLLineBreak'\r\nextend nodes: ['age_field'], extension: 'JQueryCopyTo', params: {:target => 'long_text'}"}, "commit"=>"Save and Continue"}
+Redirected to http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_concrete_mapping_rules-tab
+Completed in 318ms | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-11 00:09:09) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 235ms (View: 230 | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-11 00:10:49) [GET]
+  Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
+Completed in 29972ms (View: 5 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-11 00:13:44) [GET]
+  Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
+Completed in 40078ms (View: 5 | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d]

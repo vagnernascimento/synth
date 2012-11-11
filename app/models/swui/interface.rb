@@ -14,6 +14,7 @@ module SWUI
 		property SWUI::abstract_scheme
 		property SWUI::abstract_rules
 		property SWUI::concrete_mapping_rules
+		property SWUI::concrete_extensions
 		
 		#== Class methods
 		def self.interfaces_by_weight
@@ -47,12 +48,14 @@ module SWUI
 						
 						concrete_interface_rules =  InterfaceRules::ConcreteInterface.new( abstract_composed_hash )
 						concrete_composed_hash = concrete_interface_rules.evaluate( facts_triples, concrete_mapping_rules_str, interface_data )
+						hash_extensions = concrete_interface_rules.evaluate_extensions( selected_interface.concrete_extensions.to_s )
 						
             #return concrete_composed_hash
             #== Concrete rendering
 						if  concrete_composed_hash.is_a?(Hash)
 							#return concrete_composed_hash.to_s
 							concrete_interface = ConcreteWidget::Interface.new(concrete_composed_hash)
+							concrete_interface.add_extensions(hash_extensions)
 							
 							return concrete_interface.render
 						else
