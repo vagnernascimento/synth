@@ -16,6 +16,6 @@ class JQueryCopyTo < ConcreteWidget::Extension
     end
     
     def run_dependencies(obj)
-      obj.include_js(["js/jquery-1.7.2.min.js"])
+      obj.include_js(["/_shared/js/jquery-1.7.2.min.js"])
     end
 end

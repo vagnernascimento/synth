@@ -17,8 +17,8 @@ class JQueryDatePickerInput < ConcreteWidget::WidgetBase
     end
     
     def run_dependencies(obj)
-      obj.include_js(["js/jquery-1.7.2.min.js", "js/jquery-ui-1.8.21.custom.min.js"])
-      obj.include_css(["css/ui-lightness/jquery-ui-1.8.21.custom.css"])
+      obj.include_js(["/_shared/js/jquery-1.7.2.min.js", "/_shared/js/jquery-ui-1.8.21.custom.min.js"])
+      obj.include_css(["/concrete-widget/#{self.class.to_s}/css/ui-lightness/jquery-ui-1.8.21.custom.css"])
     end
    
 end

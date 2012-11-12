@@ -24,7 +24,7 @@ class JQueryTempoTemplateEngine < ConcreteWidget::WidgetBase
     end
     
     def run_dependencies(obj)
-      obj.include_js(["js/tempo.min.js", "js/jquery-1.7.2.min.js", "js/jquery-ui-1.8.21.custom.min.js"])
+      obj.include_js(["/concrete-widget/#{self.class.to_s}/js/tempo.min.js", "/_shared/js/jquery-1.7.2.min.js", "/_shared/js/jquery-ui-1.8.21.custom.min.js"])
     end
    
 end

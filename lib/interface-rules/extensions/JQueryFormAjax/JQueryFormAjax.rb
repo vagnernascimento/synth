@@ -17,6 +17,6 @@ class JQueryFormAjax < ConcreteWidget::Extension
     end
     
     def run_dependencies(obj)
-      obj.include_js(["js/jquery-1.7.2.min.js", "js/jquery.form.js"])
+      obj.include_js(["/_shared/js/jquery-1.7.2.min.js", "/concrete-widget/#{self.class.to_s}/js/jquery.form.js"])
     end
 end

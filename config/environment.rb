@@ -82,6 +82,9 @@ end
 
 puts "Demorou:#{tempo(time_total)}"
 
+require 'lib/interface-rules/boot_environment'
+InterfaceRewrite::rewrite
+
 
 #jena_memory = { :type => :jena, :model => "hyperde", :ontology => :owl, :reasoner => :owl }
 
