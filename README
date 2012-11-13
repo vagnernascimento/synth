@@ -31,6 +31,12 @@ Install the dependencies listed below:
 $ jgem install uuidtools
 $ jgem install dsl
 $ jgem install json
+$ jgem install rack-rewrite
+$ jgem install tilt
+$ jgem install rubytree
+$ jgem install markaby
+$ jgem install useragent
+$ jgem install wongi-engine
 
 RUNNING (Ruby 1.8 or 1.9)
 -------

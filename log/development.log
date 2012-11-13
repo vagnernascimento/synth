@@ -22938,3 +22938,319 @@ Completed in 184ms (View: 174, DB: 0) | 200 OK [http://localhost/interfaces/edit
 Processing ExecuteController#index (for 127.0.0.1 at 2012-11-12 15:39:15) [GET]
   Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
 Completed in 41933ms (View: 2, DB: 0) | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-13 00:17:56) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 513ms (View: 496, DB: 0) | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-13 00:19:25) [POST]
+  Parameters: {"authenticity_token"=>"a3uBCtckLd2gU1r4RvMjgr9erf2rHUqL9Mv62t2bdFU=", "id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28", "current_panel"=>"http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_concrete_mapping_rules-tab", "interface"=>{"interface_name"=>"DefaultIdx", "interface_title"=>"Default Index ", "interface_weight"=>"1", "interface_selection_rule"=>"set{\r\n  #has :URI, \"index_title\", \"All Persons\"\r\n  has :URI, \"class\", \"SHDM::Index\"\r\n  has \"user_agent\", \"mobile\", false\r\n}", "interface_description_type"=>"Abstract", "abstract_spec"=>"<%= @page_title %>", "abstract_scheme"=>"{name: \"main_page\", abstract_element: \"CompositeInterfaceElement\", children:[\r\n  {name: \"main_header\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n    {name: \"page_title\", abstract_element: \"ElementExhibitor\"},\r\n    {name: \"date_picker1\", abstract_element: \"ElementExhibitor\"},\r\n    {name: \"date_picker2\", abstract_element: \"ElementExhibitor\"}\r\n  ]},\r\n  {name: \"content\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      \r\n    {name: \"persons\", abstract_element: \"CompositeInterfaceElement\", repeatable: true, children:[\r\n        {name: \"target_url\", abstract_element: \"SimpleActivator\"},\r\n        {name: \"publication\", abstract_element: \"ElementExhibitor\"},\r\n       ]}\r\n     ]}\r\n  \r\n  \r\n]}", "abstract_rules"=>"", "concrete_mapping_rules"=>"maps_to abstract: \"main_page\", concrete_widget: \"HTMLPage\" do\r\n  \r\nend\r\n\r\n\r\nmaps_to\tabstract: \"main_header\", concrete_widget: \"HTMLComposition\",\r\nparams: { content: \"My main title\" } do\r\n  eq 1, 1\r\nend\r\n\r\nmaps_to abstract: \"page_title\", concrete_widget: \"HTMLHeading\",\r\nparams: { size: 2, content: @index.index_title.to_s }do\r\n  \r\nend\r\n\r\nmaps_to\tabstract: \"date_picker1\", concrete_widget: \"JQueryDatePickerInput\"\r\nmaps_to\tabstract: \"date_picker2\", concrete_widget: \"JQueryDatePickerInput\"\r\n\r\n\r\nmaps_to abstract: \"content\", concrete_widget: \"HTMLComposition\",\r\nparams: {css_class: \"login\", content: \"Here will be something\"} do\r\n  #has :_, \"browser\", \"Firefox\"\r\nend\r\n\r\nmaps_to abstract: \"persons\", concrete_widget: \"HTMLComposition\",\r\nparams: {:collection => @index.entries, :as => :person, values: @index.entries }\r\n\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLAnchor\",\r\nparams: { url: value.uri, content: value.title } do\r\n  gt value.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: \"No URL\"} do\r\n  lt value.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"publication\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: value.title } do\r\n  has :_, \"browser\", \"Firefox\"\r\n  eq value.uri.to_s.class, String\r\nend\r\n\r\n", "concrete_extensions"=>"extend nodes: ['publication', 'page_title' ], extension: 'HTMLLineBreak'\r\n\r\nextend nodes: ['date_picker1'], extension: 'JQueryCopyTo', params: { target: 'date_picker2'}"}, "commit"=>"Save and Continue"}
+Redirected to http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_concrete_mapping_rules-tab
+Completed in 380ms (DB: 0) | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-13 00:19:25) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 317ms (View: 311, DB: 0) | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-13 00:24:57) [GET]
+  Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
+Completed in 43319ms (View: 2, DB: 0) | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-13 00:28:02) [POST]
+  Parameters: {"authenticity_token"=>"a3uBCtckLd2gU1r4RvMjgr9erf2rHUqL9Mv62t2bdFU=", "id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28", "current_panel"=>"http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_concrete_mapping_rules-tab", "interface"=>{"interface_name"=>"DefaultIdx", "interface_title"=>"Default Index ", "interface_weight"=>"1", "interface_selection_rule"=>"set{\r\n  #has :URI, \"index_title\", \"All Persons\"\r\n  has :URI, \"class\", \"SHDM::Index\"\r\n  has \"user_agent\", \"mobile\", false\r\n}", "interface_description_type"=>"Abstract", "abstract_spec"=>"<%= @page_title %>", "abstract_scheme"=>"{name: \"main_page\", abstract_element: \"CompositeInterfaceElement\", children:[\r\n  {name: \"main_header\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n    {name: \"page_title\", abstract_element: \"ElementExhibitor\"},\r\n    {name: \"date_picker1\", abstract_element: \"ElementExhibitor\"},\r\n    {name: \"date_picker2\", abstract_element: \"ElementExhibitor\"}\r\n  ]},\r\n  {name: \"content\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      \r\n    {name: \"persons\", abstract_element: \"CompositeInterfaceElement\", repeatable: true, children:[\r\n        {name: \"target_url\", abstract_element: \"SimpleActivator\"},\r\n        {name: \"publication\", abstract_element: \"ElementExhibitor\"},\r\n       ]}\r\n     ]}\r\n  \r\n  \r\n]}", "abstract_rules"=>"", "concrete_mapping_rules"=>"maps_to abstract: \"main_page\", concrete_widget: \"HTMLPage\" do\r\n  \r\nend\r\n\r\n\r\nmaps_to\tabstract: \"main_header\", concrete_widget: \"HTMLComposition\",\r\nparams: { content: \"My main title\" } do\r\n  eq 1, 1\r\nend\r\n\r\nmaps_to abstract: \"page_title\", concrete_widget: \"HTMLHeading\",\r\nparams: { size: 2, content: @index.index_title.to_s }do\r\n  \r\nend\r\n\r\nmaps_to\tabstract: \"date_picker1\", concrete_widget: \"JQueryDatePickerInput\"\r\nmaps_to\tabstract: \"date_picker2\", concrete_widget: \"JQueryDatePickerInput\"\r\n\r\n\r\nmaps_to abstract: \"content\", concrete_widget: \"HTMLComposition\",\r\nparams: {css_class: \"login\", content: \"Here will be something\"} do\r\n  #has :_, \"browser\", \"Firefox\"\r\nend\r\n\r\nmaps_to abstract: \"persons\", concrete_widget: \"HTMLComposition\",\r\nparams: {:collection => @index.entries, :as => :publication }\r\n\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLAnchor\",\r\nparams: { url: publication.uri, content: publication.title } do\r\n  gt publication.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: \"No URL\"} do\r\n  lt publication.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"publication\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: publication.title } do\r\n  has :_, \"browser\", \"Firefox\"\r\n  eq value.uri.to_s.class, String\r\nend\r\n\r\n", "concrete_extensions"=>"extend nodes: ['publication', 'page_title' ], extension: 'HTMLLineBreak'\r\n\r\nextend nodes: ['date_picker1'], extension: 'JQueryCopyTo', params: { target: 'date_picker2'}"}, "commit"=>"Save and Continue"}
+Redirected to http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_concrete_mapping_rules-tab
+Completed in 354ms (DB: 0) | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-13 00:28:03) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 345ms (View: 338, DB: 0) | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-13 00:28:06) [GET]
+  Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
+Completed in 41064ms (View: 1, DB: 0) | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-13 00:29:26) [POST]
+  Parameters: {"authenticity_token"=>"a3uBCtckLd2gU1r4RvMjgr9erf2rHUqL9Mv62t2bdFU=", "id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28", "current_panel"=>"http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_concrete_mapping_rules-tab", "interface"=>{"interface_name"=>"DefaultIdx", "interface_title"=>"Default Index ", "interface_weight"=>"1", "interface_selection_rule"=>"set{\r\n  #has :URI, \"index_title\", \"All Persons\"\r\n  has :URI, \"class\", \"SHDM::Index\"\r\n  has \"user_agent\", \"mobile\", false\r\n}", "interface_description_type"=>"Abstract", "abstract_spec"=>"<%= @page_title %>", "abstract_scheme"=>"{name: \"main_page\", abstract_element: \"CompositeInterfaceElement\", children:[\r\n  {name: \"main_header\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n    {name: \"page_title\", abstract_element: \"ElementExhibitor\"},\r\n    {name: \"date_picker1\", abstract_element: \"ElementExhibitor\"},\r\n    {name: \"date_picker2\", abstract_element: \"ElementExhibitor\"}\r\n  ]},\r\n  {name: \"content\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      \r\n    {name: \"persons\", abstract_element: \"CompositeInterfaceElement\", repeatable: true, children:[\r\n        {name: \"target_url\", abstract_element: \"SimpleActivator\"},\r\n        {name: \"publication\", abstract_element: \"ElementExhibitor\"},\r\n       ]}\r\n     ]}\r\n  \r\n  \r\n]}", "abstract_rules"=>"", "concrete_mapping_rules"=>"maps_to abstract: \"main_page\", concrete_widget: \"HTMLPage\" do\r\n  \r\nend\r\n\r\n\r\nmaps_to\tabstract: \"main_header\", concrete_widget: \"HTMLComposition\",\r\nparams: { content: \"My main title\" } do\r\n  eq 1, 1\r\nend\r\n\r\nmaps_to abstract: \"page_title\", concrete_widget: \"HTMLHeading\",\r\nparams: { size: 2, content: @index.index_title.to_s }do\r\n  \r\nend\r\n\r\nmaps_to\tabstract: \"date_picker1\", concrete_widget: \"JQueryDatePickerInput\"\r\nmaps_to\tabstract: \"date_picker2\", concrete_widget: \"JQueryDatePickerInput\"\r\n\r\n\r\nmaps_to abstract: \"content\", concrete_widget: \"HTMLComposition\",\r\nparams: {css_class: \"login\", content: \"Here will be something\"} do\r\n  #has :_, \"browser\", \"Firefox\"\r\nend\r\n\r\nmaps_to abstract: \"persons\", concrete_widget: \"HTMLComposition\",\r\nparams: {:collection => @index.entries, :as => :publication }\r\n\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLAnchor\",\r\nparams: { url: publication.uri, content: publication.title } do\r\n  gt publication.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: \"No URL\"} do\r\n  lt publication.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"publication\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: publication.title } do\r\n  has :_, \"browser\", \"Firefox\"\r\n  eq value.uri.to_s.class, String\r\nend\r\n\r\n", "concrete_extensions"=>"extend nodes: ['publication', 'page_title' ], extension: 'HTMLLineBreak'\r\n\r\nextend nodes: ['date_picker1'], extension: 'JQueryCopyTo', params: { target: 'date_picker2'}"}, "commit"=>"Save and Continue"}
+Redirected to http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_concrete_mapping_rules-tab
+Completed in 258ms (DB: 0) | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-13 00:29:26) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 328ms (View: 319, DB: 0) | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-13 00:29:31) [GET]
+  Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
+Completed in 42656ms (View: 1, DB: 0) | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-13 00:31:31) [POST]
+  Parameters: {"authenticity_token"=>"a3uBCtckLd2gU1r4RvMjgr9erf2rHUqL9Mv62t2bdFU=", "id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28", "current_panel"=>"http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_concrete_mapping_rules-tab", "interface"=>{"interface_name"=>"DefaultIdx", "interface_title"=>"Default Index ", "interface_weight"=>"1", "interface_selection_rule"=>"set{\r\n  #has :URI, \"index_title\", \"All Persons\"\r\n  has :URI, \"class\", \"SHDM::Index\"\r\n  has \"user_agent\", \"mobile\", false\r\n}", "interface_description_type"=>"Abstract", "abstract_spec"=>"<%= @page_title %>", "abstract_scheme"=>"{name: \"main_page\", abstract_element: \"CompositeInterfaceElement\", children:[\r\n  {name: \"main_header\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n    {name: \"page_title\", abstract_element: \"ElementExhibitor\"},\r\n    {name: \"date_picker1\", abstract_element: \"ElementExhibitor\"},\r\n    {name: \"date_picker2\", abstract_element: \"ElementExhibitor\"}\r\n  ]},\r\n  {name: \"content\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      \r\n    {name: \"persons\", abstract_element: \"CompositeInterfaceElement\", repeatable: true, children:[\r\n        {name: \"target_url\", abstract_element: \"SimpleActivator\"},\r\n        {name: \"publication\", abstract_element: \"ElementExhibitor\"},\r\n       ]}\r\n     ]}\r\n  \r\n  \r\n]}", "abstract_rules"=>"", "concrete_mapping_rules"=>"maps_to abstract: \"main_page\", concrete_widget: \"HTMLPage\" do\r\n  \r\nend\r\n\r\n\r\nmaps_to\tabstract: \"main_header\", concrete_widget: \"HTMLComposition\",\r\nparams: { content: \"My main title\" } do\r\n  eq 1, 1\r\nend\r\n\r\nmaps_to abstract: \"page_title\", concrete_widget: \"HTMLHeading\",\r\nparams: { size: 2, content: @index.index_title.to_s }do\r\n  \r\nend\r\n\r\nmaps_to\tabstract: \"date_picker1\", concrete_widget: \"JQueryDatePickerInput\"\r\nmaps_to\tabstract: \"date_picker2\", concrete_widget: \"JQueryDatePickerInput\"\r\n\r\n\r\nmaps_to abstract: \"content\", concrete_widget: \"HTMLComposition\",\r\nparams: {css_class: \"login\", content: \"Here will be something\"} do\r\n  #has :_, \"browser\", \"Firefox\"\r\nend\r\n\r\nmaps_to abstract: \"persons\", concrete_widget: \"HTMLComposition\",\r\nparams: {:collection => @index.entries, :as => :publicationsd }\r\n\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLAnchor\",\r\nparams: { url: publication.uri, content: publication.title } do\r\n  gt publication.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: \"No URL\"} do\r\n  lt publication.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"publication\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: publication.title } do\r\n  has :_, \"browser\", \"Firefox\"\r\n  eq value.uri.to_s.class, String\r\nend\r\n\r\n", "concrete_extensions"=>"extend nodes: ['publication', 'page_title' ], extension: 'HTMLLineBreak'\r\n\r\nextend nodes: ['date_picker1'], extension: 'JQueryCopyTo', params: { target: 'date_picker2'}"}, "commit"=>"Save and Continue"}
+Redirected to http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_concrete_mapping_rules-tab
+Completed in 300ms (DB: 0) | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-13 00:31:31) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 280ms (View: 273, DB: 0) | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-13 00:31:34) [GET]
+  Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
+Completed in 16300ms (View: 2, DB: 0) | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-13 00:32:31) [POST]
+  Parameters: {"authenticity_token"=>"a3uBCtckLd2gU1r4RvMjgr9erf2rHUqL9Mv62t2bdFU=", "id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28", "current_panel"=>"http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_concrete_mapping_rules-tab", "interface"=>{"interface_name"=>"DefaultIdx", "interface_title"=>"Default Index ", "interface_weight"=>"1", "interface_selection_rule"=>"set{\r\n  #has :URI, \"index_title\", \"All Persons\"\r\n  has :URI, \"class\", \"SHDM::Index\"\r\n  has \"user_agent\", \"mobile\", false\r\n}", "interface_description_type"=>"Abstract", "abstract_spec"=>"<%= @page_title %>", "abstract_scheme"=>"{name: \"main_page\", abstract_element: \"CompositeInterfaceElement\", children:[\r\n  {name: \"main_header\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n    {name: \"page_title\", abstract_element: \"ElementExhibitor\"},\r\n    {name: \"date_picker1\", abstract_element: \"ElementExhibitor\"},\r\n    {name: \"date_picker2\", abstract_element: \"ElementExhibitor\"}\r\n  ]},\r\n  {name: \"content\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      \r\n    {name: \"persons\", abstract_element: \"CompositeInterfaceElement\", repeatable: true, children:[\r\n        {name: \"target_url\", abstract_element: \"SimpleActivator\"},\r\n        {name: \"publication\", abstract_element: \"ElementExhibitor\"},\r\n       ]}\r\n     ]}\r\n  \r\n  \r\n]}", "abstract_rules"=>"", "concrete_mapping_rules"=>"maps_to abstract: \"main_page\", concrete_widget: \"HTMLPage\" do\r\n  \r\nend\r\n\r\n\r\nmaps_to\tabstract: \"main_header\", concrete_widget: \"HTMLComposition\",\r\nparams: { content: \"My main title\" } do\r\n  eq 1, 1\r\nend\r\n\r\nmaps_to abstract: \"page_title\", concrete_widget: \"HTMLHeading\",\r\nparams: { size: 2, content: @index.index_title.to_s }do\r\n  \r\nend\r\n\r\nmaps_to\tabstract: \"date_picker1\", concrete_widget: \"JQueryDatePickerInput\"\r\nmaps_to\tabstract: \"date_picker2\", concrete_widget: \"JQueryDatePickerInput\"\r\n\r\n\r\nmaps_to abstract: \"content\", concrete_widget: \"HTMLComposition\",\r\nparams: {css_class: \"login\", content: \"Here will be something\"} do\r\n  #has :_, \"browser\", \"Firefox\"\r\nend\r\n\r\nmaps_to abstract: \"persons\", concrete_widget: \"HTMLComposition\",\r\nparams: {:collection => @index.entries, :as => :publications }\r\n\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLAnchor\",\r\nparams: { url: publication.uri, content: publication.title } do\r\n  gt publication.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: \"No URL\"} do\r\n  lt publication.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"publication\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: publication.title } do\r\n  has :_, \"browser\", \"Firefox\"\r\n  eq value.uri.to_s.class, String\r\nend\r\n\r\n", "concrete_extensions"=>"extend nodes: ['publication', 'page_title' ], extension: 'HTMLLineBreak'\r\n\r\nextend nodes: ['date_picker1'], extension: 'JQueryCopyTo', params: { target: 'date_picker2'}"}, "commit"=>"Save and Continue"}
+Redirected to http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_concrete_mapping_rules-tab
+Completed in 459ms (DB: 0) | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-13 00:32:32) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 222ms (View: 215, DB: 0) | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-13 00:32:35) [GET]
+  Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
+Completed in 16180ms (View: 6, DB: 0) | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-13 00:33:15) [POST]
+  Parameters: {"authenticity_token"=>"a3uBCtckLd2gU1r4RvMjgr9erf2rHUqL9Mv62t2bdFU=", "id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28", "current_panel"=>"http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_concrete_mapping_rules-tab", "interface"=>{"interface_name"=>"DefaultIdx", "interface_title"=>"Default Index ", "interface_weight"=>"1", "interface_selection_rule"=>"set{\r\n  #has :URI, \"index_title\", \"All Persons\"\r\n  has :URI, \"class\", \"SHDM::Index\"\r\n  has \"user_agent\", \"mobile\", false\r\n}", "interface_description_type"=>"Abstract", "abstract_spec"=>"<%= @page_title %>", "abstract_scheme"=>"{name: \"main_page\", abstract_element: \"CompositeInterfaceElement\", children:[\r\n  {name: \"main_header\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n    {name: \"page_title\", abstract_element: \"ElementExhibitor\"},\r\n    {name: \"date_picker1\", abstract_element: \"ElementExhibitor\"},\r\n    {name: \"date_picker2\", abstract_element: \"ElementExhibitor\"}\r\n  ]},\r\n  {name: \"content\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      \r\n    {name: \"persons\", abstract_element: \"CompositeInterfaceElement\", repeatable: true, children:[\r\n        {name: \"target_url\", abstract_element: \"SimpleActivator\"},\r\n        {name: \"publication\", abstract_element: \"ElementExhibitor\"},\r\n       ]}\r\n     ]}\r\n  \r\n  \r\n]}", "abstract_rules"=>"", "concrete_mapping_rules"=>"maps_to abstract: \"main_page\", concrete_widget: \"HTMLPage\" do\r\n  \r\nend\r\n\r\n\r\nmaps_to\tabstract: \"main_header\", concrete_widget: \"HTMLComposition\",\r\nparams: { content: \"My main title\" } do\r\n  eq 1, 1\r\nend\r\n\r\nmaps_to abstract: \"page_title\", concrete_widget: \"HTMLHeading\",\r\nparams: { size: 2, content: @index.index_title.to_s }do\r\n  \r\nend\r\n\r\nmaps_to\tabstract: \"date_picker1\", concrete_widget: \"JQueryDatePickerInput\"\r\nmaps_to\tabstract: \"date_picker2\", concrete_widget: \"JQueryDatePickerInput\"\r\n\r\n\r\nmaps_to abstract: \"content\", concrete_widget: \"HTMLComposition\",\r\nparams: {css_class: \"login\", content: \"Here will be something\"} do\r\n  #has :_, \"browser\", \"Firefox\"\r\nend\r\n\r\nmaps_to abstract: \"persons\", concrete_widget: \"HTMLComposition\",\r\nparams: {:collection => @index.entries, :as => :publication }\r\n\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLAnchor\",\r\nparams: { url: publication.uri, content: publication.title } do\r\n  gt publication.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: \"No URL\"} do\r\n  lt publication.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"publication\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: publication.title } do\r\n  has :_, \"browser\", \"Firefox\"\r\n  eq value.uri.to_s.class, String\r\nend\r\n\r\n", "concrete_extensions"=>"extend nodes: ['publication', 'page_title' ], extension: 'HTMLLineBreak'\r\n\r\nextend nodes: ['date_picker1'], extension: 'JQueryCopyTo', params: { target: 'date_picker2'}"}, "commit"=>"Save and Continue"}
+Redirected to http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_concrete_mapping_rules-tab
+Completed in 266ms (DB: 0) | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-13 00:33:16) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 155ms (View: 149, DB: 0) | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-13 00:33:18) [GET]
+  Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
+Completed in 41212ms (View: 3, DB: 0) | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-13 12:53:15) [POST]
+  Parameters: {"authenticity_token"=>"a3uBCtckLd2gU1r4RvMjgr9erf2rHUqL9Mv62t2bdFU=", "id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28", "current_panel"=>"http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_concrete_mapping_rules-tab", "interface"=>{"interface_name"=>"DefaultIdx", "interface_title"=>"Default Index ", "interface_weight"=>"1", "interface_selection_rule"=>"set{\r\n  #has :URI, \"index_title\", \"All Persons\"\r\n  has :URI, \"class\", \"SHDM::Index\"\r\n  has \"user_agent\", \"mobile\", false\r\n}", "interface_description_type"=>"Abstract", "abstract_spec"=>"<%= @page_title %>", "abstract_scheme"=>"{name: \"main_page\", abstract_element: \"CompositeInterfaceElement\", children:[\r\n  {name: \"main_header\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n    {name: \"page_title\", abstract_element: \"ElementExhibitor\"},\r\n    {name: \"date_picker1\", abstract_element: \"ElementExhibitor\"},\r\n    {name: \"date_picker2\", abstract_element: \"ElementExhibitor\"}\r\n  ]},\r\n  {name: \"content\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      \r\n    {name: \"persons\", abstract_element: \"CompositeInterfaceElement\", repeatable: true, children:[\r\n        {name: \"target_url\", abstract_element: \"SimpleActivator\"},\r\n        {name: \"publication\", abstract_element: \"ElementExhibitor\"},\r\n       ]}\r\n     ]}\r\n  \r\n  \r\n]}", "abstract_rules"=>"", "concrete_mapping_rules"=>"maps_to abstract: \"main_page\", concrete_widget: \"HTMLPage\" do\r\n  \r\nend\r\n\r\n\r\nmaps_to\tabstract: \"main_header\", concrete_widget: \"HTMLComposition\",\r\nparams: { content: \"My main title\" } do\r\n  eq 1, 1\r\nend\r\n\r\nmaps_to abstract: \"page_title\", concrete_widget: \"HTMLHeading\",\r\nparams: { size: 2, content: @index.index_title.to_s }do\r\n  \r\nend\r\n\r\nmaps_to\tabstract: \"date_picker1\", concrete_widget: \"JQueryDatePickerInput\"\r\nmaps_to\tabstract: \"date_picker2\", concrete_widget: \"JQueryDatePickerInput\"\r\n\r\n\r\nmaps_to abstract: \"content\", concrete_widget: \"HTMLComposition\",\r\nparams: {css_class: \"login\", content: \"Here will be something\"} do\r\n  #has :_, \"browser\", \"Firefox\"\r\nend\r\n\r\nmaps_to abstract: \"persons\", concrete_widget: \"HTMLComposition\",\r\nparams: {:collection => @index.entries, :as => :publication }\r\n\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLAnchor\",\r\nparams: { url: publication.uri, content: publication.title } do\r\n  gt publication.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: \"No URL\"} do\r\n  lt publication.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"publication\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: publication.title } do\r\n  has :_, \"browser\", \"Firefox\"\r\n  eq value.uri.to_s.class, String\r\nend\r\n\r\n", "concrete_extensions"=>"extend nodes: ['publication', 'page_title' ], extension: 'HTMLLineBreak'\r\n\r\nextend nodes: ['date_picker1'], extension: 'JQueryCopyTo', params: { target: 'date_picker2'}"}, "commit"=>"Save and Continue"}
+Redirected to http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_concrete_mapping_rules-tab
+Completed in 81ms (DB: 0) | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-13 12:53:16) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 241ms (View: 236, DB: 0) | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-13 12:53:19) [GET]
+  Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
+Completed in 37610ms (View: 1, DB: 0) | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-13 13:41:57) [POST]
+  Parameters: {"authenticity_token"=>"a3uBCtckLd2gU1r4RvMjgr9erf2rHUqL9Mv62t2bdFU=", "id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28", "current_panel"=>"http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_concrete_mapping_rules-tab", "interface"=>{"interface_name"=>"DefaultIdx", "interface_title"=>"Default Index ", "interface_weight"=>"1", "interface_selection_rule"=>"set{\r\n  #has :URI, \"index_title\", \"All Persons\"\r\n  has :URI, \"class\", \"SHDM::Index\"\r\n  has \"user_agent\", \"mobile\", false\r\n}", "interface_description_type"=>"Abstract", "abstract_spec"=>"<%= @page_title %>", "abstract_scheme"=>"{name: \"main_page\", abstract_element: \"CompositeInterfaceElement\", children:[\r\n  {name: \"main_header\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n    {name: \"page_title\", abstract_element: \"ElementExhibitor\"},\r\n    {name: \"date_picker1\", abstract_element: \"ElementExhibitor\"},\r\n    {name: \"date_picker2\", abstract_element: \"ElementExhibitor\"}\r\n  ]},\r\n  {name: \"content\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      \r\n    {name: \"persons\", abstract_element: \"CompositeInterfaceElement\", repeatable: true, children:[\r\n        {name: \"target_url\", abstract_element: \"SimpleActivator\"},\r\n        {name: \"publication\", abstract_element: \"ElementExhibitor\"},\r\n       ]}\r\n     ]}\r\n  \r\n  \r\n]}", "abstract_rules"=>"", "concrete_mapping_rules"=>"maps_to abstract: \"main_page\", concrete_widget: \"HTMLPage\" do\r\n  \r\nend\r\n\r\n\r\nmaps_to\tabstract: \"main_header\", concrete_widget: \"HTMLComposition\",\r\nparams: { content: \"My main title\" } do\r\n  eq 1, 1\r\nend\r\n\r\nmaps_to abstract: \"page_title\", concrete_widget: \"HTMLHeading\",\r\nparams: { size: 2, content: @index.index_title.to_s }do\r\n  \r\nend\r\n\r\nmaps_to\tabstract: \"date_picker1\", concrete_widget: \"JQueryDatePickerInput\"\r\nmaps_to\tabstract: \"date_picker2\", concrete_widget: \"JQueryDatePickerInput\"\r\n\r\n\r\nmaps_to abstract: \"content\", concrete_widget: \"HTMLComposition\",\r\nparams: {css_class: \"login\", content: \"Here will be something\"} do\r\n  has :_, \"browser\", \"Firefox\"\r\nend\r\n\r\nmaps_to abstract: \"persons\", concrete_widget: \"HTMLComposition\",\r\nparams: {:collection => @index.entries, :as => :publication }\r\n\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLAnchor\",\r\nparams: { url: publication.uri, content: publication.title } do\r\n  gt publication.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: \"No URL\"} do\r\n  lt publication.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"publication\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: publication.title } do\r\n  has :_, \"browser\", \"Firefox\"\r\n  eq value.uri.to_s.class, String\r\nend\r\n\r\n", "concrete_extensions"=>"extend nodes: ['publication', 'page_title' ], extension: 'HTMLLineBreak'\r\n\r\nextend nodes: ['date_picker1'], extension: 'JQueryCopyTo', params: { target: 'date_picker2'}"}, "commit"=>"Save and Continue"}
+Redirected to http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_concrete_mapping_rules-tab
+Completed in 262ms (DB: 0) | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-13 13:41:57) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 195ms (View: 186, DB: 0) | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-13 13:42:13) [GET]
+  Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
+Completed in 12399ms (View: 4, DB: 0) | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-13 13:44:48) [POST]
+  Parameters: {"authenticity_token"=>"a3uBCtckLd2gU1r4RvMjgr9erf2rHUqL9Mv62t2bdFU=", "id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28", "current_panel"=>"http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_concrete_mapping_rules-tab", "interface"=>{"interface_name"=>"DefaultIdx", "interface_title"=>"Default Index ", "interface_weight"=>"1", "interface_selection_rule"=>"set{\r\n  #has :URI, \"index_title\", \"All Persons\"\r\n  has :URI, \"class\", \"SHDM::Index\"\r\n  has \"user_agent\", \"mobile\", false\r\n}", "interface_description_type"=>"Abstract", "abstract_spec"=>"<%= @page_title %>", "abstract_scheme"=>"{name: \"main_page\", abstract_element: \"CompositeInterfaceElement\", children:[\r\n  {name: \"main_header\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n    {name: \"page_title\", abstract_element: \"ElementExhibitor\"},\r\n    {name: \"date_picker1\", abstract_element: \"ElementExhibitor\"},\r\n    {name: \"date_picker2\", abstract_element: \"ElementExhibitor\"}\r\n  ]},\r\n  {name: \"content\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      \r\n    {name: \"persons\", abstract_element: \"CompositeInterfaceElement\", repeatable: true, children:[\r\n        {name: \"target_url\", abstract_element: \"SimpleActivator\"},\r\n        {name: \"publication\", abstract_element: \"ElementExhibitor\"},\r\n       ]}\r\n     ]}\r\n  \r\n  \r\n]}", "abstract_rules"=>"", "concrete_mapping_rules"=>"maps_to abstract: \"main_page\", concrete_widget: \"HTMLPage\" do\r\n  \r\nend\r\n\r\n\r\nmaps_to\tabstract: \"main_header\", concrete_widget: \"HTMLComposition\",\r\nparams: { content: \"My main title\" } do\r\n  eq 1, 1\r\nend\r\n\r\nmaps_to abstract: \"page_title\", concrete_widget: \"HTMLHeading\",\r\nparams: { size: 2, content: @index.index_title.to_s }do\r\n  \r\nend\r\n\r\nmaps_to\tabstract: \"date_picker1\", concrete_widget: \"JQueryDatePickerInput\"\r\nmaps_to\tabstract: \"date_picker2\", concrete_widget: \"JQueryDatePickerInput\"\r\n\r\n\r\nmaps_to abstract: \"content\", concrete_widget: \"HTMLComposition\",\r\nparams: {content: \"Here will be something\"} do\r\n  has :_, \"browser\", \"Firefox\"\r\nend\r\n\r\nmaps_to abstract: \"persons\", concrete_widget: \"HTMLComposition\",\r\nparams: {:collection => @index.entries, :as => :publication }\r\n\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLAnchor\",\r\nparams: { url: publication.uri, content: publication.title } do\r\n  gt publication.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: \"No URL\"} do\r\n  lt publication.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"publication\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: publication.title } do\r\n  has :_, \"browser\", \"Firefox\"\r\n  eq value.uri.to_s.class, String\r\nend\r\n\r\n", "concrete_extensions"=>"extend nodes: ['publication', 'page_title' ], extension: 'HTMLLineBreak'\r\n\r\nextend nodes: ['date_picker1'], extension: 'JQueryCopyTo', params: { target: 'date_picker2'}"}, "commit"=>"Save and Continue"}
+Redirected to http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_concrete_mapping_rules-tab
+Completed in 254ms (DB: 0) | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-13 13:44:48) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 173ms (View: 167, DB: 0) | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-13 14:01:23) [POST]
+  Parameters: {"authenticity_token"=>"a3uBCtckLd2gU1r4RvMjgr9erf2rHUqL9Mv62t2bdFU=", "id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28", "current_panel"=>"http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_concrete_mapping_rules-tab", "interface"=>{"interface_name"=>"DefaultIdx", "interface_title"=>"Default Index ", "interface_weight"=>"1", "interface_selection_rule"=>"set{\r\n  #has :URI, \"index_title\", \"All Persons\"\r\n  has :URI, \"class\", \"SHDM::Index\"\r\n  has \"user_agent\", \"mobile\", false\r\n}", "interface_description_type"=>"Abstract", "abstract_spec"=>"<%= @page_title %>", "abstract_scheme"=>"{name: \"main_page\", abstract_element: \"CompositeInterfaceElement\", children:[\r\n  {name: \"main_header\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n    {name: \"page_title\", abstract_element: \"ElementExhibitor\"},\r\n    {name: \"date_picker1\", abstract_element: \"ElementExhibitor\"},\r\n    {name: \"date_picker2\", abstract_element: \"ElementExhibitor\"}\r\n  ]},\r\n  {name: \"content\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      \r\n    {name: \"persons\", abstract_element: \"CompositeInterfaceElement\", repeatable: true, children:[\r\n        {name: \"target_url\", abstract_element: \"SimpleActivator\"},\r\n        {name: \"publication\", abstract_element: \"ElementExhibitor\"},\r\n       ]}\r\n     ]}\r\n  \r\n  \r\n]}", "abstract_rules"=>"", "concrete_mapping_rules"=>"maps_to abstract: \"main_page\", concrete_widget: \"HTMLPage\" do\r\n  \r\nend\r\n\r\n\r\nmaps_to\tabstract: \"main_header\", concrete_widget: \"HTMLComposition\",\r\nparams: { content: \"My main title\" } do\r\n  eq 1, 1\r\nend\r\n\r\nmaps_to abstract: \"page_title\", concrete_widget: \"HTMLHeading\",\r\nparams: { size: 2, content: @index.index_title.to_s }do\r\n  \r\nend\r\n\r\nmaps_to\tabstract: \"date_picker1\", concrete_widget: \"JQueryDatePickerInput\"\r\nmaps_to\tabstract: \"date_picker2\", concrete_widget: \"JQueryDatePickerInput\"\r\n\r\n\r\nmaps_to abstract: \"content\", concrete_widget: \"HTMLComposition\",\r\nparams: {content: \"Here will be something\"} do\r\n  has :_, \"browser\", \"Firefox\"\r\nend\r\n\r\nmaps_to abstract: \"persons\", concrete_widget: \"HTMLComposition\",\r\nparams: {collection: @index.entries, as: :publication }\r\n\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLAnchor\",\r\nparams: { url: publication.uri, content: publication.title } do\r\n  gt publication.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: \"No URL\"} do\r\n  lt publication.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"publication\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: publication.title } do\r\n  has :_, \"browser\", \"Firefox\"\r\n  eq value.uri.to_s.class, String\r\nend\r\n\r\n", "concrete_extensions"=>"extend nodes: ['publication', 'page_title' ], extension: 'HTMLLineBreak'\r\n\r\nextend nodes: ['date_picker1'], extension: 'JQueryCopyTo', params: { target: 'date_picker2'}"}, "commit"=>"Save and Continue"}
+Redirected to http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_concrete_mapping_rules-tab
+Completed in 258ms (DB: 0) | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-13 14:01:23) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 189ms (View: 184, DB: 0) | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-13 14:01:26) [GET]
+  Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
+Completed in 40568ms (View: 2, DB: 0) | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d]
+
+
+Processing ContextsController#index (for 127.0.0.1 at 2012-11-13 14:02:59) [GET]
+Rendering template within layouts/application
+Rendering contexts/index
+Completed in 413ms (View: 312, DB: 0) | 200 OK [http://localhost/navigation]
+
+
+Processing IndexesController#index (for 127.0.0.1 at 2012-11-13 14:03:10) [GET]
+Rendering template within layouts/application
+Rendering indexes/index
+Completed in 379ms (View: 345, DB: 0) | 200 OK [http://localhost/indexes]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-13 14:03:30) [POST]
+  Parameters: {"authenticity_token"=>"a3uBCtckLd2gU1r4RvMjgr9erf2rHUqL9Mv62t2bdFU=", "id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28", "current_panel"=>"http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_selection_rule-tab", "interface"=>{"interface_name"=>"DefaultIdx", "interface_title"=>"Default Index ", "interface_weight"=>"1", "interface_selection_rule"=>"set{\r\n  has :URI, \"class\", \"SHDM::Index\"\r\n  has :URI, \"index_name\", \"AllPublicationsIdx\"\r\n  has \"user_agent\", \"mobile\", false\r\n}", "interface_description_type"=>"Abstract", "abstract_spec"=>"<%= @page_title %>", "abstract_scheme"=>"{name: \"main_page\", abstract_element: \"CompositeInterfaceElement\", children:[\r\n  {name: \"main_header\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n    {name: \"page_title\", abstract_element: \"ElementExhibitor\"},\r\n    {name: \"date_picker1\", abstract_element: \"ElementExhibitor\"},\r\n    {name: \"date_picker2\", abstract_element: \"ElementExhibitor\"}\r\n  ]},\r\n  {name: \"content\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      \r\n    {name: \"persons\", abstract_element: \"CompositeInterfaceElement\", repeatable: true, children:[\r\n        {name: \"target_url\", abstract_element: \"SimpleActivator\"},\r\n        {name: \"publication\", abstract_element: \"ElementExhibitor\"},\r\n       ]}\r\n     ]}\r\n  \r\n  \r\n]}", "abstract_rules"=>"", "concrete_mapping_rules"=>"maps_to abstract: \"main_page\", concrete_widget: \"HTMLPage\" do\r\n  \r\nend\r\n\r\n\r\nmaps_to\tabstract: \"main_header\", concrete_widget: \"HTMLComposition\",\r\nparams: { content: \"My main title\" } do\r\n  eq 1, 1\r\nend\r\n\r\nmaps_to abstract: \"page_title\", concrete_widget: \"HTMLHeading\",\r\nparams: { size: 2, content: @index.index_title.to_s }do\r\n  \r\nend\r\n\r\nmaps_to\tabstract: \"date_picker1\", concrete_widget: \"JQueryDatePickerInput\"\r\nmaps_to\tabstract: \"date_picker2\", concrete_widget: \"JQueryDatePickerInput\"\r\n\r\n\r\nmaps_to abstract: \"content\", concrete_widget: \"HTMLComposition\",\r\nparams: {content: \"Here will be something\"} do\r\n  has :_, \"browser\", \"Firefox\"\r\nend\r\n\r\nmaps_to abstract: \"persons\", concrete_widget: \"HTMLComposition\",\r\nparams: {collection: @index.entries, as: :publication }\r\n\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLAnchor\",\r\nparams: { url: publication.uri, content: publication.title } do\r\n  gt publication.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"target_url\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: \"No URL\"} do\r\n  lt publication.uri.size, 90\r\nend\r\n\r\nmaps_to abstract: \"publication\", concrete_widget: \"HTMLLabel\",\r\nparams: { content: publication.title } do\r\n  has :_, \"browser\", \"Firefox\"\r\n  eq value.uri.to_s.class, String\r\nend\r\n\r\n", "concrete_extensions"=>"extend nodes: ['publication', 'page_title' ], extension: 'HTMLLineBreak'\r\n\r\nextend nodes: ['date_picker1'], extension: 'JQueryCopyTo', params: { target: 'date_picker2'}"}, "commit"=>"Save and Continue"}
+Redirected to http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_selection_rule-tab
+Completed in 256ms (DB: 0) | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-13 14:03:30) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 147ms (View: 142, DB: 0) | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-13 14:03:33) [GET]
+  Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
+Completed in 40103ms (View: 2, DB: 0) | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-13 14:18:33) [GET]
+  Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
+Completed in 1669ms (View: 2, DB: 0) | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-13 14:18:35) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 11761ms (View: 11752, DB: 0) | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing IndexesController#index (for 127.0.0.1 at 2012-11-13 14:18:47) [GET]
+Rendering template within layouts/application
+Rendering indexes/index
+Completed in 1246ms (View: 883, DB: 0) | 200 OK [http://localhost/indexes]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-13 14:21:10) [GET]
+  Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
+Completed in 659ms (View: 2, DB: 0) | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d]
+
+
+Processing ContextsController#index (for 127.0.0.1 at 2012-11-13 14:21:23) [GET]
+Rendering template within layouts/application
+Rendering contexts/index
+Completed in 371ms (View: 333, DB: 0) | 200 OK [http://localhost/navigation]
+
+
+Processing IndexesController#index (for 127.0.0.1 at 2012-11-13 14:21:26) [GET]
+Rendering template within layouts/application
+Rendering indexes/index
+Completed in 566ms (View: 560, DB: 0) | 200 OK [http://localhost/indexes]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-13 14:21:32) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 302ms (View: 298, DB: 0) | 200 OK [http://localhost/interface]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-13 14:21:36) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 208ms (View: 201, DB: 0) | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing InterfacesController#update (for 127.0.0.1 at 2012-11-13 14:23:26) [POST]
+  Parameters: {"authenticity_token"=>"a3uBCtckLd2gU1r4RvMjgr9erf2rHUqL9Mv62t2bdFU=", "id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28", "current_panel"=>"http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_selection_rule-tab", "interface"=>{"interface_name"=>"DefaultIdx", "interface_title"=>"Default Index ", "interface_weight"=>"1", "interface_selection_rule"=>"set{\r\n  has :URI, \"index_name\", \"AllPublicationsIdx\"\r\n  has :URI, \"class\", \"SHDM::Index\"\r\n  has \"user_agent\", \"mobile\", false\r\n}", "interface_description_type"=>"Abstract", "abstract_spec"=>"<%= @page_title %>", "abstract_scheme"=>"{name: \"main_page\", abstract_element: \"CompositeInterfaceElement\", children:[\r\n  {name: \"main_header\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n    {name: \"page_title\", abstract_element: \"ElementExhibitor\"},\r\n    {name: \"date_picker1\", abstract_element: \"ElementExhibitor\"},\r\n    {name: \"date_picker2\", abstract_element: \"ElementExhibitor\"}\r\n  ]},\r\n  {name: \"content\", abstract_element: \"CompositeInterfaceElement\", children: [\r\n      \r\n    {name: \"persons\", abstract_element: \"CompositeInterfaceElement\", repeatable: true, children:[\r\n        {name: \"target_url\", abstract_element: \"SimpleActivator\"},\r\n        {name: \"publication\", abstract_element: \"ElementExhibitor\"},\r\n       ]}\r\n     ]}\r\n  \r\n  \r\n]}", "abstract_rules"=>"", "concrete_mapping_rules"=>"", "concrete_extensions"=>"extend nodes: ['publication', 'page_title' ], extension: 'HTMLLineBreak'\r\n\r\nextend nodes: ['date_picker1'], extension: 'JQueryCopyTo', params: { target: 'date_picker2'}"}, "commit"=>"Save and Continue"}
+Redirected to http://localhost:3000/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28#tab_selection_rule-tab
+Completed in 491ms (DB: 0) | 302 Found [http://localhost/interfaces/update]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-13 14:23:27) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 185ms (View: 179, DB: 0) | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-13 14:23:29) [GET]
+  Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
+Completed in 1145ms (View: 2, DB: 0) | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d]
+
+
+Processing InterfacesController#index (for 127.0.0.1 at 2012-11-13 14:23:56) [GET]
+Rendering template within layouts/application
+Rendering interfaces/index
+Completed in 245ms (View: 236, DB: 0) | 200 OK [http://localhost/interfaces]
+
+
+Processing InterfacesController#edit (for 127.0.0.1 at 2012-11-13 14:30:12) [GET]
+  Parameters: {"id"=>"http://base#109cd130-22af-11e2-9522-00044b181e28"}
+Rendering template within layouts/application
+Rendering interfaces/edit
+Completed in 462ms (View: 451, DB: 0) | 200 OK [http://localhost/interfaces/edit/http:%2F%2Fbase%23109cd130-22af-11e2-9522-00044b181e28]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-13 14:30:27) [GET]
+  Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
+Completed in 39551ms (View: 1, DB: 0) | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d]
+
+
+Processing OperationsController#index (for 127.0.0.1 at 2012-11-13 16:47:57) [GET]
+Rendering template within layouts/application
+Rendering operations/index
+Completed in 418ms (View: 410, DB: 0) | 200 OK [http://localhost/behavior]
+
+
+Processing OperationsController#edit (for 127.0.0.1 at 2012-11-13 16:48:04) [GET]
+  Parameters: {"id"=>"http://base#5d089320-59c4-11e0-b9e1-00264afffe1d"}
+Rendering template within layouts/application
+Rendering operations/edit
+Completed in 165ms (View: 158, DB: 0) | 200 OK [http://localhost/operations/edit/http:%2F%2Fbase%235d089320-59c4-11e0-b9e1-00264afffe1d]
+
+
+Processing OperationsController#edit (for 127.0.0.1 at 2012-11-13 16:48:11) [GET]
+  Parameters: {"id"=>"http://base#216f01a0-59c4-11e0-b9e1-00264afffe1d"}
+Rendering template within layouts/application
+Rendering operations/edit
+Completed in 102ms (View: 96, DB: 0) | 200 OK [http://localhost/operations/edit/http:%2F%2Fbase%23216f01a0-59c4-11e0-b9e1-00264afffe1d]

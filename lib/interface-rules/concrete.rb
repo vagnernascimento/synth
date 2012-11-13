@@ -23,7 +23,8 @@ module InterfaceRules
 			@hash
 		end
 		
-    def evaluate_node(facts, str_rules, interface_data = {}, value)
+    def evaluate_node(facts, str_rules, interface_data = {}, value, interator_name)
+			interator_name = interator_name.nil? ? 'value' : interator_name
 			engine = Wongi::Engine.create
       facts.each{| fact | engine << fact }
       engine << ruleset{ 
@@ -31,6 +32,7 @@ module InterfaceRules
 					instance_variable_set( eval(":@#{k}"), v )
 				}
 				begin
+					eval( "#{interator_name.to_s} = value")
 					eval(str_rules) 
 				rescue Exception => e  
 					puts "Evaluation of Interface rules failed (repeatable node)"
@@ -136,10 +138,11 @@ module InterfaceRules
       if current_node[:repeatable] == true
         c = 0
         new_children = []
-				values = current_node[:node_content][:params][:values]
+				values = current_node[:node_content][:params][:collection]
+				interator_name = current_node[:node_content][:params][:as]
         if values.is_a?(Array)
 					values.each do | value |
-						selected_nodes = evaluate_node(facts, str_rules, interface_data, value)
+						selected_nodes = evaluate_node(facts, str_rules, interface_data, value, interator_name)
 						selected_nodes.each{ |k,v| 
             }
 						if selected_nodes.is_a?(Hash)
