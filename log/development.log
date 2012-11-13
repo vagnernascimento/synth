@@ -23254,3 +23254,18 @@ Processing OperationsController#edit (for 127.0.0.1 at 2012-11-13 16:48:11) [GET
 Rendering template within layouts/application
 Rendering operations/edit
 Completed in 102ms (View: 96, DB: 0) | 200 OK [http://localhost/operations/edit/http:%2F%2Fbase%23216f01a0-59c4-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-13 20:05:14) [GET]
+  Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
+Completed in 1195ms (View: 8, DB: 0) | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-13 20:12:34) [GET]
+  Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
+Completed in 37209ms (View: 1, DB: 0) | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d]
+
+
+Processing ExecuteController#index (for 127.0.0.1 at 2012-11-13 20:13:38) [GET]
+  Parameters: {"id"=>"http://base#cd5c0070-59bb-11e0-b9e1-00264afffe1d"}
+Completed in 32878ms (View: 1, DB: 0) | 200 OK [http://localhost/execute/index/http:%2F%2Fbase%23cd5c0070-59bb-11e0-b9e1-00264afffe1d]
