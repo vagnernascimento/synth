@@ -46,9 +46,10 @@
 			
 		});
 
-    function codemirror_instance(id){
-      var editor = CodeMirror.fromTextArea(document.getElementById(id), {
-      mode: "ruby",
+    function codemirror_instance(id, mode){
+      var mode = (mode == null ? 'ruby' : mode);
+			var editor = CodeMirror.fromTextArea(document.getElementById(id), {
+      mode: mode,
       lineNumbers: true,
       lineWrapping: true,
       tabSize: 2,

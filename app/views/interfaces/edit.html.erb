@@ -48,8 +48,9 @@ color: #fff;
   <ul id="interface_steps" >
     <li class="active"><a onclick="copy_current_panel(this)" href="#general">General data &raquo;</a></li>
     <li class=""><a onclick="copy_current_panel(this)" href="#tab_selection_rule">Interface Selection Rules &raquo;</a></li>
-    <li class=""><a onclick="copy_current_panel(this)" href="#tab_abstract_scheme"> Abstract Scheme and Rules &raquo;</a></li>
-    <li class=""><a onclick="copy_current_panel(this)" href="#tab_concrete_mapping_rules">Concrete Mapping</a></li>
+    <li class="concrete"><a onclick="copy_current_panel(this)" href="#tab_concrete_description"> Concrete Description</a></li>
+		<li class="abstract"><a onclick="copy_current_panel(this)" href="#tab_abstract_scheme"> Abstract Description and Rules &raquo;</a></li>
+    <li class="abstract"><a onclick="copy_current_panel(this)" href="#tab_concrete_mapping_rules">Concrete Mapping</a></li>
     
   </ul>
  
@@ -67,17 +68,29 @@ color: #fff;
   <div id="tab_selection_rule" class="ui-tabs-panel">
      <p>
       <%= f.label :interface_weight %><br /> 
-      <%= f.select :interface_weight, (1..20), :selected => @interface.interface_weight.to_s.to_i %>
+      <%= f.select :interface_weight, (1..30), :selected => @interface.interface_weight.to_s.to_i %>
      
     </p>
     <p>
       <%= f.label :interface_selection_rule %><br />
       <%= f.text_area :interface_selection_rule, :rows => 5, :cols => 71 %>
     </p>
+		<p>
+      <%= f.label :description_type %><br /> 
+      <%= f.select :interface_description_type, ["Abstract", "Concrete"], {:selected => @interface.interface_description_type.to_s}, {:onChange => 'toogle(this.value)'} %>
+    </p>
   </div>
-  <div id="tab_abstract_scheme" class="ui-tabs-panel">
+	
+  <div id="tab_concrete_description" class="ui-tabs-panel">
     <p>
-      <%= f.label :abstract_scheme %><br />
+      <%= f.label :abstract_description %><br />
+      <%= f.text_area :abstract_spec, :rows => 10, :cols => 71 %>
+    </p>
+    
+  </div>
+	<div id="tab_abstract_scheme" class="ui-tabs-panel">
+    <p>
+      <%= f.label :abstract_description %><br />
       <%= f.text_area :abstract_scheme, :rows => 10, :cols => 71 %>
     </p>
     <p>
@@ -105,10 +118,24 @@ color: #fff;
     function copy_current_panel(obj){
 			$('#current_panel').attr('value', obj.href);
 		}
+		toogle = function(value){
+				show = '.' + value.toLowerCase();
+				hide = '.' + (value == 'Abstract' ? 'concrete' : 'abstract');
+				$(hide).hide();
+				$(show).show();
+				
+			}
 		$(document).ready(function() {
+			<%
+				hide = (@interface.interface_description_type.to_s == 'Abstract' or @interface.interface_description_type.empty?) ? 'concrete' : 'abstract'
+			%>
+			
+			$('.<%= hide %>').hide();
+			
 			$('#current_panel').attr('value', window.location.href);
 			codemirror_instance("interface_interface_selection_rule");
 			codemirror_instance("interface_abstract_scheme");
+			codemirror_instance("interface_abstract_spec", 'ruby');
 			codemirror_instance("interface_abstract_rules");
 			codemirror_instance("interface_concrete_mapping_rules");
 			codemirror_instance("interface_concrete_extensions");

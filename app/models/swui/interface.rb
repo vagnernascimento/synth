@@ -11,10 +11,13 @@ module SWUI
 		property SWUI::interface_selection_rule
 		property SWUI::interface_weight
 		property SWUI::interface_title
+		property SWUI::interface_description_type
 		property SWUI::abstract_scheme
 		property SWUI::abstract_rules
 		property SWUI::concrete_mapping_rules
 		property SWUI::concrete_extensions
+		
+		property SWUI::abstract_spec
 		
 		#== Class methods
 		def self.interfaces_by_weight
@@ -30,41 +33,17 @@ module SWUI
       end
     end
 		
-    def self.render(facts_triples = [], interface_data = {})
+    def self.make_interface(facts_triples = [], interface_data = {})
       selected_interface = self.select_interface(facts_triples)
       unless selected_interface.nil?
-        abstract_scheme = eval(selected_interface.abstract_scheme.to_s)
-        if abstract_scheme.is_a?(Hash)
-          abstract_rules_str = selected_interface.abstract_rules.to_s
-          
-          #== Instances and evaluates the selected abstract interface
-          abstract_interface_rules =  InterfaceRules::AbstractInterface.new( abstract_scheme )
-          abstract_composed_hash = abstract_interface_rules.evaluate( facts_triples, abstract_rules_str )
-         
-					#== Concrete mapping
-					concrete_mapping_rules_str = selected_interface.concrete_mapping_rules.to_s
-					 
-					unless concrete_mapping_rules_str.empty?
-						
-						concrete_interface_rules =  InterfaceRules::ConcreteInterface.new( abstract_composed_hash )
-						concrete_composed_hash = concrete_interface_rules.evaluate( facts_triples, concrete_mapping_rules_str, interface_data )
-						hash_extensions = concrete_interface_rules.evaluate_extensions( selected_interface.concrete_extensions.to_s )
-						
-            #return concrete_composed_hash
-            #== Concrete rendering
-						if  concrete_composed_hash.is_a?(Hash)
-							#return concrete_composed_hash.to_s
-							concrete_interface = ConcreteWidget::Interface.new(concrete_composed_hash)
-							concrete_interface.add_extensions(hash_extensions)
-							
-							return concrete_interface.render
-						else
-							return "No interface could be composed"
-						end
-					end
-          
-        end
-      end
+				if selected_interface.interface_description_type.to_s == "Abstract" 
+					self.make_abstract(selected_interface, facts_triples, interface_data)
+				else
+					selected_interface.abstract_spec.to_s
+				end
+				#return selected_interface.interface_description_type.to_s, str_interface
+			end
+      
     end
     
     #== Instance methods
@@ -80,6 +59,38 @@ module SWUI
 
     
 		private
+		
+		
+		def self.make_abstract(selected_interface, facts_triples, interface_data)
+			
+			abstract_scheme = eval(selected_interface.abstract_scheme.to_s)
+			if abstract_scheme.is_a?(Hash)
+				abstract_rules_str = selected_interface.abstract_rules.to_s
+				
+				#== Instances and evaluates the selected abstract interface
+				abstract_interface_rules =  InterfaceRules::AbstractInterface.new( abstract_scheme )
+				abstract_composed_hash = abstract_interface_rules.evaluate( facts_triples, abstract_rules_str )
+			 
+				#== Concrete mapping
+				concrete_mapping_rules_str = selected_interface.concrete_mapping_rules.to_s
+				 
+				unless concrete_mapping_rules_str.empty?
+					concrete_interface_rules =  InterfaceRules::ConcreteInterface.new( abstract_composed_hash )
+					concrete_composed_hash = concrete_interface_rules.evaluate( facts_triples, concrete_mapping_rules_str, interface_data )
+					hash_extensions = concrete_interface_rules.evaluate_extensions( selected_interface.concrete_extensions.to_s )
+					#== Concrete rendering
+					if  concrete_composed_hash.is_a?(Hash)
+						concrete_interface = ConcreteWidget::Interface.new(concrete_composed_hash)
+						concrete_interface.add_extensions(hash_extensions)
+						return concrete_interface.render
+					else
+						return "No interface could be composed"
+					end
+				end
+				
+			end
+		end
+		
 		
 		
 	end
