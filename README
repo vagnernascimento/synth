@@ -23,7 +23,7 @@ Install JRuby (http://jruby.org) 1.6 or later
 Install Bundler
 $ jgem install bundler
 
-Install de dependencies
+Install dependencies
 $ bundle install
 
 RUNNING (Ruby 1.8 or 1.9)
