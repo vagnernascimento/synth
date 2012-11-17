@@ -13,26 +13,27 @@ module ConcreteWidget
       @params  = params
       @id = params[:id]
       @extensions = []
+			@insertion_position = params[:insertion_position] 
     end
     
-    def add_content(content, on_bottom = true)
+    def add_content(new_content, on_bottom = true)
       if on_bottom
-          @content += content
+          self.content = self.content + new_content.to_s
       else
-          @content = content + @content
+          self.content = new_content.to_s + self.content
       end
     end
     
-    def <<(content)
-      add_content(content)
+    def <<(new_content)
+      add_content(new_content)
     end
     
-    def content=(content)
-      @content = content
+    def content=(new_content)
+      @content = new_content.to_s
     end 
     
     def content
-      @content
+      @content || ""
     end  
     
     def name
@@ -96,13 +97,24 @@ module ConcreteWidget
       @extensions << ext
     end
     
-    def render_extensions()
-      extensions_rendered = ""
-      extensions.each{ |ext| 
+		def insertion_position
+			@insertion_position || "after"
+		end
+		
+    def render_extensions(source_rendered = "")
+			extensions.each{ |ext| 
         ext.parent = self
-        extensions_rendered << "\n" + ext.render
+				if ext.insertion_position == 'around'
+					ext.content = source_rendered
+					source_rendered =  ext.render
+				elsif ext.insertion_position == 'before'
+					source_rendered = ext.render << source_rendered
+				else
+					source_rendered = source_rendered << ext.render
+				end
       } unless extensions.nil?
-      return extensions_rendered
+			
+			return source_rendered
     end
     
     def render(params={})
@@ -111,7 +123,7 @@ module ConcreteWidget
       template_list = Dir.glob(path_mask)
       unless template_list.empty?
         template = Tilt.new(template_list.first)
-        template.render(self, params ) << render_extensions
+				render_extensions(template.render(self, params ))
       else
         self.content << render_extensions
       end

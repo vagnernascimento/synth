@@ -4,7 +4,7 @@ require "pp"
 SWUI::Interface
 
 module SWUI
-	class SWUI::Interface
+	class SWUI::Interface 
 		
 		# Interface properties
 		property SWUI::interface_name, 'rdfs:subPropertyOf' => RDFS::label

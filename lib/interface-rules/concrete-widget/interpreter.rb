@@ -49,7 +49,7 @@ module ConcreteWidget
         ext[:params] ||= {}
         ext[:nodes].each{ |node|
           ext[:params][:index] = ext[:nodes].index(node)
-          name = ext[:name] or ext[:params][:index]
+          name = ext[:name] || "#{ext[:extension]}_#{node}"
           ext[:params][:name] ||= name
           ext[:params][:id] ||= name   
           instance = extension_instance(ext[:extension], ext[:params]) 

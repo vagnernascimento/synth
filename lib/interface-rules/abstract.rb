@@ -4,6 +4,7 @@ module InterfaceRules
   require "rubygems"
 
   class InterfaceRules::AbstractInterface
+		 
 		 include ExtendDSLRules
     def initialize(hash)
 			@hash = hash
