@@ -17,7 +17,9 @@ module SWUI
 		property SWUI::concrete_mapping_rules
 		property SWUI::concrete_extensions
 		
+		# Legacy properties (for concrete interfaces)
 		property SWUI::abstract_spec
+		property SWUI::concrete_interface_code
 		
 		#== Class methods
 		def self.interfaces_by_weight
@@ -28,7 +30,8 @@ module SWUI
     def self.select_interface(facts_triples)
       for interface in SWUI::Interface.interfaces_by_weight do
         if interface.evaluate_selection_rule(facts_triples)
-          return interface 
+          puts "SELECTED INTERFACE: #{interface.interface_title}"
+					return interface 
         end
       end
     end

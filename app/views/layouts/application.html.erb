@@ -26,6 +26,9 @@
   <%= stylesheet_link_tag 'codemirror/theme/blackboard' %>
 	<%= javascript_include_tag 'codemirror/codemirror' %>
 	<%= javascript_include_tag 'codemirror/mode/ruby/ruby' %>
+	<%= javascript_include_tag 'codemirror/mode/css/css' %>
+	<%= javascript_include_tag 'codemirror/mode/xml/xml' %>
+	<%= javascript_include_tag 'codemirror/mode/javascript/javascript' %>
 	<%= javascript_include_tag 'codemirror/util/searchcursor' %>	
 	<%= javascript_include_tag 'codemirror/util/match-highlighter' %>
 	
@@ -45,25 +48,30 @@
 			});		
 			
 		});
-
+		var editors = {}
     function codemirror_instance(id, mode){
       var mode = (mode == null ? 'ruby' : mode);
-			var editor = CodeMirror.fromTextArea(document.getElementById(id), {
+			editors[id] = CodeMirror.fromTextArea(document.getElementById(id), {
       mode: mode,
       lineNumbers: true,
       lineWrapping: true,
       tabSize: 2,
       theme: "default",
       onCursorActivity: function() {
-        editor.matchHighlight("CodeMirror-matchhighlight");
-       // editor.setLineClass(hlLine, null, null);
-       // hlLine = editor.setLineClass(editor.getCursor().line, null, "activeline");
+        editors[id].matchHighlight("CodeMirror-matchhighlight");
+       // editors[id].setLineClass(hlLine, null, null);
+       // hlLine = editors[id].setLineClass(editor.getCursor().line, null, "activeline");
         
       }
       });
-     // var hlLine = editor.setLineClass(0, "activeline");
+     // var hlLine = editors[id].setLineClass(0, "activeline");
     }
-    
+    function changeEditor(id, option, value){
+			editors[id].setOption(option, value);
+		}
+		
+	
+		
 		$(document).ready(function(){
 		   	$("#vertical_tabs").tabs({
 			    select: function(event, ui) {

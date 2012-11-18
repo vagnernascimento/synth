@@ -83,10 +83,16 @@ color: #fff;
 	
   <div id="tab_concrete_description" class="ui-tabs-panel">
     <p>
-      <%= f.label :abstract_description %><br />
-      <%= f.text_area :abstract_spec, :rows => 10, :cols => 71 %>
+      <%= f.label :concrete_description %><br />
+      <%= f.text_area :abstract_spec, :rows => 5, :cols => 71 %>
+		</p>
+		<p>
+			<%= f.label :concrete_code %><br />
+			<%= f.text_area :concrete_interface_code, :rows => 5, :cols => 71 %>
     </p>
-    
+    <p>
+			<%= f.label :highlight_for_concrete_code %>: <%= select_tag "highlight", options_for_select(["ruby", "css", "xml", "javascript"]), {:onChange => "changeEditor('interface_concrete_interface_code','mode', this.value)"} %>
+		</p>
   </div>
 	<div id="tab_abstract_scheme" class="ui-tabs-panel">
     <p>
@@ -107,6 +113,7 @@ color: #fff;
 			<%= f.label :concrete_extensions %><br />
 			<%= f.text_area :concrete_extensions, :rows => 3, :cols => 71 %>
 		</p>
+	
   </div>
  </div> 
   <p style="clear:both;">
@@ -135,7 +142,9 @@ color: #fff;
 			$('#current_panel').attr('value', window.location.href);
 			codemirror_instance("interface_interface_selection_rule");
 			codemirror_instance("interface_abstract_scheme");
-			codemirror_instance("interface_abstract_spec", 'ruby');
+			codemirror_instance("interface_abstract_spec");
+			codemirror_instance("interface_concrete_interface_code");
+			
 			codemirror_instance("interface_abstract_rules");
 			codemirror_instance("interface_concrete_mapping_rules");
 			codemirror_instance("interface_concrete_extensions");

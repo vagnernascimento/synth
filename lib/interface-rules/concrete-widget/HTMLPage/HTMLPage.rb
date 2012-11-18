@@ -3,12 +3,20 @@ class HTMLPage < ConcreteWidget::WidgetBase
   def initialize(params)
     @title  = params[:title] || "Page"
     @content  = params[:content] || ""
-    @include_js = params[:include_js] || []
-    @include_css = params[:include_css] || []
+    self.include_js params[:include_js]
+    self.include_css params[:include_css]
+		@name = params[:name]
+		@params  = params
+		@id = params[:id]
+		@extensions = []
+		@insertion_position = params[:insertion_position] 
   end
   
   def include_js(plus)
-    @include_js += plus
+    @include_js ||= []
+		plus ||= []
+		plus = plus.is_a?(String) ? [plus] : plus
+		@include_js += plus
     @include_js.uniq!
   end
   
@@ -17,7 +25,10 @@ class HTMLPage < ConcreteWidget::WidgetBase
   end
   
   def include_css(plus)
-    @include_css += plus
+		@include_css ||= []
+		plus ||= []
+    plus = plus.is_a?(String) ? [plus] : plus
+		@include_css += plus
     @include_css.uniq!
   end
   

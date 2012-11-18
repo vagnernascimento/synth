@@ -26,7 +26,7 @@ module InterfaceRules
 			interface_data = @interface_data
 			engine = Wongi::Engine.create
       rules = @rules_array
-			
+			m = 0
 			@facts.each{| fact | engine << fact }
       engine << ruleset{ 
 				interface_data.each{ | k, v | 
@@ -37,7 +37,7 @@ module InterfaceRules
 					begin
 						eval("#{parent_node_iteractor.to_s} = parent_node_value") unless (parent_node_iteractor.nil? or parent_node_value.nil?)
 						eval("#{current_node_interactor.to_s} = current_node_value") unless (current_node_interactor.nil? or current_node_value.nil?)
-						eval("maps_to #{str_rule}") 
+						eval(str_rule) 
 					rescue Exception => e  
 						#puts "Evaluation of Interface rules failed (repeatable node)"
 						#puts e.message  
@@ -53,7 +53,7 @@ module InterfaceRules
 			#== Instance values
 			@facts = facts
 			@str_rules = str_rules
-			@rules_array =  str_rules.split('maps_to')
+			@rules_array = split_rules(str_rules)
 			rules = @rules_array
 			@interface_data = interface_data
 			
@@ -71,7 +71,7 @@ module InterfaceRules
 					rescue Exception => e 
 						puts "Evaluation of Interface rules failed"
 						puts e.message 
-						puts e.backtrace.inspect 
+						#puts e.backtrace.inspect 
 					end
 				}
 			}
@@ -206,6 +206,18 @@ module InterfaceRules
 				hash[:nodes] = new_nodes
 				@extention_list << hash
 			end
+		end
+		
+		
+		def split_rules(str)
+			rules = Array.new
+			m = 0
+			str.each_line do | line |
+				m = m + 1 if line.match(/^.*?maps_to.+$/)
+				rules[m] ||= ""
+				rules[m] << line
+			end
+			return rules
 		end
 		
   end

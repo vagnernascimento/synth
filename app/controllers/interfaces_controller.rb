@@ -42,6 +42,7 @@ class InterfacesController < ApplicationController
   def update
     @interface = SWUI::Interface.find(params[:id])
 		current_panel = params.delete(:current_panel)
+		params.delete(:highlight)
     respond_to do |format|
       if @interface.update_attributes(params[:interface])
         flash[:notice] = 'Interface was successfully updated.'
