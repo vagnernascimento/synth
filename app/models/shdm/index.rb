@@ -6,6 +6,7 @@ SHDM::QueryIndex
 SHDM::IndexParameter
 SHDM::NavigationAttribute
 
+include Serializer
 class SHDM::Index
   
   property SHDM::index_name
@@ -68,6 +69,9 @@ class SHDM::ContextIndex;  sub_class_of(SHDM::Index)
       context_instance.resources #getting resources instead of node for performance reasons
     end
     
+		def entry(node)
+      IndexEntryDecorator.new(node, self)
+    end
     def entries
       @entries ||= nodes.map do |node|
         IndexEntryDecorator.new(node, self)

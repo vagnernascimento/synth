@@ -20,63 +20,72 @@ module InterfaceRules
 			@hash
 		end
 		
-    #== To do: discover why do not work using a Hash as parameters
-		#def evaluate_node(values_to_eval = nil)
-		def evaluate_node(current_node_interactor, current_node_value, parent_node_iteractor = nil, parent_node_value = nil)
+
+		
+		def evaluate_node(element_name, node_values = nil)
+			
 			interface_data = @interface_data
+      rules_by_element = @rules_by_element
+			counter = 0
+			
 			engine = Wongi::Engine.create
-      rules = @rules_array
-			m = 0
+			#== Add facts
 			@facts.each{| fact | engine << fact }
-      engine << ruleset{ 
-				interface_data.each{ | k, v | 
-					instance_variable_set( eval(":@#{k}"), v )
-				}
-	
-				rules.each{ | str_rule |
-					begin
-						eval("#{parent_node_iteractor.to_s} = parent_node_value") unless (parent_node_iteractor.nil? or parent_node_value.nil?)
-						eval("#{current_node_interactor.to_s} = current_node_value") unless (current_node_interactor.nil? or current_node_value.nil?)
-						eval(str_rule) 
-					rescue Exception => e  
-						#puts "Evaluation of Interface rules failed (repeatable node)"
-						#puts e.message  
-						#puts e.backtrace.inspect 
+			#== interface data
+			hash_data = { :locals => node_values, :instance_variables => @interface_data}
+		
+			my_ruleset = evaluate_rule hash_data do 
+
+				if rules_by_element[element_name].is_a?(Array)
+					rules_by_element[element_name].each do | str_rule |
+						counter = counter + 1
+						begin
+							eval(str_rule)
+						rescue Exception => e  
+							puts "#{counter} => Evaluation of Interface rules failed (repeatable node)"
+							puts "#{str_rule}"
+							puts e.message  
+							#puts e.backtrace.inspect 
+						end
 					end
-				}
-			}
+				end
+			end
+			engine << my_ruleset
       return selected_elements(engine)
     end
+		
+   
     
     def evaluate(facts, str_rules, interface_data = {})
 			
 			#== Instance values
 			@facts = facts
-			@str_rules = str_rules
-			@rules_array = split_rules(str_rules)
-			rules = @rules_array
 			@interface_data = interface_data
+			@rules_by_element = rules_by_element(str_rules)
+			rules_by_element = @rules_by_element
 			
 			#== New wongi engine
-			@engine = Wongi::Engine.create
-			@facts.each{| fact | @engine << fact }
+			engine = Wongi::Engine.create
+			@facts.each{| fact | engine << fact }
 			
-      @engine << ruleset{ 
+      engine << ruleset{ 
 				interface_data.each{ | k, v | 
 					instance_variable_set( eval(":@#{k}"), v )
 				}
-				rules.each{ | str_rule |
-					begin
-						eval("maps_to #{str_rule}") 
-					rescue Exception => e 
-						puts "Evaluation of Interface rules failed"
-						puts e.message 
-						#puts e.backtrace.inspect 
+				rules_by_element.each do | element, rules |
+					rules.each do | str_rule |
+						begin
+							eval(str_rule)
+						rescue Exception => e 
+							puts "Evaluation of Interface rules failed"
+							#puts e.message 
+							#puts e.backtrace.inspect 
+						end
 					end
-				}
+				end
 			}
 			#== main selected elements
-      @selected = selected_elements(@engine)
+      @selected = selected_elements(engine)
       return compose(@hash) 
 		end	
 
@@ -138,23 +147,25 @@ module InterfaceRules
 			return new_name
 		end
 		
-		def populate_cloned_children(children, selected_nodes, parent_iterator_name, parent_instance_value)
+	
+		def populate_cloned_children(children, node_values)
       children.each_index do |index|
 		 
 				#-- Populates with values of selected node
-				if selected_nodes[children[index][:name]].is_a?(Hash)
+				selected_node = evaluate_node(children[index][:name], node_values) #== Recursive interface data is sent to evaluation
+				if selected_node[children[index][:name]].is_a?(Hash)
 					source_node_name = children[index][:name]
-					children[index][:node_content] = selected_nodes[children[index][:name]]
+					children[index][:node_content] = selected_node[children[index][:name]]
 					#-- rename the new node
 					source_node_name ||= rand(36**8).to_s(36)
 					children[index][:name] = get_cloned_node_name(source_node_name)
 					#-- Has children?
 					unless children[index][:children].nil?
-						new_children = repeatable_children_nodes(children[index], parent_iterator_name, parent_instance_value) #== For Nested collections
+						new_children = repeatable_children_nodes(children[index], node_values) #== For Nested collections
 						unless new_children.nil?
 							children[index][:children] = new_children
 						else
-							populate_cloned_children(children[index][:children], selected_nodes, parent_iterator_name, parent_instance_value) 
+							populate_cloned_children(children[index][:children], node_values) 
 						end
 					end
 				else
@@ -164,8 +175,9 @@ module InterfaceRules
       end
 			return children.compact!
     end
-    
-    def repeatable_children_nodes(current_node, parent_iterator_name = nil, parent_instance_value = nil)
+		
+		
+		def repeatable_children_nodes(current_node, node_values = Hash.new)
       
       if current_node[:repeatable] == true
         new_children = [] #== For children populated with collection
@@ -174,19 +186,24 @@ module InterfaceRules
 				
         if collection.is_a?(Array)
 					collection.each do | instance_value |
+						children_clone = Marshal.load( Marshal.dump(current_node[:children]) ) #== Clonning nodes
 						
-						selected_nodes = evaluate_node(iterator_name, instance_value, parent_iterator_name, parent_instance_value) #== The last iterator (parent) of collection is sent
-						if selected_nodes.is_a?(Hash)
-							children_clone = Marshal.load( Marshal.dump(current_node[:children]) ) #== Clonning nodes
-							populate_cloned_children(children_clone, selected_nodes, iterator_name, instance_value)
-							new_children = new_children + children_clone
-						end
+						current_value = Hash.new
+						current_value[iterator_name] = instance_value
+						node_values.merge!(current_value)
+						
+						populate_cloned_children(children_clone, node_values)
+						new_children = new_children + children_clone #== Add clonned nodes in the tree
+
 					end
   				return new_children
 				end
       end
       
     end
+		
+		
+		
 		
 		#== Extension method
 		#== extend nodes: ['name_field', 'age_field', 'age_field' ], :extension => 'HTMLLineBreak'
@@ -218,6 +235,23 @@ module InterfaceRules
 				rules[m] << line
 			end
 			return rules
+		end
+		
+		def rules_by_element(str)
+			rules_array = split_rules(str).compact!
+			rules_hash = Hash.new
+			
+			rules_array.each do | str_rule |
+				unless str_rule.nil?
+					match = str_rule.match(/maps_to.+?abstract.+?['"](.+?)['"]/)
+					unless match.nil?
+						abstract_name = match[1]
+						rules_hash[abstract_name] ||= Array.new
+						rules_hash[abstract_name] << str_rule
+					end
+				end
+			end
+			return rules_hash
 		end
 		
   end

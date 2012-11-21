@@ -18,9 +18,9 @@ module ConcreteWidget
     
     def add_content(new_content, on_bottom = true)
       if on_bottom
-          self.content = self.content + new_content.to_s
+          @content = @content + new_content.to_s
       else
-          self.content = new_content.to_s + self.content
+          @content = new_content.to_s + @content
       end
     end
     
@@ -98,14 +98,15 @@ module ConcreteWidget
     end
     
 		def insertion_position
-			@insertion_position || "after"
+			@insertion_position || @params[:insertion_position] || "after"
 		end
 		
     def render_extensions(source_rendered = "")
 			extensions.each{ |ext| 
         ext.parent = self
 				if ext.insertion_position == 'around'
-					ext.content = source_rendered
+					ext.content << source_rendered
+					puts ext.content
 					source_rendered =  ext.render
 				elsif ext.insertion_position == 'before'
 					source_rendered = ext.render << source_rendered

@@ -22,26 +22,64 @@ module ExtendDSLRules
 			end
 			
 			def maps_to(hash, &block)
-				
-				#id = rand(36**30).to_s(36)
-        rule "#{hash[:abstract]}" do
-				#rule "#{hash[:abstract]}_maps_to_#{hash[:concrete_widget]}" do
-					begin
-						forall &block
-					rescue
-					 forall do end
+        hash_data = @_data
+				def self.method_missing(m, *args, &block)  
+					unless @_data.nil?
+						return  @_data[:instance_variables][m] || @_data[:locals][m] || nil
 					end
-					make{
-						gen hash[:abstract], "maps_to", { concrete_widget: hash[:concrete_widget], params: hash[:params] }
-					}
-				end
+				end 
+
+				rule_inst = ProductionRule.new hash[:abstract]
+        @rules << rule_inst
+				rule_inst.instance_eval{
+					
+					#== Metaprogramming -> Instance interface variables as local variables of rule
+					unless hash_data.nil?
+						rule_inst.instance_variable_set( :@_data, hash_data ) 
+						hash_data[:instance_variables].each{ | k, v | rule_inst.instance_variable_set( eval(":@#{k}"), v ) } 
+						
+						hash_data[:locals].each{ | k, v |	
+							rule_inst.class.module_eval { attr_accessor k.to_sym }
+							eval("rule_inst.#{k.to_s} = v")
+							}
+					end
+
+					if block_given?
+							forall &block 
+							make{ gen hash[:abstract], "maps_to", { concrete_widget: hash[:concrete_widget], params: hash[:params] } }
+					else
+						forall { }
+						make{	gen hash[:abstract], "maps_to", { concrete_widget: hash[:concrete_widget], params: hash[:params] } }
+					end
+				}
+				
+				return rule_inst
 			end
 			
 			
 		end
 	end
+
+
+def evaluate_rule(hash_data = Hash.new, &definition)
+	rs = Wongi::Engine::Ruleset.new
 	
-  
+	#== Metaprogramming -> Instance interface variables as local variables of ruleset
+	unless hash_data.nil?
+		rs.instance_variable_set( :@_data, hash_data ) 
+		hash_data[:instance_variables].each{ | k, v | 
+			rs.instance_variable_set( eval(":@#{k}"), v ) 
+			instance_variable_set( eval(":@#{k}"), v )
+		} 
+		hash_data[:locals].each{ | k, v |	
+			rs.class.module_eval { attr_accessor k.to_sym }
+			eval("rs.#{k.to_s} = v")	
+			
+		}
+	end
+	rs.instance_eval &definition if block_given?
+  rs
+end 
 	
 	#=== New DSL terms
 	class GreaterThanTest < FilterTest
