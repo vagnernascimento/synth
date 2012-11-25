@@ -101,6 +101,11 @@ module ConcreteWidget
 			@insertion_position || @params[:insertion_position] || "after"
 		end
 		
+    def relative_path
+      type = self.is_a?(ConcreteWidget::Extension) ? "extensions" : "concrete-widget"
+      "/#{type}/#{self.class}/"
+    end
+    
     def render_extensions(source_rendered = "")
 			extensions.each{ |ext| 
         ext.parent = self

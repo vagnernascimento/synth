@@ -66,4 +66,20 @@ class InterfacesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+	
+	def widget_manifest
+		widget_name = params[:id]
+		unless widget_name.nil? 
+			@widget_hash = @template.widget_manifest_hash(widget_name) 
+			respond_to do |format|
+				if @widget_hash.is_a?(Hash)
+					format.html { render :layout => false }
+				else
+					format.html { render :text => "<h2>Manifest file not found for #{widget_name}</h2>" }
+				end
+				
+			end
+		end
+	end
+	
 end

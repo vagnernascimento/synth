@@ -15,11 +15,14 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :landmarks
   map.resources :operation_parameters
-	map.resources :interfaces
+	map.resources :interfaces, :collection => {
+																							:widget_manifest			=> :get,
+																							:extension_manifest		=> :get
+																						}
   map.resources :abstract_interfaces, :member => { :xslt => :get }, :collection => { :htmlTags => :get, :css => :get, :aixsl => :get }
-  map.resources :effects
-  map.resources :concrete_widgets
-  map.resources :concrete_interfaces
+  #map.resources :effects
+  #map.resources :concrete_widgets
+  #map.resources :concrete_interfaces
   map.resources :in_context_classes, :collection => { 
                                                       :navigation_attribute_index_parameters                 => :get, 
                                                       :navigation_attribute_index_parameters_post_data       => :get,

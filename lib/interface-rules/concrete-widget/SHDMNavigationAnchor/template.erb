@@ -17,7 +17,7 @@
 		attr.each do |value|
 			counter = counter + 1 %>
 			<% if value.is_a?(Hash) %>
-				<a class="<%= @css_class %>" id="<%= @id %>_<%= URI.encode(value[:label]) %>" title="<%= value[:label] %>" href="<%= value[:url] %>" /> <%= value[:label] %> </a> <%= @separator if attr.size > counter %>
+				<a class="<%= @css_class %>" id="<%= @id %>_<%= URI.encode(value[:label]) %>" title="<%= value[:label] %>" href="<%= value[:url] %>" > <%= value[:label] %> </a> <%= @separator if attr.size > counter %>
 			<% else %>
 				<%= value %>
 			<% end %>
