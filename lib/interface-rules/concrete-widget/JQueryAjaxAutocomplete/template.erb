@@ -1,0 +1,32 @@
+<input type="text" id="<%=@id%>" class="<%= @css_class%>" autocomplete="off"/>
+
+<script type="text/javascript" charset="utf-8">
+  $(document).ready(function() {
+    
+    
+     $( "#<%=@id%>" ).autocomplete({
+            source: function( request, response ) {
+                $.ajax({
+                    url: "<%= @json_source_url %>",
+                    dataType: "<%= @data_type %>",
+                    data: {
+                       <% unless @search_parameter.empty? %>
+                       <%= @search_parameter %>: request.term
+                       <% end %>
+                    },
+                    success: function( data ) {
+                        response( 
+                          $.map( data<%= @node_json_result_element %>, function( item ) {
+                            return  <%= @hash_result_format %>
+                            //    label: item.name + (item.adminName1 ? ", " + item.adminName1 : "") + ", " + item.countryName,
+                            //   value: item.name
+                          }
+                        ));
+                    }
+                });
+            },
+            minLength: 2
+        });
+ });  
+</script>  
+
