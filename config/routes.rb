@@ -12,7 +12,7 @@ ActionController::Routing::Routes.draw do |map|
                                            :index_navigation_attribute_index_parameters_post_data => :get                                           
                                          }
 
-
+	#map.connect ':controller/:action/:id', :controller => 'rest', :requirements => { :id => /.*/ }
   map.resources :landmarks
   map.resources :operation_parameters
 	map.resources :interfaces, :collection => {
