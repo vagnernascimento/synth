@@ -117,7 +117,7 @@ module Jqgrid
       # Enable direct selection (when a row in the table is clicked)
       # The javascript function created by the user (options[:selection_handler]) will be called with the selected row id as a parameter
       direct_link = ""
-      if options[:direct_selection] && options[:selection_handler].present? && options[:multi_selection].blank?
+      if options[:direct_selection].blank? && options[:selection_handler].present? && options[:multi_selection].blank?
         direct_link = %Q/
         onSelectRow: function(id){ 
           if(id){ 
