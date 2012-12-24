@@ -3,7 +3,7 @@
 #path/to/jruby -S script/import path/to/source_file.rdf model=application_name format=rdfxml
 
 args = ARGV.map{|arg| arg.split("=")}
-file = args.delete_at(0)
+file = args.delete_at(0).first
 options = {}
 for arg in args do
   options[arg.first] = arg.last
