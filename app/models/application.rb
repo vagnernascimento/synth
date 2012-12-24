@@ -100,7 +100,7 @@ class Application
   end
   
   def destroy
-    shutdown
+    Application.active.shutdown
     FileUtils.mv(path, "#{APPLICATIONS_PATH}/.#{name}")
   end
 
