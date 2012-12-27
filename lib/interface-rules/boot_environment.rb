@@ -4,20 +4,49 @@ module InterfaceRewrite
 		def self.rewrite
 			Rails::Initializer.run do |config|
 				config.middleware.insert_before(Rack::Lock, Rack::Rewrite) do
-					#== Rewrite for shared folder (js, css, etc)
-					send_file %r{/_shared/(.+)}, Proc.new {|path, rack_env| InterfaceRewrite::file_path(path[0])}, :if => Proc.new { |rack_env|
+					#== TO DO: Improve it!!!
+					
+					#== REWRITE FOR SHARED FOLDER (JS, CSS, ETC)
+					#== For image content-type
+					send_file %r{/_shared/(.+\.)(?:ico|jpg|jpeg|png|gif)$}, Proc.new {|path, rack_env| InterfaceRewrite::file_path(path[0])}, 
+					:headers => lambda { { 'Content-Type' => 'application/force-download' } }, 
+					:if => Proc.new { |rack_env|
+						file = rack_env['PATH_INFO'].match(/(_shared\/.+)$/)
+						File.exists?( InterfaceRewrite::file_path(file[0]) ) if file
+					}
+					#== Other cases
+					send_file %r{/_shared/(.+)}, Proc.new {|path, rack_env| InterfaceRewrite::file_path(path[0])}, 
+					:if => Proc.new { |rack_env|
 						file = rack_env['PATH_INFO'].match(/(_shared\/.+)$/)
 						File.exists?( InterfaceRewrite::file_path(file[0]) ) if file
 					}
 					
-					#== Rewrite for widgets
-					send_file %r{/(concrete-widget/.+)}, Proc.new {|path, rack_env| File.join(RAILS_ROOT, 'lib', 'interface-rules', path[0])}, :if => Proc.new { |rack_env|
+					#== REWRITE FOR WIDGETS
+					#== For image content-type
+					send_file %r{/(concrete-widget/.+\.)(?:ico|jpg|jpeg|png|gif)$}, Proc.new {|path, rack_env| File.join(RAILS_ROOT, 'lib', 'interface-rules', path[0])},
+					:headers => lambda { { 'Content-Type' => 'application/force-download' } }, 
+					:if => Proc.new { |rack_env|
+						file = rack_env['PATH_INFO'].match(/(concrete-widget\/.+)$/)
+						File.exists?( File.join(RAILS_ROOT, 'lib', 'interface-rules',  file[0]) ) if file
+					}
+					#== Other cases
+					send_file %r{/(concrete-widget/.+)}, Proc.new {|path, rack_env| File.join(RAILS_ROOT, 'lib', 'interface-rules', path[0])}, 
+					:if => Proc.new { |rack_env|
 						file = rack_env['PATH_INFO'].match(/(concrete-widget\/.+)$/)
 						File.exists?( File.join(RAILS_ROOT, 'lib', 'interface-rules',  file[0]) ) if file
 					}
 			
 					#== Rewrite for extensions
-					send_file %r{/(extensions/.+)}, Proc.new {|path, rack_env| File.join(RAILS_ROOT, 'lib', 'interface-rules', path[0])}, :if => Proc.new { |rack_env|
+					#== For image content-type					
+					send_file %r{/(extensions/.+\.)(?:ico|jpg|jpeg|png|gif)$}, Proc.new {|path, rack_env| File.join(RAILS_ROOT, 'lib', 'interface-rules', path[0])}, 
+					:headers => lambda { { 'Content-Type' => 'application/force-download' } }, 
+					:if => Proc.new { |rack_env|
+						file = rack_env['PATH_INFO'].match(/(extensions\/.+)$/)
+						File.exists?( File.join(RAILS_ROOT, 'lib', 'interface-rules',  file[0]) ) if file
+					}
+					#== Other cases
+					send_file %r{/(extensions/.+)}, Proc.new {|path, rack_env| File.join(RAILS_ROOT, 'lib', 'interface-rules', path[0])}, 
+					:if => Proc.new { |rack_env|
 						file = rack_env['PATH_INFO'].match(/(extensions\/.+)$/)
 						File.exists?( File.join(RAILS_ROOT, 'lib', 'interface-rules',  file[0]) ) if file
 					}
