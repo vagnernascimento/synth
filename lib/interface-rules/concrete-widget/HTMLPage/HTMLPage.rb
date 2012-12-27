@@ -6,6 +6,7 @@ class HTMLPage < ConcreteWidget::WidgetBase
     self.include_js params[:include_js]
     self.include_css params[:include_css]
 		@name = params[:name]
+		@css_class = params[:css_class]
 		@params  = params
 		@id = params[:id]
 		@extensions = []
@@ -29,6 +30,7 @@ class HTMLPage < ConcreteWidget::WidgetBase
 		plus ||= []
     plus = plus.is_a?(String) ? [plus] : plus
 		@include_css += plus
+		@include_css.reverse!
     @include_css.uniq!
   end
   

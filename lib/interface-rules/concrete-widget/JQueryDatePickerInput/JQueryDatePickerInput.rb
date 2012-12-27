@@ -5,6 +5,7 @@ class JQueryDatePickerInput < ConcreteWidget::WidgetBase
       @name = params[:name]
       @id = params[:id]
       @params = params
+			@date_format = params[:date_format] || "yy-mm-dd"
       @depends_on_ids = params[:depends_on_ids]
     end
     

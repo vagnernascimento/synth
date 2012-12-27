@@ -1,4 +1,4 @@
-<input type="text" id="<%=@id%>" class="<%= @css_class%>" autocomplete="off"/>
+<input type="text" id="<%=@id%>" name="<%=@name%>" class="<%= @css_class%>" autocomplete="off"/>
 
 <script type="text/javascript" charset="utf-8">
   $(document).ready(function() {
@@ -10,9 +10,7 @@
                     url: "<%= @json_source_url %>",
                     dataType: "<%= @data_type %>",
                     data: {
-                       <% unless @search_parameter.empty? %>
                        <%= @search_parameter %>: request.term
-                       <% end %>
                     },
                     success: function( data ) {
                         response( 

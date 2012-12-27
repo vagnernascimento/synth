@@ -1,6 +1,7 @@
 {
   name: "JQueryAjaxAutocomplete",
   version:  "0.0.1",
+	source: "http://jqueryui.com/autocomplete/",
   description: "HTML autocomplete input field",  
   compatible_abstracts: [ "IndefiniteVariable" ],
   dependencies: [ "HTMLPage" ],
@@ -8,8 +9,9 @@
     {name: "css_class", mandatory: false, data_type: "string"},
     {name: "id", mandatory: false, data_type: "string"},
     {name: "json_source_url", mandatory: true, data_type: "string"},
+		{name: "data_type", mandatory: false, data_type: "string", default_value: "json"},
     {name: "node_json_result_element", mandatory: false, data_type: "string"},
-    {name: "search_parameter", mandatory: false, data_type: "string"},
+    {name: "search_parameter", mandatory: false, data_type: "string", default_value: "search"},
     {name: "hash_result_format", mandatory: false, data_type: "string"},
     
     

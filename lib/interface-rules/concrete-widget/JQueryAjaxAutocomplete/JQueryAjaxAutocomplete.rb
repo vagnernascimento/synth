@@ -5,8 +5,8 @@ class JQueryAjaxAutocomplete < ConcreteWidget::WidgetBase
     @name = params[:name]
     @id = params[:id]
     @json_source_url = params[:json_source_url]
-    @data_type = params[:data_type] || "jsonp"
-    @search_parameter = params[:search_parameter]
+    @data_type = params[:data_type] || "json"
+    @search_parameter = params[:search_parameter] || "search"
     @node_json_result_element = params[:node_json_result_element] || ""
     @hash_result_format = params[:hash_result_format] || "item"
     @params = params
