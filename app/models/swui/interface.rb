@@ -34,6 +34,7 @@ module SWUI
 					return interface 
         end
       end
+			return nil
     end
 		
     def self.make_interface(facts_triples = [], interface_data = {})
@@ -44,7 +45,8 @@ module SWUI
 				else
 					selected_interface.abstract_spec.to_s
 				end
-				#return selected_interface.interface_description_type.to_s, str_interface
+			else
+				raise "NO INTERFACE RULE WAS MATCHED"
 			end
       
     end
