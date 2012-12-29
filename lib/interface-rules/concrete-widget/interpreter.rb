@@ -26,14 +26,14 @@ module ConcreteWidget
     end
         
     # Returns a Ruby Tree version of the interface from a hash tree.
-    def compose(hash_tree)
+    def compose(hash_tree,parent = nil)
       #begin
        
-        node, children = new_node_and_children(hash_tree)
+        node, children = new_node_and_children(hash_tree, parent)
         if children
           children = repeatable_children_nodes(children, node)
           children.each do |child|
-            node << compose(child)
+            node << compose(child, node)
           end 
         end
         return node
@@ -136,7 +136,7 @@ module ConcreteWidget
     end
     
     
-    def new_node_and_children(hash_tree)
+    def new_node_and_children(hash_tree, parent)
       #-- Add properties
       @node_index_counter+=1
       
@@ -154,6 +154,7 @@ module ConcreteWidget
       #-- Tree node
       node = Tree::TreeNode.new(node_content[:params][:name], content)
       node.content.params = node_content[:params]
+			node.content.parent = parent.content unless parent.nil?
       #-- Direct reference 
       @direct_ref_node[node_content[:params][:name]] = node
       return node, children
