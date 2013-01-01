@@ -56,43 +56,19 @@ module InterfaceRules
     end
 		
    
-    
-    def evaluate(facts, str_rules, interface_data = {})
-			
-			#== Instance values
+	 def evaluate(facts, str_rules, interface_data = {})
 			@facts = facts
 			@interface_data = interface_data
 			@rules_by_element = rules_by_element(str_rules)
-			rules_by_element = @rules_by_element
+			@selected = Hash.new
 			
-			#== New wongi engine
-			engine = Wongi::Engine.create
-			@facts.each{| fact | engine << fact }
-			
-      engine << ruleset{ 
-				interface_data.each{ | k, v | 
-					#instance_variable_set( eval(":@#{k}"), v )
-          self.class.module_eval { attr_accessor k.to_sym }
-          eval("self.#{k.to_s} = v")	
-				}
-				rules_by_element.each do | element, rules |
-					rules.each do | str_rule |
-						begin
-							eval(str_rule)
-						rescue Exception => e 
-							puts "Evaluation of Interface rules failed"
-							#puts e.message 
-							#puts e.backtrace.inspect 
-						end
-					end
-				end
-			}
-			#== main selected elements
-      @selected = selected_elements(engine)
-      return compose(@hash) 
-		end	
-
-		
+			@rules_by_element.each do | element, rules |
+				result = evaluate_node(element, interface_data)
+				@selected.merge!(result)
+			end
+			return compose(@hash) 
+	 end
+    
 		def evaluate_extensions(extension_str)
 			if extension_str.is_a?(String)
 				eval(extension_str)

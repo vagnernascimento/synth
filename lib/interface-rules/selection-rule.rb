@@ -4,23 +4,19 @@ module InterfaceRules
 
 	class InterfaceRules::SelectionRule
 		include ExtendDSLRules
-
-		def initialize(str_rule)
-		  
-			@engine = Wongi::Engine.create
-			if str_rule.is_a?(String)
-				#begin			
-					@rules = ruleset{ eval(str_rule) }
-					#rules = ruleset{ set{ eq @index.label.first.to_s, "All Persons" } }
-					@engine << @rules
-				#rescue LoadError => e
-				#	warn "The rule description is invalid"
-				#end
-			
-			end
-			
-		end
 		
+		def initialize(str_rule, interface_data = {})
+			@engine = Wongi::Engine.create
+			
+			if str_rule.is_a?(String)
+				hash_data = { :locals => interface_data, :instance_variables => {} }
+      
+				my_ruleset = evaluate_rule hash_data do 
+					eval(str_rule)
+				end
+				engine << my_ruleset
+			end
+		end
 		
 		def engine
 			@engine

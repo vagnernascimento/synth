@@ -27,9 +27,9 @@ module SWUI
 			interfaces.sort!{ | x, y | (x.interface_weight.to_s.to_i || 0) <=> (y.interface_weight.to_s.to_i || 0) }
 		end
 		
-    def self.select_interface(facts_triples)
+    def self.select_interface(facts_triples, interface_data)
       for interface in SWUI::Interface.interfaces_by_weight do
-        if interface.evaluate_selection_rule(facts_triples)
+        if interface.evaluate_selection_rule(facts_triples, interface_data)
           puts "SELECTED INTERFACE: #{interface.interface_title}"
 					return interface 
         end
@@ -38,7 +38,7 @@ module SWUI
     end
 		
     def self.make_interface(facts_triples = [], interface_data = {})
-      selected_interface = self.select_interface(facts_triples)
+      selected_interface = self.select_interface(facts_triples, interface_data)
       unless selected_interface.nil?
 				if selected_interface.interface_description_type.to_s == "Abstract" 
 					self.make_abstract(selected_interface, facts_triples, interface_data)
@@ -52,10 +52,10 @@ module SWUI
     end
     
     #== Instance methods
-		def evaluate_selection_rule(facts_triples = [])
+		def evaluate_selection_rule(facts_triples = [], interface_data)
 			
 			unless self.interface_selection_rule.empty?
-				instance_rule = InterfaceRules::SelectionRule.new( self.interface_selection_rule.to_s )
+				instance_rule = InterfaceRules::SelectionRule.new( self.interface_selection_rule.to_s, interface_data )
         #== Adding facts
 				instance_rule.add_facts(facts_triples)
 				return instance_rule.is_true?
@@ -74,7 +74,7 @@ module SWUI
 				
 				#== Instances and evaluates the selected abstract interface
 				abstract_interface_rules =  InterfaceRules::AbstractInterface.new( abstract_scheme )
-				abstract_composed_hash = abstract_interface_rules.evaluate( facts_triples, abstract_rules_str )
+				abstract_composed_hash = abstract_interface_rules.evaluate( facts_triples, abstract_rules_str, interface_data )
 			 
 				#== Concrete mapping
 				concrete_mapping_rules_str = selected_interface.concrete_mapping_rules.to_s

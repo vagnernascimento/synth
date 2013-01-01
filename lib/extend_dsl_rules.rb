@@ -12,14 +12,42 @@ module ExtendDSLRules
 		
 		class Ruleset
 			#== New rules methods
-			def set(rule_name = "rule", &block)
-				rule rule_name do
-					forall &block
-					make{
-						gen rule_name, "selected", true
-					}
-				end
-			end
+
+			def set(rule_name = "rule", &block)	
+				hash_data = @_data
+				def self.method_missing(m, *args, &block)  
+					unless @_data.nil?
+						return  @_data[:instance_variables][m] || @_data[:locals][m] || nil
+					end
+				end 
+
+				rule_inst = ProductionRule.new rule_name
+        @rules << rule_inst
+				rule_inst.instance_eval{
+					
+					#== Metaprogramming -> Instance interface variables as local variables of rule
+					unless hash_data.nil?
+						rule_inst.instance_variable_set( :@_data, hash_data ) 
+						hash_data[:instance_variables].each{ | k, v | rule_inst.instance_variable_set( eval(":@#{k}"), v ) } 
+						
+						hash_data[:locals].each{ | k, v |	
+							rule_inst.class.module_eval { attr_accessor k.to_sym }
+							eval("rule_inst.#{k.to_s} = v")
+							}
+					end
+
+					if block_given?
+						forall &block 
+						make{	gen rule_name, "selected", true	}
+					else
+						forall { }
+						make{ gen rule_name, "selected", true	}
+					end
+				}
+				
+				return rule_inst
+		  end
+			
 			
 			def maps_to(hash, &block)
         hash_data = @_data

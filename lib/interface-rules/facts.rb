@@ -61,7 +61,9 @@ module InterfaceRules
 					self << [ node.uri.to_s, "rdf:type", prop.to_s ] 
 				}
 				node.direct_properties.each{ | prop | 
-					predicate = prop.label.first.to_s || prop.first.to_s
+					predicate = prop.label.to_a.empty? ? prop.compact_uri : prop.label.first
+					
+					#predicate = prop.label.first.to_s || prop.first.to_s
 					if prop.is_a?(Array)
 						prop.each{ | value | self << [ node.uri.to_s, predicate, value.to_s ] }
 					else

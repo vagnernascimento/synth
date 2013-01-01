@@ -14,12 +14,17 @@ module InterfaceRules
 			@hash
 		end
 		
-    def evaluate(facts, str_rules)
+    def evaluate(facts, str_rules, interface_data)
 			engine = Wongi::Engine.create
 			facts.each{| fact | engine << fact }
 			
-      engine << ruleset{ eval(str_rules) }
-			
+      #engine << ruleset{ eval(str_rules) }
+			hash_data = { :locals => interface_data, :instance_variables => {} }
+      
+			my_ruleset = evaluate_rule hash_data do 
+				eval(str_rules)
+			end
+			engine << my_ruleset
       selected = selected_elements(engine)
 			return compose(@hash, selected, engine.productions)
 		end	
