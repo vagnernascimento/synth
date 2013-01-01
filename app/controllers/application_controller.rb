@@ -56,7 +56,9 @@ class ApplicationController < ActionController::Base
 
        #converts HashWithIndifferentAccess params to a ordinary Hash. It makes merge work.
        values = params.to_hash  
-       values.merge!(values){|k,v| if v.is_a?(String); CGI::unescape(v) else v end }
+			 puts values.inspect
+       values.merge!(values){|k,v| if v.is_a?(String); v.gsub("\n\"","\n\"\"") else v end }
+			 #values.merge!(values){|k,v| if v.is_a?(String); CGI::unescape(v) else v end }
        values.merge!(values){|k,v| if v.is_a?(String) && v.match(/http:\/\/.+/)
                                       r = RDFS::Resource.find(v)
                                       r.nil? ? v : r
