@@ -6,6 +6,6 @@ class DHTMLXSchedulerLineHead < ConcreteWidget::WidgetBase
     @params = params
   end
 	def render
-		@parent.add_entry('section', content)
+		@parent.add_entry('section', content) if @parent.respond_to?(:add_entry)
 	end
 end

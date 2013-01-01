@@ -12,7 +12,7 @@ class DHTMLXSchedulerEntry < ConcreteWidget::WidgetBase
 	end
 	
 	def render
-		@parent.add_entry(@entries)
+		@parent.add_entry(@entries) if @parent.respond_to?(:add_entry)
 	end
 	
 end

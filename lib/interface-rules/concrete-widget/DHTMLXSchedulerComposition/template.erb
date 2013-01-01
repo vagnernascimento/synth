@@ -1,12 +1,10 @@
 <style type="text/css" media="screen">
 		html, body{
-			margin:0;
-			padding:0;
 			height:100%;
 			overflow:hidden;
 		}
 	</style>
-<div id="<%= @id %>" class="dhx_cal_container <%= @css_class %>" style='width:100%; height:100%;'>
+<div id="<%= @id %>" class="dhx_cal_container <%= @css_class %>" style='<%= @css_style%>'>
 		<div class="dhx_cal_navline" >
 			<div class="dhx_cal_prev_button">&nbsp;</div>
 			<div class="dhx_cal_next_button">&nbsp;</div>
@@ -22,19 +20,19 @@
 		<div class="dhx_cal_data">
 		</div>		
 </div>
-	<br />
-	ABAIXO
+
 <script type="text/javascript" charset="utf-8">
 		var sections = [];
 		var entries = [];
-		function init_<%= @id %>(start_date, x_start_hour) {
+		function init_<%= @id %>(start_date, x_size, x_step, x_start_hour) {
 
 			scheduler.locale.labels.timeline_tab = "Timeline";
 			scheduler.locale.labels.section_custom="Section";
 			scheduler.config.details_on_create=true;
 			scheduler.config.details_on_dblclick=true;
 			scheduler.config.xml_date="%Y-%m-%d %H:%i";
-			scheduler.config.readonly=false;
+			scheduler.config.readonly=true;
+			scheduler.xy.bar_height = 35;
 
 			//===============
 			//Configuration
@@ -44,8 +42,8 @@
 				name: "timeline",
 				x_unit: "hour",
 				x_date: "%H:%i",
-				x_step: 1,
-				x_size: 8,
+				x_step: x_step,
+				x_size: x_size,
 				x_start: x_start_hour,
 				y_unit: sections,
 				y_property: "section_id",
@@ -65,7 +63,7 @@
 			scheduler.parse( entries	,"json");
 		}
 		
-		var source_data = <%= @entries.to_json %>;
+		var source_data = <%= @entries.to_json || [] %>;
 		
 		$(document).ready(function() {
 			 $('#<%= @id %>').parent().css('width', '100%');
@@ -87,8 +85,15 @@
 			start_dt.setUTCMonth(parseInt(st_dt[2]) - 1);
 			start_dt.setUTCDate(parseInt(st_dt[3]));
 			
-			var x_start_hour = (parseInt(st_dt[4]) - 1);
-			init_<%= @id %>(start_dt, x_start_hour);
+			var x_size = 24;
+			var x_step = 1;
+			
+			var x_start_hour = Math.round((parseInt(st_dt[4]) / 2) + 0.1) ;
+			
+			//x_start_hour = x_start_hour % 2 == 0 ? x_start_hour : x_start_hour - 1;
+			
+			
+			init_<%= @id %>(start_dt, x_size, x_step, parseInt(st_dt[4]));
 		});
 </script>  
 
