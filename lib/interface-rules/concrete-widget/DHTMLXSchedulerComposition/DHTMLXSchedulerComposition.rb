@@ -34,8 +34,8 @@ class DHTMLXSchedulerComposition < ConcreteWidget::WidgetBase
 	
   def run_dependencies(obj)
 		add_skin(obj)
-		obj.include_js(["/_shared/js/jquery-1.7.2.min.js", "/concrete-widget/#{self.class.to_s}/codebase/dhtmlxscheduler.js", "/concrete-widget/#{self.class.to_s}/codebase/ext/dhtmlxscheduler_timeline.js"])
-    obj.include_css(["/concrete-widget/#{self.class.to_s}/codebase/dhtmlxscheduler.css"])
+		obj.include_js(["/_shared/js/jquery-1.7.2.min.js", "/_shared/js/jquery-ui-1.8.21.custom.min.js", "/concrete-widget/#{self.class.to_s}/codebase/dhtmlxscheduler.js", "/concrete-widget/#{self.class.to_s}/codebase/ext/dhtmlxscheduler_timeline.js"])
+    obj.include_css(["/_shared/css/ui-lightness/jquery-ui-1.8.21.custom.css", "/concrete-widget/#{self.class.to_s}/codebase/dhtmlxscheduler.css"])
 		
   end
    

@@ -66,6 +66,9 @@
 		var source_data = <%= @entries.to_json || [] %>;
 		
 		$(document).ready(function() {
+			 
+			
+			 
 			 $('#<%= @id %>').parent().css('width', '100%');
 			 $('#<%= @id %>').parent().css('height', '100%');
 			
@@ -78,13 +81,8 @@
 					minor_dt = source_data[i]['start_date'];
 				}
 			 }
-			var st_dt = minor_dt.match(/(\d\d\d\d)-(\d\d)-(\d\d) (\d\d)/i);
-
-			var start_dt = new Date();
-			start_dt.setUTCFullYear(parseInt(st_dt[1]));
-			start_dt.setUTCMonth(parseInt(st_dt[2]) - 1);
-			start_dt.setUTCDate(parseInt(st_dt[3]));
-			
+			var st_dt = minor_dt.match(/(\d\d\d\d)-(\d\d)-(\d\d) (\d\d):(\d\d)/i);
+			var start_dt = new Date(st_dt[1], (st_dt[2] - 1), st_dt[3]);
 			var x_size = 24;
 			var x_step = 1;
 			
@@ -92,8 +90,32 @@
 			
 			//x_start_hour = x_start_hour % 2 == 0 ? x_start_hour : x_start_hour - 1;
 			
-			
 			init_<%= @id %>(start_dt, x_size, x_step, parseInt(st_dt[4]));
 		});
+		
+		function open_ajax_dialog(url, title, height, width){
+			$(function ()    {
+        $('<div>').dialog({
+            modal: true,
+            open: function ()
+            {
+                var obj = $(this);
+								obj.html('<div id="loading_<%= @id %>" style="text-align:center;width:100%;"><img src="<%= self.relative_path %>images/ajax-loader.gif" align="absbottom" style="background: none;" /></div> ');
+								$.ajax({
+									url: url,
+									cache: false
+								}).done(function( html ) {
+									obj.html(html);
+								});
+								
+								//$(this).load('http://localhost:3000/execute/context/http%3A%2F%2Fbase%2369ab8750-4fda-11e2-b654-00044b181e28?node=http%3A%2F%2Fwww.snee.com%2Fns%2Fflights%23SX2702&airport_from=HNL&airport_to=NRT');
+            },         
+            height: height,
+            width: width,
+            title: title
+        });
+    });
+		 }
+		
 </script>  
 
