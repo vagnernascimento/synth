@@ -1,7 +1,21 @@
+body{
+	margin:0;
+	padding:0;
+	 font-family: helvetica,arial,verdana,sans-serif;
+	 
+}
 #flights{
 	width:100%;
 	height:100%;
 
+}
+
+.ui-widget-header {
+	
+	background-color: #F2F7FA;
+	border: 1px solid #B7CFDF;
+	border-radius: 3px 3px 3px 3px;
+	color:#163F5E;
 }
 
 @font-face {
@@ -56,6 +70,8 @@ body.search_page {
 		float:left;
 }
 
+
+
 #header {
 	position: absolute;
 	top:50px;
@@ -65,14 +81,89 @@ body.search_page {
 	z-index:20;
 	
 }
+body #index{background: url("/images/airline-tickets/background.png");}
+#index #header{
+	position:relative;top:0;left:0;
+	height:55px;
+	z-index:20;
+	background: url("/images/airline-tickets/background.png");
+	background-position: center 690px;
+	width:100%;
+  color: #222222;
+	margin:0;
+	padding-top:20px;
+}
+
 
 #header h1{
 	font-family: 'museo';
 	/*color:#0B2D4C;*/
 	color:#fff;
 	font-size:70px;
-	text-shadow: 0 3px 3px 0 #AAAAAA;
+	text-shadow: 0 3px 3px 0 #c0c0c0;
+	
 }
+
+#index #header h1, #index #header a{
+	font-family: 'museo';
+	padding:0px 0px 0px 40px;
+	color:#fff;
+	font-size:37px;
+	line-height:40px;
+	margin:0;
+	text-shadow: 0 3px 3px 0 #AAAAAA;
+	text-decoration:none;
+	z-index: 20px;
+}
+.dhx_cal_event_line {
+	padding-top:5px;
+	margin-top: 8px;
+	text-align:center;
+}
+
+.dhx_cal_event_line a{ 
+	line-height:22px;
+	text-decoration: none;
+  color:#163F5E;
+}
+
+.dhx_cal_event_line a:hover{ 
+	text-decoration: underline;
+}
+
+.dhx_matrix_scell b{font-size: 13px;}
+
+#index .dhx_cal_today_button{display:none;}
+
+#legs {
+	position:relative;
+	left:50%;
+	margin-left:-182px;
+	margin-top:-45px;
+	-moz-user-select: -moz-none;
+	background-color: #EDF3FE;
+	border-radius: 20px 20px 20px 20px;
+	border: 1px solid #B7CFDF;
+	width:364px;
+	height:25px;
+  font-family: Tahoma;
+	font-size:14px;
+	padding:7px 0px 0px 15px;
+	text-align:center;
+	box-shadow: 0 2px 2px 0 #AAAAAA;
+	color: #92A9B8;
+}
+#legs img {
+	vertical-align: bottom;
+	margin:0px 5px 0px 5px;
+}
+#legs #leg_go {padding-right: 8px; border-right: 1px solid #AAAAAA;}
+#legs .current_leg {font-weight:700; color:#2F3A48}
+#legs #leg_go {float:left;}
+#legs label {padding-right:8px;}
+
+#no_flights{padding:10px;}
+
 .search-form input[type="text"], #linkword-form input[type="text"], .bounce-page input[type="text"], .search-form input[type="password"], #linkword-form input[type="password"], .bounce-page input[type="password"] {
     border-width: 2px;
     font-size: 100%;
@@ -84,7 +175,7 @@ body.search_page {
 }
 
 .bounce-page #pax{
-    border-width: 2px;
+    border-width: 1px;
     font-size: 80%;
     height: 28px;
     padding: 2px;
@@ -148,10 +239,26 @@ button {
     padding: 2px 6px 3px;
 }
 
-.ui-widget-header{
-	background-color: #F2F7FA;
-	border: 1px solid #B7CFDF;
-	border-radius: 3px 3px 3px 3px;
-	color:#163F5E;
+
+#flight_info{
+	font-size:14px;
 }
 
+#flight_info label{
+	font-weight:bold;
+	float:left;
+	display:block;
+	clear:both;
+	min-width:70px;
+	line-height:25px;
+}
+
+#flight_info span{
+	line-height:25px;
+	display:block;
+}
+
+#flight_info #fl_price{
+	color: #D9940C;
+	font-weight:bold;
+}
