@@ -135,6 +135,8 @@ body #index{background: url("/images/airline-tickets/background.png");}
 
 #index .dhx_cal_today_button{display:none;}
 
+.best_price{font-weight:bold;font-size:14px;}
+
 #legs {
 	position:relative;
 	left:50%;
@@ -144,7 +146,7 @@ body #index{background: url("/images/airline-tickets/background.png");}
 	background-color: #EDF3FE;
 	border-radius: 20px 20px 20px 20px;
 	border: 1px solid #B7CFDF;
-	width:364px;
+	width:375px;
 	height:25px;
   font-family: Tahoma;
 	font-size:14px;
