@@ -19,7 +19,6 @@ module InterfaceRules
 		def hash
 			@hash
 		end
-		
 
 		
 		def evaluate_node(element_name, node_values = nil)
@@ -43,9 +42,9 @@ module InterfaceRules
 						begin
 							eval(str_rule)
 						rescue Exception => e  
-							puts "#{counter} => Evaluation of Interface rules failed (repeatable node)"
+							puts "#{counter} => Evaluation of Interface rules failed"
 							puts "#{str_rule}"
-							puts e.message  
+							#puts e.message  
 							#puts e.backtrace.inspect 
 						end
 					end
