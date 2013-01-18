@@ -22,6 +22,21 @@ module SWUI
 		property SWUI::concrete_interface_code
 		
 		#== Class methods
+		
+    def self.get_interface(facts_triples = [], interface_data = {})
+      selected_interface = self.select_interface(facts_triples, interface_data)
+      unless selected_interface.nil?
+				if selected_interface.interface_description_type.to_s == "Abstract" 
+					self.make_interface(selected_interface, facts_triples, interface_data)
+				else
+					selected_interface.abstract_spec.to_s
+				end
+			else
+				raise "NO INTERFACE RULE WAS MATCHED"
+			end
+      
+    end
+		
 		def self.interfaces_by_weight
 			interfaces = SWUI::Interface.find_all
 			interfaces.sort!{ | x, y | (x.interface_weight.to_s.to_i || 0) <=> (y.interface_weight.to_s.to_i || 0) }
@@ -35,20 +50,6 @@ module SWUI
         end
       end
 			return nil
-    end
-		
-    def self.make_interface(facts_triples = [], interface_data = {})
-      selected_interface = self.select_interface(facts_triples, interface_data)
-      unless selected_interface.nil?
-				if selected_interface.interface_description_type.to_s == "Abstract" 
-					self.make_abstract(selected_interface, facts_triples, interface_data)
-				else
-					selected_interface.abstract_spec.to_s
-				end
-			else
-				raise "NO INTERFACE RULE WAS MATCHED"
-			end
-      
     end
     
     #== Instance methods
@@ -66,7 +67,7 @@ module SWUI
 		private
 		
 		
-		def self.make_abstract(selected_interface, facts_triples, interface_data)
+		def self.make_interface(selected_interface, facts_triples, interface_data)
 			
 			abstract_scheme = eval(selected_interface.abstract_scheme.to_s)
 			if abstract_scheme.is_a?(Hash)
