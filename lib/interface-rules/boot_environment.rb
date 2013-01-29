@@ -1,4 +1,5 @@
 require "rack/rewrite"
+require "rack/rewrite/rule"
 #== The method File.read was redefined to fix a bug in Windows
 class File
 	def File.read(file_name)
