@@ -6,18 +6,22 @@
     
      $( "#<%=@id%>" ).autocomplete({
             source: function( request, response ) {
-                $.ajax({
+                data_params = { <%= @search_parameter %>: request.term };
+								extra_params = <%= @params_from_elements.to_json %>;
+								$.each(extra_params, function(key, value){
+									elem_value = $('#' + value).attr('value') || $('#' + value).html();
+									if(elem_value){
+										data_params[value] = elem_value;
+									}
+								});
+								$.ajax({
                     url: "<%= @json_source_url %>",
                     dataType: "<%= @data_type %>",
-                    data: {
-                       <%= @search_parameter %>: request.term
-                    },
+                    data: data_params,
                     success: function( data ) {
                         response( 
                           $.map( data<%= @node_json_result_element %>, function( item ) {
                             return  <%= @hash_result_format %>
-                            //    label: item.name + (item.adminName1 ? ", " + item.adminName1 : "") + ", " + item.countryName,
-                            //   value: item.name
                           }
                         ));
                     }
