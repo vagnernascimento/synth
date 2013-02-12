@@ -6,6 +6,7 @@ class DHTMLXSchedulerAnchorAjaxDialog < ConcreteWidget::WidgetBase
 		@url = params[:url] || ""
 		@title = params[:title] || @content
     @id = params[:id]
+		@dialog_id = params[:dialog_id] || params[:id]
     @params = params
 		@height = params[:height] || 'auto'
 		@width = params[:width] || 'auto'

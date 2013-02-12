@@ -93,9 +93,11 @@
 			init_<%= @id %>(start_dt, x_size, x_step, parseInt(st_dt[4]));
 		});
 		
-		function open_ajax_dialog(url, title, height, width){
-			$(function ()    {
-        $('<div>').dialog({
+		function open_ajax_dialog(dialog_id, url, dialog_title, height, width){
+			$('#'+escape(dialog_id)).remove();
+            var dialog_window = $("<div></div>").attr('id', escape(dialog_id));
+            
+			dialog_window.dialog({
             modal: true,
             open: function ()
             {
@@ -107,14 +109,12 @@
 								}).done(function( html ) {
 									obj.html(html);
 								});
-								
-								//$(this).load('http://localhost:3000/execute/context/http%3A%2F%2Fbase%2369ab8750-4fda-11e2-b654-00044b181e28?node=http%3A%2F%2Fwww.snee.com%2Fns%2Fflights%23SX2702&airport_from=HNL&airport_to=NRT');
             },         
             height: height,
             width: width,
-            title: title
+            title: dialog_title
         });
-    });
+    
 		 }
 		
 </script>  
