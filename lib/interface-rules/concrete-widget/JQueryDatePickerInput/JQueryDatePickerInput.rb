@@ -6,6 +6,8 @@ class JQueryDatePickerInput < ConcreteWidget::WidgetBase
       @id = params[:id]
       @params = params
 			@date_format = params[:date_format] || "yy-mm-dd"
+			@min_date = params[:min_date]
+			@max_date = params[:max_date]
       @depends_on_ids = params[:depends_on_ids]
     end
     
