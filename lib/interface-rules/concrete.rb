@@ -208,9 +208,11 @@ module InterfaceRules
 			rules = Array.new
 			m = 0
 			str.each_line do | line |
-				m = m + 1 if line.match(/^.*?maps_to.+$/)
-				rules[m] ||= ""
-				rules[m] << line
+				unless line.match(/^[\s]*#.*$/)
+					m = m + 1 if line.match(/^.*?maps_to.+$/)
+					rules[m] ||= ""
+					rules[m] << line
+				end
 			end
 			return rules
 		end
@@ -218,7 +220,6 @@ module InterfaceRules
 		def rules_by_element(str)
 			rules_array = split_rules(str).compact!
 			rules_hash = Hash.new
-			
 			rules_array.each do | str_rule |
 				unless str_rule.nil?
 					match = str_rule.match(/maps_to.+?abstract.+?['"](.+?)['"]/)
