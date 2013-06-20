@@ -1,5 +1,7 @@
 require "rack/rewrite"
 require "rack/rewrite/rule"
+require "application"
+
 #== The method File.read was redefined to fix a bug in Windows
 class File
 	def File.read(file_name)
@@ -12,7 +14,6 @@ module InterfaceRewrite
 		def self.rewrite
 			Rails::Initializer.run do |config|
 				config.middleware.insert_before(Rack::Lock, Rack::Rewrite) do
-					
 					#== REWRITE FOR SHARED FOLDER (JS, CSS, ETC)
 					send_file %r{/_shared/(.+)}, Proc.new {|path, rack_env| InterfaceRewrite::file_path(path[0])}, 
 					:if => Proc.new { |rack_env|
@@ -35,6 +36,14 @@ module InterfaceRewrite
 						file = rack_env['PATH_INFO'].match(/(extensions\/.+)$/)
 						File.exists?( File.join(RAILS_ROOT, 'lib', 'interface-rules',  file[0]) ) if file
 					}
+                    
+					#== REWRITE FOR APPLICATION FOLDER (JS, CSS, ETC)
+					send_file %r{/app/(.+)}, Proc.new {|path, rack_env| File.join(RAILS_ROOT, Application.active.path, 'public', path[1])}, 
+					:if => Proc.new { |rack_env|
+                        file = rack_env['PATH_INFO'].match(/app\/(.+)$/)
+						File.exists?( File.join(RAILS_ROOT, Application.active.path, 'public', file[1]) ) if file
+					}
+                    
 				end
 			end
 			
