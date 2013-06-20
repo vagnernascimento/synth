@@ -1,8 +1,8 @@
 		body {
 			margin: 0;
 			padding: 0;
-      width:auto;
-			background:url("//r-ec.bstatic.com/static/img/nobg.png") repeat-x scroll 0 0 #FFFFFF;
+            width:auto;
+			background:url("/app/images/nobg.png") repeat-x scroll 0 0 #FFFFFF;
 			background-position: 0 -40px;
 			
 			color: #003580;
