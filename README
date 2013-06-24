@@ -18,7 +18,7 @@ Please report if you find any bug.
 
 INSTALLING
 ----------
-Install JRuby (http://jruby.org) 1.6 or later
+Install JRuby (http://jruby.org) 1.6.8
 
 Install Bundler
 $ jgem install bundler
@@ -26,7 +26,7 @@ $ jgem install bundler
 Install dependencies
 $ bundle install
 
-RUNNING (Ruby 1.8 or 1.9)
+RUNNING (Ruby 1.9)
 -------
 $ cd /path/to/synth
 $ jruby -S script/server
