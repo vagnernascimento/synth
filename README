@@ -24,11 +24,12 @@ Install Bundler
 $ jgem install bundler
 
 Install dependencies
+$ cd /path/to/synth
 $ bundle install
 
 RUNNING (Ruby 1.9)
 -------
-$ cd /path/to/synth
-$ jruby -S script/server
+
+$ jruby --1.9 -S script/server
 
 Open on your internet browser: http://localhost:3000
