@@ -3,7 +3,7 @@ class InterfacesController < ApplicationController
   # GET /interfaces
   # GET /interfaces.xml
   def index
-    @interfaces = SWUI::Interface.find_all    
+    @interfaces = SWUI::Interface.find_all.sort{ |a, b| a.interface_weight.first.to_i <=> b.interface_weight.first.to_i }
   end
 	
 	# GET /interfaces/new
