@@ -1,4 +1,4 @@
-	<style>
+﻿	<style>
 		.button {
 	  color:#666699; 
 		background-color:#E8EDFF; 
@@ -38,7 +38,8 @@
 							<%= link_to "", { :controller => :resources, :action => :show, :id => value.uri }, :class => "ui-icon ui-icon-extlink" %>
 							<div class="editable">
 								<div class="showing" style="color: #669;">
-									<%= (value.rdfs::label.empty? ? value.compact_uri : value.rdfs::label.first) %>
+									
+                  <%= (value.rdfs::label.empty? ? value.compact_uri : value.rdfs::label.first).force_encoding("ASCII-8BIT") %>
 								</div>
 								<div class="editing">
 									<input type="text" name="property" id="<%= property.uri %>" value="<%= value.uri %>"/>
@@ -47,10 +48,10 @@
 						<% else %>
 							<div class="editable">
 								<div class="showing <%= ' animate' if (!@property.nil? && @property.uri == property.uri) && @value == value %>">
-									<%= h value.to_s.inspect %>
+									<%= h value.to_s.inspect.force_encoding("ASCII-8BIT") %>
 								</div>
 								<div class="editing">
-									<input type="text" name="property" id="<%= property.uri %>" cols="50" value="<%= value.to_s %>">
+									<input type="text" name="property" id="<%= property.uri.force_encoding("ASCII-8BIT") %>" cols="50" value="<%= value.to_s.force_encoding("ASCII-8BIT") %>">
 								</div>
 							</div>
 						<% end %>
