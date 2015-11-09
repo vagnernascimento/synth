@@ -15,8 +15,7 @@ gem "markaby", "~> 0.7.2"
 gem "rack-rewrite", "~> 1.3.1"
 gem "useragent", "~> 0.4.12"
 gem "browser", "~> 0.1.5"
-#gem "wongi-engine", "~> 0.0.4", :git => 'git://github.com/ulfurinn/wongi-engine.git'
-gem "wongi-engine"
+gem "wongi-engine", "~> 0.1.4"
 gem "jruby-openssl", "~> 0.7.7"
 
 group :development do
